@@ -2,12 +2,14 @@ PODS:
   - Alamofire (5.4.1)
   - AlamofireNetworkActivityIndicator (3.1.0):
     - Alamofire (~> 5.1)
+  - lottie-ios (3.2.0)
   - SwiftyJSON (4.3.0)
   - Toast-Swift (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AlamofireNetworkActivityIndicator (~> 3.1)
+  - lottie-ios
   - SwiftyJSON (~> 4.0)
   - Toast-Swift (~> 5.0.1)
 
@@ -15,15 +17,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireNetworkActivityIndicator
+    - lottie-ios
     - SwiftyJSON
     - Toast-Swift
 
 SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireNetworkActivityIndicator: 6564782bd7b9e6c430ae67d9277af01907b01ca4
+  lottie-ios: b6b911246246a90a1d25e7388afe6d9ef003d293
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 1d1ffca748cfffd121828750cdb2cf25e2cc9806
+PODFILE CHECKSUM: 269711de1fe0a0a3c812ef0c95aa2b5d736b3136
 
 COCOAPODS: 1.10.1

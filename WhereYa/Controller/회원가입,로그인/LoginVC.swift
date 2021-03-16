@@ -6,18 +6,33 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginVC: baseVC{
 
+    @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var idTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginBtn: UIButton!
     @IBOutlet weak var signinBtn: UIButton!
     @IBOutlet weak var findInfoBtn: UIButton!
     
+    let animationView : AnimationView = {
+        let aniView = AnimationView(name: "16315-map")
+    
+        aniView.contentMode = .scaleAspectFill
+        return aniView
+    }()
+
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        view.addSubview(animationView)
+        animationView.translatesAutoresizingMaskIntoConstraints = false
+        animationView.centerXAnchor.constraint(equalTo: mainImageView.centerXAnchor).isActive = true
+        animationView.centerYAnchor.constraint(equalTo: mainImageView.centerYAnchor).isActive = true
+        animationView.center = view.center
         
         self.navigationController?.navigationBar.isHidden = true
     
@@ -32,6 +47,12 @@ class LoginVC: baseVC{
         idTextField.delegate = self
         passwordTextField.delegate = self
         
+        animationView.play{(finish) in
+            
+            self.animationView.removeFromSuperview()
+            self.mainImageView.image = #imageLiteral(resourceName: "로고")
+          
+        }
     }
     @IBAction func loginBtnClicked(_ sender: Any) {
         
