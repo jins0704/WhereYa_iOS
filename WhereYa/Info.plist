@@ -27,6 +27,7 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>BMHANNAAir_otf.otf</string>
 		<string>BMJUA_ttf.ttf</string>
 		<string>AppleSDGothicNeoB.ttf</string>
 		<string>AppleSDGothicNeoM.ttf</string>

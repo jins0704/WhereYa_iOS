@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		19E8D14FB76DF0C5A15C3C11 /* Pods_WhereYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAB4146BCC0F8AB2762B95B /* Pods_WhereYa.framework */; };
 		4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564C62600F0AD00806E8D /* 16315-map.json */; };
+		4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D326010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png */; };
+		4F5564DA26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D426010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png */; };
+		4F5564DB26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D526010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png */; };
+		4F5564DC26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D626010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png */; };
+		4F5564DD26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D726010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png */; };
+		4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -43,6 +49,13 @@
 		4F5564A52600E78700806E8D /* AppleSDGothicNeoSB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoSB.ttf; sourceTree = "<group>"; };
 		4F5564A62600E78800806E8D /* AppleSDGothicNeoR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR.ttf; sourceTree = "<group>"; };
 		4F5564C62600F0AD00806E8D /* 16315-map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16315-map.json"; sourceTree = "<group>"; };
+		4F5564C92601096900806E8D /* BMHANNAAir_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAAir_otf.otf; sourceTree = "<group>"; };
+		4F5564D326010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.26.png"; sourceTree = "<group>"; };
+		4F5564D426010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.49.png"; sourceTree = "<group>"; };
+		4F5564D526010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.04.png"; sourceTree = "<group>"; };
+		4F5564D626010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.58.24.png"; sourceTree = "<group>"; };
+		4F5564D726010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.59.png"; sourceTree = "<group>"; };
+		4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.58.54.png"; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +105,19 @@
 				906A0BCDEF2B3B391B528F96 /* Pods-WhereYa.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		4F5564CB26010C0400806E8D /* LogoName */ = {
+			isa = PBXGroup;
+			children = (
+				4F5564D526010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png */,
+				4F5564D326010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png */,
+				4F5564D426010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png */,
+				4F5564D726010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png */,
+				4F5564D626010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png */,
+				4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */,
+			);
+			path = LogoName;
 			sourceTree = "<group>";
 		};
 		4FAB950825C7D4A000148446 = {
@@ -178,6 +204,7 @@
 				4F5564A22600E78700806E8D /* Roboto-Light.ttf */,
 				4F5564A12600E78700806E8D /* Roboto-Medium.ttf */,
 				4F5564A32600E78700806E8D /* Roboto-Regular.ttf */,
+				4F5564C92601096900806E8D /* BMHANNAAir_otf.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -225,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAB951D25C7D4A400148446 /* Assets.xcassets */,
+				4F5564CB26010C0400806E8D /* LogoName */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -319,11 +347,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */,
+				4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */,
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
 				4FD8328525FBE3A000D8A214 /* CommunityMainTableViewCell.xib in Resources */,
 				4FAB951E25C7D4A400148446 /* Assets.xcassets in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
 				4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */,
+				4F5564DD26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png in Resources */,
+				4F5564DB26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png in Resources */,
+				4F5564DA26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png in Resources */,
+				4F5564DC26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png in Resources */,
 				4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */,
 				4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */,
 			);

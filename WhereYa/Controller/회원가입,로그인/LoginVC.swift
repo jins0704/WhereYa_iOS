@@ -48,10 +48,10 @@ class LoginVC: baseVC{
         passwordTextField.delegate = self
         
         animationView.play{(finish) in
-            
-            self.animationView.removeFromSuperview()
-            self.mainImageView.image = #imageLiteral(resourceName: "로고")
-          
+            DispatchQueue.main.asyncAfter(deadline: .now()+0.3){
+                self.animationView.removeFromSuperview()
+                self.mainImageView.image = #imageLiteral(resourceName: "로고")
+            }
         }
     }
     @IBAction func loginBtnClicked(_ sender: Any) {
