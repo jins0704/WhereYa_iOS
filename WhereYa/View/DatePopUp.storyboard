@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GODIC15.TTF">
+            <string>KoreanGD15-R</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Data Pop UpVC-->
+        <scene sceneID="jfl-ex-M9Y">
+            <objects>
+                <viewController storyboardIdentifier="PopUpVC" id="n8R-K5-Evy" customClass="DataPopUpVC" customModule="GOGO" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zW8-xX-pdZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dYS-R1-4KU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <action selector="backgroundClicked:" destination="n8R-K5-Evy" eventType="touchUpInside" id="6Cq-hP-vFr"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7nu-EN-yC4">
+                                <rect key="frame" x="32" y="298" width="350" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5Y-ea-DfZ">
+                                        <rect key="frame" x="290" y="30" width="30" height="29"/>
+                                        <fontDescription key="fontDescription" name="KoreanGD15-R" family="KoreanGD15R" pointSize="17"/>
+                                        <state key="normal" title="완료"/>
+                                        <connections>
+                                            <action selector="doneBtnClicked:" destination="n8R-K5-Evy" eventType="touchUpInside" id="zZh-La-tqz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v5Y-ea-DfZ" secondAttribute="trailing" constant="30" id="BSK-Ie-aKa"/>
+                                    <constraint firstAttribute="width" constant="350" id="H6g-Hs-UGo"/>
+                                    <constraint firstAttribute="height" constant="300" id="aYW-V9-eTA"/>
+                                    <constraint firstItem="v5Y-ea-DfZ" firstAttribute="top" secondItem="7nu-EN-yC4" secondAttribute="top" constant="30" id="sPr-wT-Vyo"/>
+                                </constraints>
+                            </view>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="upg-dO-svA">
+                                <rect key="frame" x="79" y="372" width="256" height="153"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <locale key="locale" localeIdentifier="ko_KR"/>
+                                <connections>
+                                    <action selector="selectBirth:" destination="n8R-K5-Evy" eventType="valueChanged" id="Wx3-MD-42f"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q9r-gK-1Kt"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Q9r-gK-1Kt" firstAttribute="trailing" secondItem="dYS-R1-4KU" secondAttribute="trailing" id="3u3-7W-O9N"/>
+                            <constraint firstItem="dYS-R1-4KU" firstAttribute="top" secondItem="Q9r-gK-1Kt" secondAttribute="top" id="DWe-30-ZaR"/>
+                            <constraint firstItem="7nu-EN-yC4" firstAttribute="centerX" secondItem="zW8-xX-pdZ" secondAttribute="centerX" id="E0U-I7-BYg"/>
+                            <constraint firstItem="Q9r-gK-1Kt" firstAttribute="bottom" secondItem="dYS-R1-4KU" secondAttribute="bottom" id="hC9-da-aEK"/>
+                            <constraint firstItem="dYS-R1-4KU" firstAttribute="leading" secondItem="Q9r-gK-1Kt" secondAttribute="leading" id="hTs-1Z-FZU"/>
+                            <constraint firstItem="7nu-EN-yC4" firstAttribute="centerY" secondItem="zW8-xX-pdZ" secondAttribute="centerY" id="yCt-gt-RgI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="upg-dO-svA" id="ypp-Wz-kXl"/>
+                        <outlet property="popUpView" destination="7nu-EN-yC4" id="nCb-65-6r1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7BF-IN-5kH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5804.347826086957" y="290.625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
