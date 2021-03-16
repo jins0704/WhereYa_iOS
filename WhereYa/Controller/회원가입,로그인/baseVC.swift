@@ -96,7 +96,7 @@ class baseVC: UIViewController{
         }
         else{
             self.view.endEditing(true)
-            nextBtn.backgroundColor = UIColor(red: <#T##CGFloat#>, green: <#T##CGFloat#>, blue: <#T##CGFloat#>, alpha: <#T##CGFloat#>)
+            nextBtn.backgroundColor = UIColor.mainBlueColor
             nextBtn.isEnabled = true
         }
     }
@@ -162,4 +162,15 @@ extension UITextField {
 
 extension UIColor {
 
+    @nonobjc class var darkPink85: UIColor {
+       return UIColor(red: 226.0 / 255.0, green: 42.0 / 255.0, blue: 111.0 / 255.0, alpha: 0.85)
+     }
+    
+    @nonobjc class var mainBlueColor: UIColor {
+    return UIColor(red: 96.0 / 255.0, green: 146.0 / 255.0, blue: 206.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var subpink: UIColor {
+        return UIColor(red: 233.0 / 255.0, green: 188.0 / 255.0, blue: 180.0 / 255.0, alpha: 0.85)
+      }
 }

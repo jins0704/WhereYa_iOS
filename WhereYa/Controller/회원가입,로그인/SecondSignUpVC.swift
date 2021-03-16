@@ -67,7 +67,7 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
     }
     
     @IBAction func manBtnClicked(_ sender: Any) {
-        gender_ManBtn.backgroundColor = UIColor.gray
+        gender_ManBtn.backgroundColor = UIColor.mainBlueColor
         gender_ManBtn.titleLabel?.tintColor = UIColor.white
         
         gender_WomanBtn.backgroundColor = UIColor.white
@@ -78,7 +78,7 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
     }
     
     @IBAction func womanBtnClicked(_ sender: Any) {
-        gender_WomanBtn.backgroundColor = UIColor.gray
+        gender_WomanBtn.backgroundColor = UIColor.subpink
         gender_WomanBtn.titleLabel?.tintColor = UIColor.white
         
         gender_ManBtn.backgroundColor = UIColor.white

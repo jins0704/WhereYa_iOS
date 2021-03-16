@@ -10,12 +10,13 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>BMJUA_ttf.ttf</string>
-		<string>GODIC12.TTF</string>
-		<string>GODIC13.TTF</string>
-		<string>GODIC14.TTF</string>
-		<string>GODIC15.TTF</string>
-		<string>GODIC16.TTF</string>
-		<string>GODIC17.TTF</string>
+		<string>AppleSDGothicNeoB.ttf</string>
+		<string>AppleSDGothicNeoM.ttf</string>
+		<string>AppleSDGothicNeoR.ttf</string>
+		<string>AppleSDGothicNeoSB.ttf</string>
+		<string>Roboto-Light.ttf</string>
+		<string>Roboto-Medium.ttf</string>
+		<string>Roboto-Regular.ttf</string>
 	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>

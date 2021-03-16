@@ -34,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F5564A02600E78700806E8D /* AppleSDGothicNeoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB.ttf; sourceTree = "<group>"; };
+		4F5564A12600E78700806E8D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		4F5564A22600E78700806E8D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4F5564A32600E78700806E8D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4F5564A42600E78700806E8D /* AppleSDGothicNeoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM.ttf; sourceTree = "<group>"; };
+		4F5564A52600E78700806E8D /* AppleSDGothicNeoSB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoSB.ttf; sourceTree = "<group>"; };
+		4F5564A62600E78800806E8D /* AppleSDGothicNeoR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR.ttf; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -162,6 +169,13 @@
 		4FF917B725DE453A0096FC26 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				4F5564A02600E78700806E8D /* AppleSDGothicNeoB.ttf */,
+				4F5564A42600E78700806E8D /* AppleSDGothicNeoM.ttf */,
+				4F5564A62600E78800806E8D /* AppleSDGothicNeoR.ttf */,
+				4F5564A52600E78700806E8D /* AppleSDGothicNeoSB.ttf */,
+				4F5564A22600E78700806E8D /* Roboto-Light.ttf */,
+				4F5564A12600E78700806E8D /* Roboto-Medium.ttf */,
+				4F5564A32600E78700806E8D /* Roboto-Regular.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";

@@ -156,6 +156,7 @@ class FirstSignUpVC: baseVC{
                         if message as! String == "아이디"{
                             DispatchQueue.main.async{
                                 self.idCheckMark.isHidden = false
+                                self.idCheckMark.tintColor = UIColor.mainBlueColor
                             }
                             self.nextChecks[0] = true
                         }
