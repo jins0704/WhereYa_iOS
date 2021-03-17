@@ -8,15 +8,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="GODIC15.TTF">
-            <string>KoreanGD15-R</string>
+        <array key="AppleSDGothicNeoB.ttf">
+            <string>AppleSDGothicNeoB00</string>
         </array>
     </customFonts>
     <scenes>
         <!--Data Pop UpVC-->
         <scene sceneID="jfl-ex-M9Y">
             <objects>
-                <viewController storyboardIdentifier="PopUpVC" id="n8R-K5-Evy" customClass="DataPopUpVC" customModule="GOGO" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopUpVC" id="n8R-K5-Evy" customClass="DataPopUpVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zW8-xX-pdZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,13 +31,21 @@
                                 <rect key="frame" x="32" y="298" width="350" height="300"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v5Y-ea-DfZ">
-                                        <rect key="frame" x="290" y="30" width="30" height="29"/>
-                                        <fontDescription key="fontDescription" name="KoreanGD15-R" family="KoreanGD15R" pointSize="17"/>
+                                        <rect key="frame" x="290" y="30" width="30" height="35"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeoB00" family="AppleSDGothicNeoB00" pointSize="17"/>
                                         <state key="normal" title="완료"/>
                                         <connections>
                                             <action selector="doneBtnClicked:" destination="n8R-K5-Evy" eventType="touchUpInside" id="zZh-La-tqz"/>
                                         </connections>
                                     </button>
+                                    <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="upg-dO-svA">
+                                        <rect key="frame" x="0.0" y="64" width="350" height="236"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <locale key="locale" localeIdentifier="ko_KR"/>
+                                        <connections>
+                                            <action selector="selectBirth:" destination="n8R-K5-Evy" eventType="valueChanged" id="Wx3-MD-42f"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -47,14 +55,6 @@
                                     <constraint firstItem="v5Y-ea-DfZ" firstAttribute="top" secondItem="7nu-EN-yC4" secondAttribute="top" constant="30" id="sPr-wT-Vyo"/>
                                 </constraints>
                             </view>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="upg-dO-svA">
-                                <rect key="frame" x="79" y="372" width="256" height="153"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <locale key="locale" localeIdentifier="ko_KR"/>
-                                <connections>
-                                    <action selector="selectBirth:" destination="n8R-K5-Evy" eventType="valueChanged" id="Wx3-MD-42f"/>
-                                </connections>
-                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9r-gK-1Kt"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

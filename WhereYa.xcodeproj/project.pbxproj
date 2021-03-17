@@ -15,6 +15,7 @@
 		4F5564DC26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D626010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png */; };
 		4F5564DD26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D726010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png */; };
 		4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */; };
+		4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564E52601E01200806E8D /* MyPageVC.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -56,6 +57,7 @@
 		4F5564D626010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.58.24.png"; sourceTree = "<group>"; };
 		4F5564D726010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.59.png"; sourceTree = "<group>"; };
 		4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.58.54.png"; sourceTree = "<group>"; };
+		4F5564E52601E01200806E8D /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,15 @@
 			path = LogoName;
 			sourceTree = "<group>";
 		};
+		4F5564E42601DFF200806E8D /* 마이페이지 */ = {
+			isa = PBXGroup;
+			children = (
+				4F5564E52601E01200806E8D /* MyPageVC.swift */,
+			);
+			name = "마이페이지";
+			path = "마이페이지";
+			sourceTree = "<group>";
+		};
 		4FAB950825C7D4A000148446 = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +189,7 @@
 				4FD2DC4E25F2471800678B9B /* BaseTabbarVC.swift */,
 				4FF918FC25E8FC200096FC26 /* 홈 */,
 				4FD8322D25F7B91F00D8A214 /* 커뮤니티 */,
+				4F5564E42601DFF200806E8D /* 마이페이지 */,
 			);
 			name = "탭바";
 			path = "탭바";
@@ -425,6 +437,7 @@
 				4FD8322F25F7B95D00D8A214 /* CommunityVC.swift in Sources */,
 				4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */,
 				4FF918E225E81D7E0096FC26 /* DataPopUpVC.swift in Sources */,
+				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4FD8328425FBE3A000D8A214 /* CommunityMainTableViewCell.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
