@@ -15,4 +15,7 @@ struct APIConstants{
     static let signupURL = APIConstants.BASE_URL + "/user"
     static let checkIdURL = APIConstants.BASE_URL + "/user/check/userId"
     static let checkNicknameURL = APIConstants.BASE_URL + "/user/check/nickname"
+    
+    //프로필이미지
+    static let profileUpdateURL = APIConstants.BASE_URL + "/user/upload/img"
 }

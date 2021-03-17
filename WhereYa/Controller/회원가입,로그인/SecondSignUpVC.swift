@@ -89,7 +89,7 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
     }
     
     @IBAction func completeBtnClicked(_ sender: Any) {
-        
+        print("회원가입 시도시작")
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
         //userID password nickname name gender birthday phoneNumber 준다

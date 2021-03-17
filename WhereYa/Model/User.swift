@@ -8,6 +8,7 @@
 import Foundation
 
 class User : Codable{
+  
     var userId : String?
     var password : String?
     var nickname : String?

@@ -10,4 +10,3 @@ import Foundation
 struct Token : Codable {
     var jwt: String
 }
-

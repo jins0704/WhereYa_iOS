@@ -47,6 +47,9 @@ class LoginVC: baseVC{
         idTextField.delegate = self
         passwordTextField.delegate = self
         
+        idTextField.text = ""
+        passwordTextField.text = ""
+        
         animationView.play{(finish) in
             DispatchQueue.main.asyncAfter(deadline: .now()+0.3){
                 self.animationView.removeFromSuperview()
@@ -71,7 +74,8 @@ class LoginVC: baseVC{
                 print("success")
                 
                 UserDefaults.standard.setValue(token, forKey: "token")
-            
+                UserDefaults.standard.setValue(self.idTextField.text, forKey: "user_id")
+                
                 let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
                 let basetabbarVC = storyboard.instantiateViewController(identifier:"BaseTabbarVC")  as! BaseTabbarVC
 

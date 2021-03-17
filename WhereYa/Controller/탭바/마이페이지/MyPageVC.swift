@@ -11,27 +11,22 @@ class MyPageVC: UIViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBtn: UIButton!
+    @IBOutlet weak var profileNicknameLabel: UILabel!
+    @IBOutlet weak var profileIdLabel: UILabel!
+    
     
     let imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        imagePicker.allowsEditing = true 
-        imagePicker.delegate = self
         
-        profileImage.layer.cornerRadius = profileImage.frame.height/2
-        profileImage.layer.borderWidth = 1
-        profileImage.clipsToBounds = true
-        profileImage.layer.borderColor = UIColor.clear.cgColor
-
+        UISetting()
         
-        profileImageBtn.layer.cornerRadius = profileImageBtn.frame.height/2
-        profileImageBtn.layer.borderWidth = 0.4
-        profileImageBtn.clipsToBounds = true
-        profileImageBtn.layer.borderColor = UIColor.black.cgColor
+        let user = UserDefaults.standard
+      
+        self.profileNicknameLabel.text = user.string(forKey: "user_nickname")
+        self.profileIdLabel.text = user.string(forKey: "user_id")
         
-
         // Do any additional setup after loading the view.
     }
     
@@ -59,25 +54,54 @@ class MyPageVC: UIViewController {
         present(alert, animated: true, completion: nil)
 
     }
+    
+    func UISetting(){
+        imagePicker.allowsEditing = true
+        imagePicker.delegate = self
+        
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.layer.borderWidth = 1
+        profileImage.clipsToBounds = true
+        profileImage.layer.borderColor = UIColor.clear.cgColor
+        
+        profileImageBtn.layer.cornerRadius = profileImageBtn.frame.height/2
+        profileImageBtn.layer.borderWidth = 0.4
+        profileImageBtn.clipsToBounds = true
+        profileImageBtn.layer.borderColor = UIColor.black.cgColor
+        
+
+    }
 }
 
 extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-            
-            var newImage: UIImage? = nil // update image
-            
-            if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-                newImage = possibleImage // 수정된 이미지가 있을 경우
-                
-            }
-            else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-                newImage = possibleImage // 원본 이미지가 있을 경우
-            }
-            
-            self.profileImage.image = newImage // 받아온 이미지를 update
         
-            picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
+        var newImage: UIImage? = nil // update image
+        
+        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            newImage = possibleImage // 수정된 이미지가 있을 경우
             
         }
+        else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            newImage = possibleImage // 원본 이미지가 있을 경우
+        }
+        
+        self.profileImage.image = newImage // 받아온 이미지를 update
+        
+        picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
+        
+        
+        guard let selectedImage = info[.originalImage] as? UIImage else {
+            fatalError("error :  \(info)")
+        }
+        
+        let imageUrl=info[UIImagePickerController.InfoKey.imageURL] as? NSURL //이미지 url
+        let imageName = imageUrl?.lastPathComponent//이미지 이름
+        
+        ProfileUpdateService.shared.update(nickname: profileIdLabel.text ?? "asd", img: selectedImage, imgName: imageName ?? "asd") {data in
+            print(data)
+        }
+        
+    }
 }
