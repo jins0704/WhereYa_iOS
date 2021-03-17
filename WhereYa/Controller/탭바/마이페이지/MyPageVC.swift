@@ -32,7 +32,7 @@ class MyPageVC: UIViewController {
     
 
     @IBAction func profileImageBtnClicked(_ sender: Any) {
-        let alert =  UIAlertController(title: "원하는 타이틀", message: "원하는 메세지", preferredStyle: .actionSheet)
+        let alert =  UIAlertController(title: "", message: "프로필 사진 설정", preferredStyle: .actionSheet)
       
         let library =  UIAlertAction(title: "앨범", style: .default) {
             (action) in
@@ -56,6 +56,7 @@ class MyPageVC: UIViewController {
     }
     
     func UISetting(){
+        
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         
@@ -69,7 +70,6 @@ class MyPageVC: UIViewController {
         profileImageBtn.clipsToBounds = true
         profileImageBtn.layer.borderColor = UIColor.black.cgColor
         
-
     }
 }
 
@@ -87,8 +87,6 @@ extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDeleg
             newImage = possibleImage // 원본 이미지가 있을 경우
         }
         
-        self.profileImage.image = newImage // 받아온 이미지를 update
-        
         picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
         
         
@@ -96,12 +94,28 @@ extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDeleg
             fatalError("error :  \(info)")
         }
         
-        let imageUrl=info[UIImagePickerController.InfoKey.imageURL] as? NSURL //이미지 url
-        let imageName = imageUrl?.lastPathComponent//이미지 이름
+        guard let imageUrl=info[UIImagePickerController.InfoKey.imageURL] as? NSURL, let imageName = imageUrl.lastPathComponent else{return}
         
-        ProfileUpdateService.shared.update(nickname: profileIdLabel.text ?? "asd", img: selectedImage, imgName: imageName ?? "asd") {data in
-            print(data)
+        ProfileUpdateService.shared.updateImage(img: selectedImage, imgName: imageName) { data in
+            
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch data{
+            case .success(let imgname) :
+                self.profileImage.image = newImage // 새로운 이미지를 update
+                print(imgname)
+               
+            case .requestErr(let message):
+                print(message)
+                return
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+            }
         }
-        
     }
 }

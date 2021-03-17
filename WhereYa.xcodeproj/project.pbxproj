@@ -18,6 +18,7 @@
 		4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564E52601E01200806E8D /* MyPageVC.swift */; };
 		4F5564E9260212B300806E8D /* MyPageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564E8260212B300806E8D /* MyPageSettingVC.swift */; };
 		4F5564EE260225B000806E8D /* ProfileUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564ED260225B000806E8D /* ProfileUpdateService.swift */; };
+		4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		4F5564E52601E01200806E8D /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		4F5564E8260212B300806E8D /* MyPageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingVC.swift; sourceTree = "<group>"; };
 		4F5564ED260225B000806E8D /* ProfileUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileUpdateService.swift; path = ../../../../Downloads/ProfileUpdateService.swift; sourceTree = "<group>"; };
+		4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-18 오전 3.06.02.png"; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -280,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAB951D25C7D4A400148446 /* Assets.xcassets */,
+				4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */,
 				4F5564CB26010C0400806E8D /* LogoName */,
 			);
 			path = Image;
@@ -379,6 +382,7 @@
 				4FD8328525FBE3A000D8A214 /* CommunityMainTableViewCell.xib in Resources */,
 				4FAB951E25C7D4A400148446 /* Assets.xcassets in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
+				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
 				4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */,
 				4F5564DD26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png in Resources */,
 				4F5564DB26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png in Resources */,
