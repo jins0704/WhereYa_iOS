@@ -44,7 +44,7 @@ struct LoginService {
                     
                     print(decodedData)
                     
-                    let tokenData = decodedData.jwt
+                    let tokenData = decodedData
                     
                     completion(.success(tokenData))
                 }

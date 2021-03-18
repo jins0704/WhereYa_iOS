@@ -42,11 +42,12 @@ class LoginVC: baseVC{
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
             switch data{
-            case .success(let token) :
-                guard let token = token as? String else { return }
+            case .success(let tokenData) :
+                guard let tokenData = tokenData as? Token else { return }
                 print("success")
                 
-                UserDefaults.standard.setValue(token, forKey: "token")
+                UserDefaults.standard.setValue(tokenData.jwt, forKey: "token")
+                UserDefaults.standard.setValue(tokenData.nickname, forKey: "user_nickname")
                 UserDefaults.standard.setValue(self.idTextField.text, forKey: "user_id")
                 
                 let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
@@ -90,8 +91,8 @@ class LoginVC: baseVC{
         idTextField.delegate = self
         passwordTextField.delegate = self
         
-        idTextField.text = ""
-        passwordTextField.text = ""
+        //idTextField.text = ""
+        //passwordTextField.text = ""
         
         animationView.play{(finish) in
             DispatchQueue.main.asyncAfter(deadline: .now()+0.6){
