@@ -17,8 +17,10 @@
 		4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */; };
 		4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564E52601E01200806E8D /* MyPageVC.swift */; };
 		4F5564E9260212B300806E8D /* MyPageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564E8260212B300806E8D /* MyPageSettingVC.swift */; };
-		4F5564EE260225B000806E8D /* ProfileUpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564ED260225B000806E8D /* ProfileUpdateService.swift */; };
+		4F5564EE260225B000806E8D /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564ED260225B000806E8D /* ProfileService.swift */; };
 		4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */; };
+		4F5564FA2603431800806E8D /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* Profile.swift */; };
+		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -62,8 +64,10 @@
 		4F5564D826010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.58.54.png"; sourceTree = "<group>"; };
 		4F5564E52601E01200806E8D /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		4F5564E8260212B300806E8D /* MyPageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingVC.swift; sourceTree = "<group>"; };
-		4F5564ED260225B000806E8D /* ProfileUpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileUpdateService.swift; path = ../../../../Downloads/ProfileUpdateService.swift; sourceTree = "<group>"; };
+		4F5564ED260225B000806E8D /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileService.swift; path = ../../../../Downloads/ProfileService.swift; sourceTree = "<group>"; };
 		4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-18 오전 3.06.02.png"; sourceTree = "<group>"; };
+		4F5564F92603431800806E8D /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -254,7 +258,8 @@
 				4FF918B025E62A2A0096FC26 /* NetworkResult.swift */,
 				4FF918B425E62BCC0096FC26 /* LoginService.swift */,
 				4FF918C825E6BA970096FC26 /* SignUpService.swift */,
-				4F5564ED260225B000806E8D /* ProfileUpdateService.swift */,
+				4F5564ED260225B000806E8D /* ProfileService.swift */,
+				4F5564FF260388BD00806E8D /* NetworkInfo.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				4FF918BB25E6450E0096FC26 /* Token.swift */,
 				4FF9190225E900660096FC26 /* User.swift */,
 				4FD2DC2D25EFAD4100678B9B /* ActivityIndicator.swift */,
+				4F5564F92603431800806E8D /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 			files = (
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
+				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
 				4F5564E9260212B300806E8D /* MyPageSettingVC.swift in Sources */,
 				4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */,
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
@@ -452,6 +459,7 @@
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* User.swift in Sources */,
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
+				4F5564FA2603431800806E8D /* Profile.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
 				4FD8322F25F7B95D00D8A214 /* CommunityVC.swift in Sources */,
 				4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */,
@@ -460,7 +468,7 @@
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4FD8328425FBE3A000D8A214 /* CommunityMainTableViewCell.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
-				4F5564EE260225B000806E8D /* ProfileUpdateService.swift in Sources */,
+				4F5564EE260225B000806E8D /* ProfileService.swift in Sources */,
 				4FF918BC25E6450E0096FC26 /* Token.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

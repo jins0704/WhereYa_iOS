@@ -8,7 +8,7 @@
 import UIKit
 
 class MyPageVC: UIViewController {
-
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBtn: UIButton!
     @IBOutlet weak var profileNicknameLabel: UILabel!
@@ -23,14 +23,50 @@ class MyPageVC: UIViewController {
         UISetting()
         
         let user = UserDefaults.standard
-      
+        
         self.profileNicknameLabel.text = user.string(forKey: "user_nickname")
         self.profileIdLabel.text = user.string(forKey: "user_id")
+        
         
         // Do any additional setup after loading the view.
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        ProfileService.shared.getImage { (data) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            print("function completed")
+            
+            switch data{
+            case .success(let imgurl) :
+                guard let imgurl = imgurl as? String else { return }
+                print("success")
+                print("function" + imgurl)
+                if let url = URL(string: imgurl){
+                    do{
+                        let urldata = try Data(contentsOf: url)
+                        self.profileImage.image = UIImage(data: urldata)
+                    }catch{
+                        print("data error")
+                        print(error)
+                    }
+                }
+                
+            case .requestErr(let message):
+                print(message)
+                return
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+            }
+        }
+    }
+    
+    
     @IBAction func profileImageBtnClicked(_ sender: Any) {
         let alert =  UIAlertController(title: "", message: "프로필 사진 설정", preferredStyle: .actionSheet)
       
@@ -76,46 +112,33 @@ class MyPageVC: UIViewController {
 extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        var newImage: UIImage? = nil // update image
-        
-        if let possibleImage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
-            newImage = possibleImage // 수정된 이미지가 있을 경우
+    
+        if let myimage = info[.originalImage] as? UIImage,
+           let myurl = info[UIImagePickerController.InfoKey.imageURL] as? URL {
             
-        }
-        else if let possibleImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
-            newImage = possibleImage // 원본 이미지가 있을 경우
-        }
-        
-        picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
-        
-        
-        guard let selectedImage = info[.originalImage] as? UIImage else {
-            fatalError("error :  \(info)")
-        }
-        
-        guard let imageUrl=info[UIImagePickerController.InfoKey.imageURL] as? NSURL, let imageName = imageUrl.lastPathComponent else{return}
-        
-        ProfileUpdateService.shared.updateImage(img: selectedImage, imgName: imageName) { data in
-            
-            ActivityIndicator.shared.activityIndicator.stopAnimating()
-            
-            switch data{
-            case .success(let imgname) :
-                self.profileImage.image = newImage // 새로운 이미지를 update
-                print(imgname)
-               
-            case .requestErr(let message):
-                print(message)
-                return
-            case .serverErr:
-                print("serverErr")
-                return
+            ProfileService.shared.updateImage(img: myimage, url : myurl, completion: { (data) in
                 
-            case .networkFail:
-                print("networkFail")
-                return
-            }
+                ActivityIndicator.shared.activityIndicator.stopAnimating()
+
+                switch data{
+                case .success(_) :
+                    self.profileImage.image = myimage
+
+                case .requestErr(let message):
+                    print(message)
+                    return
+                case .serverErr:
+                    print("serverErr")
+                    return
+
+                case .networkFail:
+                    print("networkFail")
+                    return
+                }
+                
+            })
+            
+            picker.dismiss(animated: true, completion: nil) // picker를 닫아줌
         }
     }
 }
