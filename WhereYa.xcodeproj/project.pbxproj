@@ -31,9 +31,9 @@
 		4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB952C25C7D77B00148446 /* LoginVC.swift */; };
 		4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2DC2D25EFAD4100678B9B /* ActivityIndicator.swift */; };
 		4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD2DC4E25F2471800678B9B /* BaseTabbarVC.swift */; };
-		4FD8322F25F7B95D00D8A214 /* CommunityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8322E25F7B95D00D8A214 /* CommunityVC.swift */; };
-		4FD8328425FBE3A000D8A214 /* CommunityMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8328225FBE3A000D8A214 /* CommunityMainTableViewCell.swift */; };
-		4FD8328525FBE3A000D8A214 /* CommunityMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8328325FBE3A000D8A214 /* CommunityMainTableViewCell.xib */; };
+		4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8322E25F7B95D00D8A214 /* FriendsVC.swift */; };
+		4FD8328425FBE3A000D8A214 /* FriendsMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FD8328225FBE3A000D8A214 /* FriendsMainTableViewCell.swift */; };
+		4FD8328525FBE3A000D8A214 /* FriendsMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FD8328325FBE3A000D8A214 /* FriendsMainTableViewCell.xib */; };
 		4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */; };
 		4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B025E62A2A0096FC26 /* NetworkResult.swift */; };
 		4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B425E62BCC0096FC26 /* LoginService.swift */; };
@@ -80,9 +80,9 @@
 		4FAB952C25C7D77B00148446 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4FD2DC2D25EFAD4100678B9B /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
 		4FD2DC4E25F2471800678B9B /* BaseTabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabbarVC.swift; sourceTree = "<group>"; };
-		4FD8322E25F7B95D00D8A214 /* CommunityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityVC.swift; sourceTree = "<group>"; };
-		4FD8328225FBE3A000D8A214 /* CommunityMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMainTableViewCell.swift; sourceTree = "<group>"; };
-		4FD8328325FBE3A000D8A214 /* CommunityMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityMainTableViewCell.xib; sourceTree = "<group>"; };
+		4FD8322E25F7B95D00D8A214 /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		4FD8328225FBE3A000D8A214 /* FriendsMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMainTableViewCell.swift; sourceTree = "<group>"; };
+		4FD8328325FBE3A000D8A214 /* FriendsMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsMainTableViewCell.xib; sourceTree = "<group>"; };
 		4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
 		4FF918B025E62A2A0096FC26 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4FF918B425E62BCC0096FC26 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
@@ -219,9 +219,9 @@
 		4FD8322D25F7B91F00D8A214 /* 커뮤니티 */ = {
 			isa = PBXGroup;
 			children = (
-				4FD8322E25F7B95D00D8A214 /* CommunityVC.swift */,
-				4FD8328225FBE3A000D8A214 /* CommunityMainTableViewCell.swift */,
-				4FD8328325FBE3A000D8A214 /* CommunityMainTableViewCell.xib */,
+				4FD8322E25F7B95D00D8A214 /* FriendsVC.swift */,
+				4FD8328225FBE3A000D8A214 /* FriendsMainTableViewCell.swift */,
+				4FD8328325FBE3A000D8A214 /* FriendsMainTableViewCell.xib */,
 			);
 			name = "커뮤니티";
 			path = "커뮤니티";
@@ -385,7 +385,7 @@
 				4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */,
 				4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */,
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
-				4FD8328525FBE3A000D8A214 /* CommunityMainTableViewCell.xib in Resources */,
+				4FD8328525FBE3A000D8A214 /* FriendsMainTableViewCell.xib in Resources */,
 				4FAB951E25C7D4A400148446 /* Assets.xcassets in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
@@ -461,12 +461,12 @@
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
 				4F5564FA2603431800806E8D /* Profile.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
-				4FD8322F25F7B95D00D8A214 /* CommunityVC.swift in Sources */,
+				4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */,
 				4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */,
 				4FF918E225E81D7E0096FC26 /* DataPopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
-				4FD8328425FBE3A000D8A214 /* CommunityMainTableViewCell.swift in Sources */,
+				4FD8328425FBE3A000D8A214 /* FriendsMainTableViewCell.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
 				4F5564EE260225B000806E8D /* ProfileService.swift in Sources */,
 				4FF918BC25E6450E0096FC26 /* Token.swift in Sources */,

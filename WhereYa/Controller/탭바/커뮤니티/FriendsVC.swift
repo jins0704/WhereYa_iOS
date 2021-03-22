@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommunityVC: UIViewController {
+class FriendsVC: UIViewController {
     let cellIdentifier : String = "communityMainTableViewCell"
     
     private let freeItems: [String] = ["자유롭게 물어봐요1", "자유롭게 물어봐요2", "자유롭게 물어봐요3", "자유롭게 물어봐요4", "자유롭게 물어봐요5", "자유롭게 물어봐요6"]
@@ -16,15 +16,15 @@ class CommunityVC: UIViewController {
     
     private let sections: [String] = ["자유게시판", "밥친구게시판", "QnA 게시판"]
 
-    @IBOutlet weak var communityTableView: UITableView!
+    @IBOutlet weak var friendsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        communityTableView.delegate = self
-        communityTableView.dataSource = self
+        friendsTableView.delegate = self
+        friendsTableView.dataSource = self
         
-        communityTableView.register(UINib(nibName: "CommunityMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        friendsTableView.register(UINib(nibName: "CommunityMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
 
@@ -32,7 +32,7 @@ class CommunityVC: UIViewController {
     // MARK: - Navigation
 
 }
-extension CommunityVC : UITableViewDelegate, UITableViewDataSource{
+extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        
@@ -59,7 +59,7 @@ extension CommunityVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell : CommunityMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CommunityMainTableViewCell
+        let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell
         
         var text : String?
         

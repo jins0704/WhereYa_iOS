@@ -18,7 +18,7 @@ struct LoginService {
     
     func login(_ id : String, _ pwd : String , completion : @escaping(NetworkResult<Any>) -> Void ){
         
-        let header : HTTPHeaders = ["Content-Type": "application/json"]
+        let header : HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON]
         
         let dataRequest = AF.request(APIConstants.signinURL,
                                      method: .post,

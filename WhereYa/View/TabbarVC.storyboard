@@ -32,10 +32,10 @@
             </objects>
             <point key="canvasLocation" x="400" y="185"/>
         </scene>
-        <!--Community-->
+        <!--친구목록-->
         <scene sceneID="F2J-3B-yuQ">
             <objects>
-                <viewController id="9ac-Nf-mM9" customClass="CommunityVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9ac-Nf-mM9" customClass="FriendsVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="siO-UV-Nab">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,11 +61,9 @@
                             <constraint firstItem="6Oa-iI-FzF" firstAttribute="top" secondItem="qte-wv-SGa" secondAttribute="bottom" constant="20" id="hkg-li-9yg"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Community" id="diJ-rM-gap">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="bell.fill" catalog="system" id="YBd-C0-GIp"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="친구목록" id="diJ-rM-gap"/>
                     <connections>
-                        <outlet property="communityTableView" destination="6Oa-iI-FzF" id="ecZ-ti-rAe"/>
+                        <outlet property="friendsTableView" destination="6Oa-iI-FzF" id="ZEU-hy-Onr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR7-Wt-txk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -395,7 +393,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>

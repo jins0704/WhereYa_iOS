@@ -23,7 +23,7 @@ struct SignUpService {
         }
     }
     
-    let header : HTTPHeaders = ["Content-Type": "application/json"]
+    let header : HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON]
     
     //1. 회원가입 완료
     //  아이디, 비밀번호, 닉네임, 이름, 성별, 생년월일, 전화번호

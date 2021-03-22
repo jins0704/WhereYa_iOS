@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CommunityMainTableViewCell: UITableViewCell {
+class FriendsMainTableViewCell: UITableViewCell {
 
     @IBOutlet weak var label: UILabel!
     

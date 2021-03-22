@@ -9,16 +9,21 @@ import Foundation
 
 extension String {
     var auth: String {
-        return "Bears " + self
+        return "Bearer " + self
     }
 }
 
 enum NetworkHeaderKey: String {
     case auth = "Authorization"
+    case CONTENT_TYPE = "Content-Type"
 }
 
 struct NetworkInfo {
     static var networkHeader: [String: String] {
-        return [NetworkHeaderKey.auth.rawValue: ""]
+        let token = UserDefaults.standard.string(forKey: "token") ?? ""
+        return [NetworkHeaderKey.auth.rawValue: token.auth]
+    }
+    static var networkHeader2: [String: String] {
+        return [NetworkHeaderKey.CONTENT_TYPE.rawValue: "application/json"]
     }
 }
