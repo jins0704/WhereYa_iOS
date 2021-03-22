@@ -9,6 +9,8 @@ import UIKit
 
 class MyPageVC: UIViewController {
     
+    let user = UserDefaults.standard
+    
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBtn: UIButton!
     @IBOutlet weak var profileNicknameLabel: UILabel!
@@ -22,10 +24,8 @@ class MyPageVC: UIViewController {
         
         UISetting()
         
-        let user = UserDefaults.standard
-        
-        self.profileNicknameLabel.text = user.string(forKey: "user_nickname")
-        self.profileIdLabel.text = user.string(forKey: "user_id")
+        self.profileNicknameLabel.text = user.string(forKey: UserKey.NICKNAME)
+        self.profileIdLabel.text = user.string(forKey: UserKey.ID)
         
         
         // Do any additional setup after loading the view.
@@ -35,17 +35,15 @@ class MyPageVC: UIViewController {
         ProfileService.shared.getImage { (data) in
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
-            print("function completed")
-            
             switch data{
             case .success(let imgurl) :
                 guard let imgurl = imgurl as? String else { return }
                 print("success")
-                print("function" + imgurl)
                 if let url = URL(string: imgurl){
                     do{
                         let urldata = try Data(contentsOf: url)
                         self.profileImage.image = UIImage(data: urldata)
+                        UserDefaults.standard.setValue(imgurl, forKey: UserKey.IMAGE)
                     }catch{
                         print("data error")
                         print(error)
@@ -107,6 +105,34 @@ class MyPageVC: UIViewController {
         profileImageBtn.layer.borderColor = UIColor.black.cgColor
         
     }
+    
+    func myImageString() -> String{
+        var myImageString : String = ""
+        
+        ProfileService.shared.getImage { (data) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch data{
+            case .success(let imgurl) :
+                guard let imgurl = imgurl as? String else { return }
+                myImageString = imgurl
+                print("success")
+                
+            case .requestErr(let message):
+                print(message)
+                return
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+            }
+        }
+        print("image changed and saved")
+        return myImageString
+    }
 }
 
 extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
@@ -123,7 +149,8 @@ extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDeleg
                 switch data{
                 case .success(_) :
                     self.profileImage.image = myimage
-
+                    UserDefaults.standard.setValue(self.myImageString(), forKey: UserKey.IMAGE)
+                    print("image변경")
                 case .requestErr(let message):
                     print(message)
                     return

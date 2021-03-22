@@ -22,4 +22,7 @@ struct APIConstants{
     //프로필이미지
     static let profileUpdateURL = APIConstants.BASE_URL + "/user/upload/img"
     static let profileGetURL = APIConstants.BASE_URL + "/user"
+    
+    //친구목록 조회
+    static let friendsListURL = APIConstants.BASE_URL + "/friend"
 }

@@ -9,10 +9,16 @@ import UIKit
 
 class FriendsMainTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
+    @IBOutlet weak var profileNickname: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        profileImage.layer.cornerRadius = profileImage.frame.height/2
+        profileImage.layer.borderWidth = 1
+        profileImage.clipsToBounds = true
+        profileImage.layer.borderColor = UIColor.clear.cgColor
+        
         // Initialization code
     }
 

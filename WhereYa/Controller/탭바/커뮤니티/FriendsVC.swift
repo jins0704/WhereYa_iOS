@@ -8,51 +8,106 @@
 import UIKit
 
 class FriendsVC: UIViewController {
-    let cellIdentifier : String = "communityMainTableViewCell"
+   
+    let user = UserDefaults.standard
+    let cellIdentifier : String = "friendsMainTableViewCell"
+    var isFiltering : Bool = false
     
-    private let freeItems: [String] = ["자유롭게 물어봐요1", "자유롭게 물어봐요2", "자유롭게 물어봐요3", "자유롭게 물어봐요4", "자유롭게 물어봐요5", "자유롭게 물어봐요6"]
-    private let foodtems: [String] = ["밥친구구해요1", "밥친구구해요2", "밥친구구해요3", "밥친구구해요4"]
-    private let qnaItems: [String] = ["궁금해요1", "궁금해요2", "궁금해요3", "궁금해요4"]
+    private var filterList : [Friend] = []
+    private var myProfile : [Friend] = []
+    private var Bookmark_Friends: [Friend] = []
+    private var Normal_Friends: [Friend] = []
     
-    private let sections: [String] = ["자유게시판", "밥친구게시판", "QnA 게시판"]
+    private let sections: [String] = ["내 프로필","즐겨찾기", "친구목록"]
 
     @IBOutlet weak var friendsTableView: UITableView!
+    @IBOutlet weak var friendsSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         friendsTableView.delegate = self
         friendsTableView.dataSource = self
+        friendsTableView.separatorStyle = .none
         
-        friendsTableView.register(UINib(nibName: "CommunityMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        friendsSearchBar.delegate = self
+        friendsSearchBar.placeholder = "친구 닉네임 검색"
+        //friendsTableView.cellLayoutMarginsFollowReadableWidth = false
+        //friendsTableView.separatorInset.left = 0
+        
+        loadList()
+        
+        friendsTableView.register(UINib(nibName: "FriendsMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        ProfileService.shared.getFriendsList { data in
+            switch data{
+            case .success(let friendData) :
+                guard let friendData = friendData as? [Friend] else { return }
+                for friend in friendData{
+                    if friend.star == false{
+                        self.Normal_Friends.append(friend)
+                    }
+                    else{
+                        self.Bookmark_Friends.append(friend)
+                    }
+                }
+               
+                DispatchQueue.main.async {
+                    self.friendsTableView.reloadData()
+                }
+                
+            case .requestErr(let message):
+                print(message)
+                return
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+            }
+        }
+    }
+    
+    func loadList(){
+        guard let myImage = user.string(forKey: UserKey.IMAGE) else {return }
+        let myNickname = user.string(forKey: UserKey.NICKNAME)
+        let mine = Friend(profileImg : myImage, nickname: myNickname ?? "", star: false)
+        myProfile.append(mine)
+        print(mine)
+    }
     
     // MARK: - Navigation
 
 }
 extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
-        switch section{
         
-        case 0:
+        if isFiltering{
+            return filterList.count
+        }
+        else{
+            switch section{
             
-            return self.freeItems.count
-            
-        case 1:
-            
-            return self.foodtems.count
-        
-        case 2:
-            return self.qnaItems.count
-            
-        default:
-            
-            return 0
-            
+            case 0:
+                return self.myProfile.count
+            case 1:
+                
+                return self.Bookmark_Friends.count
+            case 2:
+                
+                return self.Normal_Friends.count
+                
+            default:
+                
+                return 0
+                
+            }
         }
         
     }
@@ -61,32 +116,72 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell
         
-        var text : String?
+        var nick : String?
+        var img : String?
         
-        if indexPath.section == 0{
-            text = self.freeItems[indexPath.row]
-        }
-        else if indexPath.section == 1{
-            text = self.foodtems[indexPath.row]
+        if isFiltering {
+            cell.profileNickname.text = filterList[indexPath.row].nickname
         }
         else{
-            text = self.qnaItems[indexPath.row]
-        }
+            if indexPath.section == 0{
+                img = self.myProfile[indexPath.row].profileImg
+                nick = self.myProfile[indexPath.row].nickname
+            }
+            else if indexPath.section == 1{
+                img = self.Bookmark_Friends[indexPath.row].profileImg
+                nick = self.Bookmark_Friends[indexPath.row].nickname
+            }
+            else{
+                img = self.Normal_Friends[indexPath.row].profileImg
+                nick = self.Normal_Friends[indexPath.row].nickname
+            }
             
-        cell.label.text = text
-
+            if let url = URL(string: img ?? "https://gogoeverybodyy.s3.ap-northeast-2.amazonaws.com/static/8E5176DA-9CB1-4B21-9B62-EE7FDB289549.jpeg"){
+                do{
+                    let urldata = try Data(contentsOf: url)
+                    cell.profileImage.image = UIImage(data: urldata)
+                }catch{
+                    print("data error")
+                    print(error)
+                }
+            }
+            cell.profileNickname.text = nick
+            
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         
-        return sections[section]
-        
+        if isFiltering {
+            return "검색목록"
+        }
+        else{
+            return sections[section]
+        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-       
-        return 3
-   
+        if isFiltering{
+            return 1
+        }
+        else{
+            return 3
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+    
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
+}
+
+extension FriendsVC : UISearchBarDelegate{
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+      
+        friendsTableView.reloadData()
+        friendsSearchBar.resignFirstResponder()
     }
 }

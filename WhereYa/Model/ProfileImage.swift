@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Profile : Codable{
+struct ProfileImage : Codable{
     var profileImg : String
 }

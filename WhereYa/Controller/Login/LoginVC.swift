@@ -46,9 +46,9 @@ class LoginVC: baseVC{
                 guard let tokenData = tokenData as? Token else { return }
                 print("success")
                 
-                UserDefaults.standard.setValue(tokenData.jwt, forKey: "token")
-                UserDefaults.standard.setValue(tokenData.nickname, forKey: "user_nickname")
-                UserDefaults.standard.setValue(self.idTextField.text, forKey: "user_id")
+                UserDefaults.standard.setValue(tokenData.jwt, forKey: UserKey.TOKEN)
+                UserDefaults.standard.setValue(tokenData.nickname, forKey: UserKey.NICKNAME)
+                UserDefaults.standard.setValue(self.idTextField.text, forKey: UserKey.ID)
                 
                 let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
                 let basetabbarVC = storyboard.instantiateViewController(identifier:"BaseTabbarVC")  as! BaseTabbarVC

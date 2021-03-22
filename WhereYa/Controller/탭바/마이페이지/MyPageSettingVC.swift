@@ -17,7 +17,6 @@ class MyPageSettingVC: UIViewController {
         super.viewDidLoad()
         
         alarmAgreeSwitch.onTintColor = UIColor.subpink
-        
         locationAgreeSwitch.onTintColor = UIColor.subpink
         // Do any additional setup after loading the view.
     }
