@@ -6,10 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class FriendsVC: UIViewController {
    
-    let user = UserDefaults.standard
     let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
     
@@ -25,6 +25,8 @@ class FriendsVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        getFriendsList()
         
         friendsTableView.delegate = self
         friendsTableView.dataSource = self
@@ -34,14 +36,27 @@ class FriendsVC: UIViewController {
         friendsSearchBar.placeholder = "친구 닉네임 검색"
         //friendsTableView.cellLayoutMarginsFollowReadableWidth = false
         //friendsTableView.separatorInset.left = 0
-        
-        loadList()
-        
+  
         friendsTableView.register(UINib(nibName: "FriendsMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        loadMyProfile()
+    }
+    
+    func loadMyProfile(){
+        myProfile.removeAll()
+        
+        guard let myImage = UserDefaults.standard.string(forKey: UserKey.IMAGE) else {return }
+        let myNickname = UserDefaults.standard.string(forKey: UserKey.NICKNAME)
+
+        let mine = Friend(profileImg : myImage, nickname: myNickname ?? "", star: false)
+        myProfile.append(mine)
+
+        self.friendsTableView.reloadData()
+    }
+    
+    func getFriendsList(){
         ProfileService.shared.getFriendsList { data in
             switch data{
             case .success(let friendData) :
@@ -73,14 +88,6 @@ class FriendsVC: UIViewController {
         }
     }
     
-    func loadList(){
-        guard let myImage = user.string(forKey: UserKey.IMAGE) else {return }
-        let myNickname = user.string(forKey: UserKey.NICKNAME)
-        let mine = Friend(profileImg : myImage, nickname: myNickname ?? "", star: false)
-        myProfile.append(mine)
-        print(mine)
-    }
-    
     // MARK: - Navigation
 
 }
@@ -97,10 +104,9 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
             case 0:
                 return self.myProfile.count
             case 1:
-                
+                print(Bookmark_Friends.count)
                 return self.Bookmark_Friends.count
             case 2:
-                
                 return self.Normal_Friends.count
                 
             default:
@@ -117,34 +123,33 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell
         
         var nick : String?
-        var img : String?
+        var img : URL?
         
         if isFiltering {
             cell.profileNickname.text = filterList[indexPath.row].nickname
         }
         else{
             if indexPath.section == 0{
-                img = self.myProfile[indexPath.row].profileImg
+                if let imageString = self.myProfile[indexPath.row].profileImg ,let image = URL(string: imageString){
+                    img = image
+                }
                 nick = self.myProfile[indexPath.row].nickname
             }
             else if indexPath.section == 1{
-                img = self.Bookmark_Friends[indexPath.row].profileImg
+                if let imageString = self.Bookmark_Friends[indexPath.row].profileImg ,let image = URL(string: imageString){
+                    img = image
+                }
                 nick = self.Bookmark_Friends[indexPath.row].nickname
             }
             else{
-                img = self.Normal_Friends[indexPath.row].profileImg
+                if let imageString = self.Normal_Friends[indexPath.row].profileImg ,let image = URL(string: imageString){
+                    img = image
+                }
                 nick = self.Normal_Friends[indexPath.row].nickname
             }
             
-            if let url = URL(string: img ?? "https://gogoeverybodyy.s3.ap-northeast-2.amazonaws.com/static/8E5176DA-9CB1-4B21-9B62-EE7FDB289549.jpeg"){
-                do{
-                    let urldata = try Data(contentsOf: url)
-                    cell.profileImage.image = UIImage(data: urldata)
-                }catch{
-                    print("data error")
-                    print(error)
-                }
-            }
+            cell.profileImage.kf.indicatorType = .activity
+            cell.profileImage.kf.setImage(with: img)
             cell.profileNickname.text = nick
             
         }

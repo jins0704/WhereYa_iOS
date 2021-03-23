@@ -44,6 +44,8 @@ class MyPageVC: UIViewController {
                         let urldata = try Data(contentsOf: url)
                         self.profileImage.image = UIImage(data: urldata)
                         UserDefaults.standard.setValue(imgurl, forKey: UserKey.IMAGE)
+                        print("겟")
+                        print(UserDefaults.standard.string(forKey: UserKey.IMAGE))
                     }catch{
                         print("data error")
                         print(error)
@@ -105,34 +107,6 @@ class MyPageVC: UIViewController {
         profileImageBtn.layer.borderColor = UIColor.black.cgColor
         
     }
-    
-    func myImageString() -> String{
-        var myImageString : String = ""
-        
-        ProfileService.shared.getImage { (data) in
-            ActivityIndicator.shared.activityIndicator.stopAnimating()
-            
-            switch data{
-            case .success(let imgurl) :
-                guard let imgurl = imgurl as? String else { return }
-                myImageString = imgurl
-                print("success")
-                
-            case .requestErr(let message):
-                print(message)
-                return
-            case .serverErr:
-                print("serverErr")
-                return
-                
-            case .networkFail:
-                print("networkFail")
-                return
-            }
-        }
-        print("image changed and saved")
-        return myImageString
-    }
 }
 
 extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
@@ -147,10 +121,12 @@ extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDeleg
                 ActivityIndicator.shared.activityIndicator.stopAnimating()
 
                 switch data{
-                case .success(_) :
+                case .success(let imgurl) :
+                    guard let imgurl = imgurl as? String else { return }
+                    UserDefaults.standard.setValue(imgurl, forKey: UserKey.IMAGE)
+           
                     self.profileImage.image = myimage
-                    UserDefaults.standard.setValue(self.myImageString(), forKey: UserKey.IMAGE)
-                    print("image변경")
+             
                 case .requestErr(let message):
                     print(message)
                     return
