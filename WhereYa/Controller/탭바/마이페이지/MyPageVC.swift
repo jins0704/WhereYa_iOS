@@ -44,8 +44,6 @@ class MyPageVC: UIViewController {
                         let urldata = try Data(contentsOf: url)
                         self.profileImage.image = UIImage(data: urldata)
                         UserDefaults.standard.setValue(imgurl, forKey: UserKey.IMAGE)
-                        print("겟")
-                        print(UserDefaults.standard.string(forKey: UserKey.IMAGE))
                     }catch{
                         print("data error")
                         print(error)

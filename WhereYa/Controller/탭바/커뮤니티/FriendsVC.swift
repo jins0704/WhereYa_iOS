@@ -12,7 +12,7 @@ class FriendsVC: UIViewController {
    
     let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
-    
+    private var AllList : [Friend] = []
     private var filterList : [Friend] = []
     private var myProfile : [Friend] = []
     private var Bookmark_Friends: [Friend] = []
@@ -62,6 +62,7 @@ class FriendsVC: UIViewController {
             case .success(let friendData) :
                 guard let friendData = friendData as? [Friend] else { return }
                 for friend in friendData{
+                    self.AllList.append(friend)
                     if friend.star == false{
                         self.Normal_Friends.append(friend)
                     }
@@ -175,9 +176,7 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-    
-    }
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
     }
@@ -188,5 +187,33 @@ extension FriendsVC : UISearchBarDelegate{
       
         friendsTableView.reloadData()
         friendsSearchBar.resignFirstResponder()
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if let searchtext = self.friendsSearchBar.text{
+            if searchtext.count == 0{
+                isFiltering = false
+            }
+            else{
+                isFiltering = true
+                
+                //let predicate = NSPredicate(format: "title Contains[cd] %@", searchbar.text!)
+                        //let request : NSFetchRequest<TodoItem> = TodoItem.fetchRequest()
+                        //request.predicate = predicate
+                        //let descriptor = NSSortDescriptor(key: "title", ascending: true)
+                        //request.sortDescriptors = [descriptor]
+                        
+                filterList = []
+                for friend in AllList{
+                    if let nickname = friend.nickname{
+                        if nickname.contains(searchText){
+                            filterList.append(friend)
+                        }
+                    }
+                }
+            
+                self.friendsTableView.reloadData()
+            }
+        }
     }
 }

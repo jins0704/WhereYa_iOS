@@ -221,21 +221,21 @@
 			children = (
 				4FD2DC4E25F2471800678B9B /* BaseTabbarVC.swift */,
 				4FF918FC25E8FC200096FC26 /* Home */,
-				4FD8322D25F7B91F00D8A214 /* 커뮤니티 */,
+				4FD8322D25F7B91F00D8A214 /* FreiendList */,
 				4F5564E42601DFF200806E8D /* MyPage */,
 			);
 			name = Tabbar;
 			path = "탭바";
 			sourceTree = "<group>";
 		};
-		4FD8322D25F7B91F00D8A214 /* 커뮤니티 */ = {
+		4FD8322D25F7B91F00D8A214 /* FreiendList */ = {
 			isa = PBXGroup;
 			children = (
 				4FD8322E25F7B95D00D8A214 /* FriendsVC.swift */,
 				4FD8328225FBE3A000D8A214 /* FriendsMainTableViewCell.swift */,
 				4FD8328325FBE3A000D8A214 /* FriendsMainTableViewCell.xib */,
 			);
-			name = "커뮤니티";
+			name = FreiendList;
 			path = "커뮤니티";
 			sourceTree = "<group>";
 		};
