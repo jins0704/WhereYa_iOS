@@ -25,4 +25,6 @@ struct APIConstants{
     
     //친구목록 조회
     static let friendsListURL = APIConstants.BASE_URL + "/friend"
+    //친구목록 추가
+    static let addFriendURL = APIConstants.BASE_URL + "/friend/"
 }

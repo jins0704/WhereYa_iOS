@@ -57,7 +57,7 @@ class FriendsVC: UIViewController {
     }
     
     func getFriendsList(){
-        ProfileService.shared.getFriendsList { data in
+        FriendService.shared.getFriendsList { data in
             switch data{
             case .success(let friendData) :
                 guard let friendData = friendData as? [Friend] else { return }
@@ -89,9 +89,51 @@ class FriendsVC: UIViewController {
         }
     }
     
-    // MARK: - Navigation
-
+    // MARK: - IBAction
+    @IBAction func addFriend(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "친구 추가", message: "친구의 닉네임을 입력하세요", preferredStyle: .alert)
+        
+        let insertBtn = UIAlertAction(title: "확인", style: .default) { (insert) in
+            if let nickname = alert.textFields?[0].text{
+                FriendService.shared.addFriend(friendNickname: nickname) { (data) in
+                    
+                    ActivityIndicator.shared.activityIndicator.stopAnimating()
+                    
+                    switch data{
+                    
+                    case .success(let nickname) :
+                        print(nickname)
+                        
+                    case .requestErr(let message):
+                        print(message)
+                        return
+                        
+                    case .serverErr:
+                        print("serverErr")
+                        return
+                        
+                    case .networkFail:
+                        print("networkFail")
+                        return
+                        
+                    }
+                }
+            }
+        }
+        
+        let cancelBtn = UIAlertAction(title: "취소", style: .cancel) { (cancel) in
+        }
+        
+        alert.addTextField()
+        alert.addAction(insertBtn)
+        alert.addAction(cancelBtn)
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }
+
+// MARK: - TableViewDelegate, TableViewDataSource
 extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,7 +158,6 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
                 
             }
         }
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -182,6 +223,7 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
+// MARK: - SearchBarDelegate
 extension FriendsVC : UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
       
@@ -211,9 +253,8 @@ extension FriendsVC : UISearchBarDelegate{
                         }
                     }
                 }
-            
-                self.friendsTableView.reloadData()
             }
+            self.friendsTableView.reloadData()
         }
     }
 }

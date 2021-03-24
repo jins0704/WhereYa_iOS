@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		19E8D14FB76DF0C5A15C3C11 /* Pods_WhereYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAB4146BCC0F8AB2762B95B /* Pods_WhereYa.framework */; };
+		4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52B7260B5E020084C549 /* FriendService.swift */; };
+		4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */; };
 		4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564C62600F0AD00806E8D /* 16315-map.json */; };
 		4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D326010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png */; };
 		4F5564DA26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D426010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png */; };
@@ -19,7 +21,7 @@
 		4F5564E9260212B300806E8D /* MyPageSettingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564E8260212B300806E8D /* MyPageSettingVC.swift */; };
 		4F5564EE260225B000806E8D /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564ED260225B000806E8D /* ProfileService.swift */; };
 		4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */; };
-		4F5564FA2603431800806E8D /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* ProfileImage.swift */; };
+		4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* ResponseProfileImage.swift */; };
 		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
@@ -40,15 +42,17 @@
 		4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B025E62A2A0096FC26 /* NetworkResult.swift */; };
 		4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B425E62BCC0096FC26 /* LoginService.swift */; };
 		4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B725E62F500096FC26 /* APIConstants.swift */; };
-		4FF918BC25E6450E0096FC26 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918BB25E6450E0096FC26 /* Token.swift */; };
+		4FF918BC25E6450E0096FC26 /* ResponseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918BB25E6450E0096FC26 /* ResponseToken.swift */; };
 		4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918C825E6BA970096FC26 /* SignUpService.swift */; };
 		4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF918D825E81D270096FC26 /* DatePopUp.storyboard */; };
 		4FF918E225E81D7E0096FC26 /* DataPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918E125E81D7E0096FC26 /* DataPopUpVC.swift */; };
 		4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF918F625E8FB630096FC26 /* TabbarVC.storyboard */; };
-		4FF9190325E900660096FC26 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9190225E900660096FC26 /* User.swift */; };
+		4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9190225E900660096FC26 /* ResponseUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F3A52B7260B5E020084C549 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
+		4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFriendNickname.swift; sourceTree = "<group>"; };
 		4F5564A02600E78700806E8D /* AppleSDGothicNeoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB.ttf; sourceTree = "<group>"; };
 		4F5564A12600E78700806E8D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		4F5564A22600E78700806E8D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -68,7 +72,7 @@
 		4F5564E8260212B300806E8D /* MyPageSettingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageSettingVC.swift; sourceTree = "<group>"; };
 		4F5564ED260225B000806E8D /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileService.swift; path = ../../../../Downloads/ProfileService.swift; sourceTree = "<group>"; };
 		4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-18 오전 3.06.02.png"; sourceTree = "<group>"; };
-		4F5564F92603431800806E8D /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		4F5564F92603431800806E8D /* ResponseProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProfileImage.swift; sourceTree = "<group>"; };
 		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
@@ -91,12 +95,12 @@
 		4FF918B025E62A2A0096FC26 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4FF918B425E62BCC0096FC26 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		4FF918B725E62F500096FC26 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
-		4FF918BB25E6450E0096FC26 /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		4FF918BB25E6450E0096FC26 /* ResponseToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseToken.swift; sourceTree = "<group>"; };
 		4FF918C825E6BA970096FC26 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		4FF918D825E81D270096FC26 /* DatePopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePopUp.storyboard; sourceTree = "<group>"; };
 		4FF918E125E81D7E0096FC26 /* DataPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPopUpVC.swift; sourceTree = "<group>"; };
 		4FF918F625E8FB630096FC26 /* TabbarVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabbarVC.storyboard; sourceTree = "<group>"; };
-		4FF9190225E900660096FC26 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4FF9190225E900660096FC26 /* ResponseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUser.swift; sourceTree = "<group>"; };
 		7CAB4146BCC0F8AB2762B95B /* Pods_WhereYa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereYa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FFFD94B7A3694862AE0A199 /* Pods-WhereYa.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereYa.debug.xcconfig"; path = "Target Support Files/Pods-WhereYa/Pods-WhereYa.debug.xcconfig"; sourceTree = "<group>"; };
 		906A0BCDEF2B3B391B528F96 /* Pods-WhereYa.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhereYa.release.xcconfig"; path = "Target Support Files/Pods-WhereYa/Pods-WhereYa.release.xcconfig"; sourceTree = "<group>"; };
@@ -272,6 +276,7 @@
 				4FF918C825E6BA970096FC26 /* SignUpService.swift */,
 				4F5564ED260225B000806E8D /* ProfileService.swift */,
 				4F5564FF260388BD00806E8D /* NetworkInfo.swift */,
+				4F3A52B7260B5E020084C549 /* FriendService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -279,12 +284,13 @@
 		4FF918BA25E644F30096FC26 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4FF918BB25E6450E0096FC26 /* Token.swift */,
-				4FF9190225E900660096FC26 /* User.swift */,
+				4FF918BB25E6450E0096FC26 /* ResponseToken.swift */,
+				4FF9190225E900660096FC26 /* ResponseUser.swift */,
 				4FD2DC2D25EFAD4100678B9B /* ActivityIndicator.swift */,
-				4F5564F92603431800806E8D /* ProfileImage.swift */,
+				4F5564F92603431800806E8D /* ResponseProfileImage.swift */,
 				4FF06D4B26089B3A00327E80 /* UserKey.swift */,
 				4FF06D5226089CAD00327E80 /* Friend.swift */,
+				4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -462,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
 				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
@@ -471,20 +478,21 @@
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
-				4FF9190325E900660096FC26 /* User.swift in Sources */,
+				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
-				4F5564FA2603431800806E8D /* ProfileImage.swift in Sources */,
+				4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
 				4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */,
 				4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */,
 				4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */,
+				4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */,
 				4FF918E225E81D7E0096FC26 /* DataPopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4FD8328425FBE3A000D8A214 /* FriendsMainTableViewCell.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
 				4F5564EE260225B000806E8D /* ProfileService.swift in Sources */,
-				4FF918BC25E6450E0096FC26 /* Token.swift in Sources */,
+				4FF918BC25E6450E0096FC26 /* ResponseToken.swift in Sources */,
 				4FF06D5326089CAD00327E80 /* Friend.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
