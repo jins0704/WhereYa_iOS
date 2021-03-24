@@ -57,12 +57,20 @@ class FriendsVC: UIViewController {
     }
     
     func getFriendsList(){
+ 
+        Normal_Friends.removeAll()
+        Bookmark_Friends.removeAll()
+        AllList.removeAll()
+        
         FriendService.shared.getFriendsList { data in
             switch data{
             case .success(let friendData) :
+                
                 guard let friendData = friendData as? [Friend] else { return }
+                
                 for friend in friendData{
                     self.AllList.append(friend)
+                    
                     if friend.star == false{
                         self.Normal_Friends.append(friend)
                     }
@@ -72,6 +80,7 @@ class FriendsVC: UIViewController {
                 }
                
                 DispatchQueue.main.async {
+                    
                     self.friendsTableView.reloadData()
                 }
                 
@@ -96,13 +105,15 @@ class FriendsVC: UIViewController {
         let insertBtn = UIAlertAction(title: "확인", style: .default) { (insert) in
             if let nickname = alert.textFields?[0].text{
                 FriendService.shared.addFriend(friendNickname: nickname) { (data) in
-                    
+                    print("왓습니다")
+                    print(data)
                     ActivityIndicator.shared.activityIndicator.stopAnimating()
                     
                     switch data{
                     
-                    case .success(let nickname) :
-                        print(nickname)
+                    case .success(let message) :
+                        self.getFriendsList()
+                        print(message)
                         
                     case .requestErr(let message):
                         print(message)
@@ -147,7 +158,6 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
             case 0:
                 return self.myProfile.count
             case 1:
-                print(Bookmark_Friends.count)
                 return self.Bookmark_Friends.count
             case 2:
                 return self.Normal_Friends.count
@@ -164,37 +174,35 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell
         
-        var nick : String?
         var img : URL?
+        var usingArray : [Friend] = []
         
         if isFiltering {
-            cell.profileNickname.text = filterList[indexPath.row].nickname
+            if let imageString = self.AllList[indexPath.row].profileImg ,let image = URL(string: imageString){
+                img = image
+            }
+            
+            cell.profileNickname.text = self.filterList[indexPath.row].nickname
         }
         else{
-            if indexPath.section == 0{
-                if let imageString = self.myProfile[indexPath.row].profileImg ,let image = URL(string: imageString){
-                    img = image
-                }
-                nick = self.myProfile[indexPath.row].nickname
+            switch indexPath.section{
+            case 0 :
+                usingArray = self.myProfile
+            case 1 :
+                usingArray = self.Bookmark_Friends
+            case 2 :
+                usingArray = self.Normal_Friends
+            default: break
             }
-            else if indexPath.section == 1{
-                if let imageString = self.Bookmark_Friends[indexPath.row].profileImg ,let image = URL(string: imageString){
-                    img = image
-                }
-                nick = self.Bookmark_Friends[indexPath.row].nickname
+            if let imageString = usingArray[indexPath.row].profileImg ,let image = URL(string: imageString){
+                img = image
             }
-            else{
-                if let imageString = self.Normal_Friends[indexPath.row].profileImg ,let image = URL(string: imageString){
-                    img = image
-                }
-                nick = self.Normal_Friends[indexPath.row].nickname
-            }
-            
-            cell.profileImage.kf.indicatorType = .activity
-            cell.profileImage.kf.setImage(with: img)
-            cell.profileNickname.text = nick
-            
+            cell.profileNickname.text = usingArray[indexPath.row].nickname
         }
+        
+        cell.profileImage.kf.indicatorType = .activity
+        cell.profileImage.kf.setImage(with: img)
+        
         return cell
     }
     

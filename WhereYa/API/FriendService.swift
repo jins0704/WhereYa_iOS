@@ -53,11 +53,16 @@ struct FriendService{
         }
     }
     
+//    private func makeParameter(_ friendNickName : String) -> Parameters {
+//        return ["friendNickname": friendNickName]
+//    }
+
     func addFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
         let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
                                    NetworkHeaderKey.auth.rawValue: token.auth]
-        let url : String = APIConstants.addFriendURL + "{" + friendNickname + "}"
+        let url : String = APIConstants.addFriendURL + friendNickname
+        print(url)
         let dataRequest = AF.request(url,
                                      method: .post,
                                      encoding: JSONEncoding.default,
@@ -68,19 +73,12 @@ struct FriendService{
             //네트워크 성공시
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
-                guard let value =  response.value else{return}
                 
                 print(statusCode)
-                
+                print("코드왓다")
                 if statusCode <= 300{
-
-                    let decoder = JSONDecoder()
-                    
-                    guard let decodedData = try? decoder.decode(ResponseFriendNickname.self, from: value) else {return}
-                    
-                    let nickname : String = decodedData.nickname
-                    
-                    completion(.success(nickname))
+           
+                    completion(.success("success"))
                 }
                 else{
                     completion(.requestErr("bad request"))
