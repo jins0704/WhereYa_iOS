@@ -53,7 +53,7 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
         //팝업 스토리보드 가져오기
         let storyboard = UIStoryboard.init(name: "DatePopUp", bundle: nil)
         //스토리보드 통해 팝업 컨트롤러 가져오기
-        let popUpVC = storyboard.instantiateViewController(identifier: "PopUpVC") as! DataPopUpVC
+        let popUpVC = storyboard.instantiateViewController(identifier: "DatePopUpVC") as! DatePopUpVC
         //팝업 효과 스타일 설정
         popUpVC.modalPresentationStyle = .overCurrentContext //덮어 보여주는 스타일
         popUpVC.modalTransitionStyle = .crossDissolve //스르르 사라지는 스타일

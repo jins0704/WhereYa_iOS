@@ -174,6 +174,8 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell
         
+        cell.selectionStyle = .none
+        
         var img : URL?
         var usingArray : [Friend] = []
         
@@ -228,6 +230,22 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if !isFiltering && indexPath.section != 0{
+            
+            let storyboard = UIStoryboard.init(name: "FriendSettingPopUp", bundle: nil)
+           
+            let popUpVC = storyboard.instantiateViewController(identifier: "FriendSettingPopUpVC") as! FriendSettingPopUpVC
+           
+            popUpVC.modalPresentationStyle = .overCurrentContext
+            popUpVC.modalTransitionStyle = .crossDissolve
+            
+            self.present(popUpVC, animated: true) {
+            }
+        }
     }
 }
 

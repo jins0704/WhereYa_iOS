@@ -16,7 +16,7 @@
         <!--Data Pop UpVC-->
         <scene sceneID="jfl-ex-M9Y">
             <objects>
-                <viewController storyboardIdentifier="PopUpVC" id="n8R-K5-Evy" customClass="DataPopUpVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DatePopUpVC" id="n8R-K5-Evy" customClass="DataPopUpVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zW8-xX-pdZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -23,6 +23,8 @@
 		4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */; };
 		4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* ResponseProfileImage.swift */; };
 		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
+		4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */; };
+		4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -45,7 +47,7 @@
 		4FF918BC25E6450E0096FC26 /* ResponseToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918BB25E6450E0096FC26 /* ResponseToken.swift */; };
 		4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918C825E6BA970096FC26 /* SignUpService.swift */; };
 		4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF918D825E81D270096FC26 /* DatePopUp.storyboard */; };
-		4FF918E225E81D7E0096FC26 /* DataPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918E125E81D7E0096FC26 /* DataPopUpVC.swift */; };
+		4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918E125E81D7E0096FC26 /* DatePopUpVC.swift */; };
 		4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF918F625E8FB630096FC26 /* TabbarVC.storyboard */; };
 		4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF9190225E900660096FC26 /* ResponseUser.swift */; };
 /* End PBXBuildFile section */
@@ -74,6 +76,8 @@
 		4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-18 오전 3.06.02.png"; sourceTree = "<group>"; };
 		4F5564F92603431800806E8D /* ResponseProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProfileImage.swift; sourceTree = "<group>"; };
 		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendSettingPopUp.storyboard; sourceTree = "<group>"; };
+		4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingPopUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +102,7 @@
 		4FF918BB25E6450E0096FC26 /* ResponseToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseToken.swift; sourceTree = "<group>"; };
 		4FF918C825E6BA970096FC26 /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
 		4FF918D825E81D270096FC26 /* DatePopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DatePopUp.storyboard; sourceTree = "<group>"; };
-		4FF918E125E81D7E0096FC26 /* DataPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPopUpVC.swift; sourceTree = "<group>"; };
+		4FF918E125E81D7E0096FC26 /* DatePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopUpVC.swift; sourceTree = "<group>"; };
 		4FF918F625E8FB630096FC26 /* TabbarVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabbarVC.storyboard; sourceTree = "<group>"; };
 		4FF9190225E900660096FC26 /* ResponseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseUser.swift; sourceTree = "<group>"; };
 		7CAB4146BCC0F8AB2762B95B /* Pods_WhereYa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhereYa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -205,6 +209,7 @@
 				4FAB951A25C7D4A000148446 /* Main.storyboard */,
 				4FF918D825E81D270096FC26 /* DatePopUp.storyboard */,
 				4FF918F625E8FB630096FC26 /* TabbarVC.storyboard */,
+				4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				4FD8322E25F7B95D00D8A214 /* FriendsVC.swift */,
 				4FD8328225FBE3A000D8A214 /* FriendsMainTableViewCell.swift */,
 				4FD8328325FBE3A000D8A214 /* FriendsMainTableViewCell.xib */,
+				4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */,
 			);
 			name = FreiendList;
 			path = "커뮤니티";
@@ -320,7 +326,7 @@
 				4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */,
 				4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */,
 				4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */,
-				4FF918E125E81D7E0096FC26 /* DataPopUpVC.swift */,
+				4FF918E125E81D7E0096FC26 /* DatePopUpVC.swift */,
 			);
 			name = SignUp;
 			path = "회원가입,로그인";
@@ -407,6 +413,7 @@
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
 				4FD8328525FBE3A000D8A214 /* FriendsMainTableViewCell.xib in Resources */,
 				4FAB951E25C7D4A400148446 /* Assets.xcassets in Resources */,
+				4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
 				4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */,
@@ -480,13 +487,14 @@
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
+				4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */,
 				4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
 				4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */,
 				4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */,
 				4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */,
 				4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */,
-				4FF918E225E81D7E0096FC26 /* DataPopUpVC.swift in Sources */,
+				4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4FD8328425FBE3A000D8A214 /* FriendsMainTableViewCell.swift in Sources */,

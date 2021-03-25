@@ -11,7 +11,7 @@ protocol PopUpDelegate{
     func doneBtnClicked(data : String)
 }
 
-class DataPopUpVC: baseVC {
+class DatePopUpVC: baseVC {
 
     var popupDelegate : PopUpDelegate?
     var birthdate : String?
