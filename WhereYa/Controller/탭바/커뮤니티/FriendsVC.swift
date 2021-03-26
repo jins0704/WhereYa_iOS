@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class FriendsVC: UIViewController {
+class FriendsVC: UIViewController, PopUpDelegate {
    
     let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
@@ -97,7 +97,12 @@ class FriendsVC: UIViewController {
             }
         }
     }
-    
+    // MARK: - popupdelegate
+    func doneBtnClicked(data: String) {
+        if data == "okay"{
+            getFriendsList()
+        }
+    }
     // MARK: - IBAction
     @IBAction func addFriend(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "친구 추가", message: "친구의 닉네임을 입력하세요", preferredStyle: .alert)
@@ -105,7 +110,6 @@ class FriendsVC: UIViewController {
         let insertBtn = UIAlertAction(title: "확인", style: .default) { (insert) in
             if let nickname = alert.textFields?[0].text{
                 FriendService.shared.addFriend(friendNickname: nickname) { (data) in
-                    print("왓습니다")
                     print(data)
                     ActivityIndicator.shared.activityIndicator.stopAnimating()
                     
@@ -141,7 +145,6 @@ class FriendsVC: UIViewController {
         
         self.present(alert, animated: true, completion: nil)
     }
-    
 }
 
 // MARK: - TableViewDelegate, TableViewDataSource
@@ -234,6 +237,17 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        var usingArray : [Friend] = []
+        switch indexPath.section{
+        case 0 :
+            usingArray = self.myProfile
+        case 1 :
+            usingArray = self.Bookmark_Friends
+        case 2 :
+            usingArray = self.Normal_Friends
+        default: break
+        }
+        
         if !isFiltering && indexPath.section != 0{
             
             let storyboard = UIStoryboard.init(name: "FriendSettingPopUp", bundle: nil)
@@ -242,6 +256,18 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
            
             popUpVC.modalPresentationStyle = .overCurrentContext
             popUpVC.modalTransitionStyle = .crossDissolve
+            
+            popUpVC.popupDelegate = self
+            
+            if let fNickname = usingArray[indexPath.row].nickname{
+                popUpVC.detailNickname = fNickname
+            }
+            if let fImg = usingArray[indexPath.row].profileImg{
+                popUpVC.detailImg = fImg
+            }
+            if let fStar = usingArray[indexPath.row].star{
+                popUpVC.detailStar = fStar
+            }
             
             self.present(popUpVC, animated: true) {
             }

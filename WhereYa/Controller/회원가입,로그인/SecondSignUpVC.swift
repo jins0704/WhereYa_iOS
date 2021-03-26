@@ -171,6 +171,9 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
         
     }
     
+    func sendDetailProfile(friend: Friend) {}
+    
+    
     // MARK: - TextFieldDelegate
     override func textFieldDidChangeSelection(_ textField: UITextField) {
         
@@ -238,5 +241,4 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
         
         self.view.endEditing(true)
     }
-
 }

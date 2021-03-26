@@ -25,6 +25,7 @@
 		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
 		4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */; };
 		4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */; };
+		4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948AD9260DD4ED004BC1A9 /* Protocol.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -78,6 +79,7 @@
 		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendSettingPopUp.storyboard; sourceTree = "<group>"; };
 		4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingPopUpVC.swift; sourceTree = "<group>"; };
+		4F948AD9260DD4ED004BC1A9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +223,7 @@
 				4F5564EB260217B400806E8D /* Login */,
 				4FF918F925E8FBF30096FC26 /* SignUp */,
 				4FD8322C25F7B90B00D8A214 /* Tabbar */,
+				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */,
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,

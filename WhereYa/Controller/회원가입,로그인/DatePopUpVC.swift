@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol PopUpDelegate{
-    func doneBtnClicked(data : String)
-}
-
 class DatePopUpVC: baseVC {
 
     var popupDelegate : PopUpDelegate?

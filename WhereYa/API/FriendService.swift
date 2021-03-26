@@ -62,7 +62,7 @@ struct FriendService{
         let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
                                    NetworkHeaderKey.auth.rawValue: token.auth]
         let url : String = APIConstants.addFriendURL + friendNickname
-        print(url)
+    
         let dataRequest = AF.request(url,
                                      method: .post,
                                      encoding: JSONEncoding.default,
@@ -75,7 +75,40 @@ struct FriendService{
                 guard let statusCode =  response.response?.statusCode else { return }
                 
                 print(statusCode)
-                print("코드왓다")
+    
+                if statusCode <= 300{
+           
+                    completion(.success("success"))
+                }
+                else{
+                    completion(.requestErr("bad request"))
+                }
+                
+            //네트워크 실패
+            case .failure: completion(.networkFail)
+    
+            }
+        }
+    }
+    
+    func removeFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
+        
+        let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
+                                   NetworkHeaderKey.auth.rawValue: token.auth]
+        let url : String = APIConstants.addFriendURL + friendNickname
+        let dataRequest = AF.request(url,
+                                     method: .delete,
+                                     encoding: JSONEncoding.default,
+                                     headers: header).validate(statusCode: 200...500)
+        
+        dataRequest.responseData { response in
+            switch response.result{
+            //네트워크 성공시
+            case .success :
+                guard let statusCode =  response.response?.statusCode else { return }
+                
+                print(statusCode)
+        
                 if statusCode <= 300{
            
                     completion(.success("success"))
