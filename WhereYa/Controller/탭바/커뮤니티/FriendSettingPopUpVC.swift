@@ -75,6 +75,30 @@ class FriendSettingPopUpVC: UIViewController{
         print(isStarClicked)
         animated(btn: starBtn, state : isStarClicked, imageName : "star", color:  UIColor.mainBlueColor)
         
+        FriendService.shared.bookmarkFriend(friendNickname: self.nicknameLabel.text!) { (data) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch data{
+            
+            case .success( _) :
+                let okay = "okay"
+                self.popupDelegate?.doneBtnClicked(data: okay)
+                
+            case .requestErr(let message):
+                print(message)
+                return
+                
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+                
+            }
+        }
+        
         
         successAlert(message: msg)
     }
@@ -96,6 +120,7 @@ class FriendSettingPopUpVC: UIViewController{
             
             case .success( _) :
                 let okay = "okay"
+                print("변경 완료")
                 self.popupDelegate?.doneBtnClicked(data: okay)
                 
             case .requestErr(let message):
@@ -109,7 +134,6 @@ class FriendSettingPopUpVC: UIViewController{
             case .networkFail:
                 print("networkFail")
                 return
-                
             }
         }
 

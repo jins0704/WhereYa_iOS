@@ -36,8 +36,6 @@ struct LoginService {
                 print(statusCode)
                 
                 if statusCode <= 300{
-                    //guard let token = response.response?.headers["Autorization"] else{return}
-                    
                     let decoder = JSONDecoder()
                     
                     guard let decodedData = try? decoder.decode(Token.self, from: value) else {return}
@@ -48,13 +46,10 @@ struct LoginService {
                     
                     completion(.success(tokenData))
                 }
-                else{
-                    completion(.requestErr("bad request"))
-                }
+                else{completion(.requestErr("bad request"))}
                 
             //네트워크 실패
             case .failure: completion(.networkFail)
-    
             }
         }
     }

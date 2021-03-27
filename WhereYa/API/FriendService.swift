@@ -12,12 +12,11 @@ struct FriendService{
     
     static let shared = FriendService()
     
-    let token = UserDefaults.standard.string(forKey: "token") ?? ""
+    let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
+                               NetworkHeaderKey.auth.rawValue: UserDefaults.standard.string(forKey: "token")?.auth ?? ""]
     
     func getFriendsList(completion: @escaping (NetworkResult<Any>) -> Void){
-        let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
-                                   NetworkHeaderKey.auth.rawValue: token.auth]
-        
+
         let dataRequest = AF.request(APIConstants.friendsListURL,
                                      method: .get,
                                      encoding: JSONEncoding.default,
@@ -52,15 +51,9 @@ struct FriendService{
             }
         }
     }
-    
-//    private func makeParameter(_ friendNickName : String) -> Parameters {
-//        return ["friendNickname": friendNickName]
-//    }
 
     func addFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
-                                   NetworkHeaderKey.auth.rawValue: token.auth]
         let url : String = APIConstants.addFriendURL + friendNickname
     
         let dataRequest = AF.request(url,
@@ -70,21 +63,15 @@ struct FriendService{
         
         dataRequest.responseData { response in
             switch response.result{
-            //네트워크 성공시
+
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
                 
                 print(statusCode)
     
-                if statusCode <= 300{
-           
-                    completion(.success("success"))
-                }
-                else{
-                    completion(.requestErr("bad request"))
-                }
-                
-            //네트워크 실패
+                if statusCode <= 300{  completion(.success("success"))}
+                else{completion(.requestErr("bad request"))}
+ 
             case .failure: completion(.networkFail)
     
             }
@@ -93,8 +80,6 @@ struct FriendService{
     
     func removeFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
-                                   NetworkHeaderKey.auth.rawValue: token.auth]
         let url : String = APIConstants.addFriendURL + friendNickname
         let dataRequest = AF.request(url,
                                      method: .delete,
@@ -102,22 +87,38 @@ struct FriendService{
                                      headers: header).validate(statusCode: 200...500)
         
         dataRequest.responseData { response in
+        
             switch response.result{
-            //네트워크 성공시
+    
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
                 
-                print(statusCode)
-        
-                if statusCode <= 300{
-           
-                    completion(.success("success"))
-                }
-                else{
-                    completion(.requestErr("bad request"))
-                }
+                if statusCode <= 300{completion(.success("success"))}
+                else{completion(.requestErr("bad request"))}
                 
-            //네트워크 실패
+            case .failure: completion(.networkFail)
+    
+            }
+        }
+    }
+    
+    func bookmarkFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
+        
+        let url : String = APIConstants.bookmarkFriendURL + friendNickname
+        let dataRequest = AF.request(url,
+                                     method: .post,
+                                     encoding: JSONEncoding.default,
+                                     headers: header).validate(statusCode: 200...500)
+        
+        dataRequest.responseData { response in
+            switch response.result{
+
+            case .success :
+                guard let statusCode =  response.response?.statusCode else { return }
+                
+                if statusCode <= 300{completion(.success("success"))}
+                else{completion(.requestErr("bad request"))}
+                
             case .failure: completion(.networkFail)
     
             }

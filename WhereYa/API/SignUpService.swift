@@ -25,8 +25,6 @@ struct SignUpService {
     
     let header : HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON]
     
-    //1. 회원가입 완료
-    //  아이디, 비밀번호, 닉네임, 이름, 성별, 생년월일, 전화번호
     func signUp(_ user : User, completion : @escaping(NetworkResult<Any>) -> Void ){
         
         let parameter : Parameters = ["userId" : user.userId ?? "a",
@@ -101,15 +99,9 @@ struct SignUpService {
             //400 사용가능한 아이디, 200 중복아이디
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
-               
-                print(statusCode)
-                
-                if statusCode <= 300{
-                    completion(.success(dataKorean!))
-                }
-                else{
-                    completion(.requestErr(dataKorean!))
-                }
+
+                if statusCode <= 300{completion(.success(dataKorean!))}
+                else{completion(.requestErr(dataKorean!))}
                 
             case .failure : completion(.networkFail)
             }
