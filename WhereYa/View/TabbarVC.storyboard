@@ -80,14 +80,51 @@
         <!--약속-->
         <scene sceneID="cZ9-ne-1tc">
             <objects>
-                <viewController id="OX4-fD-B9z" sceneMemberID="viewController">
+                <viewController id="OX4-fD-B9z" customClass="PromiseMainVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Va-7c-pLF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etr-sU-0ht">
+                                <rect key="frame" x="0.0" y="74" width="414" height="70"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.73333333329999995" blue="0.7843137255" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="GA3-be-2vH"/>
+                                </constraints>
+                                <state key="normal" title="약속 추가하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKj-9j-jYK">
+                                <rect key="frame" x="0.0" y="215" width="414" height="598"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약속목록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lfb-Bt-3Fz">
+                                <rect key="frame" x="0.0" y="174" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vR4-UE-f93"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="vR4-UE-f93" firstAttribute="bottom" secondItem="KKj-9j-jYK" secondAttribute="bottom" id="46v-cJ-DaY"/>
+                            <constraint firstItem="KKj-9j-jYK" firstAttribute="leading" secondItem="vR4-UE-f93" secondAttribute="leading" id="QYD-Me-qJd"/>
+                            <constraint firstItem="KKj-9j-jYK" firstAttribute="top" secondItem="Lfb-Bt-3Fz" secondAttribute="bottom" constant="20" id="Toi-sq-psP"/>
+                            <constraint firstItem="Lfb-Bt-3Fz" firstAttribute="top" secondItem="etr-sU-0ht" secondAttribute="bottom" constant="30" id="bQz-Ps-rMR"/>
+                            <constraint firstItem="Lfb-Bt-3Fz" firstAttribute="leading" secondItem="vR4-UE-f93" secondAttribute="leading" id="fI4-bd-NvT"/>
+                            <constraint firstItem="etr-sU-0ht" firstAttribute="leading" secondItem="vR4-UE-f93" secondAttribute="leading" id="gO0-Oq-BVg"/>
+                            <constraint firstItem="vR4-UE-f93" firstAttribute="trailing" secondItem="KKj-9j-jYK" secondAttribute="trailing" id="pcu-pm-hzU"/>
+                            <constraint firstItem="vR4-UE-f93" firstAttribute="trailing" secondItem="Lfb-Bt-3Fz" secondAttribute="trailing" id="tme-P2-s7A"/>
+                            <constraint firstItem="vR4-UE-f93" firstAttribute="trailing" secondItem="etr-sU-0ht" secondAttribute="trailing" id="xRP-xS-6Gz"/>
+                            <constraint firstItem="etr-sU-0ht" firstAttribute="top" secondItem="vR4-UE-f93" secondAttribute="top" constant="30" id="xVU-l2-HEL"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="약속" image="location.circle" catalog="system" selectedImage="location.circle.fill" id="CGZ-I3-6ZV"/>
+                    <connections>
+                        <outlet property="promiseTableView" destination="KKj-9j-jYK" id="GIm-Sr-Qr4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSt-cW-dfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

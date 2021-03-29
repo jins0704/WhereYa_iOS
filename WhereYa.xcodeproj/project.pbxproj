@@ -23,6 +23,9 @@
 		4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */; };
 		4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* ResponseProfileImage.swift */; };
 		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
+		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
+		4F8643FE26123326009F20A3 /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643FC26123326009F20A3 /* PromiseMainTableViewCell.swift */; };
+		4F8643FF26123326009F20A3 /* PromiseMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8643FD26123326009F20A3 /* PromiseMainTableViewCell.xib */; };
 		4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */; };
 		4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */; };
 		4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948AD9260DD4ED004BC1A9 /* Protocol.swift */; };
@@ -77,6 +80,9 @@
 		4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-18 오전 3.06.02.png"; sourceTree = "<group>"; };
 		4F5564F92603431800806E8D /* ResponseProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProfileImage.swift; sourceTree = "<group>"; };
 		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
+		4F8643FC26123326009F20A3 /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
+		4F8643FD26123326009F20A3 /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendSettingPopUp.storyboard; sourceTree = "<group>"; };
 		4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingPopUpVC.swift; sourceTree = "<group>"; };
 		4F948AD9260DD4ED004BC1A9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -172,6 +178,16 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		4F8643F7261232CA009F20A3 /* Promise */ = {
+			isa = PBXGroup;
+			children = (
+				4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */,
+				4F8643FC26123326009F20A3 /* PromiseMainTableViewCell.swift */,
+				4F8643FD26123326009F20A3 /* PromiseMainTableViewCell.xib */,
+			);
+			path = Promise;
+			sourceTree = "<group>";
+		};
 		4FAB950825C7D4A000148446 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +249,7 @@
 			children = (
 				4FD2DC4E25F2471800678B9B /* BaseTabbarVC.swift */,
 				4FF918FC25E8FC200096FC26 /* Home */,
+				4F8643F7261232CA009F20A3 /* Promise */,
 				4FD8322D25F7B91F00D8A214 /* FreiendList */,
 				4F5564E42601DFF200806E8D /* MyPage */,
 			);
@@ -415,6 +432,7 @@
 				4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */,
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
 				4FD8328525FBE3A000D8A214 /* FriendsMainTableViewCell.xib in Resources */,
+				4F8643FF26123326009F20A3 /* PromiseMainTableViewCell.xib in Resources */,
 				4FAB951E25C7D4A400148446 /* Assets.xcassets in Resources */,
 				4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
@@ -482,11 +500,13 @@
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
+				4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */,
 				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
 				4F5564E9260212B300806E8D /* MyPageSettingVC.swift in Sources */,
 				4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */,
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
+				4F8643FE26123326009F20A3 /* PromiseMainTableViewCell.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
