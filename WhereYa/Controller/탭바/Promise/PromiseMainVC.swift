@@ -25,6 +25,14 @@ class PromiseMainVC: UIViewController {
     }
     
 
+    @IBAction func promiseBtnClicked(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "PromiseMake", bundle: nil)
+        let promiseMakeVC = storyboard.instantiateViewController(identifier:"BasePromiseMakeVC")  as! BasePromiseMakeVC
+
+        promiseMakeVC.modalPresentationStyle = .fullScreen
+        self.present(promiseMakeVC, animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>KAKAO_APP_KEY</key>
+	<string>7199055feaa21b2172ef7de028705074</string>
 	<key>NSCameraUsageDescription</key>
 	<string>카메라 접근을 허용하시겠습니까?</string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
