@@ -11,15 +11,18 @@ public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.576568, longitude: 127.
 class PromiseMapVC: UIViewController, MTMapViewDelegate {
     
     var mapView: MTMapView?
-    
     var mapPoint1: MTMapPoint?
     var poiItem1: MTMapPOIItem?
+    
+    @IBOutlet var mapScreenView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 지도 불러오기
-        mapView = MTMapView(frame: self.view.bounds)
+        let mapPoint = CGPoint(x: 0, y: 0)
+        let mapSize = CGSize(width: mapScreenView.frame.size.width, height: mapScreenView.frame.size.height)
+        mapView = MTMapView(frame: .init(origin: mapPoint, size: mapSize))
         
         if let mapView = mapView {
             mapView.delegate = self
@@ -40,10 +43,10 @@ class PromiseMapVC: UIViewController, MTMapViewDelegate {
             poiItem1?.itemName = "아무데나 찍어봄"
             mapView.add(poiItem1)
             
-//            mapView.addPOIItems([poiItem1,poiItem2]
-//            mapView.fitAreaToShowAllPOIItems()
+            //            mapView.addPOIItems([poiItem1,poiItem2]
+            //            mapView.fitAreaToShowAllPOIItems()
             
-            self.view.addSubview(mapView)
+            self.mapScreenView.addSubview(mapView)
         }
         
     }

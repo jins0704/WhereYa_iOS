@@ -65,6 +65,10 @@
 		4F8644B82614D951009F20A3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8644AE2614D63A009F20A3 /* libsqlite3.tbd */; };
 		4F8644BB2614D961009F20A3 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8644BA2614D961009F20A3 /* Metal.framework */; };
 		4F8644E22614E01E009F20A3 /* PromiseMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */; };
+		4F8644E62614E68D009F20A3 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E52614E68D009F20A3 /* Place.swift */; };
+		4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E92614EEE9009F20A3 /* PlaceService.swift */; };
+		4F8644EE2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */; };
+		4F8644EF2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8644ED2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib */; };
 		4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */; };
 		4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */; };
 		4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948AD9260DD4ED004BC1A9 /* Protocol.swift */; };
@@ -207,6 +211,10 @@
 		4F8644B02614D6E3009F20A3 /* WhereYa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereYa-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F8644BA2614D961009F20A3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMapVC.swift; sourceTree = "<group>"; };
+		4F8644E52614E68D009F20A3 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		4F8644E92614EEE9009F20A3 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
+		4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchTableViewCell.swift; sourceTree = "<group>"; };
+		4F8644ED2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceSearchTableViewCell.xib; sourceTree = "<group>"; };
 		4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendSettingPopUp.storyboard; sourceTree = "<group>"; };
 		4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingPopUpVC.swift; sourceTree = "<group>"; };
 		4F948AD9260DD4ED004BC1A9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
@@ -321,6 +329,8 @@
 				4F8644112614A812009F20A3 /* SecondPromiseMakeVC.swift */,
 				4F8644172614CE36009F20A3 /* BasePromiseMakeVC.swift */,
 				4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */,
+				4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */,
+				4F8644ED2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib */,
 			);
 			path = Promise;
 			sourceTree = "<group>";
@@ -561,6 +571,7 @@
 				4F5564ED260225B000806E8D /* ProfileService.swift */,
 				4F5564FF260388BD00806E8D /* NetworkInfo.swift */,
 				4F3A52B7260B5E020084C549 /* FriendService.swift */,
+				4F8644E92614EEE9009F20A3 /* PlaceService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -575,6 +586,7 @@
 				4FF06D4B26089B3A00327E80 /* UserKey.swift */,
 				4FF06D5226089CAD00327E80 /* Friend.swift */,
 				4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */,
+				4F8644E52614E68D009F20A3 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -698,6 +710,7 @@
 				4F86448F2614D5B5009F20A3 /* copyright.png in Resources */,
 				4F8644942614D5B5009F20A3 /* map_present_tracking.png in Resources */,
 				4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */,
+				4F8644EF2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib in Resources */,
 				4F8644882614D5B5009F20A3 /* map_pin_custom.png in Resources */,
 				4F8644952614D5B5009F20A3 /* map_pin_red.png in Resources */,
 				4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */,
@@ -805,8 +818,10 @@
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
+				4F8644EE2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift in Sources */,
 				4F8644182614CE36009F20A3 /* BasePromiseMakeVC.swift in Sources */,
 				4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */,
+				4F8644E62614E68D009F20A3 /* Place.swift in Sources */,
 				4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
 				4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */,
@@ -818,6 +833,7 @@
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4FD8328425FBE3A000D8A214 /* FriendsMainTableViewCell.swift in Sources */,
+				4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
 				4F5564EE260225B000806E8D /* ProfileService.swift in Sources */,
 				4FF918BC25E6450E0096FC26 /* ResponseToken.swift in Sources */,

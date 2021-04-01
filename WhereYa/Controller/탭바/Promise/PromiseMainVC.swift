@@ -16,6 +16,7 @@ class PromiseMainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tabBarController?.tabBar.isHidden = false
         
         promiseTableView.delegate = self
         promiseTableView.dataSource = self

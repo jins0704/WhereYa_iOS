@@ -10,7 +10,7 @@ import Kingfisher
 
 class FriendsVC: UIViewController, PopUpDelegate {
    
-    let cellIdentifier : String = "friendsMainTableViewCell"
+    private let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
     private var AllList : [Friend] = []
     private var filterList : [Friend] = []
