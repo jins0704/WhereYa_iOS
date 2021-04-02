@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AJh-qf-gYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3279.7101449275365" y="947.54464285714278"/>
+            <point key="canvasLocation" x="3517" y="1498"/>
         </scene>
         <!--친구목록-->
         <scene sceneID="F2J-3B-yuQ">
@@ -521,7 +521,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
-                                    <segue destination="cSw-5B-DOF" kind="show" id="ixi-XX-gpF"/>
+                                    <action selector="nextBtnClicked:" destination="Yas-Ow-6Ob" eventType="touchUpInside" id="4nC-KT-QOU"/>
+                                    <segue destination="cSw-5B-DOF" kind="show" destinationCreationSelector="promisemake" id="bBW-yn-Pj8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="약속이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lR-np-Hk5">
@@ -573,12 +574,39 @@
                     </view>
                     <navigationItem key="navigationItem" id="Ym8-FL-7Po"/>
                     <connections>
+                        <outlet property="promiseMemoTextView" destination="WYl-AD-1Gq" id="OBa-lz-wfQ"/>
                         <outlet property="promiseNameLabel" destination="0lR-np-Hk5" id="BX8-Ew-xK8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbM-Y1-Lmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1590" y="948"/>
+            <point key="canvasLocation" x="975" y="1498"/>
+        </scene>
+        <!--Third Promise MakeVC-->
+        <scene sceneID="89c-rM-yN3">
+            <objects>
+                <viewController id="EK6-3N-k2p" customClass="ThirdPromiseMakeVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TIb-N7-EQe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-58-PYW">
+                                <rect key="frame" x="232" y="723" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="r6v-Ro-5Rs" kind="show" id="gUh-TJ-Sku"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mjs-jJ-ds9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vji-W5-VJf"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pou-J9-B83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2642" y="1498"/>
         </scene>
         <!--Second Promise MakeVC-->
         <scene sceneID="hjZ-MW-ub5">
@@ -624,6 +652,14 @@
                                             <action selector="placeSearchBtnClicked:" destination="cSw-5B-DOF" eventType="touchUpInside" id="sMY-Qj-wNP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tcs-ou-Jgg">
+                                        <rect key="frame" x="338" y="137" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="EK6-3N-k2p" kind="show" id="5LF-yh-Au9"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -656,9 +692,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="86O-Az-M8P">
                                         <rect key="frame" x="184" y="476" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="r6v-Ro-5Rs" kind="show" id="Fp3-jf-c9c"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -690,7 +723,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJ0-8I-hGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2540.579710144928" y="947.54464285714278"/>
+            <point key="canvasLocation" x="1757" y="1498"/>
         </scene>
     </scenes>
     <resources>

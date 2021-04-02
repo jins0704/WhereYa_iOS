@@ -9,7 +9,8 @@ import UIKit
 
 class FirstPromiseMakeVC: UIViewController {
 
-    @IBOutlet var promiseNameLabel: UILabel!
+    @IBOutlet var promiseNameTextField: UITextField!
+    @IBOutlet var promiseMemoTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,19 +18,20 @@ class FirstPromiseMakeVC: UIViewController {
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
     }
-    
+    // MARK: - IBAction
     @IBAction func backBtnClicked(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+    @IBAction func nextBtnClicked(_ sender: Any) {
+        performSegue(withIdentifier: "promisemake", sender: nil)
+    }
     
+    // MARK: - Segue
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let next : SecondPromiseMakeVC = segue.destination as? SecondPromiseMakeVC else{return}
+     
+        next.name = promiseNameTextField.text
+        next.memo = promiseMemoTextView.text
+    }
 }
