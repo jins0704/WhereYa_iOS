@@ -92,8 +92,6 @@ extension SecondPromiseMakeVC : UITableViewDelegate, UITableViewDataSource{
         
         cell.mainLabel.text = placeList[indexPath.row].place_name
         cell.subLabel.text = placeList[indexPath.row].address_name
-        print(placeList[indexPath.row].x)
-        print(placeList[indexPath.row].y)
         
         return cell
     }

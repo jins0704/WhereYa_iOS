@@ -13,7 +13,6 @@ class FirstSignUpVC: baseVC{
     @IBOutlet weak var id_SignInTextField: UITextField!
     @IBOutlet weak var pwd_SignInTextField: UITextField!
     @IBOutlet weak var repwd_SignInTextField: UITextField!
-    @IBOutlet weak var nickname_SignInTextField: UITextField!
     
     @IBOutlet weak var nextBtn: UIButton!
     
@@ -41,6 +40,10 @@ class FirstSignUpVC: baseVC{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        id_SignInTextField.clearButtonMode = .whileEditing
+        pwd_SignInTextField.clearButtonMode = .whileEditing
+        repwd_SignInTextField.clearButtonMode = .whileEditing
+
         UISetting()
         
         textFields = [id_SignInTextField,

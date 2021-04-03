@@ -37,11 +37,11 @@
             <objects>
                 <viewController id="r6v-Ro-5Rs" customClass="PromiseMapVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VRq-45-jci">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="onO-hZ-nie">
-                                <rect key="frame" x="0.0" y="88" width="414" height="400"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="400"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위치 지도 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L5u-k4-4As">
                                         <rect key="frame" x="10" y="20" width="97" height="21"/>
@@ -522,7 +522,6 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="nextBtnClicked:" destination="Yas-Ow-6Ob" eventType="touchUpInside" id="4nC-KT-QOU"/>
-                                    <segue destination="cSw-5B-DOF" kind="show" destinationCreationSelector="promisemake" id="bBW-yn-Pj8"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="약속이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0lR-np-Hk5">
@@ -575,7 +574,7 @@
                     <navigationItem key="navigationItem" id="Ym8-FL-7Po"/>
                     <connections>
                         <outlet property="promiseMemoTextView" destination="WYl-AD-1Gq" id="OBa-lz-wfQ"/>
-                        <outlet property="promiseNameLabel" destination="0lR-np-Hk5" id="BX8-Ew-xK8"/>
+                        <outlet property="promiseNameTextField" destination="2Sr-Aw-gvT" id="aOc-oc-oZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbM-Y1-Lmb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -587,7 +586,7 @@
             <objects>
                 <viewController id="EK6-3N-k2p" customClass="ThirdPromiseMakeVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TIb-N7-EQe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ehv-58-PYW">
@@ -611,7 +610,7 @@
         <!--Second Promise MakeVC-->
         <scene sceneID="hjZ-MW-ub5">
             <objects>
-                <viewController id="cSw-5B-DOF" customClass="SecondPromiseMakeVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondPromiseMakeVC" id="cSw-5B-DOF" customClass="SecondPromiseMakeVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3N1-du-MNF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -619,10 +618,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Qq-q6-DPP">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="330"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wee-B0-OfR">
-                                        <rect key="frame" x="30" y="255" width="354" height="35"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="wee-B0-OfR">
+                                        <rect key="frame" x="30" y="255" width="289" height="35"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="3tw-6g-pNR"/>
                                             <constraint firstAttribute="height" constant="35" id="jVb-Qb-R2h"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -646,8 +644,13 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OXS-pX-b0v">
-                                        <rect key="frame" x="345" y="261.5" width="20" height="22"/>
-                                        <state key="normal" image="magnifyingglass" catalog="system"/>
+                                        <rect key="frame" x="334" y="255" width="50" height="35"/>
+                                        <color key="backgroundColor" red="0.60784313729999995" green="0.73333333329999995" blue="0.7843137255" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Knx-3N-Uy7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                        <state key="normal" title="  검색  "/>
                                         <connections>
                                             <action selector="placeSearchBtnClicked:" destination="cSw-5B-DOF" eventType="touchUpInside" id="sMY-Qj-wNP"/>
                                         </connections>
@@ -663,14 +666,14 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="OXS-pX-b0v" firstAttribute="leading" secondItem="wee-B0-OfR" secondAttribute="trailing" constant="15" id="0gm-oH-SPX"/>
                                     <constraint firstItem="IyK-cc-Bog" firstAttribute="leading" secondItem="8Qq-q6-DPP" secondAttribute="leading" constant="30" id="37S-Eq-AKb"/>
                                     <constraint firstItem="5cY-2a-hKz" firstAttribute="top" secondItem="8Qq-q6-DPP" secondAttribute="top" constant="140" id="9Mn-dI-TOE"/>
                                     <constraint firstItem="wee-B0-OfR" firstAttribute="leading" secondItem="8Qq-q6-DPP" secondAttribute="leading" constant="30" id="DLy-BA-dn9"/>
                                     <constraint firstItem="OXS-pX-b0v" firstAttribute="centerY" secondItem="wee-B0-OfR" secondAttribute="centerY" id="Jwb-kC-9iQ"/>
                                     <constraint firstItem="wee-B0-OfR" firstAttribute="top" secondItem="IyK-cc-Bog" secondAttribute="bottom" constant="30" id="Lxv-Db-CqW"/>
-                                    <constraint firstAttribute="trailing" secondItem="wee-B0-OfR" secondAttribute="trailing" constant="30" id="YiS-m7-Ee5"/>
                                     <constraint firstItem="IyK-cc-Bog" firstAttribute="top" secondItem="5cY-2a-hKz" secondAttribute="bottom" constant="40" id="lwA-WG-0sM"/>
-                                    <constraint firstAttribute="trailing" secondItem="OXS-pX-b0v" secondAttribute="trailing" constant="49" id="qsu-jL-OVG"/>
+                                    <constraint firstAttribute="trailing" secondItem="OXS-pX-b0v" secondAttribute="trailing" constant="30" id="qsu-jL-OVG"/>
                                     <constraint firstItem="5cY-2a-hKz" firstAttribute="leading" secondItem="8Qq-q6-DPP" secondAttribute="leading" constant="41" id="rOt-cw-F5I"/>
                                     <constraint firstAttribute="bottom" secondItem="wee-B0-OfR" secondAttribute="bottom" constant="40" id="vHo-Kh-QSs"/>
                                 </constraints>
@@ -723,7 +726,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJ0-8I-hGY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="1498"/>
+            <point key="canvasLocation" x="1756.521739130435" y="1497.9910714285713"/>
         </scene>
     </scenes>
     <resources>
@@ -734,7 +737,6 @@
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="location.circle" catalog="system" width="128" height="121"/>
         <image name="location.circle.fill" catalog="system" width="128" height="121"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>

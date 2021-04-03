@@ -14,7 +14,7 @@ class FirstPromiseMakeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        promiseNameTextField.clearButtonMode = .whileEditing
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
     }
@@ -24,10 +24,14 @@ class FirstPromiseMakeVC: UIViewController {
     }
     
     @IBAction func nextBtnClicked(_ sender: Any) {
-        performSegue(withIdentifier: "promisemake", sender: nil)
+        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "SecondPromiseMakeVC") as? SecondPromiseMakeVC else{return}
+     
+        nextVC.name = promiseNameTextField.text
+        nextVC.memo = promiseMemoTextView.text
+        
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
-    // MARK: - Segue
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let next : SecondPromiseMakeVC = segue.destination as? SecondPromiseMakeVC else{return}
      

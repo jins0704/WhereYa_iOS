@@ -25,7 +25,7 @@ class FriendsVC: UIViewController, PopUpDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         getFriendsList()
         
         friendsTableView.delegate = self
