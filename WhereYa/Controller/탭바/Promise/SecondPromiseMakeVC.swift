@@ -95,6 +95,13 @@ extension SecondPromiseMakeVC : UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select")
+        
+        let cell = tableView.cellForRow(at: indexPath)
+        cell?.accessoryType = .checkmark
+    }
 }
 
 extension SecondPromiseMakeVC : UIGestureRecognizerDelegate{

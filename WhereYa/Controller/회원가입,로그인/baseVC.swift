@@ -144,32 +144,3 @@ extension baseVC : UITextFieldDelegate{
         return inputTextCount <= 12
     }
 }
-
-extension UITextField {
-    func setLeftPaddingPoints(_ amount:CGFloat){ //왼쪽에 여백 주기
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-        self.leftView = paddingView
-        self.leftViewMode = .always
-    }
- 
-    func setRightPaddingPoints(_ amount:CGFloat) { //오른쪽에 여백 주기
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: amount, height: self.frame.size.height))
-        self.rightView = paddingView
-        self.rightViewMode = .always
-    }
-}
-
-extension UIColor {
-
-    @nonobjc class var darkPink85: UIColor {
-       return UIColor(red: 226.0 / 255.0, green: 42.0 / 255.0, blue: 111.0 / 255.0, alpha: 0.85)
-     }
-    
-    @nonobjc class var mainBlueColor: UIColor {
-    return UIColor(red: 96.0 / 255.0, green: 146.0 / 255.0, blue: 206.0 / 255.0, alpha: 1.0)
-    }
-    
-    @nonobjc class var subpink: UIColor {
-        return UIColor(red: 233.0 / 255.0, green: 188.0 / 255.0, blue: 180.0 / 255.0, alpha: 0.85)
-      }
-}
