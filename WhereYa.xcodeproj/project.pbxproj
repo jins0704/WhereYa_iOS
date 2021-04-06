@@ -24,10 +24,8 @@
 		4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* ResponseProfileImage.swift */; };
 		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
-		4F8643FE26123326009F20A3 /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643FC26123326009F20A3 /* PromiseMainTableViewCell.swift */; };
-		4F8643FF26123326009F20A3 /* PromiseMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8643FD26123326009F20A3 /* PromiseMainTableViewCell.xib */; };
 		4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */; };
-		4F8644122614A812009F20A3 /* SecondPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644112614A812009F20A3 /* SecondPromiseMakeVC.swift */; };
+		4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644112614A812009F20A3 /* SearchPlaceVC.swift */; };
 		4F8644182614CE36009F20A3 /* BasePromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644172614CE36009F20A3 /* BasePromiseMakeVC.swift */; };
 		4F8644482614D544009F20A3 /* map_pin_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8644232614D543009F20A3 /* map_pin_custom@3x.png */; };
 		4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F8644242614D543009F20A3 /* map_pinup@3x.png */; };
@@ -68,12 +66,13 @@
 		4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E92614EEE9009F20A3 /* PlaceService.swift */; };
 		4F8644EE2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */; };
 		4F8644EF2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F8644ED2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib */; };
+		4F90BAEE261C8A1B0047F66A /* TimePopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90BAED261C8A1B0047F66A /* TimePopUpVC.swift */; };
 		4F912793261B6B63002385A9 /* PromiseMake.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F912792261B6B63002385A9 /* PromiseMake.storyboard */; };
 		4F912796261B7B3B002385A9 /* PromiseMakeNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F912795261B7B3B002385A9 /* PromiseMakeNavigationVC.swift */; };
 		4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */; };
 		4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */; };
 		4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948AD9260DD4ED004BC1A9 /* Protocol.swift */; };
-		4F9B4B4F26176315007E8534 /* ThirdPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B4B4E26176315007E8534 /* ThirdPromiseMakeVC.swift */; };
+		4F9B4B4F26176315007E8534 /* SecondPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B4B4E26176315007E8534 /* SecondPromiseMakeVC.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -129,10 +128,8 @@
 		4F5564F92603431800806E8D /* ResponseProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProfileImage.swift; sourceTree = "<group>"; };
 		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
-		4F8643FC26123326009F20A3 /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
-		4F8643FD26123326009F20A3 /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPromiseMakeVC.swift; sourceTree = "<group>"; };
-		4F8644112614A812009F20A3 /* SecondPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPromiseMakeVC.swift; sourceTree = "<group>"; };
+		4F8644112614A812009F20A3 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
 		4F8644172614CE36009F20A3 /* BasePromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePromiseMakeVC.swift; sourceTree = "<group>"; };
 		4F86441E2614D543009F20A3 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
 		4F86441F2614D543009F20A3 /* map_pin_custom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin_custom.png; sourceTree = "<group>"; };
@@ -220,12 +217,13 @@
 		4F8644E92614EEE9009F20A3 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchTableViewCell.swift; sourceTree = "<group>"; };
 		4F8644ED2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceSearchTableViewCell.xib; sourceTree = "<group>"; };
+		4F90BAED261C8A1B0047F66A /* TimePopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePopUpVC.swift; sourceTree = "<group>"; };
 		4F912792261B6B63002385A9 /* PromiseMake.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PromiseMake.storyboard; sourceTree = "<group>"; };
 		4F912795261B7B3B002385A9 /* PromiseMakeNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMakeNavigationVC.swift; sourceTree = "<group>"; };
 		4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendSettingPopUp.storyboard; sourceTree = "<group>"; };
 		4F948ABA260C7D82004BC1A9 /* FriendSettingPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendSettingPopUpVC.swift; sourceTree = "<group>"; };
 		4F948AD9260DD4ED004BC1A9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
-		4F9B4B4E26176315007E8534 /* ThirdPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPromiseMakeVC.swift; sourceTree = "<group>"; };
+		4F9B4B4E26176315007E8534 /* SecondPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPromiseMakeVC.swift; sourceTree = "<group>"; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -335,17 +333,16 @@
 			isa = PBXGroup;
 			children = (
 				4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */,
-				4F8643FC26123326009F20A3 /* PromiseMainTableViewCell.swift */,
-				4F8643FD26123326009F20A3 /* PromiseMainTableViewCell.xib */,
 				4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */,
-				4F8644112614A812009F20A3 /* SecondPromiseMakeVC.swift */,
+				4F8644112614A812009F20A3 /* SearchPlaceVC.swift */,
 				4F8644172614CE36009F20A3 /* BasePromiseMakeVC.swift */,
 				4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */,
 				4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */,
 				4F8644ED2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib */,
-				4F9B4B4E26176315007E8534 /* ThirdPromiseMakeVC.swift */,
+				4F9B4B4E26176315007E8534 /* SecondPromiseMakeVC.swift */,
 				4FFF039E261B4E28003CEF89 /* CalendarVC.swift */,
 				4F912795261B7B3B002385A9 /* PromiseMakeNavigationVC.swift */,
+				4F90BAED261C8A1B0047F66A /* TimePopUpVC.swift */,
 			);
 			path = Promise;
 			sourceTree = "<group>";
@@ -735,7 +732,6 @@
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
 				4F8644962614D5B5009F20A3 /* info_box.png in Resources */,
 				4FD8328525FBE3A000D8A214 /* FriendsMainTableViewCell.xib in Resources */,
-				4F8643FF26123326009F20A3 /* PromiseMainTableViewCell.xib in Resources */,
 				4F912793261B6B63002385A9 /* PromiseMake.storyboard in Resources */,
 				4F86448E2614D5B5009F20A3 /* map_pin_shadow@3x.png in Resources */,
 				4F8644872614D5B5009F20A3 /* map_pinup_custom@3x.png in Resources */,
@@ -821,18 +817,18 @@
 				4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */,
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
+				4F90BAEE261C8A1B0047F66A /* TimePopUpVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
 				4FFF039F261B4E28003CEF89 /* CalendarVC.swift in Sources */,
 				4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */,
 				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
-				4F8644122614A812009F20A3 /* SecondPromiseMakeVC.swift in Sources */,
+				4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */,
 				4F912796261B7B3B002385A9 /* PromiseMakeNavigationVC.swift in Sources */,
 				4F5564E9260212B300806E8D /* MyPageSettingVC.swift in Sources */,
 				4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */,
 				4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */,
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
-				4F8643FE26123326009F20A3 /* PromiseMainTableViewCell.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
@@ -856,7 +852,7 @@
 				4FD8328425FBE3A000D8A214 /* FriendsMainTableViewCell.swift in Sources */,
 				4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
-				4F9B4B4F26176315007E8534 /* ThirdPromiseMakeVC.swift in Sources */,
+				4F9B4B4F26176315007E8534 /* SecondPromiseMakeVC.swift in Sources */,
 				4F5564EE260225B000806E8D /* ProfileService.swift in Sources */,
 				4FF918BC25E6450E0096FC26 /* ResponseToken.swift in Sources */,
 				4FF06D5326089CAD00327E80 /* Friend.swift in Sources */,

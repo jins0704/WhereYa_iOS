@@ -12,16 +12,11 @@ class PromiseMainVC: UIViewController {
     let Promises: [String] = ["1","2","3","4"]
     let cellIdentifier : String = "promiseMainTableViewCell"
     
-    @IBOutlet weak var promiseTableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.isHidden = false
-        
-        promiseTableView.delegate = self
-        promiseTableView.dataSource = self
-        promiseTableView.register(UINib(nibName: "PromiseMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        
+
         navigationController?.navigationBar.isHidden = true
     }
     
@@ -45,19 +40,4 @@ class PromiseMainVC: UIViewController {
     }
     */
 
-}
-extension PromiseMainVC : UITableViewDelegate, UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Promises.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : PromiseMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PromiseMainTableViewCell
-        
-        cell.selectionStyle = .none
-        cell.promiseMemberLabel.text = Promises[indexPath.row]
-        return cell
-    }
-    
-    
 }

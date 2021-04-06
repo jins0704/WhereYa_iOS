@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 class FriendsVC: UIViewController, PopUpDelegate {
-   
+
     private let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
     private var AllList : [Friend] = []
@@ -102,7 +102,9 @@ class FriendsVC: UIViewController, PopUpDelegate {
         if data == "okay"{
             getFriendsList()
         }
+        
     }
+    func cellClicked(data: String) {}
     // MARK: - IBAction
     @IBAction func addFriend(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "친구 추가", message: "친구의 닉네임을 입력하세요", preferredStyle: .alert)

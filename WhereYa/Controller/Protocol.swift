@@ -9,4 +9,5 @@ import Foundation
 
 protocol PopUpDelegate{
     func doneBtnClicked(data : String)
+    func cellClicked(data : String)
 }
