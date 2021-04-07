@@ -27,6 +27,7 @@
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="nextBtnClicked:" destination="2ut-jh-o8F" eventType="touchUpInside" id="Gqv-qg-FpM"/>
+                                    <segue destination="PrZ-y2-PPg" kind="show" id="NqM-6S-53i"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-Of-DgW">
@@ -204,6 +205,68 @@
             </objects>
             <point key="canvasLocation" x="1429" y="1831"/>
         </scene>
+        <!--Search FriendVC-->
+        <scene sceneID="E8i-9B-kOR">
+            <objects>
+                <viewController storyboardIdentifier="SearchFriendVC" id="57o-Fl-hn7" customClass="SearchFriendVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xjB-Tp-3YD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="8v5-Mf-iaT">
+                                <rect key="frame" x="0.0" y="143" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60t-FP-CMd">
+                                <rect key="frame" x="30" y="79" width="16.5" height="24"/>
+                                <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnClicked:" destination="57o-Fl-hn7" eventType="touchUpInside" id="Ii2-ch-yFw"/>
+                                    <action selector="backBtnClicked:" destination="5wb-81-Cqm" eventType="touchUpInside" id="KvG-Hw-7wh"/>
+                                    <action selector="backBtnClicked:" destination="5me-Rd-Aaw" eventType="touchUpInside" id="prm-Jc-gOs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INc-40-uSR">
+                                <rect key="frame" x="354" y="76" width="30" height="30"/>
+                                <state key="normal" title="완료"/>
+                                <connections>
+                                    <action selector="doneBtnClicked:" destination="57o-Fl-hn7" eventType="touchUpInside" id="pAI-g3-Dbo"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVN-B0-F3V">
+                                <rect key="frame" x="0.0" y="199" width="414" height="663"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="we4-9h-WCL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HVN-B0-F3V" firstAttribute="top" secondItem="8v5-Mf-iaT" secondAttribute="bottom" id="1IL-il-Gbz"/>
+                            <constraint firstItem="8v5-Mf-iaT" firstAttribute="trailing" secondItem="we4-9h-WCL" secondAttribute="trailing" id="5S2-xM-mWt"/>
+                            <constraint firstItem="8v5-Mf-iaT" firstAttribute="top" secondItem="60t-FP-CMd" secondAttribute="bottom" constant="40" id="7PV-Or-1x9"/>
+                            <constraint firstItem="8v5-Mf-iaT" firstAttribute="leading" secondItem="we4-9h-WCL" secondAttribute="leading" id="Ajb-LW-zWS"/>
+                            <constraint firstItem="HVN-B0-F3V" firstAttribute="leading" secondItem="we4-9h-WCL" secondAttribute="leading" id="Bal-ka-FNe"/>
+                            <constraint firstItem="60t-FP-CMd" firstAttribute="leading" secondItem="we4-9h-WCL" secondAttribute="leading" constant="30" id="Heb-YJ-FYg"/>
+                            <constraint firstItem="we4-9h-WCL" firstAttribute="trailing" secondItem="INc-40-uSR" secondAttribute="trailing" constant="30" id="IIc-2N-kM7"/>
+                            <constraint firstItem="we4-9h-WCL" firstAttribute="bottom" secondItem="HVN-B0-F3V" secondAttribute="bottom" id="lAK-aN-FHu"/>
+                            <constraint firstItem="60t-FP-CMd" firstAttribute="top" secondItem="we4-9h-WCL" secondAttribute="top" constant="35" id="q2x-dC-eeH"/>
+                            <constraint firstItem="HVN-B0-F3V" firstAttribute="trailing" secondItem="we4-9h-WCL" secondAttribute="trailing" id="x5h-EU-YkD"/>
+                            <constraint firstItem="INc-40-uSR" firstAttribute="centerY" secondItem="60t-FP-CMd" secondAttribute="centerY" id="xt2-kF-771"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="friendTableView" destination="HVN-B0-F3V" id="cgl-Nf-JCT"/>
+                        <outlet property="searchBar" destination="8v5-Mf-iaT" id="20J-GB-IUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xy6-H4-dVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2515.9420289855075" y="1830.8035714285713"/>
+        </scene>
         <!--Second Promise MakeVC-->
         <scene sceneID="FJa-Qp-7fN">
             <objects>
@@ -263,7 +326,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPZ-3I-jzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3181" y="1361"/>
+            <point key="canvasLocation" x="3816" y="1173"/>
         </scene>
         <!--Promise MapVC-->
         <scene sceneID="V25-g5-LMF">
@@ -314,7 +377,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N6a-sJ-nlS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4426.0869565217399" y="1497.9910714285713"/>
+            <point key="canvasLocation" x="2516" y="1010"/>
         </scene>
         <!--Promise Make NavigationVC-->
         <scene sceneID="BMp-aU-hrh">

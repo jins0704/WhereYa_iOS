@@ -11,11 +11,12 @@ import Foundation
 struct FriendResponse : Codable{
     let friends : [Friend]
 }
-struct Friend : Codable{
+class Friend : Codable{
     
     var profileImg : String?
     var nickname : String?
     var star : Bool?
+    var promiseCheck : Bool?
     
     init(profileImg : String, nickname : String, star : Bool) {
         self.profileImg = profileImg

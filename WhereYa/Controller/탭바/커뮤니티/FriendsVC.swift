@@ -28,6 +28,8 @@ class FriendsVC: UIViewController, PopUpDelegate {
         
         getFriendsList()
         
+        friendsSearchBar.autocapitalizationType = .none
+        
         friendsTableView.delegate = self
         friendsTableView.dataSource = self
         friendsTableView.separatorStyle = .none
@@ -105,6 +107,7 @@ class FriendsVC: UIViewController, PopUpDelegate {
         
     }
     func cellClicked(data: String) {}
+    
     // MARK: - IBAction
     @IBAction func addFriend(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "친구 추가", message: "친구의 닉네임을 입력하세요", preferredStyle: .alert)
@@ -180,6 +183,7 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell
         
         cell.selectionStyle = .none
+        cell.checkBtn.isHidden = true
         
         var img : URL?
         var usingArray : [Friend] = []

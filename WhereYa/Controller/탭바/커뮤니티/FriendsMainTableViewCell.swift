@@ -1,16 +1,30 @@
 //
-//  CommunityMainTableViewCell.swift
-//  GOGO
+//  FriendMainTableViewCell.swift
+//  WhereYa
 //
-//  Created by 홍진석 on 2021/03/13.
+//  Created by 홍진석 on 2021/04/08.
 //
-
 import UIKit
 
 class FriendsMainTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var profileImage: UIImageView!
+    
+    var delegate : CellDelegate?
+    
+    @IBOutlet var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UILabel!
+    @IBOutlet var checkBtn: UIButton!
+    
+    
+    @IBAction func checkBtnClicked(_ sender: Any) {
+        guard let nickname = profileNickname.text else{return}
+        
+        if checkBtn.tintColor == UIColor.mainBlueColor{
+            delegate?.cellChecked(nickname,false)
+        }
+        else{
+            delegate?.cellChecked(nickname,true)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

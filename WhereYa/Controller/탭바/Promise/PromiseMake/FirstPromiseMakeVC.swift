@@ -18,8 +18,9 @@ class FirstPromiseMakeVC: UIViewController {
     var detailView = UIView()
     var dateLabel = UILabel()
     var memo = UITextView()
+    
+    var searchFriendBtn = UIButton()
     var searchPlaceBtn = UIButton()
-    var searchFriend = UIButton()
     
     @IBOutlet var textviewDoneBtn: UIButton!
     @IBOutlet var folderableBtn: UIButton!
@@ -40,8 +41,6 @@ class FirstPromiseMakeVC: UIViewController {
         view.addSubview(detailView)
         detailView.addSubview(memo)
         detailView.addSubview(dateLabel)
-        detailView.addSubview(searchPlaceBtn)
-        detailView.addSubview(searchFriend)
         
         detailViewSetting()
         viewSetting()
@@ -93,7 +92,7 @@ class FirstPromiseMakeVC: UIViewController {
         detailView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 30).isActive = true
         detailView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -30).isActive = true
 
-        detailView.heightAnchor.constraint(equalToConstant: 300).isActive = true
+        detailView.heightAnchor.constraint(equalToConstant: 400).isActive = true
 
         folderableBtn.tintColor = UIColor.gray
         folderableBtn.isHidden = true
@@ -119,7 +118,8 @@ class FirstPromiseMakeVC: UIViewController {
         memo.text = "약속 메모"
         memo.textColor = UIColor.lightGray
         memo.font = UIFont.systemFont(ofSize: 15)
-        
+     
+        detailView.addSubview(searchPlaceBtn)
         searchPlaceBtn.translatesAutoresizingMaskIntoConstraints = false
         searchPlaceBtn.topAnchor.constraint(equalTo: memo.bottomAnchor, constant: 20).isActive = true
         searchPlaceBtn.leadingAnchor.constraint(equalTo: dateLabel.safeAreaLayoutGuide.leadingAnchor).isActive = true
@@ -129,23 +129,39 @@ class FirstPromiseMakeVC: UIViewController {
         searchPlaceBtn.titleLabel?.textAlignment = .center
         searchPlaceBtn.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.7333333333, blue: 0.7843137255, alpha: 1)
         searchPlaceBtn.addTarget(self, action: #selector(self.placeBtnClicked), for: .touchUpInside)
-        searchFriend.translatesAutoresizingMaskIntoConstraints = false
-        searchFriend.topAnchor.constraint(equalTo: searchPlaceBtn.bottomAnchor, constant: 20).isActive = true
-        searchFriend.leadingAnchor.constraint(equalTo: dateLabel.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        searchFriend.trailingAnchor.constraint(equalTo: dateLabel.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        searchFriend.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        searchFriend.setTitle("만날 친구 찾기", for: .normal)
-        searchFriend.titleLabel?.textAlignment = .center
-        searchFriend.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.7333333333, blue: 0.7843137255, alpha: 1)
+        
+        detailView.addSubview(searchFriendBtn)
+        searchFriendBtn.translatesAutoresizingMaskIntoConstraints = false
+        searchFriendBtn.topAnchor.constraint(equalTo: searchPlaceBtn.bottomAnchor, constant: 20).isActive = true
+        searchFriendBtn.leadingAnchor.constraint(equalTo: dateLabel.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        searchFriendBtn.trailingAnchor.constraint(equalTo: dateLabel.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        searchFriendBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        searchFriendBtn.setTitle("만날 친구 찾기", for: .normal)
+        searchFriendBtn.titleLabel?.textAlignment = .center
+        searchFriendBtn.backgroundColor = #colorLiteral(red: 0.6078431373, green: 0.7333333333, blue: 0.7843137255, alpha: 1)
+        searchFriendBtn.addTarget(self, action: #selector(self.friendBtnClicked), for: .touchUpInside)
+
     }
     
     @IBAction func placeBtnClicked(){
-        let nextVC = storyboard?.instantiateViewController(identifier: "SearchPlaceVC") as! SearchPlaceVC
+        print("searchplace")
+        let placeVC = storyboard?.instantiateViewController(identifier: "SearchPlaceVC") as! SearchPlaceVC
         
-        nextVC.modalTransitionStyle = .coverVertical
-        nextVC.modalPresentationStyle = .fullScreen
-        nextVC.popupDelegate = self
-        self.present(nextVC, animated: true, completion: nil)
+        placeVC.modalTransitionStyle = .coverVertical
+        placeVC.modalPresentationStyle = .fullScreen
+        placeVC.popupDelegate = self
+        self.present(placeVC, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func friendBtnClicked(){
+        print("searchfriend")
+        let friendVC = storyboard?.instantiateViewController(identifier: "SearchFriendVC") as! SearchFriendVC
+        
+        friendVC.modalTransitionStyle = .coverVertical
+        friendVC.modalPresentationStyle = .fullScreen
+        //nextVC.popupDelegate = self
+        self.present(friendVC, animated: true, completion: nil)
     }
 }
 
