@@ -70,6 +70,8 @@
 		4F90BB10261E084F0047F66A /* SearchFriendVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90BB0F261E084F0047F66A /* SearchFriendVC.swift */; };
 		4F90BB1C261E1F160047F66A /* FriendsMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90BB1A261E1F160047F66A /* FriendsMainTableViewCell.swift */; };
 		4F90BB1D261E1F160047F66A /* FriendsMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F90BB1B261E1F160047F66A /* FriendsMainTableViewCell.xib */; };
+		4F90BB25261EDA7E0047F66A /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90BB24261EDA7E0047F66A /* Promise.swift */; };
+		4F90BB29261EF8340047F66A /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F90BB28261EF8330047F66A /* UITextView.swift */; };
 		4F912793261B6B63002385A9 /* PromiseMake.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F912792261B6B63002385A9 /* PromiseMake.storyboard */; };
 		4F912796261B7B3B002385A9 /* PromiseMakeNavigationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F912795261B7B3B002385A9 /* PromiseMakeNavigationVC.swift */; };
 		4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */; };
@@ -222,6 +224,8 @@
 		4F90BB0F261E084F0047F66A /* SearchFriendVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFriendVC.swift; sourceTree = "<group>"; };
 		4F90BB1A261E1F160047F66A /* FriendsMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsMainTableViewCell.swift; sourceTree = "<group>"; };
 		4F90BB1B261E1F160047F66A /* FriendsMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsMainTableViewCell.xib; sourceTree = "<group>"; };
+		4F90BB24261EDA7E0047F66A /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
+		4F90BB28261EF8330047F66A /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		4F912792261B6B63002385A9 /* PromiseMake.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PromiseMake.storyboard; sourceTree = "<group>"; };
 		4F912795261B7B3B002385A9 /* PromiseMakeNavigationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMakeNavigationVC.swift; sourceTree = "<group>"; };
 		4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendSettingPopUp.storyboard; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 			children = (
 				4FFF0396261B25D1003CEF89 /* UITextField.swift */,
 				4FFF039B261B2B5A003CEF89 /* UIColor.swift */,
+				4F90BB28261EF8330047F66A /* UITextView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -505,6 +510,7 @@
 				4FF917DA25DE59840096FC26 /* Utils */,
 				4FAB952A25C7D4C300148446 /* Controller */,
 				4FAB952925C7D4BB00148446 /* View */,
+				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 				4FAB952225C7D4A400148446 /* Info.plist */,
 				4F86441C2614D543009F20A3 /* DaumMap.embeddedframework */,
 			);
@@ -531,7 +537,6 @@
 				4F5564EB260217B400806E8D /* Login */,
 				4FF918F925E8FBF30096FC26 /* SignUp */,
 				4FD8322C25F7B90B00D8A214 /* Tabbar */,
-				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -611,6 +616,7 @@
 				4FF06D5226089CAD00327E80 /* Friend.swift */,
 				4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */,
 				4F8644E52614E68D009F20A3 /* Place.swift */,
+				4F90BB24261EDA7E0047F66A /* Promise.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -844,8 +850,10 @@
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
+				4F90BB25261EDA7E0047F66A /* Promise.swift in Sources */,
 				4F8644EE2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift in Sources */,
 				4F8644182614CE36009F20A3 /* BasePromiseMakeVC.swift in Sources */,
+				4F90BB29261EF8340047F66A /* UITextView.swift in Sources */,
 				4FFF0397261B25D1003CEF89 /* UITextField.swift in Sources */,
 				4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */,
 				4F8644E62614E68D009F20A3 /* Place.swift in Sources */,

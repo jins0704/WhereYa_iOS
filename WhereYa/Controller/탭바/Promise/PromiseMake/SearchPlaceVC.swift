@@ -90,8 +90,10 @@ extension SearchPlaceVC : UITableViewDelegate, UITableViewDataSource{
     
         if let cell = tableView.cellForRow(at: indexPath) as?
             PlaceSearchTableViewCell{
-            let text : String = cell.mainLabel.text ?? "만날 장소 찾기"
-            popupDelegate?.cellClicked(data: text)
+            
+            let selectedPlace : Place = Place(cell.mainLabel.text ?? "", cell.subLabel.text ?? "", cell.longitudeX ?? "", cell.latitudeY ?? "")
+            
+            popupDelegate?.placeClicked(place: selectedPlace)
             print("전달")
             self.dismiss(animated: true, completion: nil)
         }

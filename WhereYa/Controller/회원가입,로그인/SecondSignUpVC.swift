@@ -8,7 +8,7 @@
 import UIKit
 
 class SecondSignUpVC: baseVC, PopUpDelegate {
-
+  
     @IBOutlet weak var popupBtn: UIButton!
     
     @IBOutlet weak var genderStackView: UIStackView!
@@ -170,7 +170,9 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
         ButtonState(nextChecks, completeBtn)
         
     }
-    func cellClicked(data: String) {}
+    func placeClicked(place: Place) {}
+    func friendClicked(friends: [String]) {}
+    
     
     func sendDetailProfile(friend: Friend) {}
     

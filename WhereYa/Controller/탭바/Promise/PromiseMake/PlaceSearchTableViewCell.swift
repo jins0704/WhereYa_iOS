@@ -12,6 +12,9 @@ class PlaceSearchTableViewCell: UITableViewCell {
     @IBOutlet var mainLabel: UILabel!
     @IBOutlet var subLabel: UILabel!
     
+    var longitudeX : String?
+    var latitudeY : String?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

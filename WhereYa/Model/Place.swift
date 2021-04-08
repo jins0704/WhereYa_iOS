@@ -24,7 +24,7 @@ public struct RegionInfo : Codable{
     var selected_region : String?
     
 }
-public struct Place : Codable{
+public class Place : Codable{
     var id : String?
     var place_name : String?
     var category_name : String?
@@ -37,4 +37,11 @@ public struct Place : Codable{
     var y : String?
     var place_url : String?
     var distance : String?
+    
+    init(_ place_name : String, _ address_name: String, _ x : String, _ y : String){
+        self.place_name = place_name
+        self.address_name = address_name
+        self.x = x
+        self.y = y
+    }
 }

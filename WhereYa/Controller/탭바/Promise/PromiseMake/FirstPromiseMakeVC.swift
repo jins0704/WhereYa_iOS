@@ -7,6 +7,7 @@
 
 import UIKit
 import FSCalendar
+import Toast_Swift
 
 class FirstPromiseMakeVC: UIViewController {
     var selectedDate : String?
@@ -22,7 +23,8 @@ class FirstPromiseMakeVC: UIViewController {
     var searchFriendBtn = UIButton()
     var searchPlaceBtn = UIButton()
     
-    @IBOutlet var textviewDoneBtn: UIButton!
+    var promise : Promise = Promise()
+    
     @IBOutlet var folderableBtn: UIButton!
     @IBOutlet var promiseNameTextField: UITextField!
 
@@ -49,6 +51,15 @@ class FirstPromiseMakeVC: UIViewController {
     @IBAction func backBtnClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
+    @IBAction func completeBtnClicked(_ sender: Any) {
+        if promise.name?.count == 0 || promise.time == nil || promise.date == nil || promise.invitedfriends == nil || promise.destination == nil{
+            self.view.makeToast("약속 조건을 채워주세요", duration: 0.5, position: .center)
+        }
+        else{
+            print(promise)
+        }
+        
+    }
     
     @IBAction func folderableBtnClicked(_ sender: Any) {
         view.addSubview(calendar)
@@ -58,15 +69,10 @@ class FirstPromiseMakeVC: UIViewController {
         folderableBtn.isHidden = true
         view.reloadInputViews()
     }
-    @IBAction func textviewEditDone(_ sender: Any) {
-        textviewDoneBtn.isHidden = true
-        self.memo.resignFirstResponder()
-    }
     @IBAction func nextBtnClicked(_ sender: Any) {
     }
 
     func viewSetting(){
-        textviewDoneBtn.isHidden = true
         
         calendar.translatesAutoresizingMaskIntoConstraints = false
         calendar.topAnchor.constraint(equalTo: folderableBtn.bottomAnchor, constant: 0).isActive = true
@@ -118,7 +124,8 @@ class FirstPromiseMakeVC: UIViewController {
         memo.text = "약속 메모"
         memo.textColor = UIColor.lightGray
         memo.font = UIFont.systemFont(ofSize: 15)
-     
+        memo.addDoneButtonOnKeyboard()
+        
         detailView.addSubview(searchPlaceBtn)
         searchPlaceBtn.translatesAutoresizingMaskIntoConstraints = false
         searchPlaceBtn.topAnchor.constraint(equalTo: memo.bottomAnchor, constant: 20).isActive = true
@@ -160,7 +167,7 @@ class FirstPromiseMakeVC: UIViewController {
         
         friendVC.modalTransitionStyle = .coverVertical
         friendVC.modalPresentationStyle = .fullScreen
-        //nextVC.popupDelegate = self
+        friendVC.popupDelegate = self
         self.present(friendVC, animated: true, completion: nil)
     }
 }
@@ -188,7 +195,9 @@ extension FirstPromiseMakeVC : FSCalendarDelegate, FSCalendarDataSource{
 }
 extension FirstPromiseMakeVC : UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.promise.name = promiseNameTextField.text
         textField.resignFirstResponder()
+        return true
     }
 }
 extension FirstPromiseMakeVC : UITextViewDelegate{
@@ -197,20 +206,32 @@ extension FirstPromiseMakeVC : UITextViewDelegate{
             textView.text = nil
             textView.textColor = UIColor.black
         }
-        self.textviewDoneBtn.isHidden = false
+    }
+    func textViewDidEndEditing(_ textView: UITextView) {
+        promise.memo = self.memo.text
     }
     
 }
 
 extension FirstPromiseMakeVC : PopUpDelegate{
-    func cellClicked(data: String) {
-        selectPlace = data
-        self.searchPlaceBtn.setTitle("만남장소 : \(selectPlace ?? " ")", for: .normal)
+    func friendClicked(friends: [String]) {
+        promise.invitedfriends = friends
+        self.searchFriendBtn.setTitle("친구 : \(friends[0]) 외 \(friends.count-1)명", for: .normal)
+    }
+    
+    func placeClicked(place: Place) {
+        promise.destination = place
+        self.searchPlaceBtn.setTitle("장소 : \(place.place_name ?? " ")", for: .normal)
+        
     }
     
     func doneBtnClicked(data: String) {
         self.selectedTime = data
-        self.dateLabel.text = " \(selectedDate ?? " ") , \(selectedTime ?? " ")"
+        self.dateLabel.text = "시간 : \(selectedDate ?? " ") , \(selectedTime ?? " ")"
+       
+        promise.date = selectedDate
+        promise.time = selectedTime
+        
 //        self.memo.text = "약속 메모(주의 : 날짜를 재설정하면 사라져요)"
 //        self.memo.textColor = UIColor.lightGray
         calendar.removeFromSuperview()

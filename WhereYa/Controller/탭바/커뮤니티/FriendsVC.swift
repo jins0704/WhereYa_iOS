@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 class FriendsVC: UIViewController, PopUpDelegate {
+    
 
     private let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
@@ -106,7 +107,8 @@ class FriendsVC: UIViewController, PopUpDelegate {
         }
         
     }
-    func cellClicked(data: String) {}
+    func friendClicked(friends: [String]) {}
+    func placeClicked(place: Place) {}
     
     // MARK: - IBAction
     @IBAction func addFriend(_ sender: UIBarButtonItem) {

@@ -9,7 +9,8 @@ import Foundation
 
 protocol PopUpDelegate{
     func doneBtnClicked(data : String)
-    func cellClicked(data : String)
+    func placeClicked(place : Place)
+    func friendClicked(friends : [String])
 }
 
 protocol CellDelegate {

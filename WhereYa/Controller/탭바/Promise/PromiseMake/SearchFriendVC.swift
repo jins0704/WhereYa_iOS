@@ -17,8 +17,8 @@ class SearchFriendVC: UIViewController {
     @IBOutlet var invitedLabel: UILabel!
     @IBOutlet var friendsLabel: UILabel!
     
+    var popupDelegate : PopUpDelegate?
     var isFiltering : Bool = false
-    private var selectedFriends : [Friend]  = []
     private var allList : [Friend] = []
     private var filterList : [Friend] = []
     
@@ -42,6 +42,20 @@ class SearchFriendVC: UIViewController {
     }
     
     @IBAction func doneBtnClicked(_ sender: Any) {
+        var completeCheck = false
+        var selectedFriends : [String]  = []
+        
+        for i in allList{
+            if i.promiseCheck == true{
+                selectedFriends.append(i.nickname ?? "")
+                completeCheck = true
+            }
+        }
+        if completeCheck == true{
+            popupDelegate?.friendClicked(friends: selectedFriends)
+            self.dismiss(animated: true, completion: nil)
+        }
+        
     }
     // MARK: - func
     func getFriendsList(){
@@ -77,6 +91,7 @@ class SearchFriendVC: UIViewController {
     }
 }
 
+// MARK: - TableView
 extension SearchFriendVC : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if isFiltering{

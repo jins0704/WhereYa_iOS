@@ -21,15 +21,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sRS-31-4FD">
-                                <rect key="frame" x="184" y="737" width="46" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextBtnClicked:" destination="2ut-jh-o8F" eventType="touchUpInside" id="Gqv-qg-FpM"/>
-                                    <segue destination="PrZ-y2-PPg" kind="show" id="NqM-6S-53i"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-Of-DgW">
                                 <rect key="frame" x="30" y="143" width="354" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -55,10 +46,9 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Q-bA-kwr">
                                 <rect key="frame" x="354" y="76" width="30" height="30"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="완료"/>
                                 <connections>
-                                    <action selector="textviewEditDone:" destination="2ut-jh-o8F" eventType="touchUpInside" id="YnF-HG-j4n"/>
+                                    <action selector="completeBtnClicked:" destination="2ut-jh-o8F" eventType="touchUpInside" id="pzQ-qd-dPy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -80,7 +70,6 @@
                     <connections>
                         <outlet property="folderableBtn" destination="qct-gc-Q7m" id="c7e-0Q-Ihr"/>
                         <outlet property="promiseNameTextField" destination="PKs-Of-DgW" id="x9h-9d-7Sb"/>
-                        <outlet property="textviewDoneBtn" destination="v0Q-bA-kwr" id="KFw-3Y-OIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNa-VF-G4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
