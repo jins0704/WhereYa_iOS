@@ -111,7 +111,7 @@ class FriendsVC: UIViewController, PopUpDelegate {
     func placeClicked(place: Place) {}
     
     // MARK: - IBAction
-    @IBAction func addFriend(_ sender: UIBarButtonItem) {
+    @IBAction func addFriend(_ sender: UIButton) {
         let alert = UIAlertController(title: "친구 추가", message: "친구의 닉네임을 입력하세요", preferredStyle: .alert)
         
         let insertBtn = UIAlertAction(title: "확인", style: .default) { (insert) in

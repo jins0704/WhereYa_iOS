@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--친구목록-->
+        <!--FriendsVC-->
         <scene sceneID="F2J-3B-yuQ">
             <objects>
                 <viewController storyboardIdentifier="FriendsVC" id="9ac-Nf-mM9" customClass="FriendsVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,33 +25,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qte-wv-SGa">
-                                <rect key="frame" x="0.0" y="98" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="116" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="6Oa-iI-FzF">
-                                <rect key="frame" x="0.0" y="164" width="414" height="649"/>
+                                <rect key="frame" x="0.0" y="182" width="414" height="631"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="친구목록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIH-Sa-6rO">
+                                <rect key="frame" x="20" y="67" width="70" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u28-TX-Q0I">
+                                <rect key="frame" x="376" y="68" width="18" height="22"/>
+                                <state key="normal" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="addFriend:" destination="9ac-Nf-mM9" eventType="touchUpInside" id="iwr-Zl-1h0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MA4-VF-eSI"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Oa-iI-FzF" firstAttribute="trailing" secondItem="MA4-VF-eSI" secondAttribute="trailing" id="5dJ-NZ-kRM"/>
+                            <constraint firstItem="TIH-Sa-6rO" firstAttribute="top" secondItem="MA4-VF-eSI" secondAttribute="top" constant="23" id="BXQ-8r-Moq"/>
                             <constraint firstItem="6Oa-iI-FzF" firstAttribute="leading" secondItem="MA4-VF-eSI" secondAttribute="leading" id="HSk-uC-8DL"/>
                             <constraint firstItem="qte-wv-SGa" firstAttribute="trailing" secondItem="MA4-VF-eSI" secondAttribute="trailing" id="J1p-qn-kNV"/>
+                            <constraint firstItem="qte-wv-SGa" firstAttribute="top" secondItem="TIH-Sa-6rO" secondAttribute="bottom" constant="25" id="LLc-5h-rb0"/>
+                            <constraint firstItem="TIH-Sa-6rO" firstAttribute="leading" secondItem="MA4-VF-eSI" secondAttribute="leading" constant="20" id="P8e-mJ-Maa"/>
                             <constraint firstItem="6Oa-iI-FzF" firstAttribute="top" secondItem="qte-wv-SGa" secondAttribute="bottom" constant="10" id="chT-ln-nLB"/>
                             <constraint firstItem="MA4-VF-eSI" firstAttribute="bottom" secondItem="6Oa-iI-FzF" secondAttribute="bottom" id="eHX-6y-lM1"/>
                             <constraint firstItem="qte-wv-SGa" firstAttribute="leading" secondItem="MA4-VF-eSI" secondAttribute="leading" id="fyW-T7-KDh"/>
-                            <constraint firstItem="qte-wv-SGa" firstAttribute="top" secondItem="MA4-VF-eSI" secondAttribute="top" constant="10" id="hTR-tW-Qx9"/>
+                            <constraint firstItem="MA4-VF-eSI" firstAttribute="trailing" secondItem="u28-TX-Q0I" secondAttribute="trailing" constant="20" id="jwT-6B-d8S"/>
+                            <constraint firstItem="u28-TX-Q0I" firstAttribute="centerY" secondItem="TIH-Sa-6rO" secondAttribute="centerY" id="umb-tV-0Yh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="친구목록" id="diJ-rM-gap">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="OKy-Dc-I9c">
-                            <connections>
-                                <action selector="addFriend:" destination="9ac-Nf-mM9" id="Sce-Iy-0gf"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="diJ-rM-gap"/>
                     <connections>
                         <outlet property="friendsSearchBar" destination="qte-wv-SGa" id="Y0U-y6-g6a"/>
                         <outlet property="friendsTableView" destination="6Oa-iI-FzF" id="ZEU-hy-Onr"/>
@@ -59,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FR7-Wt-txk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4436" y="948"/>
+            <point key="canvasLocation" x="4434.7826086956529" y="947.54464285714278"/>
         </scene>
         <!--약속-->
         <scene sceneID="cZ9-ne-1tc">
@@ -69,34 +80,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etr-sU-0ht">
-                                <rect key="frame" x="364" y="64" width="30" height="30"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5w-MO-8Ps">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="480"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etr-sU-0ht">
+                                        <rect key="frame" x="364" y="64" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="oe1-7r-kWW"/>
+                                            <constraint firstAttribute="width" constant="30" id="uvc-gS-06G"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.37647058820000001" green="0.57254901960000004" blue="0.80784313730000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="plus.circle.fill" catalog="system">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="promiseBtnClicked:" destination="OX4-fD-B9z" eventType="touchUpInside" id="ey8-JM-8sS"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약속 일정" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ll4-8G-tXa">
+                                        <rect key="frame" x="20" y="67" width="74" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="oe1-7r-kWW"/>
-                                    <constraint firstAttribute="width" constant="30" id="uvc-gS-06G"/>
+                                    <constraint firstAttribute="trailing" secondItem="etr-sU-0ht" secondAttribute="trailing" constant="20" id="AEn-Wu-vyQ"/>
+                                    <constraint firstItem="etr-sU-0ht" firstAttribute="top" secondItem="v5w-MO-8Ps" secondAttribute="top" constant="64" id="AmS-3S-8ML"/>
+                                    <constraint firstItem="Ll4-8G-tXa" firstAttribute="centerY" secondItem="etr-sU-0ht" secondAttribute="centerY" id="UQs-sP-mok"/>
+                                    <constraint firstAttribute="height" constant="480" id="oRt-NJ-RV2"/>
+                                    <constraint firstItem="Ll4-8G-tXa" firstAttribute="leading" secondItem="v5w-MO-8Ps" secondAttribute="leading" constant="20" id="zn8-GA-R4U"/>
                                 </constraints>
-                                <color key="tintColor" red="0.37647058820000001" green="0.57254901960000004" blue="0.80784313730000001" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="plus.circle.fill" catalog="system">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="promiseBtnClicked:" destination="OX4-fD-B9z" eventType="touchUpInside" id="ey8-JM-8sS"/>
-                                </connections>
-                            </button>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vR4-UE-f93"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="vR4-UE-f93" firstAttribute="trailing" secondItem="etr-sU-0ht" secondAttribute="trailing" constant="20" id="Q7X-Dx-IpK"/>
-                            <constraint firstItem="etr-sU-0ht" firstAttribute="top" secondItem="vR4-UE-f93" secondAttribute="top" constant="20" id="hSv-FN-OA7"/>
+                            <constraint firstItem="v5w-MO-8Ps" firstAttribute="trailing" secondItem="vR4-UE-f93" secondAttribute="trailing" id="GXN-hz-Wjz"/>
+                            <constraint firstItem="v5w-MO-8Ps" firstAttribute="top" secondItem="9Va-7c-pLF" secondAttribute="top" id="II6-cu-u5a"/>
+                            <constraint firstItem="v5w-MO-8Ps" firstAttribute="leading" secondItem="vR4-UE-f93" secondAttribute="leading" id="QGg-Vy-3Pj"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="약속" image="calendar" catalog="system" selectedImage="calendar" id="dfb-o9-Uak"/>
                     <navigationItem key="navigationItem" id="evt-Yi-CyF"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="Ll4-8G-tXa" id="epK-yr-HaO"/>
+                        <outlet property="topCalendarView" destination="v5w-MO-8Ps" id="FSz-Zc-xiE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nSt-cW-dfE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="197"/>
+            <point key="canvasLocation" x="1560.8695652173915" y="196.875"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="x32-mc-iTu">
@@ -426,11 +461,10 @@
         <!--친구목록-->
         <scene sceneID="Txq-ey-j2y">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nl1-cp-1W4" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Nl1-cp-1W4" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="친구목록" image="person.3" catalog="system" selectedImage="person.3.fill" id="EDN-bd-oqK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nxW-PD-dhn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

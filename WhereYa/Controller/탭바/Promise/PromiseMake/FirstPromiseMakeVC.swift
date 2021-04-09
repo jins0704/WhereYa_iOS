@@ -56,7 +56,22 @@ class FirstPromiseMakeVC: UIViewController {
             self.view.makeToast("약속 조건을 채워주세요", duration: 0.5, position: .center)
         }
         else{
-            print(promise)
+            PromiseService.shared.makePromise(promise: promise) { (data) in
+                switch data{
+                case .success(let message) :
+                    print(message )
+                case .requestErr(let message):
+                    print(message)
+                    return
+                case .serverErr:
+                    print("serverErr")
+                    return
+                    
+                case .networkFail:
+                    print("networkFail")
+                    return
+                }
+            }
         }
         
     }
@@ -68,8 +83,6 @@ class FirstPromiseMakeVC: UIViewController {
         viewSetting()
         folderableBtn.isHidden = true
         view.reloadInputViews()
-    }
-    @IBAction func nextBtnClicked(_ sender: Any) {
     }
 
     func viewSetting(){

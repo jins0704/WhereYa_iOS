@@ -296,6 +296,16 @@
                                 <rect key="frame" x="41" y="237" width="95" height="30"/>
                                 <state key="normal" title="친구를 초대해요"/>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhz-6f-2XH" customClass="FSCalendar">
+                                <rect key="frame" x="21" y="356" width="373" height="350"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="eventSelectionColor">
+                                        <color key="value" red="0.66993206029999997" green="0.79927236030000004" blue="0.75053401909999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y10-oI-mAF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -315,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EPZ-3I-jzd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3816" y="1173"/>
+            <point key="canvasLocation" x="3815.9420289855075" y="1172.5446428571429"/>
         </scene>
         <!--Promise MapVC-->
         <scene sceneID="V25-g5-LMF">

@@ -109,8 +109,8 @@ extension SearchFriendVC : UITableViewDelegate, UITableViewDataSource{
         
         cell.selectionStyle = .none
         cell.delegate = self
-        var usingList : [Friend] = []
         
+        var usingList : [Friend] = []
         var img : URL?
         
         usingList = isFiltering ? self.filterList : self.allList
