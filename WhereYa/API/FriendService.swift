@@ -24,6 +24,7 @@ struct FriendService{
         
         dataRequest.responseData { response in
             switch response.result{
+         
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
                 guard let value =  response.value else{return}
@@ -32,17 +33,17 @@ struct FriendService{
                     
                     do {
                         let decoder = JSONDecoder()
-                        let result = try decoder.decode(FriendResponse.self, from: value)
+                        let result = try decoder.decode(ResponseFriend.self, from: value)
                         
                         completion(.success(result.friends))
                         
                     } catch {
                         print(error.localizedDescription)
-                        completion(.requestErr("No Data"))
+                        completion(.requestErr(NetworkInfo.NO_DATA))
                     }
                 }
                 else{
-                    completion(.requestErr("bad request123"))
+                    completion(.requestErr(NetworkInfo.BAD_REQUEST))
                 }
                 
             //네트워크 실패
@@ -69,8 +70,8 @@ struct FriendService{
                 
                 print(statusCode)
     
-                if statusCode <= 300{  completion(.success("success"))}
-                else{completion(.requestErr("bad request"))}
+                if statusCode <= 300{  completion(.success(NetworkInfo.SUCCESS))}
+                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
  
             case .failure: completion(.networkFail)
     
@@ -93,8 +94,8 @@ struct FriendService{
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
                 
-                if statusCode <= 300{completion(.success("success"))}
-                else{completion(.requestErr("bad request"))}
+                if statusCode <= 300{completion(.success(NetworkInfo.SUCCESS))}
+                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
                 
             case .failure: completion(.networkFail)
     
@@ -116,8 +117,8 @@ struct FriendService{
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
                 
-                if statusCode <= 300{completion(.success("success"))}
-                else{completion(.requestErr("bad request"))}
+                if statusCode <= 300{completion(.success(NetworkInfo.SUCCESS))}
+                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
                 
             case .failure: completion(.networkFail)
     

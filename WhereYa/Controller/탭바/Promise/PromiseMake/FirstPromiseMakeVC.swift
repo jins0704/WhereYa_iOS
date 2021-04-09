@@ -52,7 +52,7 @@ class FirstPromiseMakeVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func completeBtnClicked(_ sender: Any) {
-        if promise.name?.count == 0 || promise.time == nil || promise.date == nil || promise.invitedfriends == nil || promise.destination == nil{
+        if promise.name?.count == 0 || promise.time == nil || promise.date == nil || promise.friends == nil || promise.destination == nil{
             self.view.makeToast("약속 조건을 채워주세요", duration: 0.5, position: .center)
         }
         else{
@@ -228,7 +228,7 @@ extension FirstPromiseMakeVC : UITextViewDelegate{
 
 extension FirstPromiseMakeVC : PopUpDelegate{
     func friendClicked(friends: [String]) {
-        promise.invitedfriends = friends
+        promise.friends = friends
         self.searchFriendBtn.setTitle("친구 : \(friends[0]) 외 \(friends.count-1)명", for: .normal)
     }
     

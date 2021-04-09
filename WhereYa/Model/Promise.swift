@@ -13,5 +13,5 @@ struct Promise : Codable{
     var time : String?
     var memo : String?
     var destination : Place?
-    var invitedfriends : [String]?
+    var friends : [String]?
 }

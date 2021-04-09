@@ -18,7 +18,7 @@ class PromiseMainVC: UIViewController {
     
     var calendar = FSCalendar()
     
-    var datesWithEvent = ["2021-04-03", "2021-04-06", "2021-04-12", "2021-04-25","2021-04-08", "2021-04-16", "2021-04-20", "2021-04-28"]
+    var datesWithEvent : [String]?
 
     fileprivate lazy var dateFormatter2: DateFormatter = {
         let formatter = DateFormatter()
@@ -32,13 +32,39 @@ class PromiseMainVC: UIViewController {
         calendar.delegate = self
         calendar.dataSource = self
         topCalendarView.addSubview(calendar)
-        calendar.appearance.eventSelectionColor = UIColor.red
-        calendar.appearance.eventDefaultColor = #colorLiteral(red: 0.6359217763, green: 0.8041787744, blue: 0.7479131818, alpha: 1)
+        calendar.appearance.eventSelectionColor = #colorLiteral(red: 0.6359217763, green: 0.8041787744, blue: 0.7479131818, alpha: 1)
+        calendar.appearance.eventDefaultColor = UIColor.green
         viewSetting()
         
         navigationController?.navigationBar.isHidden = true
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        PromiseService.shared.getEvents { (data) in
+            switch data{
+            case .success(let eventData) :
+                
+                guard let events = eventData as? [String] else { return }
+                
+                self.datesWithEvent = events
+                
+                DispatchQueue.main.async {
+                    self.calendar.reloadData()
+                }
+                
+            case .requestErr(let message):
+                print(message)
+                return
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+            }
+        }
+        
+    }
 
     @IBAction func promiseBtnClicked(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "PromiseMake", bundle: nil)
@@ -80,10 +106,11 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
         let dateString = self.dateFormatter2.string(from: date)
-
-            if self.datesWithEvent.contains(dateString) {
-                return 1
-            }
+        if let events = datesWithEvent{
+            if events.contains(dateString) {
+                    return 1
+                }
+        }
         return 0
     }
 }

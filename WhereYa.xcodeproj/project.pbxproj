@@ -79,6 +79,7 @@
 		4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F948AD9260DD4ED004BC1A9 /* Protocol.swift */; };
 		4F9B4B4F26176315007E8534 /* SecondPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9B4B4E26176315007E8534 /* SecondPromiseMakeVC.swift */; };
 		4F9D15C7261F484D00FA189A /* PromiseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D15C6261F484D00FA189A /* PromiseService.swift */; };
+		4F9D15CB2620C3D400FA189A /* ResponseCalendarEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F9D15CA2620C3D400FA189A /* ResponseCalendarEvents.swift */; };
 		4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */; };
 		4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */; };
 		4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FAB951425C7D4A000148446 /* AppDelegate.swift */; };
@@ -234,6 +235,7 @@
 		4F948AD9260DD4ED004BC1A9 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
 		4F9B4B4E26176315007E8534 /* SecondPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPromiseMakeVC.swift; sourceTree = "<group>"; };
 		4F9D15C6261F484D00FA189A /* PromiseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseService.swift; sourceTree = "<group>"; };
+		4F9D15CA2620C3D400FA189A /* ResponseCalendarEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResponseCalendarEvents.swift; path = WhereYa/API/ResponseCalendarEvents.swift; sourceTree = SOURCE_ROOT; };
 		4FA2AF3B25DCF45700B65132 /* FirstSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSignUpVC.swift; sourceTree = "<group>"; };
 		4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSignUpVC.swift; sourceTree = "<group>"; };
 		4FAB951125C7D4A000148446 /* WhereYa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhereYa.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -620,6 +622,7 @@
 				4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */,
 				4F8644E52614E68D009F20A3 /* Place.swift */,
 				4F90BB24261EDA7E0047F66A /* Promise.swift */,
+				4F9D15CA2620C3D400FA189A /* ResponseCalendarEvents.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				4F9D15C7261F484D00FA189A /* PromiseService.swift in Sources */,
 				4FD2DC4F25F2471800678B9B /* BaseTabbarVC.swift in Sources */,
 				4F9B4B4F26176315007E8534 /* SecondPromiseMakeVC.swift in Sources */,
+				4F9D15CB2620C3D400FA189A /* ResponseCalendarEvents.swift in Sources */,
 				4F5564EE260225B000806E8D /* ProfileService.swift in Sources */,
 				4FF918BC25E6450E0096FC26 /* ResponseToken.swift in Sources */,
 				4FF06D5326089CAD00327E80 /* Friend.swift in Sources */,

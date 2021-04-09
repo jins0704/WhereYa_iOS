@@ -26,4 +26,8 @@ struct NetworkInfo {
     static var networkHeader2: [String: String] {
         return [NetworkHeaderKey.CONTENT_TYPE.rawValue: "application/json"]
     }
+    
+    static let NO_DATA = "No Data"
+    static let BAD_REQUEST = "Bad Request"
+    static let SUCCESS = "success"
 }

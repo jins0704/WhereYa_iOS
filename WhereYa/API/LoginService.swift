@@ -46,7 +46,7 @@ struct LoginService {
                     
                     completion(.success(tokenData))
                 }
-                else{completion(.requestErr("bad request"))}
+                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
                 
             //네트워크 실패
             case .failure: completion(.networkFail)

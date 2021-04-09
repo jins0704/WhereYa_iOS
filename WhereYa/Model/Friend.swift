@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct FriendResponse : Codable{
+struct ResponseFriend : Codable{
     let friends : [Friend]
 }
 class Friend : Codable{

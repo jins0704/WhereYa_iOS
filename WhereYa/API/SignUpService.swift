@@ -49,10 +49,10 @@ struct SignUpService {
                 print(statusCode)
                 
                 if statusCode <= 300{
-                    completion(.success("success"))
+                    completion(.success(NetworkInfo.SUCCESS))
                 }
                 else{
-                    completion(.requestErr("bad request"))
+                    completion(.requestErr(NetworkInfo.BAD_REQUEST))
                 }
           
             case .failure: completion(.networkFail)

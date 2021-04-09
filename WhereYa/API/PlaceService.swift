@@ -46,7 +46,7 @@ struct PlaceService {
                 else{
                     guard let statusCode =  response.response?.statusCode else { return }
                     print(statusCode)
-                    completion(.requestErr("bad request"))
+                    completion(.requestErr(NetworkInfo.BAD_REQUEST))
                     
                 }
 

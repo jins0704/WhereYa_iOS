@@ -29,8 +29,12 @@ struct APIConstants{
     static let addFriendURL = APIConstants.BASE_URL + "/friend/"
     //즐겨찾기 추가
     static let bookmarkFriendURL = APIConstants.BASE_URL + "/friend/bookmark/"
+    
+    //약속 캘린더 확인
+    static let promiseCheckEvents = APIConstants.BASE_URL + "/promise/checkDate"
     //약속 추가
-    static let promiseMakeURL = APIConstants.BASE_URL + "/appointment"
+    static let promiseMakeURL = APIConstants.BASE_URL + "/promise"
+    
     //지도 검색
     static let placeURL = "https://dapi.kakao.com/v2/local/search/keyword.json"
     
