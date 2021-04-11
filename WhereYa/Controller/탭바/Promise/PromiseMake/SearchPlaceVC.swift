@@ -83,6 +83,9 @@ extension SearchPlaceVC : UITableViewDelegate, UITableViewDataSource{
         cell.mainLabel.text = placeList[indexPath.row].place_name
         cell.subLabel.text = placeList[indexPath.row].address_name
         
+        cell.longitudeX = placeList[indexPath.row].x
+        cell.latitudeY = placeList[indexPath.row].y
+        
         return cell
     }
     
@@ -92,9 +95,9 @@ extension SearchPlaceVC : UITableViewDelegate, UITableViewDataSource{
             PlaceSearchTableViewCell{
             
             let selectedPlace : Place = Place(cell.mainLabel.text ?? "", cell.subLabel.text ?? "", cell.longitudeX ?? "", cell.latitudeY ?? "")
-            
+       
             popupDelegate?.placeClicked(place: selectedPlace)
-            print("전달")
+
             self.dismiss(animated: true, completion: nil)
         }
     }

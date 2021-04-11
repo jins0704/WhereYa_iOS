@@ -16,10 +16,21 @@ struct PromiseService{
 
     
     func makePromise(promise: Promise, completion: @escaping (NetworkResult<Any>) -> Void){
-        
+     
+        let parameter : Parameters = ["name" : promise.name ?? " ",
+                                      "memo" : promise.memo ?? " ",
+                                      "date" : promise.date ?? " ",
+                                      "time" : promise.time ?? " ",
+                                      "destination" :[
+                                        "address_name" : promise.destination?.address_name ?? " ",
+                                        "place_name" : promise.destination?.place_name ?? " ",
+                                        "x" : promise.destination?.x ?? " ",
+                                        "y" : promise.destination?.y ?? " "
+                                        ],
+                                      "friends" : promise.friends!]
+     
+        print(parameter)
         let url : String = APIConstants.promiseMakeURL
-        
-        let parameter : Parameters = ["promise" : promise]
         
         let dataRequest = AF.request(url,
                                      method: .post,
@@ -45,7 +56,7 @@ struct PromiseService{
     }
     
     func getEvents(completion: @escaping (NetworkResult<Any>) -> Void){
-        
+
         let url : String = APIConstants.promiseCheckEvents
         
         let dataRequest = AF.request(url,
