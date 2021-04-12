@@ -7,6 +7,9 @@
 
 import Foundation
 
+struct ResponsePromiseList : Codable{
+    let promiseList: [Promise]
+}
 struct Promise : Codable{
     var name : String?
     var date : String?

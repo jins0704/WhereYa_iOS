@@ -12,10 +12,11 @@ class PromiseMainVC: UIViewController {
 
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var topCalendarView: UIView!
+    @IBOutlet var promiseMainTableView: UITableView!
     
     let Promises: [String] = ["1","2","3","4"]
-    let cellIdentifier : String = "promiseMainTableViewCell"
-    
+    let cellIdentifier : String = "PromiseMainTableViewCell"
+    var promiseList : [Promise] = []
     var calendar = FSCalendar()
     
     var datesWithEvent : [String]?
@@ -28,12 +29,15 @@ class PromiseMainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         calendar.delegate = self
         calendar.dataSource = self
         topCalendarView.addSubview(calendar)
-        calendar.appearance.eventSelectionColor = #colorLiteral(red: 0.6359217763, green: 0.8041787744, blue: 0.7479131818, alpha: 1)
-        calendar.appearance.eventDefaultColor = UIColor.green
+        
+        promiseMainTableView.separatorStyle = .none
+        promiseMainTableView.delegate = self
+        promiseMainTableView.dataSource = self
+        promiseMainTableView.register(UINib(nibName: "PromiseMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         viewSetting()
         
         navigationController?.navigationBar.isHidden = true
@@ -76,6 +80,14 @@ class PromiseMainVC: UIViewController {
     }
     // MARK: - func
     func viewSetting(){
+        let border = CALayer()
+        border.frame = CGRect(x: 0, y: topCalendarView.frame.size.height, width: topCalendarView.frame.width, height: 1)
+        border.backgroundColor = UIColor.lightGray.cgColor
+
+        topCalendarView.layer.addSublayer((border))
+        
+        calendar.appearance.eventSelectionColor = #colorLiteral(red: 0.6359217763, green: 0.8041787744, blue: 0.7479131818, alpha: 1)
+        calendar.appearance.eventDefaultColor = UIColor.green
         calendar.translatesAutoresizingMaskIntoConstraints = false
         calendar.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
         calendar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
@@ -99,9 +111,35 @@ class PromiseMainVC: UIViewController {
 
 // MARK: - FSCalendar
 extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
-    func calendar(_ calendar: FSCalendar, shouldSelect date: Date, at monthPosition: FSCalendarMonthPosition) -> Bool {
-        print(calendar.adjustMonthPosition())
-        return true
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        let promiseData = df.string(from: date)
+        
+        PromiseService.shared.getPromiseList(promiseData) { (data) in
+            switch data{
+            case .success(let list) :
+                
+                guard let list = list as? [Promise] else { return }
+                
+                self.promiseList = list
+                
+                DispatchQueue.main.async {
+                    self.promiseMainTableView.reloadData()
+                }
+                
+            case .requestErr(let message):
+                print(message)
+                return
+            case .serverErr:
+                print("serverErr")
+                return
+                
+            case .networkFail:
+                print("networkFail")
+                return
+            }
+        }
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
@@ -113,4 +151,23 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
         }
         return 0
     }
+}
+
+extension PromiseMainVC : UITableViewDelegate,UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return promiseList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell : PromiseMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PromiseMainTableViewCell
+
+        let promise = promiseList[indexPath.row]
+        cell.promiseName.text = promise.name
+        cell.promiseTime.text = promise.time
+        cell.promisePlace.text = promise.destination?.place_name
+        cell.promiseFriends.text = "\(promise.friends?[0] ?? " ") + 외 \(promise.friends?.count ?? 1 - 1)명"
+        return cell
+    }
+    
+    
 }

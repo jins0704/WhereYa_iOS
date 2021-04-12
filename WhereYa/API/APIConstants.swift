@@ -30,8 +30,10 @@ struct APIConstants{
     //즐겨찾기 추가
     static let bookmarkFriendURL = APIConstants.BASE_URL + "/friend/bookmark/"
     
-    //약속 캘린더 확인
+    //약속일정 조회
     static let promiseCheckEvents = APIConstants.BASE_URL + "/promise/checkDate"
+    //약속목록 조회
+    static let promiseList = APIConstants.BASE_URL + "/promise/date/"
     //약속 추가
     static let promiseMakeURL = APIConstants.BASE_URL + "/promise"
     

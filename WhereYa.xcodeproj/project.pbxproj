@@ -10,6 +10,8 @@
 		19E8D14FB76DF0C5A15C3C11 /* Pods_WhereYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAB4146BCC0F8AB2762B95B /* Pods_WhereYa.framework */; };
 		4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52B7260B5E020084C549 /* FriendService.swift */; };
 		4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */; };
+		4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */; };
+		4F539DF72624BFD60020ED9E /* PromiseMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */; };
 		4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564C62600F0AD00806E8D /* 16315-map.json */; };
 		4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D326010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png */; };
 		4F5564DA26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F5564D426010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png */; };
@@ -111,6 +113,8 @@
 /* Begin PBXFileReference section */
 		4F3A52B7260B5E020084C549 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFriendNickname.swift; sourceTree = "<group>"; };
+		4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
+		4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F5564A02600E78700806E8D /* AppleSDGothicNeoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB.ttf; sourceTree = "<group>"; };
 		4F5564A12600E78700806E8D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		4F5564A22600E78700806E8D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
@@ -346,6 +350,8 @@
 				4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */,
 				4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */,
 				4FFF039E261B4E28003CEF89 /* CalendarVC.swift */,
+				4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */,
+				4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */,
 				4F90BB06261DE27F0047F66A /* PromiseMake */,
 			);
 			path = Promise;
@@ -774,6 +780,7 @@
 				4F86444E2614D544009F20A3 /* daum_copyright.png in Resources */,
 				4F5564DA26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png in Resources */,
 				4F5564DC26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png in Resources */,
+				4F539DF72624BFD60020ED9E /* PromiseMainTableViewCell.xib in Resources */,
 				4F86444F2614D544009F20A3 /* map_pin@3x.png in Resources */,
 				4F86444C2614D544009F20A3 /* th_line.png in Resources */,
 				4F86448A2614D5B5009F20A3 /* map_pinup.png in Resources */,
@@ -853,6 +860,7 @@
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
+				4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */,
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,
 				4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */,
