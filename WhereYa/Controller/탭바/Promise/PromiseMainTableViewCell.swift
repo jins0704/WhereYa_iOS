@@ -13,7 +13,10 @@ class PromiseMainTableViewCell: UITableViewCell {
     @IBOutlet var promiseName: UILabel!
     @IBOutlet var promisePlace: UILabel!
     @IBOutlet var promiseTime: UILabel!
-    @IBOutlet var promiseFriends: UILabel!
+    
+    var promiseAddress : String?
+    var promiseMemo : String?
+    var promiseFriend : [String?] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()

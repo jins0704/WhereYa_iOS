@@ -10,6 +10,7 @@ import FSCalendar
 
 class PromiseMainVC: UIViewController {
 
+    @IBOutlet var wholeView: UIView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var topCalendarView: UIView!
     @IBOutlet var promiseMainTableView: UITableView!
@@ -34,7 +35,6 @@ class PromiseMainVC: UIViewController {
         calendar.dataSource = self
         topCalendarView.addSubview(calendar)
         
-        promiseMainTableView.separatorStyle = .none
         promiseMainTableView.delegate = self
         promiseMainTableView.dataSource = self
         promiseMainTableView.register(UINib(nibName: "PromiseMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -83,11 +83,14 @@ class PromiseMainVC: UIViewController {
         let border = CALayer()
         border.frame = CGRect(x: 0, y: topCalendarView.frame.size.height, width: topCalendarView.frame.width, height: 1)
         border.backgroundColor = UIColor.lightGray.cgColor
+        
 
         topCalendarView.layer.addSublayer((border))
         
+        promiseMainTableView.separatorStyle = .none
+        
         calendar.appearance.eventSelectionColor = #colorLiteral(red: 0.6359217763, green: 0.8041787744, blue: 0.7479131818, alpha: 1)
-        calendar.appearance.eventDefaultColor = UIColor.green
+        calendar.appearance.eventDefaultColor = UIColor.blue
         calendar.translatesAutoresizingMaskIntoConstraints = false
         calendar.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
         calendar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
@@ -96,17 +99,30 @@ class PromiseMainVC: UIViewController {
         calendar.heightAnchor.constraint(equalToConstant: 350).isActive = true
         
         calendar.headerHeight = 90
-        calendar.appearance.headerDateFormat = "YYYY. M"
+        calendar.appearance.headerDateFormat = "YY년 M월"
         calendar.appearance.headerTitleColor = .mainBlueColor
         calendar.appearance.headerTitleFont = UIFont.systemFont(ofSize: 24)
         calendar.locale = Locale(identifier: "ko_KR")
         
         calendar.appearance.weekdayTextColor = UIColor.black
-        calendar.appearance.titleWeekendColor = UIColor.darkPink85
         calendar.appearance.todayColor = UIColor.systemGray4
         calendar.appearance.selectionColor = #colorLiteral(red: 0.6078431373, green: 0.7333333333, blue: 0.7843137255, alpha: 1)
     }
    
+    // MARK: - SeguePreapre
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "PromiseDetailSegue"{
+            guard let next = segue.destination as? PromiseDetailVC else{return}
+            guard let cell : PromiseMainTableViewCell = sender as? PromiseMainTableViewCell else{return}
+               
+            next.promiseName = cell.promiseName.text
+            next.promisePlace = cell.promisePlace.text
+            next.promiseTime = cell.promiseTime.text
+            next.promiseAddress = cell.promiseAddress
+            next.promiseMemo = cell.promiseMemo
+            next.promiseFriend = cell.promiseFriend
+        }
+    }
 }
 
 // MARK: - FSCalendar
@@ -125,6 +141,7 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
                 self.promiseList = list
                 
                 DispatchQueue.main.async {
+                    self.view.reloadInputViews()
                     self.promiseMainTableView.reloadData()
                 }
                 
@@ -160,14 +177,22 @@ extension PromiseMainVC : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell : PromiseMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PromiseMainTableViewCell
-
+        
         let promise = promiseList[indexPath.row]
         cell.promiseName.text = promise.name
         cell.promiseTime.text = promise.time
         cell.promisePlace.text = promise.destination?.place_name
-        cell.promiseFriends.text = "\(promise.friends?[0] ?? " ") + 외 \(promise.friends?.count ?? 1 - 1)명"
+
+        cell.selectionStyle = .none
+        
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if let cell = promiseMainTableView.cellForRow(at: indexPath) as?
+            PromiseMainTableViewCell{
+            performSegue(withIdentifier: "PromiseDetailSegue", sender: cell)
+        }
+    }
 }

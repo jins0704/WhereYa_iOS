@@ -22,12 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PKs-Of-DgW">
-                                <rect key="frame" x="30" y="143" width="354" height="18.5"/>
+                                <rect key="frame" x="30" y="133" width="354" height="18.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paM-AQ-ZUl">
-                                <rect key="frame" x="30" y="79" width="16.5" height="24"/>
+                                <rect key="frame" x="20" y="69" width="16.5" height="24"/>
                                 <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="chevron.backward" catalog="system">
                                     <color key="titleColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
@@ -38,14 +38,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qct-gc-Q7m">
-                                <rect key="frame" x="30" y="186.5" width="19" height="22"/>
+                                <rect key="frame" x="20" y="176.5" width="19" height="22"/>
                                 <state key="normal" image="chevron.down" catalog="system"/>
                                 <connections>
                                     <action selector="folderableBtnClicked:" destination="2ut-jh-o8F" eventType="touchUpInside" id="ftf-Nx-L2y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Q-bA-kwr">
-                                <rect key="frame" x="354" y="76" width="30" height="30"/>
+                                <rect key="frame" x="364" y="66" width="30" height="30"/>
                                 <state key="normal" title="완료"/>
                                 <connections>
                                     <action selector="completeBtnClicked:" destination="2ut-jh-o8F" eventType="touchUpInside" id="pzQ-qd-dPy"/>
@@ -55,13 +55,13 @@
                         <viewLayoutGuide key="safeArea" id="rPB-JX-dkV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="paM-AQ-ZUl" firstAttribute="top" secondItem="rPB-JX-dkV" secondAttribute="top" constant="35" id="0UE-a6-t6z"/>
-                            <constraint firstItem="qct-gc-Q7m" firstAttribute="leading" secondItem="rPB-JX-dkV" secondAttribute="leading" constant="30" id="CiN-cg-DuI"/>
-                            <constraint firstItem="paM-AQ-ZUl" firstAttribute="leading" secondItem="rPB-JX-dkV" secondAttribute="leading" constant="30" id="CvH-0v-RFl"/>
+                            <constraint firstItem="paM-AQ-ZUl" firstAttribute="top" secondItem="rPB-JX-dkV" secondAttribute="top" constant="25" id="0UE-a6-t6z"/>
+                            <constraint firstItem="qct-gc-Q7m" firstAttribute="leading" secondItem="rPB-JX-dkV" secondAttribute="leading" constant="20" id="CiN-cg-DuI"/>
+                            <constraint firstItem="paM-AQ-ZUl" firstAttribute="leading" secondItem="rPB-JX-dkV" secondAttribute="leading" constant="20" id="CvH-0v-RFl"/>
                             <constraint firstItem="rPB-JX-dkV" firstAttribute="trailing" secondItem="PKs-Of-DgW" secondAttribute="trailing" constant="30" id="Twh-rB-j3Z"/>
                             <constraint firstItem="PKs-Of-DgW" firstAttribute="top" secondItem="paM-AQ-ZUl" secondAttribute="bottom" constant="40" id="Zp3-dU-Lcs"/>
                             <constraint firstItem="v0Q-bA-kwr" firstAttribute="centerY" secondItem="paM-AQ-ZUl" secondAttribute="centerY" id="gQ1-Tt-hV9"/>
-                            <constraint firstItem="rPB-JX-dkV" firstAttribute="trailing" secondItem="v0Q-bA-kwr" secondAttribute="trailing" constant="30" id="s5e-Lm-PT5"/>
+                            <constraint firstItem="rPB-JX-dkV" firstAttribute="trailing" secondItem="v0Q-bA-kwr" secondAttribute="trailing" constant="20" id="s5e-Lm-PT5"/>
                             <constraint firstItem="PKs-Of-DgW" firstAttribute="leading" secondItem="rPB-JX-dkV" secondAttribute="leading" constant="30" id="sNf-GC-dMY"/>
                             <constraint firstItem="qct-gc-Q7m" firstAttribute="top" secondItem="PKs-Of-DgW" secondAttribute="bottom" constant="25" id="sUr-7Z-UtJ"/>
                         </constraints>

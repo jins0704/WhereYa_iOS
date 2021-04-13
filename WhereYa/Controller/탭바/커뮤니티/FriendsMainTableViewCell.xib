@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xic-QR-d1q">
-                        <rect key="frame" x="389" y="39" width="20" height="22"/>
+                        <rect key="frame" x="389" y="44" width="20" height="22"/>
                         <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                         <state key="normal" image="circle" catalog="system"/>
                         <connections>
@@ -25,14 +25,14 @@
                         </connections>
                     </button>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="F5r-ow-HcM">
-                        <rect key="frame" x="15" y="15" width="70" height="70"/>
+                        <rect key="frame" x="15" y="20" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="70" id="iix-8o-DQv"/>
                             <constraint firstAttribute="width" constant="70" id="nas-al-dkH"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wc-7K-Y3H">
-                        <rect key="frame" x="155" y="39.5" width="42" height="21"/>
+                        <rect key="frame" x="155" y="44.5" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -45,8 +45,8 @@
                     <constraint firstItem="F5r-ow-HcM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="18Y-6f-UOf"/>
                     <constraint firstItem="Xic-QR-d1q" firstAttribute="centerY" secondItem="1wc-7K-Y3H" secondAttribute="centerY" id="Ael-a0-PgV"/>
                     <constraint firstItem="Xic-QR-d1q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1wc-7K-Y3H" secondAttribute="trailing" constant="80" id="IEg-jN-rsa"/>
-                    <constraint firstAttribute="bottom" secondItem="F5r-ow-HcM" secondAttribute="bottom" constant="15" id="qrI-SC-wBF"/>
-                    <constraint firstItem="F5r-ow-HcM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="rxi-J8-K5B"/>
+                    <constraint firstAttribute="bottom" secondItem="F5r-ow-HcM" secondAttribute="bottom" constant="20" id="qrI-SC-wBF"/>
+                    <constraint firstItem="F5r-ow-HcM" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="rxi-J8-K5B"/>
                     <constraint firstAttribute="trailing" secondItem="Xic-QR-d1q" secondAttribute="trailing" constant="30" id="sgZ-kC-V3n"/>
                 </constraints>
             </tableViewCellContentView>

@@ -60,6 +60,7 @@ class FirstPromiseMakeVC: UIViewController {
                 switch data{
                 case .success(let message) :
                     print(message )
+                    self.dismiss(animated: true, completion: nil)
                 case .requestErr(let message):
                     print(message)
                     return

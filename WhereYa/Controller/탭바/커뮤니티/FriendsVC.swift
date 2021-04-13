@@ -230,12 +230,8 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if isFiltering{
-            return 1
-        }
-        else{
-            return 3
-        }
+        if isFiltering{return 1}
+        else{return 3}
     }
     
 
