@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		19E8D14FB76DF0C5A15C3C11 /* Pods_WhereYa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAB4146BCC0F8AB2762B95B /* Pods_WhereYa.framework */; };
+		4F17D6E6262DAE69005B2913 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17D6E5262DAE69005B2913 /* UIView.swift */; };
 		4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52B7260B5E020084C549 /* FriendService.swift */; };
 		4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */; };
 		4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */; };
@@ -112,6 +113,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F17D6E5262DAE69005B2913 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4F3A52B7260B5E020084C549 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFriendNickname.swift; sourceTree = "<group>"; };
 		4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
@@ -310,6 +312,7 @@
 				4FFF0396261B25D1003CEF89 /* UITextField.swift */,
 				4FFF039B261B2B5A003CEF89 /* UIColor.swift */,
 				4F90BB28261EF8330047F66A /* UITextView.swift */,
+				4F17D6E5262DAE69005B2913 /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -872,6 +875,7 @@
 				4F8644EE2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift in Sources */,
 				4F8644182614CE36009F20A3 /* BasePromiseMakeVC.swift in Sources */,
 				4F90BB29261EF8340047F66A /* UITextView.swift in Sources */,
+				4F17D6E6262DAE69005B2913 /* UIView.swift in Sources */,
 				4FFF0397261B25D1003CEF89 /* UITextField.swift in Sources */,
 				4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */,
 				4F8644E62614E68D009F20A3 /* Place.swift in Sources */,

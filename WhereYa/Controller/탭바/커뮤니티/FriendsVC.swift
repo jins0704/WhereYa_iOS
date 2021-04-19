@@ -10,7 +10,6 @@ import Kingfisher
 
 class FriendsVC: UIViewController, PopUpDelegate {
     
-
     private let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
     private var AllList : [Friend] = []
@@ -256,11 +255,10 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
             
             let storyboard = UIStoryboard.init(name: "FriendSettingPopUp", bundle: nil)
            
-            let popUpVC = storyboard.instantiateViewController(identifier: "FriendSettingPopUpVC") as! FriendSettingPopUpVC
+            guard let popUpVC = storyboard.instantiateViewController(identifier: "FriendSettingPopUpVC") as? FriendSettingPopUpVC else{return}
            
-            popUpVC.modalPresentationStyle = .overCurrentContext
-            popUpVC.modalTransitionStyle = .crossDissolve
-            
+            popUpVC.modalPresentationStyle = .overFullScreen
+     
             popUpVC.popupDelegate = self
             
             if let fNickname = usingArray[indexPath.row].nickname{
@@ -273,8 +271,7 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
                 popUpVC.detailStar = fStar
             }
             
-            self.present(popUpVC, animated: true) {
-            }
+            self.present(popUpVC, animated: true, completion: nil) 
         }
     }
 }

@@ -182,7 +182,10 @@ extension PromiseMainVC : UITableViewDelegate,UITableViewDataSource{
         cell.promiseName.text = promise.name
         cell.promiseTime.text = promise.time
         cell.promisePlace.text = promise.destination?.place_name
-
+        cell.promiseAddress = promise.destination?.address_name
+        cell.promiseFriend = promise.friends ?? []
+        cell.promiseMemo  = promise.memo
+        
         cell.selectionStyle = .none
         
         return cell

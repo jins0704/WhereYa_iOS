@@ -11,8 +11,6 @@ class FriendSettingPopUpVC: UIViewController{
           
     var popupDelegate : PopUpDelegate?
     
-    @IBOutlet weak var popupView: UIView!
-    
     var detailNickname : String?
     var detailImg : String?
     var detailStar : Bool?
@@ -31,6 +29,7 @@ class FriendSettingPopUpVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.swipDownDismiss()
         if let nickname = detailNickname{
             nicknameLabel.text = nickname
         }
@@ -53,11 +52,9 @@ class FriendSettingPopUpVC: UIViewController{
         profileImage.clipsToBounds = true
         profileImage.layer.borderColor = UIColor.clear.cgColor
         
-        popupView.layer.borderWidth = 1
-        popupView.layer.borderColor = UIColor.black.cgColor
-        popupView.layer.cornerRadius = 20
-        starLabel.textColor = UIColor.mainBlueColor
-        deleteLabel.textColor = UIColor.darkPink85
+        
+        starLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+        deleteLabel.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
     }
     
     @IBAction func starBtnClicked(_ sender: Any) {
@@ -163,15 +160,15 @@ class FriendSettingPopUpVC: UIViewController{
     func successAlert(message : String){
         let alert =  UIAlertController(title: "", message: message, preferredStyle: .alert)
       
-        let doneMessage = UIAlertAction(title: "확인", style: .default, handler: nil)
+        let doneMessage = UIAlertAction(title: "확인", style: .default){ (_) in
+            self.dismiss(animated: true, completion: nil)
+        }
 
         alert.addAction(doneMessage)
 
         present(alert, animated: true, completion: nil)
         
-        DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
-            self.dismiss(animated: true, completion: nil)
-        }
+    
     }
     
     @IBAction func doneProfileBtnClicked(_ sender: Any) {
