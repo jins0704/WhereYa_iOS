@@ -78,12 +78,26 @@ class FirstPromiseMakeVC: UIViewController {
     }
     
     @IBAction func folderableBtnClicked(_ sender: Any) {
-        view.addSubview(calendar)
-        detailView.removeFromSuperview()
-        view.addSubview(detailView)
-        viewSetting()
-        folderableBtn.isHidden = true
-        view.reloadInputViews()
+        if(isFoldered){
+            
+            view.addSubview(calendar)
+            detailView.removeFromSuperview()
+            view.addSubview(detailView)
+            viewSetting()
+
+            view.reloadInputViews()
+            isFoldered = false
+        }
+        else{
+            calendar.removeFromSuperview()
+            detailView.topAnchor.constraint(equalTo: self.folderableBtn.bottomAnchor, constant: 10).isActive = true
+            
+            folderableBtn.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+            
+            detailView.isHidden = false
+            view.reloadInputViews()
+            isFoldered = true
+        }
     }
 
     func viewSetting(){
@@ -114,9 +128,9 @@ class FirstPromiseMakeVC: UIViewController {
 
         detailView.heightAnchor.constraint(equalToConstant: 400).isActive = true
 
+        folderableBtn.setImage(UIImage(systemName: "chevron.up"), for: .normal)
         folderableBtn.tintColor = UIColor.gray
-        folderableBtn.isHidden = true
-        
+  
         detailView.isHidden = true
     }
     
@@ -250,9 +264,11 @@ extension FirstPromiseMakeVC : PopUpDelegate{
 //        self.memo.textColor = UIColor.lightGray
         calendar.removeFromSuperview()
         self.detailView.topAnchor.constraint(equalTo: self.folderableBtn.bottomAnchor, constant: 10).isActive = true
-        self.folderableBtn.isHidden = false
+        
+        self.folderableBtn.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        
         self.detailView.isHidden = false
         self.view.reloadInputViews()
-
+        self.isFoldered = true
     }
 }

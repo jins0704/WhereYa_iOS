@@ -11,7 +11,7 @@ struct APIConstants{
     
     static let MULTIPART = "multipart/form-data"
     static let APPLICATION_JSON =  "application/json"
-    static let BASE_URL = "http://ec2-15-165-205-7.ap-northeast-2.compute.amazonaws.com"
+    static let BASE_URL = "http://ec2-3-34-48-38.ap-northeast-2.compute.amazonaws.com"
     
     //계정
     static let signinURL = APIConstants.BASE_URL + "/user/login"
