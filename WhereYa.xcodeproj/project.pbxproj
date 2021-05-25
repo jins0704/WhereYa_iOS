@@ -340,8 +340,7 @@
 				4F5564E52601E01200806E8D /* MyPageVC.swift */,
 				4F5564E8260212B300806E8D /* MyPageSettingVC.swift */,
 			);
-			name = MyPage;
-			path = "마이페이지";
+			path = MyPage;
 			sourceTree = "<group>";
 		};
 		4F5564EB260217B400806E8D /* Login */ = {
@@ -570,8 +569,7 @@
 				4FD8322D25F7B91F00D8A214 /* FreiendList */,
 				4F5564E42601DFF200806E8D /* MyPage */,
 			);
-			name = Tabbar;
-			path = "탭바";
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
 		4FD8322D25F7B91F00D8A214 /* FreiendList */ = {
@@ -583,7 +581,7 @@
 				4F90BB1B261E1F160047F66A /* FriendsMainTableViewCell.xib */,
 			);
 			name = FreiendList;
-			path = "커뮤니티";
+			path = FriendList;
 			sourceTree = "<group>";
 		};
 		4FF917B725DE453A0096FC26 /* Font */ = {
@@ -670,8 +668,7 @@
 				4FA2AF4125DD02A100B65132 /* SecondSignUpVC.swift */,
 				4FF918E125E81D7E0096FC26 /* DatePopUpVC.swift */,
 			);
-			name = SignUp;
-			path = "회원가입,로그인";
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		4FF918FC25E8FC200096FC26 /* Home */ = {
@@ -680,8 +677,7 @@
 				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
 				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
 			);
-			name = Home;
-			path = "홈";
+			path = Home;
 			sourceTree = "<group>";
 		};
 		7716279AABFFD0D404869E40 /* Frameworks */ = {
