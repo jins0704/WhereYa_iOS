@@ -317,57 +317,6 @@
             </objects>
             <point key="canvasLocation" x="3815.9420289855075" y="1172.5446428571429"/>
         </scene>
-        <!--Promise MapVC-->
-        <scene sceneID="V25-g5-LMF">
-            <objects>
-                <viewController id="PrZ-y2-PPg" customClass="PromiseMapVC" customModule="WhereYa" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hQ3-HV-tg2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OA2-4y-ajF">
-                                <rect key="frame" x="0.0" y="44" width="414" height="400"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="위치 지도 보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rV8-dO-nza">
-                                        <rect key="frame" x="10" y="20" width="97" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FUy-z6-b6e">
-                                        <rect key="frame" x="5" y="61" width="404" height="319"/>
-                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstItem="FUy-z6-b6e" firstAttribute="top" secondItem="rV8-dO-nza" secondAttribute="bottom" constant="20" id="1Iz-Ns-Q92"/>
-                                    <constraint firstAttribute="height" constant="400" id="Inm-uI-1LO"/>
-                                    <constraint firstItem="rV8-dO-nza" firstAttribute="top" secondItem="OA2-4y-ajF" secondAttribute="top" constant="20" id="JBv-4x-YMv"/>
-                                    <constraint firstAttribute="bottom" secondItem="FUy-z6-b6e" secondAttribute="bottom" constant="20" id="QAT-qu-bL7"/>
-                                    <constraint firstItem="FUy-z6-b6e" firstAttribute="leading" secondItem="OA2-4y-ajF" secondAttribute="leading" constant="5" id="eVR-C3-ckH"/>
-                                    <constraint firstAttribute="trailing" secondItem="FUy-z6-b6e" secondAttribute="trailing" constant="5" id="nzw-y6-eXq"/>
-                                    <constraint firstItem="rV8-dO-nza" firstAttribute="leading" secondItem="OA2-4y-ajF" secondAttribute="leading" constant="10" id="tm5-Lf-dey"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="QYN-aa-7v1"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstItem="QYN-aa-7v1" firstAttribute="trailing" secondItem="OA2-4y-ajF" secondAttribute="trailing" id="45P-wE-2KM"/>
-                            <constraint firstItem="OA2-4y-ajF" firstAttribute="top" secondItem="QYN-aa-7v1" secondAttribute="top" id="E1a-wV-fHj"/>
-                            <constraint firstItem="OA2-4y-ajF" firstAttribute="leading" secondItem="QYN-aa-7v1" secondAttribute="leading" id="yKz-yO-mqH"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="ehS-lL-JAR"/>
-                    <connections>
-                        <outlet property="mapScreenView" destination="FUy-z6-b6e" id="qMx-Ks-DBc"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="N6a-sJ-nlS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2516" y="1010"/>
-        </scene>
         <!--Promise Make NavigationVC-->
         <scene sceneID="BMp-aU-hrh">
             <objects>
@@ -406,7 +355,7 @@
                                         <rect key="frame" x="40.5" y="50" width="189" height="50"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVc-4t-YqR">
-                                        <rect key="frame" x="232" y="8" width="30" height="32"/>
+                                        <rect key="frame" x="232" y="8" width="30" height="35"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeoB00" family="AppleSDGothicNeoB00" pointSize="17"/>
                                         <state key="normal" title="완료"/>
                                         <connections>
@@ -455,9 +404,6 @@
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

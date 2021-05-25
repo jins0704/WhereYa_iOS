@@ -28,6 +28,9 @@
 		4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564F92603431800806E8D /* ResponseProfileImage.swift */; };
 		4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5564FF260388BD00806E8D /* NetworkInfo.swift */; };
 		4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FAB951D25C7D4A400148446 /* Assets.xcassets */; };
+		4F585B8D265D126400DFA81B /* HomeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F585B8C265D126400DFA81B /* HomeMainVC.swift */; };
+		4F585B90265D22FB00DFA81B /* GroupRoom.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F585B8F265D22FA00DFA81B /* GroupRoom.storyboard */; };
+		4F585B92265D238200DFA81B /* GroupRoomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F585B91265D238200DFA81B /* GroupRoomVC.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
 		4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */; };
 		4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644112614A812009F20A3 /* SearchPlaceVC.swift */; };
@@ -66,7 +69,6 @@
 		4F8644B62614D94A009F20A3 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8644AD2614D632009F20A3 /* libxml2.tbd */; };
 		4F8644B82614D951009F20A3 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8644AE2614D63A009F20A3 /* libsqlite3.tbd */; };
 		4F8644BB2614D961009F20A3 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F8644BA2614D961009F20A3 /* Metal.framework */; };
-		4F8644E22614E01E009F20A3 /* PromiseMapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */; };
 		4F8644E62614E68D009F20A3 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E52614E68D009F20A3 /* Place.swift */; };
 		4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644E92614EEE9009F20A3 /* PlaceService.swift */; };
 		4F8644EE2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */; };
@@ -140,6 +142,9 @@
 		4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-18 오전 3.06.02.png"; sourceTree = "<group>"; };
 		4F5564F92603431800806E8D /* ResponseProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseProfileImage.swift; sourceTree = "<group>"; };
 		4F5564FF260388BD00806E8D /* NetworkInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkInfo.swift; sourceTree = "<group>"; };
+		4F585B8C265D126400DFA81B /* HomeMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMainVC.swift; sourceTree = "<group>"; };
+		4F585B8F265D22FA00DFA81B /* GroupRoom.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GroupRoom.storyboard; sourceTree = "<group>"; };
+		4F585B91265D238200DFA81B /* GroupRoomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupRoomVC.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
 		4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPromiseMakeVC.swift; sourceTree = "<group>"; };
 		4F8644112614A812009F20A3 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
@@ -225,7 +230,6 @@
 		4F8644AE2614D63A009F20A3 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4F8644B02614D6E3009F20A3 /* WhereYa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WhereYa-Bridging-Header.h"; sourceTree = "<group>"; };
 		4F8644BA2614D961009F20A3 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
-		4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMapVC.swift; sourceTree = "<group>"; };
 		4F8644E52614E68D009F20A3 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		4F8644E92614EEE9009F20A3 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		4F8644EC2615CFA9009F20A3 /* PlaceSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceSearchTableViewCell.swift; sourceTree = "<group>"; };
@@ -354,7 +358,6 @@
 			children = (
 				4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */,
 				4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */,
-				4F8644E12614E01E009F20A3 /* PromiseMapVC.swift */,
 				4FFF039E261B4E28003CEF89 /* CalendarVC.swift */,
 				4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */,
 				4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */,
@@ -542,6 +545,7 @@
 				4FF918F625E8FB630096FC26 /* TabbarVC.storyboard */,
 				4F948AB6260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard */,
 				4F912792261B6B63002385A9 /* PromiseMake.storyboard */,
+				4F585B8F265D22FA00DFA81B /* GroupRoom.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -673,6 +677,8 @@
 		4FF918FC25E8FC200096FC26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
+				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
 			);
 			name = Home;
 			path = "홈";
@@ -795,6 +801,7 @@
 				4F86445B2614D544009F20A3 /* map_present_background_update.png in Resources */,
 				4F86445A2614D544009F20A3 /* noimage.png in Resources */,
 				4F8644542614D544009F20A3 /* map_pinup_custom.png in Resources */,
+				4F585B90265D22FB00DFA81B /* GroupRoom.storyboard in Resources */,
 				4F86444D2614D544009F20A3 /* map_pin_red@3x.png in Resources */,
 				4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */,
 				4F8644562614D544009F20A3 /* noimage256.png in Resources */,
@@ -851,6 +858,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */,
+				4F585B8D265D126400DFA81B /* HomeMainVC.swift in Sources */,
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4F90BAEE261C8A1B0047F66A /* TimePopUpVC.swift in Sources */,
@@ -878,12 +886,12 @@
 				4F17D6E6262DAE69005B2913 /* UIViewController.swift in Sources */,
 				4FFF0397261B25D1003CEF89 /* UITextField.swift in Sources */,
 				4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */,
+				4F585B92265D238200DFA81B /* GroupRoomVC.swift in Sources */,
 				4F8644E62614E68D009F20A3 /* Place.swift in Sources */,
 				4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
 				4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */,
 				4FA2AF3C25DCF45700B65132 /* FirstSignUpVC.swift in Sources */,
-				4F8644E22614E01E009F20A3 /* PromiseMapVC.swift in Sources */,
 				4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */,
 				4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */,
 				4FFF039C261B2B5A003CEF89 /* UIColor.swift in Sources */,

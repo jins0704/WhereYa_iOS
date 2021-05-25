@@ -1,15 +1,15 @@
 //
-//  PromiseMapVC.swift
+//  GroupRoomVC.swift
 //  WhereYa
 //
-//  Created by 홍진석 on 2021/04/01.
+//  Created by 홍진석 on 2021/05/25.
 //
 
 import UIKit
-
 public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.576568, longitude: 127.029148)
-class PromiseMapVC: UIViewController, MTMapViewDelegate {
-    
+
+class GroupRoomVC: UIViewController,MTMapViewDelegate {
+
     var mapView: MTMapView?
     var mapPoint1: MTMapPoint?
     var poiItem1: MTMapPOIItem?
@@ -63,5 +63,4 @@ class PromiseMapVC: UIViewController, MTMapViewDelegate {
     func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
-    
 }
