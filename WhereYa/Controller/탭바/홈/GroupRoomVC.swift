@@ -10,6 +10,8 @@ public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.576568, longitude: 127.
 
 class GroupRoomVC: UIViewController,MTMapViewDelegate {
 
+    static let identifier = "GroupRoomVC"
+    
     var mapView: MTMapView?
     var mapPoint1: MTMapPoint?
     var poiItem1: MTMapPOIItem?
