@@ -65,4 +65,8 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
     func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
+    
+    @IBAction func backBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

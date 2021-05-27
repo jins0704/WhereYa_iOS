@@ -14,8 +14,13 @@ class HomeMainVC: UIViewController {
     @IBOutlet var roomBtn: UIButton!
     @IBOutlet var recommendTV: UITableView!
     
+    var restaurants : [Place] = []
+    var cafes : [Place] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        getNearCafeData()
+        getNearFoodData()
         UISetting()
         TableViewSetting()
         
@@ -34,7 +39,7 @@ class HomeMainVC: UIViewController {
         recommendTV.dataSource = self
         
         recommendTV.register(UINib(nibName: RecommendFoodTVC.identifier, bundle: nil), forCellReuseIdentifier: RecommendFoodTVC.identifier)
-        recommendTV.register(UINib(nibName: RecommendPlaceTVC.identifier, bundle: nil), forCellReuseIdentifier: RecommendPlaceTVC.identifier)
+        recommendTV.register(UINib(nibName: RecommendCafeTVC.identifier, bundle: nil), forCellReuseIdentifier: RecommendCafeTVC.identifier)
 
         recommendTV.separatorStyle = .none
         recommendTV.rowHeight = UITableView.automaticDimension
@@ -49,9 +54,57 @@ class HomeMainVC: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
  
-    // MARK: - Navigation
-
-
+    // MARK: - getNearPlaceData
+    
+    func getNearCafeData(){
+        ActivityIndicator.shared.activityIndicator.startAnimating()
+        
+        PlaceService.shared.getNearPlace(cafegoryCode: "CAFE") { (result) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch result{
+            
+            case .success(let data) :
+                if let places = data as? [Place]{
+                    self.cafes = places
+                    self.recommendTV.reloadData()
+                }
+          
+            case .requestErr(_) : print("requeestErr")
+            case .serverErr:
+                print(".serverErr")
+                return
+            case .networkFail:
+                print("network_error")
+                return
+            }
+        }
+    }
+    
+    func getNearFoodData(){
+        ActivityIndicator.shared.activityIndicator.startAnimating()
+        
+        PlaceService.shared.getNearPlace(cafegoryCode: "FOOD") { [self] (result) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch result{
+        
+            case .success(let data) :
+                if let places = data as? [Place]{
+                    self.restaurants = places
+                    self.recommendTV.reloadData()
+                }
+                
+            case .requestErr(_) : print("requeestErr")
+            case .serverErr:
+                print(".serverErr")
+                return
+            case .networkFail:
+                print("network_error")
+                return
+            }
+        }
+    }
 }
 
 
@@ -78,10 +131,12 @@ extension HomeMainVC : UITableViewDataSource{
         switch indexPath.row{
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: RecommendFoodTVC.identifier, for: indexPath) as! RecommendFoodTVC
+            cell.list = restaurants
             return cell
             
         case 1:
-            let cell = tableView.dequeueReusableCell(withIdentifier: RecommendPlaceTVC.identifier, for: indexPath) as! RecommendPlaceTVC
+            let cell = tableView.dequeueReusableCell(withIdentifier: RecommendCafeTVC.identifier, for: indexPath) as! RecommendCafeTVC
+            cell.list = cafes
             return cell
             
         default :

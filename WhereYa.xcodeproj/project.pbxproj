@@ -35,8 +35,8 @@
 		4F67A263265D81D60044316D /* RecommendFoodTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A261265D81D60044316D /* RecommendFoodTVC.xib */; };
 		4F67A26E265D894C0044316D /* RecommendCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67A26C265D894C0044316D /* RecommendCVC.swift */; };
 		4F67A26F265D894C0044316D /* RecommendCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A26D265D894C0044316D /* RecommendCVC.xib */; };
-		4F67A272265D896A0044316D /* RecommendPlaceTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67A270265D896A0044316D /* RecommendPlaceTVC.swift */; };
-		4F67A273265D896A0044316D /* RecommendPlaceTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A271265D896A0044316D /* RecommendPlaceTVC.xib */; };
+		4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67A270265D896A0044316D /* RecommendCafeTVC.swift */; };
+		4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A271265D896A0044316D /* RecommendCafeTVC.xib */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
 		4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */; };
 		4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644112614A812009F20A3 /* SearchPlaceVC.swift */; };
@@ -155,8 +155,8 @@
 		4F67A261265D81D60044316D /* RecommendFoodTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendFoodTVC.xib; sourceTree = "<group>"; };
 		4F67A26C265D894C0044316D /* RecommendCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCVC.swift; sourceTree = "<group>"; };
 		4F67A26D265D894C0044316D /* RecommendCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCVC.xib; sourceTree = "<group>"; };
-		4F67A270265D896A0044316D /* RecommendPlaceTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlaceTVC.swift; sourceTree = "<group>"; };
-		4F67A271265D896A0044316D /* RecommendPlaceTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendPlaceTVC.xib; sourceTree = "<group>"; };
+		4F67A270265D896A0044316D /* RecommendCafeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCafeTVC.swift; sourceTree = "<group>"; };
+		4F67A271265D896A0044316D /* RecommendCafeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCafeTVC.xib; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
 		4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPromiseMakeVC.swift; sourceTree = "<group>"; };
 		4F8644112614A812009F20A3 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
@@ -363,6 +363,19 @@
 				4FAB952C25C7D77B00148446 /* LoginVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		4F67A2A7265F95000044316D /* Recommend */ = {
+			isa = PBXGroup;
+			children = (
+				4F67A26C265D894C0044316D /* RecommendCVC.swift */,
+				4F67A26D265D894C0044316D /* RecommendCVC.xib */,
+				4F67A261265D81D60044316D /* RecommendFoodTVC.xib */,
+				4F67A260265D81D60044316D /* RecommendFoodTVC.swift */,
+				4F67A271265D896A0044316D /* RecommendCafeTVC.xib */,
+				4F67A270265D896A0044316D /* RecommendCafeTVC.swift */,
+			);
+			path = Recommend;
 			sourceTree = "<group>";
 		};
 		4F8643F7261232CA009F20A3 /* Promise */ = {
@@ -689,14 +702,9 @@
 		4FF918FC25E8FC200096FC26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4F67A2A7265F95000044316D /* Recommend */,
 				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
 				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
-				4F67A260265D81D60044316D /* RecommendFoodTVC.swift */,
-				4F67A261265D81D60044316D /* RecommendFoodTVC.xib */,
-				4F67A270265D896A0044316D /* RecommendPlaceTVC.swift */,
-				4F67A271265D896A0044316D /* RecommendPlaceTVC.xib */,
-				4F67A26C265D894C0044316D /* RecommendCVC.swift */,
-				4F67A26D265D894C0044316D /* RecommendCVC.xib */,
 			);
 			name = Home;
 			path = "홈";
@@ -780,7 +788,7 @@
 			files = (
 				4F8644552614D544009F20A3 /* info_box_tail.png in Resources */,
 				4F86448F2614D5B5009F20A3 /* copyright.png in Resources */,
-				4F67A273265D896A0044316D /* RecommendPlaceTVC.xib in Resources */,
+				4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */,
 				4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */,
 				4F8644942614D5B5009F20A3 /* map_present_tracking.png in Resources */,
 				4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */,
@@ -922,7 +930,7 @@
 				4F90BB1C261E1F160047F66A /* FriendsMainTableViewCell.swift in Sources */,
 				4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
-				4F67A272265D896A0044316D /* RecommendPlaceTVC.swift in Sources */,
+				4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */,
 				4F9D15C7261F484D00FA189A /* PromiseService.swift in Sources */,

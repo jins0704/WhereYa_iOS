@@ -29,26 +29,39 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syo-f5-WHS">
-                                <rect key="frame" x="349" y="54" width="50" height="20"/>
+                                <rect key="frame" x="349" y="64" width="50" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="NbN-PD-sQe"/>
                                     <constraint firstAttribute="height" constant="20" id="xWI-mJ-BFs"/>
                                 </constraints>
                                 <state key="normal" image="스크린샷 2021-03-17 오전 12.56.49.png"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-2P-XZt">
+                                <rect key="frame" x="20" y="64" width="16.5" height="24"/>
+                                <color key="tintColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" red="0.2156862745" green="0.2156862745" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
+                                </state>
+                                <connections>
+                                    <action selector="backBtnClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KwY-9r-1Zb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XaT-2P-XZt" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="Hyb-NO-woq"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WgD-qt-u07" secondAttribute="trailing" constant="50" id="In8-yQ-Xgu"/>
                             <constraint firstItem="9vY-dQ-MgV" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Ivm-gA-Tis"/>
                             <constraint firstItem="9vY-dQ-MgV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="RCi-vP-rnX"/>
                             <constraint firstAttribute="bottom" secondItem="9vY-dQ-MgV" secondAttribute="bottom" id="Yfv-Or-0s1"/>
                             <constraint firstItem="9vY-dQ-MgV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZUf-9Q-NOa"/>
                             <constraint firstItem="WgD-qt-u07" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="b7n-Rt-0qt"/>
-                            <constraint firstItem="Syo-f5-WHS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="10" id="cqy-Lr-boV"/>
+                            <constraint firstItem="Syo-f5-WHS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="cqy-Lr-boV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Syo-f5-WHS" secondAttribute="trailing" constant="15" id="gDB-V7-NZR"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WgD-qt-u07" secondAttribute="bottom" constant="20" id="h53-76-ACv"/>
+                            <constraint firstItem="XaT-2P-XZt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="vY0-cv-lYQ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -61,6 +74,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="스크린샷 2021-03-17 오전 12.56.49.png" width="307" height="153"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
