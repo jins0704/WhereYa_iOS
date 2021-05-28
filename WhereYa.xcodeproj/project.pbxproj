@@ -37,6 +37,7 @@
 		4F67A26F265D894C0044316D /* RecommendCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A26D265D894C0044316D /* RecommendCVC.xib */; };
 		4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67A270265D896A0044316D /* RecommendCafeTVC.swift */; };
 		4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A271265D896A0044316D /* RecommendCafeTVC.xib */; };
+		4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
 		4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */; };
 		4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644112614A812009F20A3 /* SearchPlaceVC.swift */; };
@@ -157,6 +158,7 @@
 		4F67A26D265D894C0044316D /* RecommendCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCVC.xib; sourceTree = "<group>"; };
 		4F67A270265D896A0044316D /* RecommendCafeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCafeTVC.swift; sourceTree = "<group>"; };
 		4F67A271265D896A0044316D /* RecommendCafeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCafeTVC.xib; sourceTree = "<group>"; };
+		4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryInfo.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
 		4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPromiseMakeVC.swift; sourceTree = "<group>"; };
 		4F8644112614A812009F20A3 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
@@ -647,6 +649,7 @@
 				4F3A52B7260B5E020084C549 /* FriendService.swift */,
 				4F8644E92614EEE9009F20A3 /* PlaceService.swift */,
 				4F9D15C6261F484D00FA189A /* PromiseService.swift */,
+				4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -931,6 +934,7 @@
 				4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */,
+				4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */,
 				4F9D15C7261F484D00FA189A /* PromiseService.swift in Sources */,

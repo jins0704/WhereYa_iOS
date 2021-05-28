@@ -42,19 +42,9 @@ struct PlaceService {
         }
     }
     
-    func getNearPlace(cafegoryCode: String, completion: @escaping (NetworkResult<Any>) -> Void){
-        var code : String = ""
+    func getNearPlace(categoryCode: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        switch cafegoryCode{
-        case "CAFE":
-            code = "CE7"
-        case "FOOD":
-            code = "FD6"
-        default:
-            break
-        }
-        
-        let query : String = "\(APIConstants.categoryURL)?category_group_code=\(code)&sort=accuracy&page=1&x=\(DEFAULT_POSITION.longitude)&y=\(DEFAULT_POSITION.latitude)&radius=500"
+        let query : String = "\(APIConstants.categoryURL)?category_group_code=\(categoryCode)&sort=accuracy&page=1&x=\(DEFAULT_POSITION.longitude)&y=\(DEFAULT_POSITION.latitude)&radius=500"
     
         let encodedQuery : String = query.addingPercentEncoding(withAllowedCharacters: NSMutableCharacterSet.urlQueryAllowed)!
         let queryURL : URL = URL(string: encodedQuery)!

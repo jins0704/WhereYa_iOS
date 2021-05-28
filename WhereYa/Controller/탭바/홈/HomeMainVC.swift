@@ -59,7 +59,7 @@ class HomeMainVC: UIViewController {
     func getNearCafeData(){
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
-        PlaceService.shared.getNearPlace(cafegoryCode: "CAFE") { (result) in
+        PlaceService.shared.getNearPlace(categoryCode: PlaceCategoryInfo.cafe.rawValue) { (result) in
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
             switch result{
@@ -84,7 +84,8 @@ class HomeMainVC: UIViewController {
     func getNearFoodData(){
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
-        PlaceService.shared.getNearPlace(cafegoryCode: "FOOD") { [self] (result) in
+        
+        PlaceService.shared.getNearPlace(categoryCode: PlaceCategoryInfo.food.rawValue) { [self] (result) in
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
             switch result{
