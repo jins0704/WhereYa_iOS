@@ -17,7 +17,7 @@ class CalendarVC: UIViewController {
         calendarView.delegate = self
         calendarView.dataSource = self
         
-        CalendarSetting()
+        setCalendar()
         // Do any additional setup after loading the view.
     }
     
@@ -46,7 +46,7 @@ class CalendarVC: UIViewController {
     
     
     // MARK: - func
-    func CalendarSetting(){
+    func setCalendar(){
  
         calendarView.headerHeight = 50
         calendarView.appearance.headerDateFormat = "YYYY. M"

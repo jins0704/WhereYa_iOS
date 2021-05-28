@@ -21,20 +21,20 @@ class HomeMainVC: UIViewController {
         super.viewDidLoad()
         getNearCafeData()
         getNearFoodData()
-        UISetting()
-        TableViewSetting()
+        setUI()
+        setTableView()
         
     }
     
     // MARK: - UISetting
-    func UISetting(){
+    func setUI(){
         promiseName.text = "동창회 약속"
         alarmLabel.text = "30분 남았어요\n판교역으로 6시까지 가야해요"
     }
     
     // MARK: - TableViewSetting
     
-    func TableViewSetting(){
+    func setTableView(){
         recommendTV.delegate = self
         recommendTV.dataSource = self
         

@@ -38,7 +38,7 @@ class PromiseMainVC: UIViewController {
         promiseMainTableView.delegate = self
         promiseMainTableView.dataSource = self
         promiseMainTableView.register(UINib(nibName: "PromiseMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        viewSetting()
+        setUI()
         
         navigationController?.navigationBar.isHidden = true
     }
@@ -79,7 +79,7 @@ class PromiseMainVC: UIViewController {
         self.present(firstVC, animated: true, completion: nil)
     }
     // MARK: - func
-    func viewSetting(){
+    func setUI(){
         let border = CALayer()
         border.frame = CGRect(x: 0, y: topCalendarView.frame.size.height, width: topCalendarView.frame.width, height: 1)
         border.backgroundColor = UIColor.lightGray.cgColor

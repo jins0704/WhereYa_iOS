@@ -27,7 +27,7 @@ class PromiseDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
          
-        viewSetting()
+        setUI()
     }
     
     @IBAction func backBtnClicked(_ sender: Any) {
@@ -50,7 +50,7 @@ class PromiseDetailVC: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func viewSetting(){
+    func setUI(){
         nameLabel.text = promiseName
         timeLabel.text = promiseTime
         placeLabel.text = promisePlace
