@@ -20,23 +20,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WgD-qt-u07">
-                                <rect key="frame" x="50" y="806" width="314" height="36"/>
-                                <color key="backgroundColor" red="0.52771908479999996" green="0.75702809309999997" blue="0.82746964690000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <state key="normal" title="터치 다운">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Syo-f5-WHS">
-                                <rect key="frame" x="349" y="64" width="50" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="NbN-PD-sQe"/>
-                                    <constraint firstAttribute="height" constant="20" id="xWI-mJ-BFs"/>
-                                </constraints>
-                                <state key="normal" image="스크린샷 2021-03-17 오전 12.56.49.png"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O65-9b-izt">
+                                <rect key="frame" x="16" y="824" width="24" height="22"/>
+                                <state key="normal" image="bolt.fill.batteryblock.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="test:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pM9-Nb-cDt"/>
+                                    <action selector="moveToPromiseLocation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="imt-0c-dkQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jv5-jQ-5LT">
+                                <rect key="frame" x="16" y="790" width="20" height="22"/>
+                                <state key="normal" image="message.circle" catalog="system"/>
+                                <connections>
+                                    <action selector="moveToMyLocation:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="leY-hr-D45"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-2P-XZt">
@@ -55,15 +50,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="XaT-2P-XZt" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="Hyb-NO-woq"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="WgD-qt-u07" secondAttribute="trailing" constant="50" id="In8-yQ-Xgu"/>
                             <constraint firstItem="9vY-dQ-MgV" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Ivm-gA-Tis"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="jv5-jQ-5LT" secondAttribute="bottom" constant="50" id="QkY-LK-ixB"/>
                             <constraint firstItem="9vY-dQ-MgV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="RCi-vP-rnX"/>
                             <constraint firstAttribute="bottom" secondItem="9vY-dQ-MgV" secondAttribute="bottom" id="Yfv-Or-0s1"/>
                             <constraint firstItem="9vY-dQ-MgV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ZUf-9Q-NOa"/>
-                            <constraint firstItem="WgD-qt-u07" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="b7n-Rt-0qt"/>
-                            <constraint firstItem="Syo-f5-WHS" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="cqy-Lr-boV"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Syo-f5-WHS" secondAttribute="trailing" constant="15" id="gDB-V7-NZR"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="WgD-qt-u07" secondAttribute="bottom" constant="20" id="h53-76-ACv"/>
+                            <constraint firstItem="jv5-jQ-5LT" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="nSB-Ma-41T"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="O65-9b-izt" secondAttribute="bottom" constant="16" id="pUQ-K6-8Ep"/>
+                            <constraint firstItem="O65-9b-izt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="tfc-tR-3kv"/>
                             <constraint firstItem="XaT-2P-XZt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="20" id="vY0-cv-lYQ"/>
                         </constraints>
                     </view>
@@ -77,8 +71,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bolt.fill.batteryblock.fill" catalog="system" width="128" height="93"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <image name="스크린샷 2021-03-17 오전 12.56.49.png" width="307" height="153"/>
+        <image name="message.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
