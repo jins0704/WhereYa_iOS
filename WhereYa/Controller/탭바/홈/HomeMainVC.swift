@@ -54,7 +54,7 @@ class HomeMainVC: UIViewController {
         self.present(nextVC, animated: true, completion: nil)
     }
  
-    // MARK: - getNearPlaceData
+    // MARK: - getNearCafeData
     
     func getNearCafeData(){
         ActivityIndicator.shared.activityIndicator.startAnimating()
@@ -66,10 +66,8 @@ class HomeMainVC: UIViewController {
             
             case .success(let data) :
                 if let places = data as? [Place]{
-                    self.cafes = places
-                    self.recommendTV.reloadData()
+                    self.updatePlaces(from: places,PlaceCategoryInfo.cafe.rawValue)
                 }
-          
             case .requestErr(_) : print("requeestErr")
             case .serverErr:
                 print(".serverErr")
@@ -80,7 +78,7 @@ class HomeMainVC: UIViewController {
             }
         }
     }
-    
+    // MARK: - getNearRestaurantsData
     func getNearFoodData(){
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
@@ -92,8 +90,7 @@ class HomeMainVC: UIViewController {
         
             case .success(let data) :
                 if let places = data as? [Place]{
-                    self.restaurants = places
-                    self.recommendTV.reloadData()
+                    self.updatePlaces(from: places,PlaceCategoryInfo.food.rawValue)
                 }
                 
             case .requestErr(_) : print("requeestErr")
@@ -105,6 +102,19 @@ class HomeMainVC: UIViewController {
                 return
             }
         }
+    }
+    
+    // MARK: - updatePlaces
+    func updatePlaces(from data : [Place], _ rawvalue : String){
+        switch rawvalue{
+        case PlaceCategoryInfo.cafe.rawValue:
+            self.cafes = data
+        case PlaceCategoryInfo.food.rawValue:
+            self.restaurants = data
+        default:
+            break
+        }
+        self.recommendTV.reloadData()
     }
 }
 
