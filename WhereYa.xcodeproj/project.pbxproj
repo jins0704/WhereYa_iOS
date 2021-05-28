@@ -38,6 +38,7 @@
 		4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67A270265D896A0044316D /* RecommendCafeTVC.swift */; };
 		4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A271265D896A0044316D /* RecommendCafeTVC.xib */; };
 		4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */; };
+		4F72A0492661144300217472 /* RecommendPlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A0482661144300217472 /* RecommendPlaceType.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
 		4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */; };
 		4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8644112614A812009F20A3 /* SearchPlaceVC.swift */; };
@@ -159,6 +160,7 @@
 		4F67A270265D896A0044316D /* RecommendCafeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCafeTVC.swift; sourceTree = "<group>"; };
 		4F67A271265D896A0044316D /* RecommendCafeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCafeTVC.xib; sourceTree = "<group>"; };
 		4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryInfo.swift; sourceTree = "<group>"; };
+		4F72A0482661144300217472 /* RecommendPlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlaceType.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
 		4F86440E2614A802009F20A3 /* FirstPromiseMakeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPromiseMakeVC.swift; sourceTree = "<group>"; };
 		4F8644112614A812009F20A3 /* SearchPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPlaceVC.swift; sourceTree = "<group>"; };
@@ -667,6 +669,7 @@
 				4F8644E52614E68D009F20A3 /* Place.swift */,
 				4F90BB24261EDA7E0047F66A /* Promise.swift */,
 				4F9D15CA2620C3D400FA189A /* ResponseCalendarEvents.swift */,
+				4F72A0482661144300217472 /* RecommendPlaceType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -909,6 +912,7 @@
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */,
 				4FAB951525C7D4A000148446 /* AppDelegate.swift in Sources */,
+				4F72A0492661144300217472 /* RecommendPlaceType.swift in Sources */,
 				4F539DFE2625F3910020ED9E /* PromiseDetailVC.swift in Sources */,
 				4F67A262265D81D60044316D /* RecommendFoodTVC.swift in Sources */,
 				4FF9190325E900660096FC26 /* ResponseUser.swift in Sources */,

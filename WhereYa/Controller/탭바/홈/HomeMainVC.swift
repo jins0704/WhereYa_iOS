@@ -134,7 +134,7 @@ extension HomeMainVC : UITableViewDelegate{
 extension HomeMainVC : UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return RecommendPlaceType.allCases.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
