@@ -35,6 +35,9 @@
                                     <constraint firstAttribute="height" constant="20" id="xWI-mJ-BFs"/>
                                 </constraints>
                                 <state key="normal" image="스크린샷 2021-03-17 오전 12.56.49.png"/>
+                                <connections>
+                                    <action selector="test:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="pM9-Nb-cDt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaT-2P-XZt">
                                 <rect key="frame" x="20" y="64" width="16.5" height="24"/>

@@ -66,7 +66,6 @@ extension RecommendCafeTVC : UICollectionViewDelegate{
 
 extension RecommendCafeTVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(list.count)
         return list.count
     }
     

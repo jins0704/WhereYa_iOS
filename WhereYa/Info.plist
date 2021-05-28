@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>항상 위치 허용을 하시겠습니까?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>앱을 사용중일 때 위치를 허용하시겠습니까?</string>
 	<key>KAKAO_APP_KEY</key>
 	<string>7199055feaa21b2172ef7de028705074</string>
 	<key>NSCameraUsageDescription</key>
