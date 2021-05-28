@@ -9,4 +9,13 @@ import Foundation
 
 enum RecommendPlaceType : CaseIterable{
     case cafe,food
+    
+    var identifier : String{
+        switch self {
+        case .cafe:
+            return RecommendCafeTVC.identifier
+        case .food:
+            return RecommendFoodTVC.identifier
+        }
+    }
 }
