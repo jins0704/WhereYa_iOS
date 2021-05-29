@@ -38,7 +38,7 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UISetting()
+        setUI()
         ButtonState(nextChecks, completeBtn)
         
         nicknameTextField.delegate = self
@@ -135,7 +135,7 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
     }
     
     // MARK: - UISetting
-    func UISetting(){
+    func setUI(){
         textFieldLayer(nicknameTextField)
         textFieldLayer(birthTextField)
         

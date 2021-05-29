@@ -22,7 +22,7 @@ class MyPageVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        UISetting()
+        setUI()
         
         self.profileNicknameLabel.text = user.string(forKey: UserKey.NICKNAME)
         self.profileIdLabel.text = user.string(forKey: UserKey.ID)
@@ -89,7 +89,7 @@ class MyPageVC: UIViewController {
 
     }
     
-    func UISetting(){
+    func setUI(){
         
         imagePicker.allowsEditing = true
         imagePicker.delegate = self

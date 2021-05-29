@@ -13,6 +13,7 @@ target 'WhereYa' do
   pod 'lottie-ios' 
   pod 'Kingfisher', '~> 6.0'
   pod 'FSCalendar'
+  pod 'JJFloatingActionButton'
 
 end
 

@@ -28,7 +28,7 @@ class LoginVC: baseVC{
         
         super.viewDidLoad()
         
-        UISetting()
+        setUI()
     }
     @IBAction func loginBtnClicked(_ sender: Any) {
         
@@ -70,7 +70,7 @@ class LoginVC: baseVC{
         }
     }
     
-    func UISetting(){
+    func setUI(){
         
         view.addSubview(animationView)
         animationView.translatesAutoresizingMaskIntoConstraints = false

@@ -44,15 +44,14 @@ class FirstSignUpVC: baseVC{
         pwd_SignInTextField.clearButtonMode = .whileEditing
         repwd_SignInTextField.clearButtonMode = .whileEditing
 
-        UISetting()
+        setUI()
         
         textFields = [id_SignInTextField,
                       pwd_SignInTextField,
                       repwd_SignInTextField]
 
         nextBtn.isEnabled = false
-        
-        print(nextChecks)
+  
     }
     
     // MARK: - IBAction
@@ -110,7 +109,7 @@ class FirstSignUpVC: baseVC{
     }
     
     // MARK: - UISetting
-    func UISetting(){
+    func setUI(){
         textFieldLayer(id_SignInTextField)
         textFieldLayer(pwd_SignInTextField)
         textFieldLayer(repwd_SignInTextField)

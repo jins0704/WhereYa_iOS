@@ -3,6 +3,7 @@ PODS:
   - AlamofireNetworkActivityIndicator (3.1.0):
     - Alamofire (~> 5.1)
   - FSCalendar (2.8.2)
+  - JJFloatingActionButton (2.5.0)
   - Kingfisher (6.2.1)
   - lottie-ios (3.2.0)
   - SwiftyJSON (4.3.0)
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - Alamofire (~> 5.2)
   - AlamofireNetworkActivityIndicator (~> 3.1)
   - FSCalendar
+  - JJFloatingActionButton
   - Kingfisher (~> 6.0)
   - lottie-ios
   - SwiftyJSON (~> 4.0)
@@ -22,6 +24,7 @@ SPEC REPOS:
     - Alamofire
     - AlamofireNetworkActivityIndicator
     - FSCalendar
+    - JJFloatingActionButton
     - Kingfisher
     - lottie-ios
     - SwiftyJSON
@@ -31,11 +34,12 @@ SPEC CHECKSUMS:
   Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
   AlamofireNetworkActivityIndicator: 6564782bd7b9e6c430ae67d9277af01907b01ca4
   FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
+  JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   lottie-ios: b6b911246246a90a1d25e7388afe6d9ef003d293
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: ec884255ba0fa29aede6f3e6cc052c97763fe99d
+PODFILE CHECKSUM: 8ed09b2adec895824c35d0aba3189215eb02d99b
 
 COCOAPODS: 1.10.1

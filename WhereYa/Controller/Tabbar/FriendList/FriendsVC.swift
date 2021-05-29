@@ -27,7 +27,13 @@ class FriendsVC: UIViewController, PopUpDelegate {
         super.viewDidLoad()
         
         getFriendsList()
-        
+        setTableView()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        loadMyProfile()
+    }
+    func setTableView(){
         friendsSearchBar.autocapitalizationType = .none
         
         friendsTableView.delegate = self
@@ -41,11 +47,6 @@ class FriendsVC: UIViewController, PopUpDelegate {
   
         friendsTableView.register(UINib(nibName: "FriendsMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        loadMyProfile()
-    }
-    
     func loadMyProfile(){
         myProfile.removeAll()
         

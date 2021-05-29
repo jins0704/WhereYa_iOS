@@ -40,5 +40,7 @@ struct APIConstants{
     //지도 검색
     static let placeURL = "https://dapi.kakao.com/v2/local/search/keyword.json"
     
-    static let RestApiKey = "//"
+    static let RestApiKey = "KakaoAK 41d57fc001acd4351d105785b7787be1"
+    //카테고리 검색
+    static let categoryURL = "https://dapi.kakao.com/v2/local/search/category.json"
 }
