@@ -13,7 +13,9 @@ class HomeMainVC: UIViewController {
     @IBOutlet var alarmLabel: UILabel!
     @IBOutlet var roomBtn: UIButton!
     @IBOutlet var recommendTV: UITableView!
+    @IBOutlet var recommendMaidnView: UIView!
     
+    let refreshContol = UIRefreshControl()
     var restaurants : [Place] = []
     var cafes : [Place] = []
     
@@ -23,13 +25,14 @@ class HomeMainVC: UIViewController {
         getNearFoodData()
         setUI()
         setTableView()
-        
     }
     
     // MARK: - UISetting
     func setUI(){
+        roomBtn.layer.cornerRadius = 10
         promiseName.text = "동창회 약속"
         alarmLabel.text = "30분 남았어요\n판교역으로 6시까지 가야해요"
+        recommendMaidnView.backgroundColor = UIColor.mainBlueColor
     }
     
     // MARK: - TableViewSetting
@@ -44,8 +47,23 @@ class HomeMainVC: UIViewController {
         recommendTV.separatorStyle = .none
         recommendTV.rowHeight = UITableView.automaticDimension
         recommendTV.tableFooterView = UIView()
+        
+        refreshContol.addTarget(self, action: #selector(refreshTable(refresh:)), for: .valueChanged)
+        
+        refreshContol.tintColor = .mainBlueColor
+        //refreshContol.attributedTitle = NSAttributedString(string: "임의 이름")
+        
+        recommendTV.refreshControl = refreshContol
     }
     
+    @objc func refreshTable(refresh: UIRefreshControl){
+        print("refresh")
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
+            self.recommendTV.reloadData()
+            refresh.endRefreshing()
+        }
+    }
     @IBAction func roomBtnClicked(_ sender: Any) {
         let storyboard = UIStoryboard.init(name: "GroupRoom", bundle: nil)
         let nextVC = storyboard.instantiateViewController(identifier: GroupRoomVC.identifier)  as! GroupRoomVC

@@ -47,7 +47,7 @@ extension RecommendCafeTVC : UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = UIScreen.main.bounds.width
         
-        let cellWidth = width * (324/375)
+        let cellWidth = width * (300/375)
         let cellHeight = cellWidth * (200/324)
         
         return CGSize(width: cellWidth, height: cellHeight)
