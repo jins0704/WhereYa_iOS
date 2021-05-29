@@ -16,6 +16,9 @@ class PromiseDetailVC: UIViewController {
     var promiseMemo : String?
     var promiseFriend : [String?] = []
     var friends : String = ""
+    
+    @IBOutlet var deleteBtn: UIButton!
+    @IBOutlet var backBtn: UIButton!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var timeLabel: UILabel!
     @IBOutlet var placeLabel: UILabel!

@@ -250,6 +250,8 @@
                     <navigationItem key="navigationItem" id="hCn-oa-tdZ"/>
                     <connections>
                         <outlet property="addressLabel" destination="L0p-H9-v2e" id="gjW-NW-mgO"/>
+                        <outlet property="backBtn" destination="8qd-ql-7GT" id="mxb-2v-Gfw"/>
+                        <outlet property="deleteBtn" destination="62F-MM-9LL" id="e9P-Ik-Dwj"/>
                         <outlet property="friendsLabel" destination="ry1-HQ-abE" id="T0y-hR-0cR"/>
                         <outlet property="memoLabel" destination="nCH-fJ-YYz" id="64T-a9-5Hq"/>
                         <outlet property="nameLabel" destination="hy8-CC-43t" id="UsC-cp-0VR"/>

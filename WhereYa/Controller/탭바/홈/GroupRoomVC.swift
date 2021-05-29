@@ -16,6 +16,7 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
 
     static let identifier = "GroupRoomVC"
 
+    var promise : Promise? //나중에 받아올 약속
     var mapView: MTMapView?
     var mapPoint1: MTMapPoint?
     var poiItem1: MTMapPOIItem?
@@ -96,6 +97,17 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
         
         actionButton.addItem(title: "상세정보", image: UIImage(systemName: "list.dash")?.withRenderingMode(.alwaysTemplate)) { item in
           // do something
+        
+            let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(identifier: "PromiseDetailVC")
+            
+            //self.celldelegate = nextVC as? CellDelegate
+            //celldelegate?.sendData(name: myNameLabel.text!, image: myProfileImage.image!)
+            //nextVC.modalPresentationStyle = .
+            
+            self.present(nextVC, animated: true, completion: nil)
+        
+            
         }
 
         actionButton.addItem(title: "친구현황", image: UIImage(systemName: "person.3.fill")?.withRenderingMode(.alwaysTemplate)) { item in
