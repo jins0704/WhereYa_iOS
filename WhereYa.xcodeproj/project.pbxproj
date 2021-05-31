@@ -37,6 +37,8 @@
 		4F67A26F265D894C0044316D /* RecommendCVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A26D265D894C0044316D /* RecommendCVC.xib */; };
 		4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F67A270265D896A0044316D /* RecommendCafeTVC.swift */; };
 		4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F67A271265D896A0044316D /* RecommendCafeTVC.xib */; };
+		4F6BDD862664D60B00E8B1D9 /* MainNoticePromise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDD852664D60B00E8B1D9 /* MainNoticePromise.swift */; };
+		4F6BDD882664D70800E8B1D9 /* LeftTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDD872664D70800E8B1D9 /* LeftTime.swift */; };
 		4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */; };
 		4F72A0492661144300217472 /* RecommendPlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A0482661144300217472 /* RecommendPlaceType.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
@@ -159,6 +161,8 @@
 		4F67A26D265D894C0044316D /* RecommendCVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCVC.xib; sourceTree = "<group>"; };
 		4F67A270265D896A0044316D /* RecommendCafeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCafeTVC.swift; sourceTree = "<group>"; };
 		4F67A271265D896A0044316D /* RecommendCafeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCafeTVC.xib; sourceTree = "<group>"; };
+		4F6BDD852664D60B00E8B1D9 /* MainNoticePromise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNoticePromise.swift; sourceTree = "<group>"; };
+		4F6BDD872664D70800E8B1D9 /* LeftTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftTime.swift; sourceTree = "<group>"; };
 		4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryInfo.swift; sourceTree = "<group>"; };
 		4F72A0482661144300217472 /* RecommendPlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlaceType.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
@@ -670,6 +674,8 @@
 				4F90BB24261EDA7E0047F66A /* Promise.swift */,
 				4F9D15CA2620C3D400FA189A /* ResponseCalendarEvents.swift */,
 				4F72A0482661144300217472 /* RecommendPlaceType.swift */,
+				4F6BDD852664D60B00E8B1D9 /* MainNoticePromise.swift */,
+				4F6BDD872664D70800E8B1D9 /* LeftTime.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -893,6 +899,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F948ADA260DD4ED004BC1A9 /* Protocol.swift in Sources */,
+				4F6BDD882664D70800E8B1D9 /* LeftTime.swift in Sources */,
 				4F585B8D265D126400DFA81B /* HomeMainVC.swift in Sources */,
 				4F67A26E265D894C0044316D /* RecommendCVC.swift in Sources */,
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
@@ -908,6 +915,7 @@
 				4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */,
 				4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */,
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
+				4F6BDD862664D60B00E8B1D9 /* MainNoticePromise.swift in Sources */,
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */,

@@ -18,11 +18,15 @@ class HomeMainVC: UIViewController {
     let refreshContol = UIRefreshControl()
     var restaurants : [Place] = []
     var cafes : [Place] = []
+    var mainLeftDay : Int = 0
+    var mainLeftHour : Int = 0
+    var mainLeftMinute : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getNearCafeData()
         getNearFoodData()
+        getMainPromiseData()
         setUI()
         setTableView()
     }
@@ -31,7 +35,6 @@ class HomeMainVC: UIViewController {
     func setUI(){
         roomBtn.layer.cornerRadius = 10
         promiseName.text = "동창회 약속"
-        alarmLabel.text = "30분 남았어요\n판교역으로 6시까지 가야해요"
         recommendMaidnView.backgroundColor = UIColor.mainBlueColor
     }
     
@@ -60,7 +63,9 @@ class HomeMainVC: UIViewController {
         print("refresh")
         
         DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
+            
             self.recommendTV.reloadData()
+            self.getMainPromiseData()
             refresh.endRefreshing()
         }
     }
@@ -86,12 +91,12 @@ class HomeMainVC: UIViewController {
                 if let places = data as? [Place]{
                     self.updatePlaces(from: places,PlaceCategoryInfo.cafe.rawValue)
                 }
-            case .requestErr(_) : print("requeestErr")
+            case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
             case .serverErr:
-                print(".serverErr")
+                print(NetworkInfo.SERVER_FAIL)
                 return
             case .networkFail:
-                print("network_error")
+                print(NetworkInfo.NETWORK_FAIL)
                 return
             }
         }
@@ -111,12 +116,12 @@ class HomeMainVC: UIViewController {
                     self.updatePlaces(from: places,PlaceCategoryInfo.food.rawValue)
                 }
                 
-            case .requestErr(_) : print("requeestErr")
+            case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
             case .serverErr:
-                print(".serverErr")
+                print(NetworkInfo.SERVER_FAIL)
                 return
             case .networkFail:
-                print("network_error")
+                print(NetworkInfo.NETWORK_FAIL)
                 return
             }
         }
@@ -133,6 +138,49 @@ class HomeMainVC: UIViewController {
             break
         }
         self.recommendTV.reloadData()
+    }
+    
+    // MARK: - getMainPromiseData
+    func getMainPromiseData(){
+        ActivityIndicator.shared.activityIndicator.startAnimating()
+        
+        
+        PromiseService.shared.getMainPromise{ (result) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch result{
+        
+            case .success(let data) :
+                if let promise = data as? MainNoticePromise{
+                    self.mainLeftDay = promise.lefttime?.day ?? 0
+                    self.mainLeftHour = promise.lefttime?.hour ?? 0
+                    self.mainLeftMinute = promise.lefttime?.minute ?? 0
+                    
+                    self.promiseName.text = "\(promise.promise?.name! ?? " ")"
+                    self.alarmLabel.text = "약속까지 \(self.setTimeLabel())남았어요\n\(promise.promise?.destination?.place_name! ?? " ")으로 \(promise.promise?.time! ?? " ")까지 가야해요"
+                }
+                
+            case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
+            case .serverErr:
+                print(NetworkInfo.SERVER_FAIL)
+                return
+            case .networkFail:
+                print(NetworkInfo.NETWORK_FAIL)
+                return
+            }
+        }
+    }
+    
+    func setTimeLabel() -> String{
+        if(mainLeftDay == 0){
+            if(mainLeftHour > 0){
+                return "\(self.mainLeftHour)시간 \(self.mainLeftMinute)분"
+            }
+            else{return "\(self.mainLeftMinute)분"}
+        }
+        else{
+            return "\(self.mainLeftDay)일"
+        }
     }
 }
 

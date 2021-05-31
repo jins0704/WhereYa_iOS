@@ -44,8 +44,6 @@ class LoginVC: baseVC{
             switch data{
             case .success(let tokenData) :
                 guard let tokenData = tokenData as? Token else { return }
-                print("success")
-                
                 UserDefaults.standard.setValue(tokenData.jwt, forKey: UserKey.TOKEN)
                 UserDefaults.standard.setValue(tokenData.nickname, forKey: UserKey.NICKNAME)
                 UserDefaults.standard.setValue(self.idTextField.text, forKey: UserKey.ID)

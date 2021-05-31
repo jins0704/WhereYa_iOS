@@ -82,7 +82,7 @@ struct PlaceService {
     
         switch statusCode {
         case 200: return .success(decodedData.documents)
-        case 400: return .requestErr("")
+        case 400: return .requestErr(NetworkInfo.BAD_REQUEST)
         case 500: return .serverErr
         default: return .networkFail
         }

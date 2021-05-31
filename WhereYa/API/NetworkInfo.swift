@@ -30,4 +30,6 @@ struct NetworkInfo {
     static let NO_DATA = "No Data"
     static let BAD_REQUEST = "Bad Request"
     static let SUCCESS = "success"
+    static let SERVER_FAIL = "Server Fail"
+    static let NETWORK_FAIL = "Network Fail"
 }
