@@ -16,3 +16,9 @@ protocol PopUpDelegate{
 protocol CellDelegate {
     func cellChecked(_ nickname : String, _ changeBool : Bool)
 }
+
+
+protocol PromiseDelegate{
+    func hiddenUI(hidden : Bool)
+    func sendPromise(_ promise : Promise)
+}

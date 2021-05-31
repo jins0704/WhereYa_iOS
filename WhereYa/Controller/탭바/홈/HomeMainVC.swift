@@ -18,12 +18,8 @@ class HomeMainVC: UIViewController {
     let refreshContol = UIRefreshControl()
     var restaurants : [Place] = []
     var cafes : [Place] = []
-    var mainLeftDay : Int = 0
-    var mainLeftHour : Int = 0
-    var mainLeftMinute : Int = 0
-    var mainName : String = " "
-    var mainPlaceName : String = " "
-    var mainPlaceTime : String = " "
+    var mainNoticePromise : MainNoticePromise?
+    var promiseDelegate : PromiseDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +73,10 @@ class HomeMainVC: UIViewController {
         let storyboard = UIStoryboard.init(name: "GroupRoom", bundle: nil)
         let nextVC = storyboard.instantiateViewController(identifier: GroupRoomVC.identifier)  as! GroupRoomVC
 
+        if let promise = mainNoticePromise?.promise{
+            self.promiseDelegate = nextVC
+            promiseDelegate?.sendPromise(promise)
+        }
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
     }
@@ -156,13 +156,7 @@ class HomeMainVC: UIViewController {
         
             case .success(let data) :
                 if let promise = data as? MainNoticePromise{
-                    self.mainLeftDay = promise.lefttime?.day ?? 0
-                    self.mainLeftHour = promise.lefttime?.hour ?? 0
-                    self.mainLeftMinute = promise.lefttime?.minute ?? 0
-                    self.mainName = promise.promise!.name!
-                    self.mainPlaceName = promise.promise?.destination?.place_name! ?? " "
-                    self.mainPlaceTime = promise.promise!.time!
-                    
+                    self.mainNoticePromise = promise
                     self.setMainLabel()
                 }
                 
@@ -178,21 +172,19 @@ class HomeMainVC: UIViewController {
     }
     
     func setMainLabel(){
-        self.promiseName.text = self.mainName
-        self.alarmLabel.text = "약속까지 \(self.setTimeLabel(self.mainLeftDay, self.mainLeftHour, self.mainLeftMinute))남았어요\n\(self.mainPlaceName)으로 \(self.mainPlaceTime)까지 가야해요"
+        if let mpromise = self.mainNoticePromise?.promise, let mtime = self.mainNoticePromise?.lefttime{
+            self.promiseName.text = mpromise.name
+            self.alarmLabel.text = "약속까지 \(self.setTimeLabel(mtime.day ?? 0, mtime.hour ?? 0, mtime.minute ?? 0))남았어요\n\(mpromise.destination?.place_name ?? " ")으로 \(mpromise.time ?? " ")까지 가야해요"
+        }
     }
     
     //약속 시간 텍스트 설정
     func setTimeLabel(_ day : Int, _ hour : Int, _ minute : Int) -> String{
         if(day == 0){
-            if(hour > 0){
-                return "\(hour)시간 \(minute)분"
-            }
+            if(hour > 0){return "\(hour)시간 \(minute)분"}
             else{return "\(minute)분"}
         }
-        else{
-            return "\(day)일"
-        }
+        else{return "\(day)일"}
     }
     
     func setTimer(){
@@ -202,18 +194,20 @@ class HomeMainVC: UIViewController {
     }
     
     @objc func updateTime(){
-        if(mainLeftMinute > 0){mainLeftMinute -= 1}
-        else{
-            if(mainLeftHour > 0){
-                mainLeftHour-=1
-                mainLeftMinute = 59
-            }
+        if let hour = self.mainNoticePromise?.lefttime?.hour, let minute = self.mainNoticePromise?.lefttime?.minute{
+            if(minute > 0){self.mainNoticePromise?.lefttime?.minute! -= 1}
             else{
-                mainLeftHour = 0
-                mainLeftMinute = 0
+                if(hour > 0){
+                    self.mainNoticePromise?.lefttime?.hour!-=1
+                    self.mainNoticePromise?.lefttime?.hour = 59
+                }
+                else{
+                    self.mainNoticePromise?.lefttime?.hour = 0
+                    self.mainNoticePromise?.lefttime?.minute = 0
+                }
             }
+            self.setMainLabel()
         }
-        self.setMainLabel()
     }
 }
 
