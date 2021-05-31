@@ -21,6 +21,9 @@ class HomeMainVC: UIViewController {
     var mainLeftDay : Int = 0
     var mainLeftHour : Int = 0
     var mainLeftMinute : Int = 0
+    var mainName : String = " "
+    var mainPlaceName : String = " "
+    var mainPlaceTime : String = " "
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +32,7 @@ class HomeMainVC: UIViewController {
         getMainPromiseData()
         setUI()
         setTableView()
+        setTimer()
     }
     
     // MARK: - UISetting
@@ -155,9 +159,11 @@ class HomeMainVC: UIViewController {
                     self.mainLeftDay = promise.lefttime?.day ?? 0
                     self.mainLeftHour = promise.lefttime?.hour ?? 0
                     self.mainLeftMinute = promise.lefttime?.minute ?? 0
+                    self.mainName = promise.promise!.name!
+                    self.mainPlaceName = promise.promise?.destination?.place_name! ?? " "
+                    self.mainPlaceTime = promise.promise!.time!
                     
-                    self.promiseName.text = "\(promise.promise?.name! ?? " ")"
-                    self.alarmLabel.text = "약속까지 \(self.setTimeLabel())남았어요\n\(promise.promise?.destination?.place_name! ?? " ")으로 \(promise.promise?.time! ?? " ")까지 가야해요"
+                    self.setMainLabel()
                 }
                 
             case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
@@ -171,16 +177,43 @@ class HomeMainVC: UIViewController {
         }
     }
     
-    func setTimeLabel() -> String{
-        if(mainLeftDay == 0){
-            if(mainLeftHour > 0){
-                return "\(self.mainLeftHour)시간 \(self.mainLeftMinute)분"
+    func setMainLabel(){
+        self.promiseName.text = self.mainName
+        self.alarmLabel.text = "약속까지 \(self.setTimeLabel(self.mainLeftDay, self.mainLeftHour, self.mainLeftMinute))남았어요\n\(self.mainPlaceName)으로 \(self.mainPlaceTime)까지 가야해요"
+    }
+    
+    //약속 시간 텍스트 설정
+    func setTimeLabel(_ day : Int, _ hour : Int, _ minute : Int) -> String{
+        if(day == 0){
+            if(hour > 0){
+                return "\(hour)시간 \(minute)분"
             }
-            else{return "\(self.mainLeftMinute)분"}
+            else{return "\(minute)분"}
         }
         else{
-            return "\(self.mainLeftDay)일"
+            return "\(day)일"
         }
+    }
+    
+    func setTimer(){
+        let timeSelector : Selector = #selector(self.updateTime)
+        
+        Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+    }
+    
+    @objc func updateTime(){
+        if(mainLeftMinute > 0){mainLeftMinute -= 1}
+        else{
+            if(mainLeftHour > 0){
+                mainLeftHour-=1
+                mainLeftMinute = 59
+            }
+            else{
+                mainLeftHour = 0
+                mainLeftMinute = 0
+            }
+        }
+        self.setMainLabel()
     }
 }
 
