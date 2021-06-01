@@ -10,6 +10,7 @@ import UIKit
 class RecommendFoodTVC: UITableViewCell {
     
     static let identifier = "RecommendFoodTVC"
+    var currentIdx : CGFloat = 0.0
     var myList : [Place] = []
     var list :[Place]{
         get {
@@ -67,7 +68,28 @@ extension RecommendFoodTVC : UICollectionViewDelegate{
         return 20
     }
 
-    
+    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        if let cv = scrollView as? UICollectionView {
+            
+            let layout = cv.collectionViewLayout as! UICollectionViewFlowLayout
+            let cellWidth = layout.itemSize.width + layout.minimumLineSpacing
+            
+            var offset = targetContentOffset.pointee
+            let idx = round((offset.x + cv.contentInset.left) / cellWidth)
+            
+            if idx > currentIdx {
+                currentIdx += 1
+            } else if idx < currentIdx {
+                if currentIdx != 0 {
+                    currentIdx -= 1
+                }
+            }
+            
+            offset = CGPoint(x: currentIdx * cellWidth - cv.contentInset.left, y: 0)
+            
+            targetContentOffset.pointee = offset
+        }
+    }
 }
 
 extension RecommendFoodTVC : UICollectionViewDataSource{
