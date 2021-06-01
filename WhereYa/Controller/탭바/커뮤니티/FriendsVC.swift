@@ -156,8 +156,8 @@ class FriendsVC: UIViewController, PopUpDelegate {
         }
         
         alert.addTextField()
-        alert.addAction(insertBtn)
         alert.addAction(cancelBtn)
+        alert.addAction(insertBtn)
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -181,14 +181,11 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
             case 2:
                 return self.Normal_Friends.count
                 
-            default:
-                
-                return 0
-                
+            default: return 0
             }
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell

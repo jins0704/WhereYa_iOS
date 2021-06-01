@@ -92,6 +92,10 @@ class LoginVC: baseVC{
         //idTextField.text = ""
         //passwordTextField.text = ""
         
+        idTextField.font = UIFont.myRegularSystemFont(ofSize: 14)
+        
+        passwordTextField.font = UIFont.myRegularSystemFont(ofSize: 12)
+        
         animationView.play{(finish) in
             DispatchQueue.main.asyncAfter(deadline: .now()+0.6){
                 self.animationView.removeFromSuperview()

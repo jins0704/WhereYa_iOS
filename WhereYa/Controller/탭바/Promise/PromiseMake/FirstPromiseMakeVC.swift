@@ -30,10 +30,13 @@ class FirstPromiseMakeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
+        
         promiseNameTextField.setLeftPaddingPoints(5)
         promiseNameTextField.underlineTextField("약속이름을 작성하세요")
         promiseNameTextField.clearButtonMode = .whileEditing
+        promiseNameTextField.becomeFirstResponder()
+        
         promiseNameTextField.delegate = self
         calendar.delegate = self
         calendar.dataSource = self

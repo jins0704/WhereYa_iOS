@@ -20,6 +20,7 @@ class PromiseDetailVC: UIViewController{
     
     var promiseDelegate : PromiseDelegate?
     
+    @IBOutlet var infoView: UIView!
     @IBOutlet var deleteBtn: UIButton!
     @IBOutlet var backBtn: UIButton!
     @IBOutlet var nameLabel: UILabel!
@@ -47,7 +48,6 @@ class PromiseDetailVC: UIViewController{
         let alert = UIAlertController(title: "정말로 삭제하시겠습니까?" , message: " ", preferredStyle: .alert)
         
         let deleteBtn = UIAlertAction(title: "확인", style: .default) { (delete) in
-           
         }
         
         let cancelBtn = UIAlertAction(title: "취소", style: .cancel) { (cancel) in
@@ -63,16 +63,19 @@ class PromiseDetailVC: UIViewController{
         self.downBtn.isHidden = true
         setLabel()
         nameLabel.font = UIFont.myBoldSystemFont(ofSize: 23)
-        timeLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
-        placeLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
-        addressLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
-        friendsLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
+        timeLabel.font = UIFont.myMediumSystemFont(ofSize: 15)
+        placeLabel.font = UIFont.myMediumSystemFont(ofSize: 15)
+        addressLabel.font = UIFont.myMediumSystemFont(ofSize: 15)
+        friendsLabel.font = UIFont.myMediumSystemFont(ofSize: 15)
         
+        infoView.layer.borderWidth = 0.5
+        infoView.layer.cornerRadius = 10
+        infoView.layer.borderColor = UIColor.gray.cgColor
         memoTextView.layer.borderWidth = 0.5
         memoTextView.layer.cornerRadius = 10
         memoTextView.layer.borderColor = UIColor.gray.cgColor
-        memoTextView.backgroundColor = .white
         memoTextView.isEditable = false
+        memoTextView.font = UIFont.myRegularSystemFont(ofSize: 15)
         memoTextView.text = "\n\(promiseMemo ?? "")"
 
         for i in promiseFriend{
