@@ -72,7 +72,8 @@ extension RecommendCafeTVC : UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: RecommendCVC.identifier, for: indexPath) as? RecommendCVC else {return UICollectionViewCell()}
 
-        cell.setData( list[indexPath.row].place_name!,  list[indexPath.row].phone!, list[indexPath.row].distance!,  list[indexPath.row].place_url!)
+        cell.setData(list[indexPath.row].place_name!,  list[indexPath.row].phone!, list[indexPath.row].distance!,  list[indexPath.row].place_url!)
+        cell.placeImg.image = UIImage(named: CoffeeImage.selectImage(name: list[indexPath.row].place_name!, index: indexPath.row))
         
         return cell
     }
