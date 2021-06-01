@@ -64,6 +64,29 @@
 		4F6BDDEC2665549200E8B1D9 /* starbucks.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDD42665549200E8B1D9 /* starbucks.png */; };
 		4F6BDDED2665549200E8B1D9 /* cafe8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDD52665549200E8B1D9 /* cafe8.png */; };
 		4F6BDDEE2665549200E8B1D9 /* cafe9.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDD62665549200E8B1D9 /* cafe9.png */; };
+		4F6BDDF026662E3000E8B1D9 /* FoodImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDDEF26662E3000E8B1D9 /* FoodImage.swift */; };
+		4F6BDE092666369400E8B1D9 /* meonok.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF22666369400E8B1D9 /* meonok.png */; };
+		4F6BDE0A2666369400E8B1D9 /* mara.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF32666369400E8B1D9 /* mara.png */; };
+		4F6BDE0B2666369400E8B1D9 /* dduck.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF42666369400E8B1D9 /* dduck.png */; };
+		4F6BDE0C2666369400E8B1D9 /* bunsic.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF52666369400E8B1D9 /* bunsic.png */; };
+		4F6BDE0D2666369400E8B1D9 /* italianpasta.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF62666369400E8B1D9 /* italianpasta.png */; };
+		4F6BDE0E2666369400E8B1D9 /* zzigae.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF72666369400E8B1D9 /* zzigae.png */; };
+		4F6BDE0F2666369400E8B1D9 /* food4.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF82666369400E8B1D9 /* food4.png */; };
+		4F6BDE102666369400E8B1D9 /* food5.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDF92666369400E8B1D9 /* food5.png */; };
+		4F6BDE112666369400E8B1D9 /* mandu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDFA2666369400E8B1D9 /* mandu.png */; };
+		4F6BDE122666369400E8B1D9 /* guk.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDFB2666369400E8B1D9 /* guk.png */; };
+		4F6BDE132666369400E8B1D9 /* food6.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDFC2666369400E8B1D9 /* food6.png */; };
+		4F6BDE142666369400E8B1D9 /* food2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDFD2666369400E8B1D9 /* food2.png */; };
+		4F6BDE152666369400E8B1D9 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDFE2666369400E8B1D9 /* hamburger.png */; };
+		4F6BDE162666369400E8B1D9 /* food3.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDDFF2666369400E8B1D9 /* food3.png */; };
+		4F6BDE172666369400E8B1D9 /* food1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE002666369400E8B1D9 /* food1.png */; };
+		4F6BDE182666369400E8B1D9 /* donka.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE012666369400E8B1D9 /* donka.png */; };
+		4F6BDE192666369400E8B1D9 /* sutbulgalbi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE022666369400E8B1D9 /* sutbulgalbi.png */; };
+		4F6BDE1A2666369400E8B1D9 /* pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE032666369400E8B1D9 /* pizza.png */; };
+		4F6BDE1C2666369400E8B1D9 /* banzum.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE052666369400E8B1D9 /* banzum.png */; };
+		4F6BDE1D2666369400E8B1D9 /* buritto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE062666369400E8B1D9 /* buritto.png */; };
+		4F6BDE1E2666369400E8B1D9 /* zzuggumi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE072666369400E8B1D9 /* zzuggumi.png */; };
+		4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE082666369400E8B1D9 /* chobab.png */; };
 		4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */; };
 		4F72A0492661144300217472 /* RecommendPlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A0482661144300217472 /* RecommendPlaceType.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
@@ -213,6 +236,29 @@
 		4F6BDDD42665549200E8B1D9 /* starbucks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starbucks.png; sourceTree = "<group>"; };
 		4F6BDDD52665549200E8B1D9 /* cafe8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafe8.png; sourceTree = "<group>"; };
 		4F6BDDD62665549200E8B1D9 /* cafe9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafe9.png; sourceTree = "<group>"; };
+		4F6BDDEF26662E3000E8B1D9 /* FoodImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodImage.swift; sourceTree = "<group>"; };
+		4F6BDDF22666369400E8B1D9 /* meonok.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = meonok.png; sourceTree = "<group>"; };
+		4F6BDDF32666369400E8B1D9 /* mara.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mara.png; sourceTree = "<group>"; };
+		4F6BDDF42666369400E8B1D9 /* dduck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dduck.png; sourceTree = "<group>"; };
+		4F6BDDF52666369400E8B1D9 /* bunsic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bunsic.png; sourceTree = "<group>"; };
+		4F6BDDF62666369400E8B1D9 /* italianpasta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = italianpasta.png; sourceTree = "<group>"; };
+		4F6BDDF72666369400E8B1D9 /* zzigae.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zzigae.png; sourceTree = "<group>"; };
+		4F6BDDF82666369400E8B1D9 /* food4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food4.png; sourceTree = "<group>"; };
+		4F6BDDF92666369400E8B1D9 /* food5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food5.png; sourceTree = "<group>"; };
+		4F6BDDFA2666369400E8B1D9 /* mandu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandu.png; sourceTree = "<group>"; };
+		4F6BDDFB2666369400E8B1D9 /* guk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guk.png; sourceTree = "<group>"; };
+		4F6BDDFC2666369400E8B1D9 /* food6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food6.png; sourceTree = "<group>"; };
+		4F6BDDFD2666369400E8B1D9 /* food2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food2.png; sourceTree = "<group>"; };
+		4F6BDDFE2666369400E8B1D9 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburger.png; sourceTree = "<group>"; };
+		4F6BDDFF2666369400E8B1D9 /* food3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food3.png; sourceTree = "<group>"; };
+		4F6BDE002666369400E8B1D9 /* food1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food1.png; sourceTree = "<group>"; };
+		4F6BDE012666369400E8B1D9 /* donka.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = donka.png; sourceTree = "<group>"; };
+		4F6BDE022666369400E8B1D9 /* sutbulgalbi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sutbulgalbi.png; sourceTree = "<group>"; };
+		4F6BDE032666369400E8B1D9 /* pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pizza.png; sourceTree = "<group>"; };
+		4F6BDE052666369400E8B1D9 /* banzum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banzum.png; sourceTree = "<group>"; };
+		4F6BDE062666369400E8B1D9 /* buritto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buritto.png; sourceTree = "<group>"; };
+		4F6BDE072666369400E8B1D9 /* zzuggumi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zzuggumi.png; sourceTree = "<group>"; };
+		4F6BDE082666369400E8B1D9 /* chobab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chobab.png; sourceTree = "<group>"; };
 		4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryInfo.swift; sourceTree = "<group>"; };
 		4F72A0482661144300217472 /* RecommendPlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlaceType.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
@@ -465,6 +511,35 @@
 				4F6BDDD62665549200E8B1D9 /* cafe9.png */,
 			);
 			path = cafeImage;
+			sourceTree = "<group>";
+		};
+		4F6BDDF12666369400E8B1D9 /* foodImage */ = {
+			isa = PBXGroup;
+			children = (
+				4F6BDDF22666369400E8B1D9 /* meonok.png */,
+				4F6BDDF32666369400E8B1D9 /* mara.png */,
+				4F6BDDF42666369400E8B1D9 /* dduck.png */,
+				4F6BDDF52666369400E8B1D9 /* bunsic.png */,
+				4F6BDDF62666369400E8B1D9 /* italianpasta.png */,
+				4F6BDDF72666369400E8B1D9 /* zzigae.png */,
+				4F6BDDF82666369400E8B1D9 /* food4.png */,
+				4F6BDDF92666369400E8B1D9 /* food5.png */,
+				4F6BDDFA2666369400E8B1D9 /* mandu.png */,
+				4F6BDDFB2666369400E8B1D9 /* guk.png */,
+				4F6BDDFC2666369400E8B1D9 /* food6.png */,
+				4F6BDDFD2666369400E8B1D9 /* food2.png */,
+				4F6BDDFE2666369400E8B1D9 /* hamburger.png */,
+				4F6BDDFF2666369400E8B1D9 /* food3.png */,
+				4F6BDE002666369400E8B1D9 /* food1.png */,
+				4F6BDE012666369400E8B1D9 /* donka.png */,
+				4F6BDE022666369400E8B1D9 /* sutbulgalbi.png */,
+				4F6BDE032666369400E8B1D9 /* pizza.png */,
+				4F6BDE052666369400E8B1D9 /* banzum.png */,
+				4F6BDE062666369400E8B1D9 /* buritto.png */,
+				4F6BDE072666369400E8B1D9 /* zzuggumi.png */,
+				4F6BDE082666369400E8B1D9 /* chobab.png */,
+			);
+			path = foodImage;
 			sourceTree = "<group>";
 		};
 		4F8643F7261232CA009F20A3 /* Promise */ = {
@@ -758,6 +833,7 @@
 				4F6BDD852664D60B00E8B1D9 /* MainNoticePromise.swift */,
 				4F6BDD872664D70800E8B1D9 /* LeftTime.swift */,
 				4F6BDD8B26654E4300E8B1D9 /* CoffeeImage.swift */,
+				4F6BDDEF26662E3000E8B1D9 /* FoodImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -775,6 +851,7 @@
 			isa = PBXGroup;
 			children = (
 				4FAB951D25C7D4A400148446 /* Assets.xcassets */,
+				4F6BDDF12666369400E8B1D9 /* foodImage */,
 				4F6BDDBE2665549200E8B1D9 /* cafeImage */,
 				4F5564F426027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png */,
 				4F5564CB26010C0400806E8D /* LogoName */,
@@ -881,8 +958,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F6BDE112666369400E8B1D9 /* mandu.png in Resources */,
+				4F6BDE0D2666369400E8B1D9 /* italianpasta.png in Resources */,
+				4F6BDE1C2666369400E8B1D9 /* banzum.png in Resources */,
 				4F8644552614D544009F20A3 /* info_box_tail.png in Resources */,
 				4F6BDDE62665549200E8B1D9 /* cafe6.png in Resources */,
+				4F6BDE092666369400E8B1D9 /* meonok.png in Resources */,
 				4F86448F2614D5B5009F20A3 /* copyright.png in Resources */,
 				4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */,
 				4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */,
@@ -891,10 +972,12 @@
 				4F6BDDE12665549200E8B1D9 /* cafe7.png in Resources */,
 				4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */,
 				4F8644EF2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib in Resources */,
+				4F6BDE162666369400E8B1D9 /* food3.png in Resources */,
 				4F67A26F265D894C0044316D /* RecommendCVC.xib in Resources */,
 				4F8644882614D5B5009F20A3 /* map_pin_custom.png in Resources */,
 				4F6BDDEB2665549200E8B1D9 /* pascucci.png in Resources */,
 				4F6BDDDA2665549200E8B1D9 /* cafe14.png in Resources */,
+				4F6BDE172666369400E8B1D9 /* food1.png in Resources */,
 				4F8644952614D5B5009F20A3 /* map_pin_red.png in Resources */,
 				4F90BB1D261E1F160047F66A /* FriendsMainTableViewCell.xib in Resources */,
 				4F6BDDDD2665549200E8B1D9 /* tomntoms.png in Resources */,
@@ -902,18 +985,23 @@
 				4F86449B2614D5B5009F20A3 /* map_present_direction.png in Resources */,
 				4F6BDDD92665549200E8B1D9 /* cafe1.png in Resources */,
 				4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */,
+				4F6BDE152666369400E8B1D9 /* hamburger.png in Resources */,
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
 				4F6BDDE22665549200E8B1D9 /* cafe12.png in Resources */,
+				4F6BDE102666369400E8B1D9 /* food5.png in Resources */,
 				4F6BDDE42665549200E8B1D9 /* hollys.png in Resources */,
 				4F6BDDE92665549200E8B1D9 /* ediya.png in Resources */,
 				4F8644962614D5B5009F20A3 /* info_box.png in Resources */,
 				4F912793261B6B63002385A9 /* PromiseMake.storyboard in Resources */,
 				4F86448E2614D5B5009F20A3 /* map_pin_shadow@3x.png in Resources */,
+				4F6BDE0C2666369400E8B1D9 /* bunsic.png in Resources */,
 				4F8644872614D5B5009F20A3 /* map_pinup_custom@3x.png in Resources */,
 				4F86449D2614D5B5009F20A3 /* map_present.png in Resources */,
 				4F8644582614D544009F20A3 /* map_pin.png in Resources */,
 				4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
+				4F6BDE0F2666369400E8B1D9 /* food4.png in Resources */,
+				4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */,
 				4F6BDDDC2665549200E8B1D9 /* cafe4.png in Resources */,
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
 				4F6BDDD82665549200E8B1D9 /* cafe3.png in Resources */,
@@ -922,25 +1010,33 @@
 				4F8644A02614D5B5009F20A3 /* daum_th_line.png in Resources */,
 				4F8644892614D5B5009F20A3 /* shadow_balloon.png in Resources */,
 				4F5564DD26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.59.png in Resources */,
+				4F6BDE1A2666369400E8B1D9 /* pizza.png in Resources */,
 				4F6BDDE02665549200E8B1D9 /* cafe5.png in Resources */,
 				4F6BDDDB2665549200E8B1D9 /* cafe15.png in Resources */,
 				4F6BDDE32665549200E8B1D9 /* megacoffee.png in Resources */,
+				4F6BDE1D2666369400E8B1D9 /* buritto.png in Resources */,
 				4F8644482614D544009F20A3 /* map_pin_custom@3x.png in Resources */,
+				4F6BDE132666369400E8B1D9 /* food6.png in Resources */,
 				4F5564DB26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png in Resources */,
 				4F6BDDE72665549200E8B1D9 /* angelinus.png in Resources */,
+				4F6BDE142666369400E8B1D9 /* food2.png in Resources */,
 				4F8644972614D5B5009F20A3 /* point_sprite.png in Resources */,
 				4F86444E2614D544009F20A3 /* daum_copyright.png in Resources */,
 				4F6BDDDE2665549200E8B1D9 /* cafe11.png in Resources */,
 				4F67A263265D81D60044316D /* RecommendFoodTVC.xib in Resources */,
+				4F6BDE122666369400E8B1D9 /* guk.png in Resources */,
 				4F5564DA26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png in Resources */,
 				4F6BDDEE2665549200E8B1D9 /* cafe9.png in Resources */,
 				4F5564DC26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.24.png in Resources */,
 				4F539DF72624BFD60020ED9E /* PromiseMainTableViewCell.xib in Resources */,
+				4F6BDE0A2666369400E8B1D9 /* mara.png in Resources */,
+				4F6BDE192666369400E8B1D9 /* sutbulgalbi.png in Resources */,
 				4F6BDDEA2665549200E8B1D9 /* backddabang.png in Resources */,
 				4F6BDDED2665549200E8B1D9 /* cafe8.png in Resources */,
 				4F86444F2614D544009F20A3 /* map_pin@3x.png in Resources */,
 				4F86444C2614D544009F20A3 /* th_line.png in Resources */,
 				4F86448A2614D5B5009F20A3 /* map_pinup.png in Resources */,
+				4F6BDE182666369400E8B1D9 /* donka.png in Resources */,
 				4F8644A12614D5B5009F20A3 /* map_pin_shadow.png in Resources */,
 				4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */,
 				4F6BDDE82665549200E8B1D9 /* twosome.png in Resources */,
@@ -952,7 +1048,10 @@
 				4F585B90265D22FB00DFA81B /* GroupRoom.storyboard in Resources */,
 				4F86444D2614D544009F20A3 /* map_pin_red@3x.png in Resources */,
 				4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */,
+				4F6BDE0B2666369400E8B1D9 /* dduck.png in Resources */,
+				4F6BDE1E2666369400E8B1D9 /* zzuggumi.png in Resources */,
 				4F8644562614D544009F20A3 /* noimage256.png in Resources */,
+				4F6BDE0E2666369400E8B1D9 /* zzigae.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1042,6 +1141,7 @@
 				4F585B92265D238200DFA81B /* GroupRoomVC.swift in Sources */,
 				4F6BDD8C26654E4300E8B1D9 /* CoffeeImage.swift in Sources */,
 				4F8644E62614E68D009F20A3 /* Place.swift in Sources */,
+				4F6BDDF026662E3000E8B1D9 /* FoodImage.swift in Sources */,
 				4F5564FA2603431800806E8D /* ResponseProfileImage.swift in Sources */,
 				4FAB951725C7D4A000148446 /* SceneDelegate.swift in Sources */,
 				4FD8322F25F7B95D00D8A214 /* FriendsVC.swift in Sources */,
