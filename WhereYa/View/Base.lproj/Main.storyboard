@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LsW-HO-zSt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LsW-HO-zSt">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -44,19 +44,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtA-SD-TYo">
-                                <rect key="frame" x="60" y="379" width="254" height="20"/>
+                                <rect key="frame" x="60" y="378" width="254" height="19"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeoR00" family="AppleSDGothicNeoR00" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비밀번호 확인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oap-Wi-8ZM">
-                                <rect key="frame" x="60" y="493" width="254" height="20"/>
+                                <rect key="frame" x="60" y="491" width="254" height="19"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeoR00" family="AppleSDGothicNeoR00" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="아이디" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="obc-57-wdr">
-                                <rect key="frame" x="50" y="300" width="221" height="44"/>
+                                <rect key="frame" x="50" y="299" width="219" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="yLj-tf-I5s"/>
                                 </constraints>
@@ -64,10 +64,10 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="a7C-Qu-TsX">
-                                <rect key="frame" x="60" y="265" width="42" height="20"/>
+                                <rect key="frame" x="60" y="265" width="42" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ce-sL-Mjg">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="19"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeoR00" family="AppleSDGothicNeoR00" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -75,7 +75,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rbM-5O-pYi">
-                                <rect key="frame" x="50" y="414" width="314" height="44"/>
+                                <rect key="frame" x="50" y="412" width="314" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Fyw-Pc-7qu"/>
                                 </constraints>
@@ -83,7 +83,7 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="비밀번호 확인" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Nmv-UM-ci6">
-                                <rect key="frame" x="50" y="528" width="314" height="44"/>
+                                <rect key="frame" x="50" y="525" width="314" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Lxo-41-o3C"/>
                                 </constraints>
@@ -126,13 +126,13 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="hFn-0p-8XG">
-                                <rect key="frame" x="241" y="312.5" width="20" height="19"/>
+                                <rect key="frame" x="239" y="311.5" width="20" height="19"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="58R-fa-Pzb">
-                                <rect key="frame" x="334" y="540.5" width="20" height="19"/>
+                                <rect key="frame" x="334" y="537.5" width="20" height="19"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dak-ju-Y42">
-                                <rect key="frame" x="286" y="300" width="78" height="44"/>
+                                <rect key="frame" x="284" y="299" width="80" height="44"/>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.73333333329999995" blue="0.7843137255" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="l23-Y7-hKm"/>
@@ -212,10 +212,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="yff-ZB-P3T">
-                                <rect key="frame" x="60" y="265" width="42" height="20"/>
+                                <rect key="frame" x="60" y="265" width="42" height="19"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5dt-6v-5Vm">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="19"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeoR00" family="AppleSDGothicNeoR00" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tDn-Vi-XXK">
-                                <rect key="frame" x="50" y="414" width="314" height="44"/>
+                                <rect key="frame" x="50" y="412" width="314" height="44"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CL-yl-xTJ">
                                         <rect key="frame" x="0.0" y="0.0" width="144.5" height="44"/>
@@ -271,13 +271,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnM-lR-y3w">
-                                <rect key="frame" x="60" y="493" width="254" height="20"/>
+                                <rect key="frame" x="60" y="491" width="254" height="19"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeoR00" family="AppleSDGothicNeoR00" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="닉네임" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Fsz-RA-npd">
-                                <rect key="frame" x="50" y="300" width="228" height="44"/>
+                                <rect key="frame" x="50" y="299" width="227" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="coH-7L-8Gx"/>
                                 </constraints>
@@ -285,13 +285,13 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycQ-ac-eGi">
-                                <rect key="frame" x="60" y="379" width="254" height="20"/>
+                                <rect key="frame" x="60" y="378" width="254" height="19"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeoR00" family="AppleSDGothicNeoR00" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="생년월일" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uOo-Jd-WVk">
-                                <rect key="frame" x="50" y="528" width="314" height="44"/>
+                                <rect key="frame" x="50" y="525" width="314" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Avk-1A-ybv"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="XJr-It-G5g"/>
@@ -324,7 +324,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYF-CY-zbz">
-                                <rect key="frame" x="50" y="528" width="314" height="44"/>
+                                <rect key="frame" x="50" y="525" width="314" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="x9R-RP-jrf"/>
                                 </constraints>
@@ -334,7 +334,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8my-I9-XHa">
-                                <rect key="frame" x="293" y="300" width="71" height="44"/>
+                                <rect key="frame" x="292" y="299" width="72" height="44"/>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.73333333329999995" blue="0.7843137255" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4iW-oc-F14"/>
@@ -349,7 +349,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nVU-tQ-jzp">
-                                <rect key="frame" x="248" y="312.5" width="20" height="19"/>
+                                <rect key="frame" x="247" y="311.5" width="20" height="19"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rw0-33-zzC"/>
@@ -446,14 +446,14 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLi-PR-gUC">
-                                <rect key="frame" x="151.5" y="727" width="111" height="27"/>
+                                <rect key="frame" x="151.5" y="726" width="111" height="26"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeoM00" family="AppleSDGothicNeoM00" pointSize="12"/>
                                 <state key="normal" title="아이디 비밀번호 재설정">
                                     <color key="titleColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wzj-xl-Wbe">
-                                <rect key="frame" x="186" y="676" width="42" height="27"/>
+                                <rect key="frame" x="186" y="676" width="42" height="26"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeoM00" family="AppleSDGothicNeoM00" pointSize="12"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="회원가입">
@@ -469,7 +469,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qlH-P9-EQu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeoSB00" family="AppleSDGothicNeoSB00" pointSize="17"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" title="로그인">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>

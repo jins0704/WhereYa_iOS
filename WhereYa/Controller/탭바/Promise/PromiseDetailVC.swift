@@ -15,6 +15,7 @@ class PromiseDetailVC: UIViewController{
     var promiseAddress : String?
     var promiseMemo : String?
     var promiseFriend : [String?] = []
+    @IBOutlet var downBtn: UIButton!
     var friends : String = ""
     
     var promiseDelegate : PromiseDelegate?
@@ -31,10 +32,13 @@ class PromiseDetailVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         
+    
         setUI()
     }
     
+    @IBAction func downBtnClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func backBtnClicked(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -56,13 +60,20 @@ class PromiseDetailVC: UIViewController{
     }
     
     func setUI(){
+        self.downBtn.isHidden = true
         setLabel()
+        nameLabel.font = UIFont.myBoldSystemFont(ofSize: 23)
+        timeLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
+        placeLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
+        addressLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
+        friendsLabel.font = UIFont.myMediumSystemFont(ofSize: 16)
         
         memoTextView.layer.borderWidth = 0.5
+        memoTextView.layer.cornerRadius = 10
         memoTextView.layer.borderColor = UIColor.gray.cgColor
         memoTextView.backgroundColor = .white
         memoTextView.isEditable = false
-        memoTextView.text = promiseMemo
+        memoTextView.text = "\n\(promiseMemo ?? "")"
 
         for i in promiseFriend{
             if(i == promiseFriend.last){friends.append("\(i ?? " ")")}
@@ -102,6 +113,7 @@ extension PromiseDetailVC : PromiseDelegate{
             DispatchQueue.main.async {
                 self.deleteBtn.isHidden = true
                 self.backBtn.isHidden = true
+                self.downBtn.isHidden = false
             }
         }
     }

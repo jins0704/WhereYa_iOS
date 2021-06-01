@@ -10,6 +10,7 @@ import FSCalendar
 
 class PromiseMainVC: UIViewController {
 
+    @IBOutlet var mainView: UIView!
     @IBOutlet var wholeView: UIView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var topCalendarView: UIView!
@@ -80,6 +81,9 @@ class PromiseMainVC: UIViewController {
     }
     // MARK: - func
     func setUI(){
+        self.titleLabel.font = UIFont.myBoldSystemFont(ofSize: 25)
+        self.mainView.layer.cornerRadius = 5
+        self.mainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         let border = CALayer()
         border.frame = CGRect(x: 0, y: topCalendarView.frame.size.height, width: topCalendarView.frame.width, height: 1)
         border.backgroundColor = UIColor.lightGray.cgColor
@@ -92,7 +96,7 @@ class PromiseMainVC: UIViewController {
         calendar.appearance.eventSelectionColor = #colorLiteral(red: 0.6359217763, green: 0.8041787744, blue: 0.7479131818, alpha: 1)
         calendar.appearance.eventDefaultColor = UIColor.blue
         calendar.translatesAutoresizingMaskIntoConstraints = false
-        calendar.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 0).isActive = true
+        calendar.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20).isActive = true
         calendar.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20).isActive = true
         calendar.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20).isActive = true
 

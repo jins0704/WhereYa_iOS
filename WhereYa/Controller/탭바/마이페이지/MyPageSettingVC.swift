@@ -11,6 +11,7 @@ class MyPageSettingVC: UIViewController {
 
     @IBOutlet weak var alarmAgreeSwitch: UISwitch!
     @IBOutlet weak var locationAgreeSwitch: UISwitch!
+    @IBOutlet var logoutBtn: UIButton!
     
 
     override func viewDidLoad() {
@@ -18,6 +19,7 @@ class MyPageSettingVC: UIViewController {
         
         alarmAgreeSwitch.onTintColor = UIColor.subpink
         locationAgreeSwitch.onTintColor = UIColor.subpink
+        logoutBtn.titleLabel?.font = UIFont.myMediumSystemFont(ofSize: 15)
         // Do any additional setup after loading the view.
     }
     

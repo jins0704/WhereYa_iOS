@@ -28,7 +28,8 @@ class RecommendFoodTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     
-        titleLabel.text = "근처 추천 맛집"
+        titleLabel.text = "약속 장소와 가까운 음식점"
+        titleLabel.font = UIFont.myMediumSystemFont(ofSize: 17)
         CollectionViewSetting()
     }
     

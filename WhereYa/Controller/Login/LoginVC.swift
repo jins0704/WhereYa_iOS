@@ -82,7 +82,7 @@ class LoginVC: baseVC{
         textFieldLayer(passwordTextField)
         
         loginBtn.layer.cornerRadius = 10
-        
+        loginBtn.titleLabel?.font = UIFont.myBoldSystemFont(ofSize: 18)
         signinBtn.setTitleColor(.black, for: .normal)
         findInfoBtn.setTitleColor(.black, for: .normal)
         

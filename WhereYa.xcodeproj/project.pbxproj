@@ -87,6 +87,15 @@
 		4F6BDE1D2666369400E8B1D9 /* buritto.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE062666369400E8B1D9 /* buritto.png */; };
 		4F6BDE1E2666369400E8B1D9 /* zzuggumi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE072666369400E8B1D9 /* zzuggumi.png */; };
 		4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE082666369400E8B1D9 /* chobab.png */; };
+		4F6BDE2F26665BFE00E8B1D9 /* NotoSansKR-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2826665BFE00E8B1D9 /* NotoSansKR-Light.otf */; };
+		4F6BDE3026665BFE00E8B1D9 /* NotoSansKR-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2926665BFE00E8B1D9 /* NotoSansKR-Bold.otf */; };
+		4F6BDE3126665BFE00E8B1D9 /* NotoSansKR-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2A26665BFE00E8B1D9 /* NotoSansKR-Thin.otf */; };
+		4F6BDE3226665BFE00E8B1D9 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2B26665BFE00E8B1D9 /* OFL.txt */; };
+		4F6BDE3326665BFE00E8B1D9 /* NotoSansKR-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2C26665BFE00E8B1D9 /* NotoSansKR-Black.otf */; };
+		4F6BDE3426665BFE00E8B1D9 /* NotoSansKR-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2D26665BFE00E8B1D9 /* NotoSansKR-Medium.otf */; };
+		4F6BDE3526665BFE00E8B1D9 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2E26665BFE00E8B1D9 /* NotoSansKR-Regular.otf */; };
+		4F6BDE3726665CB400E8B1D9 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDE3626665CB400E8B1D9 /* UIFont.swift */; };
+		4F6BDE3926667E3E00E8B1D9 /* calenderImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */; };
 		4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */; };
 		4F72A0492661144300217472 /* RecommendPlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A0482661144300217472 /* RecommendPlaceType.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
@@ -179,15 +188,7 @@
 		4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
 		4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseDetailVC.swift; sourceTree = "<group>"; };
-		4F5564A02600E78700806E8D /* AppleSDGothicNeoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoB.ttf; sourceTree = "<group>"; };
-		4F5564A12600E78700806E8D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
-		4F5564A22600E78700806E8D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
-		4F5564A32600E78700806E8D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
-		4F5564A42600E78700806E8D /* AppleSDGothicNeoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoM.ttf; sourceTree = "<group>"; };
-		4F5564A52600E78700806E8D /* AppleSDGothicNeoSB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoSB.ttf; sourceTree = "<group>"; };
-		4F5564A62600E78800806E8D /* AppleSDGothicNeoR.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AppleSDGothicNeoR.ttf; sourceTree = "<group>"; };
 		4F5564C62600F0AD00806E8D /* 16315-map.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "16315-map.json"; sourceTree = "<group>"; };
-		4F5564C92601096900806E8D /* BMHANNAAir_otf.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = BMHANNAAir_otf.otf; sourceTree = "<group>"; };
 		4F5564D326010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.26.png"; sourceTree = "<group>"; };
 		4F5564D426010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.49.png"; sourceTree = "<group>"; };
 		4F5564D526010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "스크린샷 2021-03-17 오전 12.56.04.png"; sourceTree = "<group>"; };
@@ -259,6 +260,15 @@
 		4F6BDE062666369400E8B1D9 /* buritto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buritto.png; sourceTree = "<group>"; };
 		4F6BDE072666369400E8B1D9 /* zzuggumi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zzuggumi.png; sourceTree = "<group>"; };
 		4F6BDE082666369400E8B1D9 /* chobab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chobab.png; sourceTree = "<group>"; };
+		4F6BDE2826665BFE00E8B1D9 /* NotoSansKR-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Light.otf"; sourceTree = "<group>"; };
+		4F6BDE2926665BFE00E8B1D9 /* NotoSansKR-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Bold.otf"; sourceTree = "<group>"; };
+		4F6BDE2A26665BFE00E8B1D9 /* NotoSansKR-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Thin.otf"; sourceTree = "<group>"; };
+		4F6BDE2B26665BFE00E8B1D9 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4F6BDE2C26665BFE00E8B1D9 /* NotoSansKR-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Black.otf"; sourceTree = "<group>"; };
+		4F6BDE2D26665BFE00E8B1D9 /* NotoSansKR-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Medium.otf"; sourceTree = "<group>"; };
+		4F6BDE2E26665BFE00E8B1D9 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
+		4F6BDE3626665CB400E8B1D9 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
+		4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calenderImg.png; sourceTree = "<group>"; };
 		4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryInfo.swift; sourceTree = "<group>"; };
 		4F72A0482661144300217472 /* RecommendPlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlaceType.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
@@ -433,6 +443,7 @@
 				4FFF039B261B2B5A003CEF89 /* UIColor.swift */,
 				4F90BB28261EF8330047F66A /* UITextView.swift */,
 				4F17D6E5262DAE69005B2913 /* UIViewController.swift */,
+				4F6BDE3626665CB400E8B1D9 /* UIFont.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -540,6 +551,20 @@
 				4F6BDE082666369400E8B1D9 /* chobab.png */,
 			);
 			path = foodImage;
+			sourceTree = "<group>";
+		};
+		4F6BDE2726665BFE00E8B1D9 /* Noto_Sans_KR */ = {
+			isa = PBXGroup;
+			children = (
+				4F6BDE2826665BFE00E8B1D9 /* NotoSansKR-Light.otf */,
+				4F6BDE2926665BFE00E8B1D9 /* NotoSansKR-Bold.otf */,
+				4F6BDE2A26665BFE00E8B1D9 /* NotoSansKR-Thin.otf */,
+				4F6BDE2B26665BFE00E8B1D9 /* OFL.txt */,
+				4F6BDE2C26665BFE00E8B1D9 /* NotoSansKR-Black.otf */,
+				4F6BDE2D26665BFE00E8B1D9 /* NotoSansKR-Medium.otf */,
+				4F6BDE2E26665BFE00E8B1D9 /* NotoSansKR-Regular.otf */,
+			);
+			path = Noto_Sans_KR;
 			sourceTree = "<group>";
 		};
 		4F8643F7261232CA009F20A3 /* Promise */ = {
@@ -778,14 +803,7 @@
 		4FF917B725DE453A0096FC26 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				4F5564A02600E78700806E8D /* AppleSDGothicNeoB.ttf */,
-				4F5564A42600E78700806E8D /* AppleSDGothicNeoM.ttf */,
-				4F5564A62600E78800806E8D /* AppleSDGothicNeoR.ttf */,
-				4F5564A52600E78700806E8D /* AppleSDGothicNeoSB.ttf */,
-				4F5564A22600E78700806E8D /* Roboto-Light.ttf */,
-				4F5564A12600E78700806E8D /* Roboto-Medium.ttf */,
-				4F5564A32600E78700806E8D /* Roboto-Regular.ttf */,
-				4F5564C92601096900806E8D /* BMHANNAAir_otf.otf */,
+				4F6BDE2726665BFE00E8B1D9 /* Noto_Sans_KR */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -850,6 +868,7 @@
 		4FF918C025E647F20096FC26 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */,
 				4FAB951D25C7D4A400148446 /* Assets.xcassets */,
 				4F6BDDF12666369400E8B1D9 /* foodImage */,
 				4F6BDDBE2665549200E8B1D9 /* cafeImage */,
@@ -874,9 +893,9 @@
 		4FF918FC25E8FC200096FC26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4F67A2A7265F95000044316D /* Recommend */,
 				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
 				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
+				4F67A2A7265F95000044316D /* Recommend */,
 			);
 			name = Home;
 			path = "홈";
@@ -968,6 +987,7 @@
 				4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */,
 				4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */,
 				4F8644942614D5B5009F20A3 /* map_present_tracking.png in Resources */,
+				4F6BDE3026665BFE00E8B1D9 /* NotoSansKR-Bold.otf in Resources */,
 				4F6BDDEC2665549200E8B1D9 /* starbucks.png in Resources */,
 				4F6BDDE12665549200E8B1D9 /* cafe7.png in Resources */,
 				4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */,
@@ -982,12 +1002,15 @@
 				4F90BB1D261E1F160047F66A /* FriendsMainTableViewCell.xib in Resources */,
 				4F6BDDDD2665549200E8B1D9 /* tomntoms.png in Resources */,
 				4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */,
+				4F6BDE3926667E3E00E8B1D9 /* calenderImg.png in Resources */,
 				4F86449B2614D5B5009F20A3 /* map_present_direction.png in Resources */,
 				4F6BDDD92665549200E8B1D9 /* cafe1.png in Resources */,
 				4F5564D926010D6700806E8D /* 스크린샷 2021-03-17 오전 12.56.26.png in Resources */,
+				4F6BDE3226665BFE00E8B1D9 /* OFL.txt in Resources */,
 				4F6BDE152666369400E8B1D9 /* hamburger.png in Resources */,
 				4FAB952125C7D4A400148446 /* LaunchScreen.storyboard in Resources */,
 				4F6BDDE22665549200E8B1D9 /* cafe12.png in Resources */,
+				4F6BDE3426665BFE00E8B1D9 /* NotoSansKR-Medium.otf in Resources */,
 				4F6BDE102666369400E8B1D9 /* food5.png in Resources */,
 				4F6BDDE42665549200E8B1D9 /* hollys.png in Resources */,
 				4F6BDDE92665549200E8B1D9 /* ediya.png in Resources */,
@@ -1001,6 +1024,7 @@
 				4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
 				4F6BDE0F2666369400E8B1D9 /* food4.png in Resources */,
+				4F6BDE3326665BFE00E8B1D9 /* NotoSansKR-Black.otf in Resources */,
 				4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */,
 				4F6BDDDC2665549200E8B1D9 /* cafe4.png in Resources */,
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
@@ -1014,6 +1038,7 @@
 				4F6BDDE02665549200E8B1D9 /* cafe5.png in Resources */,
 				4F6BDDDB2665549200E8B1D9 /* cafe15.png in Resources */,
 				4F6BDDE32665549200E8B1D9 /* megacoffee.png in Resources */,
+				4F6BDE2F26665BFE00E8B1D9 /* NotoSansKR-Light.otf in Resources */,
 				4F6BDE1D2666369400E8B1D9 /* buritto.png in Resources */,
 				4F8644482614D544009F20A3 /* map_pin_custom@3x.png in Resources */,
 				4F6BDE132666369400E8B1D9 /* food6.png in Resources */,
@@ -1044,8 +1069,10 @@
 				4F6BDDD72665549200E8B1D9 /* cafe2.png in Resources */,
 				4F86445A2614D544009F20A3 /* noimage.png in Resources */,
 				4F6BDDE52665549200E8B1D9 /* cafe13.png in Resources */,
+				4F6BDE3526665BFE00E8B1D9 /* NotoSansKR-Regular.otf in Resources */,
 				4F8644542614D544009F20A3 /* map_pinup_custom.png in Resources */,
 				4F585B90265D22FB00DFA81B /* GroupRoom.storyboard in Resources */,
+				4F6BDE3126665BFE00E8B1D9 /* NotoSansKR-Thin.otf in Resources */,
 				4F86444D2614D544009F20A3 /* map_pin_red@3x.png in Resources */,
 				4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */,
 				4F6BDE0B2666369400E8B1D9 /* dduck.png in Resources */,
@@ -1137,6 +1164,7 @@
 				4F90BB29261EF8340047F66A /* UITextView.swift in Sources */,
 				4F17D6E6262DAE69005B2913 /* UIViewController.swift in Sources */,
 				4FFF0397261B25D1003CEF89 /* UITextField.swift in Sources */,
+				4F6BDE3726665CB400E8B1D9 /* UIFont.swift in Sources */,
 				4F948ABB260C7D82004BC1A9 /* FriendSettingPopUpVC.swift in Sources */,
 				4F585B92265D238200DFA81B /* GroupRoomVC.swift in Sources */,
 				4F6BDD8C26654E4300E8B1D9 /* CoffeeImage.swift in Sources */,

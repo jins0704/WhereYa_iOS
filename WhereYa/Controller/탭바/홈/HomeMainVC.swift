@@ -9,6 +9,7 @@ import UIKit
 
 class HomeMainVC: UIViewController {
 
+    @IBOutlet var backgroundView: UIView!
     @IBOutlet var promiseName: UILabel!
     @IBOutlet var alarmLabel: UILabel!
     @IBOutlet var roomBtn: UIButton!
@@ -33,6 +34,11 @@ class HomeMainVC: UIViewController {
     
     // MARK: - UISetting
     func setUI(){
+        self.promiseName.font = UIFont.myBoldSystemFont(ofSize: 25)
+        self.alarmLabel.font = UIFont.myMediumSystemFont(ofSize: 19)
+        self.backgroundView.backgroundColor = .mainBlueColor
+        self.recommendMaidnView.layer.cornerRadius = 10
+        self.recommendMaidnView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         roomBtn.layer.cornerRadius = 10
         promiseName.text = "동창회 약속"
         recommendMaidnView.backgroundColor = UIColor.mainBlueColor
@@ -54,6 +60,7 @@ class HomeMainVC: UIViewController {
         refreshContol.addTarget(self, action: #selector(refreshTable(refresh:)), for: .valueChanged)
         
         refreshContol.tintColor = .mainBlueColor
+        
         //refreshContol.attributedTitle = NSAttributedString(string: "임의 이름")
         
         recommendTV.refreshControl = refreshContol
@@ -209,6 +216,16 @@ class HomeMainVC: UIViewController {
             self.setMainLabel()
         }
     }
+    
+    @IBAction func makePromise(_ sender: Any) {
+        let storyboard = UIStoryboard.init(name: "PromiseMake", bundle: nil)
+        let firstVC = storyboard.instantiateViewController(identifier:"PromiseMakeNavigationVC")  as! PromiseMakeNavigationVC
+        
+        firstVC.modalTransitionStyle = .coverVertical
+        firstVC.modalPresentationStyle = .fullScreen
+        self.present(firstVC, animated: true, completion: nil)
+    }
+    
 }
 
 
