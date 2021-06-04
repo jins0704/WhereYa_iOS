@@ -96,6 +96,7 @@
 		4F6BDE3526665BFE00E8B1D9 /* NotoSansKR-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE2E26665BFE00E8B1D9 /* NotoSansKR-Regular.otf */; };
 		4F6BDE3726665CB400E8B1D9 /* UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDE3626665CB400E8B1D9 /* UIFont.swift */; };
 		4F6BDE3926667E3E00E8B1D9 /* calenderImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */; };
+		4F6BDE3B2666B4AE00E8B1D9 /* PastPromiseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F6BDE3A2666B4AD00E8B1D9 /* PastPromiseVC.swift */; };
 		4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */; };
 		4F72A0492661144300217472 /* RecommendPlaceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F72A0482661144300217472 /* RecommendPlaceType.swift */; };
 		4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */; };
@@ -269,6 +270,7 @@
 		4F6BDE2E26665BFE00E8B1D9 /* NotoSansKR-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansKR-Regular.otf"; sourceTree = "<group>"; };
 		4F6BDE3626665CB400E8B1D9 /* UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIFont.swift; sourceTree = "<group>"; };
 		4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calenderImg.png; sourceTree = "<group>"; };
+		4F6BDE3A2666B4AD00E8B1D9 /* PastPromiseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastPromiseVC.swift; sourceTree = "<group>"; };
 		4F72A04626610D5000217472 /* PlaceCategoryInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCategoryInfo.swift; sourceTree = "<group>"; };
 		4F72A0482661144300217472 /* RecommendPlaceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendPlaceType.swift; sourceTree = "<group>"; };
 		4F8643F9261232FB009F20A3 /* PromiseMainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainVC.swift; sourceTree = "<group>"; };
@@ -895,6 +897,7 @@
 			children = (
 				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
 				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
+				4F6BDE3A2666B4AD00E8B1D9 /* PastPromiseVC.swift */,
 				4F67A2A7265F95000044316D /* Recommend */,
 			);
 			name = Home;
@@ -1141,6 +1144,7 @@
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
 				4FFF039F261B4E28003CEF89 /* CalendarVC.swift in Sources */,
 				4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */,
+				4F6BDE3B2666B4AE00E8B1D9 /* PastPromiseVC.swift in Sources */,
 				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
 				4F8644122614A812009F20A3 /* SearchPlaceVC.swift in Sources */,
 				4F912796261B7B3B002385A9 /* PromiseMakeNavigationVC.swift in Sources */,

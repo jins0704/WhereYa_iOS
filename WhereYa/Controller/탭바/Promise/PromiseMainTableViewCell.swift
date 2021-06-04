@@ -9,6 +9,7 @@ import UIKit
 
 class PromiseMainTableViewCell: UITableViewCell {
 
+    static let identifier = "PromiseMainTableViewCell"
     @IBOutlet var innerView: UIView!
     @IBOutlet var promiseName: UILabel!
     @IBOutlet var promisePlace: UILabel!
@@ -18,9 +19,15 @@ class PromiseMainTableViewCell: UITableViewCell {
     var promiseMemo : String?
     var promiseFriend : [String?] = []
     
+    func setData(_ name : String, _ place: String, _ time : String){
+        self.promiseName.text = name
+        self.promisePlace.text = place
+        self.promiseTime.text = time
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        self.selectionStyle = .none
         innerView.layer.cornerRadius = 20
         innerView.layer.borderWidth = 0.1
         innerView.layer.borderColor = #colorLiteral(red: 0.5650870204, green: 0.6334136128, blue: 0.6995031834, alpha: 1)

@@ -18,21 +18,21 @@ class PromiseMainVC: UIViewController {
     @IBOutlet var headerLabel: UILabel!
     
     let Promises: [String] = ["1","2","3","4"]
-    let cellIdentifier : String = "PromiseMainTableViewCell"
-    var promiseList : [Promise] = []
+
+    private var promiseList : [Promise] = []
     var calendar = FSCalendar()
     private var currentPage: Date?
-    private lazy var today: Date = { return Date() }()
+    private var today: Date = { return Date() }()
     
     var datesWithEvent : [String]?
 
-    fileprivate lazy var dateFormatter2: DateFormatter = {
+    var dateToYearMonthDay: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         return formatter
     }()
     
-    fileprivate lazy var dateFormatter1: DateFormatter = {
+    var dateToYearMonth: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy년 MM월"
         return formatter
@@ -46,7 +46,7 @@ class PromiseMainVC: UIViewController {
         
         promiseMainTableView.delegate = self
         promiseMainTableView.dataSource = self
-        promiseMainTableView.register(UINib(nibName: "PromiseMainTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        promiseMainTableView.register(UINib(nibName: PromiseMainTableViewCell.identifier, bundle: nil), forCellReuseIdentifier: PromiseMainTableViewCell.identifier)
         setUI()
         
         navigationController?.navigationBar.isHidden = true
@@ -54,11 +54,12 @@ class PromiseMainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         PromiseService.shared.getEvents { (data) in
             switch data{
-            case .success(let eventData) :
+            case .success(let result) :
                 
-                guard let events = eventData as? [String] else { return }
+                guard let r = result as? ResponseCalendarEvents else{return}
                 
-                self.datesWithEvent = events
+                
+                self.datesWithEvent = r.datesWithEvent
                 
                 DispatchQueue.main.async {
                     self.calendar.reloadData()
@@ -87,6 +88,7 @@ class PromiseMainVC: UIViewController {
         firstVC.modalPresentationStyle = .fullScreen
         self.present(firstVC, animated: true, completion: nil)
     }
+    
     // MARK: - func
     func setUI(){
         self.titleLabel.font = UIFont.myBoldSystemFont(ofSize: 25)
@@ -165,12 +167,12 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
         calendar.headerHeight = 0
         calendar.calendarHeaderView.isHidden = true
         calendar.scope = .month
-        headerLabel.text = self.dateFormatter1.string(from: calendar.currentPage)
+        headerLabel.text = self.dateToYearMonth.string(from: calendar.currentPage)
         
     }
         
 
-    func calendarCurrentPageDidChange(_ calendar: FSCalendar) { self.headerLabel.text = self.dateFormatter1.string(from: calendar.currentPage)
+    func calendarCurrentPageDidChange(_ calendar: FSCalendar) { self.headerLabel.text = self.dateToYearMonth.string(from: calendar.currentPage)
         currentPage = calendar.currentPage
     }
     
@@ -182,11 +184,11 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
         
         PromiseService.shared.getPromiseList(promiseData) { (data) in
             switch data{
-            case .success(let list) :
+            case .success(let result) :
                 
-                guard let list = list as? [Promise] else { return }
+                guard let r = result as? ResponsePromiseList else { return }
                 
-                self.promiseList = list
+                self.promiseList = r.promiseList!
                 
                 DispatchQueue.main.async {
                     self.view.reloadInputViews()
@@ -208,7 +210,7 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        let dateString = self.dateFormatter2.string(from: date)
+        let dateString = self.dateToYearMonthDay.string(from: date)
         if let events = datesWithEvent{
             if events.contains(dateString) {
                     return 1
@@ -218,8 +220,8 @@ extension PromiseMainVC : FSCalendarDelegate, FSCalendarDataSource{
     }
     
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-            switch self.dateFormatter2.string(from: date) {
-            case dateFormatter2.string(from: Date()):
+            switch self.dateToYearMonthDay.string(from: date) {
+            case dateToYearMonthDay.string(from: Date()):
                 return "오늘"
             default:
                 return nil
@@ -233,7 +235,7 @@ extension PromiseMainVC : UITableViewDelegate,UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : PromiseMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PromiseMainTableViewCell
+        let cell : PromiseMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: PromiseMainTableViewCell.identifier, for: indexPath) as! PromiseMainTableViewCell
         
         let promise = promiseList[indexPath.row]
         cell.promiseName.text = promise.name

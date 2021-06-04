@@ -60,6 +60,7 @@ class PromiseDetailVC: UIViewController{
     }
     
     func setUI(){
+        self.swipRightDismiss()
         self.downBtn.isHidden = true
         setLabel()
         nameLabel.font = UIFont.myBoldSystemFont(ofSize: 23)

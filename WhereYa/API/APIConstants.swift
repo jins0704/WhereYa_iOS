@@ -38,6 +38,8 @@ struct APIConstants{
     static let promiseList = APIConstants.BASE_URL + "/promise/date/"
     //약속 추가
     static let promiseMakeURL = APIConstants.BASE_URL + "/promise"
+    //지난 약속 조회
+    static let pastPromiseList = APIConstants.BASE_URL + "/promise/passed"
     
     //지도 검색
     static let placeURL = "https://dapi.kakao.com/v2/local/search/keyword.json"
