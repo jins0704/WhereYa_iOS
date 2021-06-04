@@ -15,11 +15,15 @@ class SearchPlaceVC: UIViewController, MTMapViewDelegate{
     private var placeList : [Place] = []
     private let cellIdentifier : String = "placeSearchTableViewCell"
     
+    @IBOutlet var placeLabel: UILabel!
+    @IBOutlet var searchBtn: UIButton!
     @IBOutlet var placeSearchTextField: UITextField!
     @IBOutlet var placeSearchTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        searchBtn.layer.cornerRadius = 5
+        placeLabel.font = UIFont.myMediumSystemFont(ofSize: 17)
         navigationController?.navigationBar.isHidden = true
         tabBarController?.tabBar.isHidden = true
         
@@ -28,6 +32,8 @@ class SearchPlaceVC: UIViewController, MTMapViewDelegate{
         placeSearchTableView.delegate = self
         placeSearchTableView.dataSource = self
         
+        placeSearchTextField.delegate = self
+        placeSearchTextField.returnKeyType = .search
         placeSearchTableView.register(UINib(nibName: "PlaceSearchTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         
     }
@@ -103,6 +109,15 @@ extension SearchPlaceVC : UITableViewDelegate, UITableViewDataSource{
     }
 }
 
+extension SearchPlaceVC : UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let btn = searchBtn{
+            placeSearchBtnClicked(btn)
+        }
+        textField.resignFirstResponder()
+        return true
+    }
+}
 extension SearchPlaceVC : UIGestureRecognizerDelegate{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
          self.view.endEditing(true)

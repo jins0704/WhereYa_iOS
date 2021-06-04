@@ -10,13 +10,11 @@ import Alamofire
 
 struct PromiseService{
     static let shared = PromiseService()
- 
+    let decoder = JSONDecoder()
     let header: HTTPHeaders = [NetworkHeaderKey.CONTENT_TYPE.rawValue: APIConstants.APPLICATION_JSON,
                                NetworkHeaderKey.auth.rawValue: UserDefaults.standard.string(forKey: "token")?.auth ?? ""]
 
-    
     func makePromise(promise: Promise, completion: @escaping (NetworkResult<Any>) -> Void){
-     
         let parameter : Parameters = ["name" : promise.name ?? " ",
                                       "memo" : promise.memo ?? " ",
                                       "date" : promise.date ?? " ",
@@ -29,107 +27,105 @@ struct PromiseService{
                                         ],
                                       "friends" : promise.friends!]
      
-        print(parameter)
         let url : String = APIConstants.promiseMakeURL
         
-        let dataRequest = AF.request(url,
-                                     method: .post,
-                                     parameters: parameter,
-                                     encoding: JSONEncoding.default,
-                                     headers: header).validate(statusCode: 200...500)
-        
-        dataRequest.responseData { response in
-            switch response.result{
+        requestPostData(url: url, httpmethod: .post, parameters: parameter, header: header) {(completionData) in
 
-            case .success :
-                guard let statusCode =  response.response?.statusCode else { return }
-                
-                print(statusCode)
-    
-                if statusCode <= 300{  completion(.success(NetworkInfo.SUCCESS))}
-                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
- 
-            case .failure: completion(.networkFail)
-    
-            }
+            completion(completionData)
         }
     }
     
     func getEvents(completion: @escaping (NetworkResult<Any>) -> Void){
 
         let url : String = APIConstants.promiseCheckEvents
-        
-        let dataRequest = AF.request(url,
-                                     method: .get,
-                                     encoding: JSONEncoding.default,
-                                     headers: header).validate(statusCode: 200...500)
-        
-        dataRequest.responseData { response in
-            switch response.result{
 
-            case .success :
-                guard let statusCode =  response.response?.statusCode else { return }
-                guard let value =  response.value else{return}
-                
-                print(statusCode)
-    
-                if statusCode <= 300{
-                    do {
-                        let decoder = JSONDecoder()
-                        let result = try decoder.decode(ResponseCalendarEvents.self, from: value)
-                        
-                        completion(.success(result.datesWithEvent ?? []))
-                        
-                    } catch {
-                        print(error.localizedDescription)
-                        completion(.requestErr(NetworkInfo.NO_DATA))
-                    }
-                    
-                }
-                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
- 
-            case .failure: completion(.networkFail)
-    
-            }
+        requestGetData(url: url, httpmethod: .get,header: header, decodeType: ResponseCalendarEvents.self) {(completionData) in
+            completion(completionData)
         }
     }
     
     func getPromiseList(_ selectedDate: String, completion: @escaping (NetworkResult<Any>) -> Void){
         let url : String = APIConstants.promiseList + selectedDate
         
-        print(url)
+        requestGetData(url: url, httpmethod: .get, header: header, decodeType: ResponsePromiseList.self) {(completionData) in
+            completion(completionData)
+        }
+    }
+    
+    func getMainPromise(completion: @escaping (NetworkResult<Any>) -> Void){
+        let url : String = APIConstants.mainPromiseURL
+
+        requestGetData(url: url, httpmethod: .get, header: header, decodeType: MainNoticePromise.self) {(completionData) in
+            
+            completion(completionData)
+        }
+    }
+    
+    func getPastPromiseList(completion: @escaping (NetworkResult<Any>) -> Void){
+        let url : String = APIConstants.pastPromiseList
         
+        requestGetData(url: url, httpmethod: .get, header: header, decodeType: ResponsePromiseList.self) {(completionData) in
+            
+            completion(completionData)
+        }
+
+    }
+    
+    func judgeStatus<T : Codable>(by statusCode : Int, _ data : Data, _ decodeType : T.Type) -> NetworkResult<Any>{
+        let decoder = JSONDecoder()
+        
+        guard let decodedData = try? decoder.decode(decodeType, from: data)
+        else{return .serverErr}
+        switch statusCode {
+        case 200: return .success(decodedData)
+        case 400: return .requestErr(NetworkInfo.NO_DATA)
+        case 500: return .serverErr
+        default: return .networkFail
+        }
+    }
+    
+    func requestGetData<T : Codable> (url : String, httpmethod : HTTPMethod, header : HTTPHeaders, decodeType : T.Type,completion: @escaping (NetworkResult<Any>) -> Void){
+
         let dataRequest = AF.request(url,
-                                     method: .get,
+                                     method: httpmethod,
                                      encoding: JSONEncoding.default,
                                      headers: header).validate(statusCode: 200...500)
         
         dataRequest.responseData { response in
             switch response.result{
-
+            
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
                 guard let value =  response.value else{return}
                 
-                print(statusCode)
+                let networkResult = self.judgeStatus(by : statusCode, value, decodeType)
+
+                completion(networkResult)
+            
+            case .failure:
+                completion(.serverErr)
+            }
+        }
+    }
     
-                if statusCode <= 300{
-                    do {
-                        let decoder = JSONDecoder()
-                        let result = try decoder.decode(ResponsePromiseList.self, from: value)
-                        
-                        completion(.success(result.promiseList))
-                        
-                    } catch {
-                        print(error.localizedDescription)
-                        completion(.requestErr(NetworkInfo.NO_DATA))
-                    }
-                    
-                }
-                else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
- 
-            case .failure: completion(.networkFail)
-    
+    func requestPostData(url : String, httpmethod : HTTPMethod, parameters : Parameters, header : HTTPHeaders, completion: @escaping (NetworkResult<Any>) -> Void){
+
+        let dataRequest = AF.request(url,
+                                     method: httpmethod,
+                                     parameters: parameters,
+                                     encoding: JSONEncoding.default,
+                                     headers: header).validate(statusCode: 200...500)
+        
+        dataRequest.responseData { response in
+            switch response.result{
+            
+            case .success :
+                guard let statusCode =  response.response?.statusCode else { return }
+                if statusCode <= 300{completion(.success(NetworkInfo.SUCCESS))}
+                else {completion(.requestErr(NetworkInfo.BAD_REQUEST))}
+            
+            case .failure:
+                completion(.serverErr)
             }
         }
     }

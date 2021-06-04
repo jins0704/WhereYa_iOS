@@ -30,6 +30,7 @@ class SearchFriendVC: UIViewController {
         searchBar.delegate = self
         searchBar.placeholder = "친구 닉네임 검색"
         searchBar.autocapitalizationType = .none
+        searchBar.returnKeyType = .done
         
         friendTableView.delegate = self
         friendTableView.dataSource = self
@@ -177,4 +178,10 @@ extension SearchFriendVC : UISearchBarDelegate{
             self.friendTableView.reloadData()
         }
     }
+}
+
+extension SearchFriendVC : UIGestureRecognizerDelegate{
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+         self.view.endEditing(true)
+   }
 }

@@ -11,6 +11,8 @@ class MyPageVC: UIViewController {
     
     let user = UserDefaults.standard
     
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileImageBtn: UIButton!
     @IBOutlet weak var profileNicknameLabel: UILabel!
@@ -91,6 +93,12 @@ class MyPageVC: UIViewController {
     
     func setUI(){
         
+        self.titleLabel.font = UIFont.myBoldSystemFont(ofSize: 25)
+        profileIdLabel.font = UIFont.myRegularSystemFont(ofSize: 17)
+        profileNicknameLabel.font = UIFont.myRegularSystemFont(ofSize: 17)
+        
+        self.mainView.layer.cornerRadius = 5
+        self.mainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         imagePicker.allowsEditing = true
         imagePicker.delegate = self
         

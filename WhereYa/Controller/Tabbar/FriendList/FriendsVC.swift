@@ -10,6 +10,7 @@ import Kingfisher
 
 class FriendsVC: UIViewController, PopUpDelegate {
     
+    @IBOutlet var mainLabel: UILabel!
     private let cellIdentifier : String = "friendsMainTableViewCell"
     var isFiltering : Bool = false
     private var AllList : [Friend] = []
@@ -20,6 +21,7 @@ class FriendsVC: UIViewController, PopUpDelegate {
     
     private let sections: [String] = ["내 프로필","즐겨찾기", "친구목록"]
 
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var friendsTableView: UITableView!
     @IBOutlet weak var friendsSearchBar: UISearchBar!
     
@@ -28,12 +30,19 @@ class FriendsVC: UIViewController, PopUpDelegate {
         
         getFriendsList()
         setTableView()
+        setUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         loadMyProfile()
     }
+    
+    func setUI(){
+        self.mainView.layer.cornerRadius = 5
+        self.mainView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+    }
     func setTableView(){
+        mainLabel.font = UIFont.myBoldSystemFont(ofSize: 25)
         friendsSearchBar.autocapitalizationType = .none
         
         friendsTableView.delegate = self
@@ -114,7 +123,7 @@ class FriendsVC: UIViewController, PopUpDelegate {
     @IBAction func addFriend(_ sender: UIButton) {
         let alert = UIAlertController(title: "친구 추가", message: "친구의 닉네임을 입력하세요", preferredStyle: .alert)
         
-        let insertBtn = UIAlertAction(title: "확인", style: .default) { (insert) in
+        let insertBtn = UIAlertAction(title: "확인", style: .cancel) { (insert) in
             if let nickname = alert.textFields?[0].text{
                 FriendService.shared.addFriend(friendNickname: nickname) { (data) in
                     print(data)
@@ -143,12 +152,12 @@ class FriendsVC: UIViewController, PopUpDelegate {
             }
         }
         
-        let cancelBtn = UIAlertAction(title: "취소", style: .cancel) { (cancel) in
+        let cancelBtn = UIAlertAction(title: "취소", style: .destructive) { (cancel) in
         }
         
         alert.addTextField()
-        alert.addAction(insertBtn)
         alert.addAction(cancelBtn)
+        alert.addAction(insertBtn)
         
         self.present(alert, animated: true, completion: nil)
     }
@@ -172,14 +181,11 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
             case 2:
                 return self.Normal_Friends.count
                 
-            default:
-                
-                return 0
-                
+            default: return 0
             }
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell : FriendsMainTableViewCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! FriendsMainTableViewCell

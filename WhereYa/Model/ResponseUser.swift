@@ -14,6 +14,7 @@ class User : Codable{
     var nickname : String?
     var gender : String?
     var brithday : String?
+    var check : Bool?
     
     init(_ userId : String, _ password : String, _ nickname : String, _ gender : String, _ birthday : String){
         self.userId = userId

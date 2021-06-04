@@ -24,6 +24,7 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
     var locationManager = CLLocationManager()
     var currentLocation : MTMapPointGeo?
     
+    var promiseDelegate : PromiseDelegate?
     
     @IBOutlet var mapScreenView: UIView!
     
@@ -101,13 +102,11 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
             let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
             let nextVC = storyboard.instantiateViewController(identifier: "PromiseDetailVC")
             
-            //self.celldelegate = nextVC as? CellDelegate
-            //celldelegate?.sendData(name: myNameLabel.text!, image: myProfileImage.image!)
-            //nextVC.modalPresentationStyle = .
+            self.promiseDelegate = nextVC as? PromiseDelegate
+            self.promiseDelegate?.hiddenUI(hidden: true)
+            self.promiseDelegate?.sendPromise(self.promise!)
             
             self.present(nextVC, animated: true, completion: nil)
-        
-            
         }
 
         actionButton.addItem(title: "친구현황", image: UIImage(systemName: "person.3.fill")?.withRenderingMode(.alwaysTemplate)) { item in
@@ -169,4 +168,15 @@ extension GroupRoomVC : CLLocationManagerDelegate{
     func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
         print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
+}
+
+extension GroupRoomVC : PromiseDelegate{
+    func hiddenUI(hidden: Bool) {}
+    
+    func sendPromise(_ promise: Promise) {
+        self.promise = promise
+        print(promise)
+    }
+    
+    
 }

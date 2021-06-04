@@ -28,6 +28,7 @@ class FriendsMainTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        profileNickname.font = UIFont.myRegularSystemFont(ofSize: 16)
         profileImage.layer.cornerRadius = profileImage.frame.height/2
         profileImage.layer.borderWidth = 1
         profileImage.clipsToBounds = true

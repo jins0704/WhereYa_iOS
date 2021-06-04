@@ -116,15 +116,10 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
                 alert.addAction(action)
                 self.present(alert, animated: true, completion: nil)
                 
-            case .requestErr(_) :
-                print("second 실패")
-                
+            case .requestErr(_) : break
             case .serverErr:
-                print(".serverErr")
                 return
-                
             case .networkFail:
-                print("network_error")
                 return
             }
         }
@@ -228,10 +223,8 @@ class SecondSignUpVC: baseVC, PopUpDelegate {
                         
                     //사용가능 데이터
                     case .serverErr:
-                        print(".serverErr")
                         return
                     case .networkFail:
-                        print("network_error")
                         return
                     }
                 }

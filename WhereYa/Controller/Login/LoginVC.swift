@@ -44,8 +44,6 @@ class LoginVC: baseVC{
             switch data{
             case .success(let tokenData) :
                 guard let tokenData = tokenData as? Token else { return }
-                print("success")
-                
                 UserDefaults.standard.setValue(tokenData.jwt, forKey: UserKey.TOKEN)
                 UserDefaults.standard.setValue(tokenData.nickname, forKey: UserKey.NICKNAME)
                 UserDefaults.standard.setValue(self.idTextField.text, forKey: UserKey.ID)
@@ -84,7 +82,7 @@ class LoginVC: baseVC{
         textFieldLayer(passwordTextField)
         
         loginBtn.layer.cornerRadius = 10
-        
+        loginBtn.titleLabel?.font = UIFont.myBoldSystemFont(ofSize: 18)
         signinBtn.setTitleColor(.black, for: .normal)
         findInfoBtn.setTitleColor(.black, for: .normal)
         
@@ -93,6 +91,10 @@ class LoginVC: baseVC{
         
         //idTextField.text = ""
         //passwordTextField.text = ""
+        
+        idTextField.font = UIFont.myRegularSystemFont(ofSize: 14)
+        
+        passwordTextField.font = UIFont.myRegularSystemFont(ofSize: 12)
         
         animationView.play{(finish) in
             DispatchQueue.main.asyncAfter(deadline: .now()+0.6){

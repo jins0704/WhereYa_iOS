@@ -46,7 +46,10 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0Q-bA-kwr">
                                 <rect key="frame" x="364" y="66" width="30" height="30"/>
-                                <state key="normal" title="완료"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="완료">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.57254901960000004" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="completeBtnClicked:" destination="2ut-jh-o8F" eventType="touchUpInside" id="pzQ-qd-dPy"/>
                                 </connections>
@@ -150,21 +153,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DUK-0e-qqG">
-                                        <rect key="frame" x="0.0" y="66" width="414" height="451"/>
+                                        <rect key="frame" x="0.0" y="66" width="414" height="551"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRK-0v-qSQ">
-                                        <rect key="frame" x="184" y="547" width="46" height="30"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="FRK-0v-qSQ" firstAttribute="top" secondItem="DUK-0e-qqG" secondAttribute="bottom" constant="30" id="AqD-0F-ICd"/>
                                     <constraint firstAttribute="trailing" secondItem="DUK-0e-qqG" secondAttribute="trailing" id="Cua-ro-zyG"/>
                                     <constraint firstItem="DUK-0e-qqG" firstAttribute="top" secondItem="ck8-9c-6Yr" secondAttribute="bottom" constant="15" id="DD4-et-rQQ"/>
-                                    <constraint firstItem="FRK-0v-qSQ" firstAttribute="centerX" secondItem="8U0-qA-pqq" secondAttribute="centerX" id="Lew-tt-50r"/>
-                                    <constraint firstAttribute="bottom" secondItem="FRK-0v-qSQ" secondAttribute="bottom" constant="40" id="Y6F-Gp-eqc"/>
+                                    <constraint firstAttribute="bottom" secondItem="DUK-0e-qqG" secondAttribute="bottom" id="EWh-fp-Kqz"/>
                                     <constraint firstItem="ck8-9c-6Yr" firstAttribute="leading" secondItem="8U0-qA-pqq" secondAttribute="leading" constant="30" id="ZZY-gN-suG"/>
                                     <constraint firstItem="DUK-0e-qqG" firstAttribute="leading" secondItem="8U0-qA-pqq" secondAttribute="leading" id="gxr-kE-Jem"/>
                                     <constraint firstItem="ck8-9c-6Yr" firstAttribute="top" secondItem="8U0-qA-pqq" secondAttribute="top" constant="30" id="vkB-ao-RyS"/>
@@ -185,8 +182,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="PRL-Sx-MpV"/>
                     <connections>
+                        <outlet property="placeLabel" destination="fTv-W5-B72" id="Khe-tS-o0x"/>
                         <outlet property="placeSearchTableView" destination="DUK-0e-qqG" id="Z1P-WM-ssE"/>
                         <outlet property="placeSearchTextField" destination="lb0-K5-NJQ" id="LiE-Zl-8a2"/>
+                        <outlet property="searchBtn" destination="teH-jh-KRy" id="pi2-5Q-P64"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wMm-1n-90c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -221,20 +220,23 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INc-40-uSR">
                                 <rect key="frame" x="354" y="66" width="30" height="30"/>
-                                <state key="normal" title="완료"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                <state key="normal" title="완료">
+                                    <color key="titleColor" red="0.37647058823529411" green="0.5725490196078431" blue="0.80784313725490198" alpha="0.74829384509999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="doneBtnClicked:" destination="57o-Fl-hn7" eventType="touchUpInside" id="pAI-g3-Dbo"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HVN-B0-F3V">
-                                <rect key="frame" x="0.0" y="174" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="184" width="414" height="678"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="we4-9h-WCL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="HVN-B0-F3V" firstAttribute="top" secondItem="8v5-Mf-iaT" secondAttribute="bottom" id="1IL-il-Gbz"/>
+                            <constraint firstItem="HVN-B0-F3V" firstAttribute="top" secondItem="8v5-Mf-iaT" secondAttribute="bottom" constant="10" id="1IL-il-Gbz"/>
                             <constraint firstItem="8v5-Mf-iaT" firstAttribute="trailing" secondItem="we4-9h-WCL" secondAttribute="trailing" id="5S2-xM-mWt"/>
                             <constraint firstItem="8v5-Mf-iaT" firstAttribute="top" secondItem="60t-FP-CMd" secondAttribute="bottom" constant="30" id="7PV-Or-1x9"/>
                             <constraint firstItem="8v5-Mf-iaT" firstAttribute="leading" secondItem="we4-9h-WCL" secondAttribute="leading" id="Ajb-LW-zWS"/>
@@ -355,7 +357,7 @@
                                         <rect key="frame" x="40.5" y="50" width="189" height="50"/>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVc-4t-YqR">
-                                        <rect key="frame" x="232" y="8" width="30" height="35"/>
+                                        <rect key="frame" x="232" y="8" width="30" height="32"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeoB00" family="AppleSDGothicNeoB00" pointSize="17"/>
                                         <state key="normal" title="완료"/>
                                         <connections>

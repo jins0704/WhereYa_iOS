@@ -37,15 +37,13 @@
 	</dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>BMHANNAAir_otf.otf</string>
-		<string>BMJUA_ttf.ttf</string>
+		<string>NotoSansKR-Light.otf</string>
+		<string>NotoSansKR-Bold.otf</string>
 		<string>AppleSDGothicNeoB.ttf</string>
-		<string>AppleSDGothicNeoM.ttf</string>
-		<string>AppleSDGothicNeoR.ttf</string>
-		<string>AppleSDGothicNeoSB.ttf</string>
-		<string>Roboto-Light.ttf</string>
-		<string>Roboto-Medium.ttf</string>
-		<string>Roboto-Regular.ttf</string>
+		<string>NotoSansKR-Thin.otf</string>
+		<string>NotoSansKR-Black.otf</string>
+		<string>NotoSansKR-Medium.otf</string>
+		<string>NotoSansKR-Regular.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

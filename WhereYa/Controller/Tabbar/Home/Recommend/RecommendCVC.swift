@@ -20,8 +20,16 @@ class RecommendCVC: UICollectionViewCell {
     override func awakeFromNib() {
         self.layer.cornerRadius = 10
         //self.backgroundColor = UIColor.mainBlueColor
-
-        self.layer.shadowColor = UIColor.black.cgColor
+        placeImg.layer.cornerRadius = 20
+//        placeImg.layer.borderWidth = 1
+//        placeImg.clipsToBounds = true
+//        placeImg.layer.borderColor = UIColor.clear.cgColor
+        self.placeName.font = UIFont.myBoldSystemFont(ofSize: 13)
+        self.placePhone.font = UIFont.myMediumSystemFont(ofSize: 12)
+        self.placeDistance.font = UIFont.myMediumSystemFont(ofSize: 12)
+        self.placeURL.font = UIFont.myMediumSystemFont(ofSize: 12)
+        
+        self.layer.shadowColor = UIColor.mainBlueColor.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 0)
         self.layer.shadowRadius = 10
         self.layer.shadowOpacity = 0.3
