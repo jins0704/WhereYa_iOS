@@ -20,6 +20,7 @@
 		4F454B29266C010D00AB83AF /* bakery.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B22266C010C00AB83AF /* bakery.png */; };
 		4F454B2A266C010D00AB83AF /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B23266C010D00AB83AF /* chicken.png */; };
 		4F454B2B266C010D00AB83AF /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B24266C010D00AB83AF /* taco.png */; };
+		4F454B2D266C05EC00AB83AF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F454B2C266C05EC00AB83AF /* UIView.swift */; };
 		4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */; };
 		4F539DF72624BFD60020ED9E /* PromiseMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */; };
 		4F539DFE2625F3910020ED9E /* PromiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */; };
@@ -204,6 +205,7 @@
 		4F454B22266C010C00AB83AF /* bakery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakery.png; sourceTree = "<group>"; };
 		4F454B23266C010D00AB83AF /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
 		4F454B24266C010D00AB83AF /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
+		4F454B2C266C05EC00AB83AF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
 		4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseDetailVC.swift; sourceTree = "<group>"; };
@@ -465,6 +467,7 @@
 				4F90BB28261EF8330047F66A /* UITextView.swift */,
 				4F17D6E5262DAE69005B2913 /* UIViewController.swift */,
 				4F6BDE3626665CB400E8B1D9 /* UIFont.swift */,
+				4F454B2C266C05EC00AB83AF /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -506,8 +509,8 @@
 			children = (
 				4F67A26C265D894C0044316D /* RecommendCVC.swift */,
 				4F67A26D265D894C0044316D /* RecommendCVC.xib */,
-				4F67A261265D81D60044316D /* RecommendFoodTVC.xib */,
 				4F67A260265D81D60044316D /* RecommendFoodTVC.swift */,
+				4F67A261265D81D60044316D /* RecommendFoodTVC.xib */,
 				4F67A271265D896A0044316D /* RecommendCafeTVC.xib */,
 				4F67A270265D896A0044316D /* RecommendCafeTVC.swift */,
 			);
@@ -1222,6 +1225,7 @@
 				4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */,
+				4F454B2D266C05EC00AB83AF /* UIView.swift in Sources */,
 				4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */,

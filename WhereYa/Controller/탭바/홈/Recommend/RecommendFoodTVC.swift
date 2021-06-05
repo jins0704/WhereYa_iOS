@@ -103,7 +103,7 @@ extension RecommendFoodTVC : UICollectionViewDataSource{
 
         cell.setData( list[indexPath.row].place_name!,  list[indexPath.row].phone!, list[indexPath.row].distance!,  list[indexPath.row].place_url!)
         cell.placeImg.image = UIImage(named: FoodImage.selectImage(name: list[indexPath.row].place_name!, index: indexPath.row))
-       
+        
         return cell
     }
     

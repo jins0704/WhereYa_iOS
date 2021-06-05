@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class RecommendCVC: UICollectionViewCell {
     
@@ -14,8 +15,9 @@ class RecommendCVC: UICollectionViewCell {
     @IBOutlet var placeName: UILabel!
     @IBOutlet var placePhone: UILabel!
     @IBOutlet var placeDistance: UILabel!
-    @IBOutlet var placeURL: UILabel!
+    @IBOutlet var linkBtn: UIButton!
     
+    var placeLink : String?
     
     override func awakeFromNib() {
         self.layer.cornerRadius = 10
@@ -24,11 +26,12 @@ class RecommendCVC: UICollectionViewCell {
 //        placeImg.layer.borderWidth = 1
 //        placeImg.clipsToBounds = true
 //        placeImg.layer.borderColor = UIColor.clear.cgColor
-        self.placeName.font = UIFont.myBoldSystemFont(ofSize: 13)
-        self.placePhone.font = UIFont.myMediumSystemFont(ofSize: 12)
-        self.placeDistance.font = UIFont.myMediumSystemFont(ofSize: 12)
-        self.placeURL.font = UIFont.myMediumSystemFont(ofSize: 12)
-        
+        self.placeName.font = UIFont.myBoldSystemFont(ofSize: 14)
+        self.placePhone.font = UIFont.myMediumSystemFont(ofSize: 13)
+        self.placeDistance.font = UIFont.myMediumSystemFont(ofSize: 13)
+        self.linkBtn.setTitle("자세히 보기", for: .normal)
+        self.linkBtn.titleLabel?.font = UIFont.myMediumSystemFont(ofSize: 13)
+        self.linkBtn.tintColor = .mainBlueColor
         self.layer.shadowColor = UIColor.mainBlueColor.cgColor
         self.layer.shadowOffset = CGSize(width: 1, height: 0)
         self.layer.shadowRadius = 10
@@ -43,9 +46,18 @@ class RecommendCVC: UICollectionViewCell {
     
     func setData(_ name : String, _ phone: String, _ distance : String, _ url : String){
         self.placeName.text = name
-        self.placePhone.text = "전화번호 : \(phone)"
+        if phone.count == 0{self.placePhone.text = "전화번호 : 없음"}
+        else{self.placePhone.text = "전화번호 : \(phone)"}
         self.placeDistance.text = "거리 : \(distance)m"
-        self.placeURL.text = "추후 링크 추가"
+        self.placeLink = url
     }
-
+    
+    @IBAction func linkBtnClicked(_ sender: Any) {
+        guard let url = URL(string: placeLink ?? "www.google.com")else{return}
+        
+        let safariViewController = SFSafariViewController(url: url)
+        safariViewController.modalPresentationStyle = .fullScreen
+        
+        self.parentViewController?.present(safariViewController, animated: true, completion: nil)
+    }
 }
