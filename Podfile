@@ -14,6 +14,7 @@ target 'WhereYa' do
   pod 'Kingfisher', '~> 6.0'
   pod 'FSCalendar'
   pod 'JJFloatingActionButton'
+  pod 'Starscream', '~> 4.0.0'
 
 end
 
