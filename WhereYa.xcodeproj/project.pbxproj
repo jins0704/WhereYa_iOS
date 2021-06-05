@@ -441,6 +441,7 @@
 		4F3A52A92609F0470084C549 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 				4FFF0396261B25D1003CEF89 /* UITextField.swift */,
 				4FFF039B261B2B5A003CEF89 /* UIColor.swift */,
 				4F90BB28261EF8330047F66A /* UITextView.swift */,
@@ -745,7 +746,6 @@
 				4FF917DA25DE59840096FC26 /* Utils */,
 				4FAB952A25C7D4C300148446 /* Controller */,
 				4FAB952925C7D4BB00148446 /* View */,
-				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 				4FAB952225C7D4A400148446 /* Info.plist */,
 				4F86441C2614D543009F20A3 /* DaumMap.embeddedframework */,
 			);
@@ -1361,7 +1361,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hongjinseok/Desktop/WhereYa_iOS/WhereYa-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1388,7 +1388,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hongjinseok/Desktop/WhereYa_iOS/WhereYa-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

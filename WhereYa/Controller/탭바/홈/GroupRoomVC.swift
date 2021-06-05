@@ -9,32 +9,42 @@ import UIKit
 import CoreLocation
 import JJFloatingActionButton
 import Toast_Swift
+import Starscream
 
 public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.576568, longitude: 127.029148)
 
-class GroupRoomVC: UIViewController,MTMapViewDelegate {
+class GroupRoomVC: UIViewController,MTMapViewDelegate{
 
     static let identifier = "GroupRoomVC"
-
+    
     var promise : Promise? //나중에 받아올 약속
     var mapView: MTMapView?
     var mapPoint1: MTMapPoint?
     var poiItem1: MTMapPOIItem?
-    
     var locationManager = CLLocationManager()
     var currentLocation : MTMapPointGeo?
     
     var promiseDelegate : PromiseDelegate?
+    var promiseLocation : MTMapPointGeo?
+    let socketURL = APIConstants.SOCKET_URL
+    var request : URLRequest?
+    var socket : WebSocket?
     
     @IBOutlet var mapScreenView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setPromiseInfo()
         setLocationManager()
         setMap()
         setFloatingButton()
+        setSocket()
     }
-    
+    func setPromiseInfo(){
+        guard let promiseLogitude = Double(promise?.destination?.x ?? "0.0") else { return};
+        guard let promiseLatitude = Double(promise?.destination?.y ?? "0.0") else { return}
+        promiseLocation = MTMapPointGeo(latitude: promiseLatitude, longitude: promiseLogitude)
+    }
     func setLocationManager(){
         locationManager.requestWhenInUseAuthorization()
         locationManager.delegate = self
@@ -59,14 +69,15 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
             mapView.baseMapType = .standard
             
             // 지도 중심점, 레벨
-            mapView.setMapCenter(MTMapPoint(geoCoord: DEFAULT_POSITION), zoomLevel: 4, animated: true)
+            mapView.setMapCenter(MTMapPoint(geoCoord: promiseLocation!), zoomLevel: 4, animated: true)
+//            mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.585568, longitude: 127.019148)), zoomLevel: 4, animated: true)
             
             // 현재 위치 트래킹
             mapView.showCurrentLocationMarker = true
             mapView.currentLocationTrackingMode = .onWithoutHeading
             
             // 마커 추가
-            self.mapPoint1 = MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.585568, longitude: 127.019148))
+            self.mapPoint1 = MTMapPoint(geoCoord: promiseLocation!)
             poiItem1 = MTMapPOIItem()
             poiItem1?.markerType = MTMapPOIItemMarkerType.yellowPin
             poiItem1?.mapPoint = mapPoint1
@@ -116,7 +127,7 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
         actionButton.addItem(title: "터치다운", image: UIImage(systemName: "hand.raised.fill")?.withRenderingMode(.alwaysTemplate)) { item in
    
             let loc1 = CLLocation(latitude: self.currentLocation?.latitude ?? 0, longitude: self.currentLocation?.longitude ?? 0)
-            let loc2 = CLLocation(latitude: DEFAULT_POSITION.latitude, longitude: DEFAULT_POSITION.longitude)
+            let loc2 = CLLocation(latitude: self.promiseLocation!.latitude, longitude: self.promiseLocation!.longitude)
             
             let distance = loc1.distance(from: loc2)
             if(distance > 1000){
@@ -142,12 +153,12 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     @IBAction func moveToMyLocation(_ sender: Any) {
-        self.mapView?.setMapCenter(MTMapPoint(geoCoord: currentLocation ?? DEFAULT_POSITION), zoomLevel: 3, animated: true)
+        self.mapView?.setMapCenter(MTMapPoint(geoCoord: currentLocation ?? promiseLocation!), zoomLevel: 3, animated: true)
     }
     
     @IBAction func moveToPromiseLocation(_ sender: Any) {
         // 지도 중심점, 레벨
-        self.mapView?.setMapCenter(MTMapPoint(geoCoord: DEFAULT_POSITION), zoomLevel: 3, animated: true)
+        self.mapView?.setMapCenter(MTMapPoint(geoCoord: promiseLocation!), zoomLevel: 3, animated: true)
     }
 }
 
@@ -175,8 +186,54 @@ extension GroupRoomVC : PromiseDelegate{
     
     func sendPromise(_ promise: Promise) {
         self.promise = promise
-        print(promise)
+    }
+}
+
+//socket
+extension GroupRoomVC : WebSocketDelegate{
+    func setSocket(){
+        self.request = URLRequest(url: URL(string: socketURL)!)
+        request?.timeoutInterval = 10
+        request?.setValue("Room", forHTTPHeaderField: "Sec-WebSocket-Protocol")
+        socket = WebSocket(request: request!)
+        socket?.delegate = self
+        socket?.connect()
+        print("socket Connected")
     }
     
+    func disconnect() {
+        socket?.disconnect()
+    }
     
+    func didReceive(event: WebSocketEvent, client: WebSocket) {
+        switch(event){
+        case .connected(let headers):
+            print(".connected - \(headers)")
+            
+            let params = [["roodId" : 1,
+                           "name" : "aaa",
+                           "x" : "127.029148",
+                           "y" : "37.576568"]]
+            let jParams = try! JSONSerialization.data(withJSONObject: params, options: [])
+            client.write(string: String(data:jParams, encoding: .utf8)!, completion: nil)
+        case .disconnected(let reason, let code):
+            print(".disconnected - \(reason), \(code)")
+        case .text(let text):
+            print("received text: \(text)")
+        case .binary(let data):
+            print("received data: \(data)")
+        case .pong(let pongData):
+            print("received pong")
+        case .ping(let pingData):
+            print("received ping")
+        case .viabilityChanged:
+            print("viabilityChanged")
+        case .reconnectSuggested:
+            print("reconnectSuggested")
+        case .cancelled:
+            print("cancelled")
+        case .error(_): break
+        default: break
+        }
+    }
 }

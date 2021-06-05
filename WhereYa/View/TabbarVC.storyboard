@@ -760,14 +760,14 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDl-sO-paO">
-                                            <rect key="frame" x="15" y="65" width="47.5" height="23"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDl-sO-paO">
+                                            <rect key="frame" x="15" y="65" width="384" height="23"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ECg-ma-pJU">
-                                            <rect key="frame" x="15" y="123" width="384" height="87"/>
+                                            <rect key="frame" x="15" y="113" width="384" height="107"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                             <color key="tintColor" red="0.37647058820000001" green="0.57254901960000004" blue="0.80784313730000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -806,12 +806,13 @@
                                         <constraint firstItem="dDl-sO-paO" firstAttribute="top" secondItem="CGh-ic-tYx" secondAttribute="bottom" constant="25" id="8gJ-B9-Q47"/>
                                         <constraint firstAttribute="height" constant="250" id="9Ag-Q0-MH6"/>
                                         <constraint firstItem="ECg-ma-pJU" firstAttribute="leading" secondItem="4Q2-63-Na8" secondAttribute="leading" constant="15" id="B8e-OK-5yh"/>
+                                        <constraint firstAttribute="trailing" secondItem="dDl-sO-paO" secondAttribute="trailing" constant="15" id="DMQ-WX-Ojz"/>
                                         <constraint firstItem="fz7-oQ-0Qd" firstAttribute="bottom" secondItem="CGh-ic-tYx" secondAttribute="bottom" id="HSt-ly-047"/>
                                         <constraint firstItem="CGh-ic-tYx" firstAttribute="leading" secondItem="4Q2-63-Na8" secondAttribute="leading" constant="15" id="Pjy-s3-DNN"/>
-                                        <constraint firstItem="ECg-ma-pJU" firstAttribute="top" secondItem="dDl-sO-paO" secondAttribute="bottom" constant="35" id="TaX-wJ-EzN"/>
+                                        <constraint firstItem="ECg-ma-pJU" firstAttribute="top" secondItem="dDl-sO-paO" secondAttribute="bottom" constant="25" id="TaX-wJ-EzN"/>
                                         <constraint firstItem="dDl-sO-paO" firstAttribute="leading" secondItem="4Q2-63-Na8" secondAttribute="leading" constant="15" id="c7q-r2-ebh"/>
                                         <constraint firstItem="fz7-oQ-0Qd" firstAttribute="top" secondItem="CGh-ic-tYx" secondAttribute="top" id="fF7-lI-pwB"/>
-                                        <constraint firstAttribute="bottom" secondItem="ECg-ma-pJU" secondAttribute="bottom" constant="40" id="wK2-cY-dUf"/>
+                                        <constraint firstAttribute="bottom" secondItem="ECg-ma-pJU" secondAttribute="bottom" constant="30" id="wK2-cY-dUf"/>
                                     </constraints>
                                 </view>
                             </tableView>
