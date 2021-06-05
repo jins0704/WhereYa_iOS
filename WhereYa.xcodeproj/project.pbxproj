@@ -11,6 +11,15 @@
 		4F17D6E6262DAE69005B2913 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17D6E5262DAE69005B2913 /* UIViewController.swift */; };
 		4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52B7260B5E020084C549 /* FriendService.swift */; };
 		4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */; };
+		4F454B1C266C00EC00AB83AF /* billyangel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1A266C00EC00AB83AF /* billyangel.png */; };
+		4F454B1D266C00EC00AB83AF /* sulbing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1B266C00EC00AB83AF /* sulbing.png */; };
+		4F454B25266C010D00AB83AF /* babsang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1E266C010A00AB83AF /* babsang.png */; };
+		4F454B26266C010D00AB83AF /* hanwoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1F266C010B00AB83AF /* hanwoo.png */; };
+		4F454B27266C010D00AB83AF /* calguksu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B20266C010B00AB83AF /* calguksu.png */; };
+		4F454B28266C010D00AB83AF /* steak.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B21266C010C00AB83AF /* steak.png */; };
+		4F454B29266C010D00AB83AF /* bakery.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B22266C010C00AB83AF /* bakery.png */; };
+		4F454B2A266C010D00AB83AF /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B23266C010D00AB83AF /* chicken.png */; };
+		4F454B2B266C010D00AB83AF /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B24266C010D00AB83AF /* taco.png */; };
 		4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */; };
 		4F539DF72624BFD60020ED9E /* PromiseMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */; };
 		4F539DFE2625F3910020ED9E /* PromiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */; };
@@ -186,6 +195,15 @@
 		4F17D6E5262DAE69005B2913 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4F3A52B7260B5E020084C549 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFriendNickname.swift; sourceTree = "<group>"; };
+		4F454B1A266C00EC00AB83AF /* billyangel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billyangel.png; sourceTree = "<group>"; };
+		4F454B1B266C00EC00AB83AF /* sulbing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sulbing.png; sourceTree = "<group>"; };
+		4F454B1E266C010A00AB83AF /* babsang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = babsang.png; sourceTree = "<group>"; };
+		4F454B1F266C010B00AB83AF /* hanwoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanwoo.png; sourceTree = "<group>"; };
+		4F454B20266C010B00AB83AF /* calguksu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calguksu.png; sourceTree = "<group>"; };
+		4F454B21266C010C00AB83AF /* steak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steak.png; sourceTree = "<group>"; };
+		4F454B22266C010C00AB83AF /* bakery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakery.png; sourceTree = "<group>"; };
+		4F454B23266C010D00AB83AF /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		4F454B24266C010D00AB83AF /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
 		4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
 		4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseDetailVC.swift; sourceTree = "<group>"; };
@@ -502,6 +520,8 @@
 				4F6BDDBF2665549200E8B1D9 /* cafe2.png */,
 				4F6BDDC02665549200E8B1D9 /* cafe3.png */,
 				4F6BDDC12665549200E8B1D9 /* cafe1.png */,
+				4F454B1A266C00EC00AB83AF /* billyangel.png */,
+				4F454B1B266C00EC00AB83AF /* sulbing.png */,
 				4F6BDDC22665549200E8B1D9 /* cafe14.png */,
 				4F6BDDC32665549200E8B1D9 /* cafe15.png */,
 				4F6BDDC42665549200E8B1D9 /* cafe4.png */,
@@ -543,6 +563,13 @@
 				4F6BDDFC2666369400E8B1D9 /* food6.png */,
 				4F6BDDFD2666369400E8B1D9 /* food2.png */,
 				4F6BDDFE2666369400E8B1D9 /* hamburger.png */,
+				4F454B1E266C010A00AB83AF /* babsang.png */,
+				4F454B22266C010C00AB83AF /* bakery.png */,
+				4F454B20266C010B00AB83AF /* calguksu.png */,
+				4F454B23266C010D00AB83AF /* chicken.png */,
+				4F454B1F266C010B00AB83AF /* hanwoo.png */,
+				4F454B21266C010C00AB83AF /* steak.png */,
+				4F454B24266C010D00AB83AF /* taco.png */,
 				4F6BDDFF2666369400E8B1D9 /* food3.png */,
 				4F6BDE002666369400E8B1D9 /* food1.png */,
 				4F6BDE012666369400E8B1D9 /* donka.png */,
@@ -983,6 +1010,7 @@
 				4F6BDE112666369400E8B1D9 /* mandu.png in Resources */,
 				4F6BDE0D2666369400E8B1D9 /* italianpasta.png in Resources */,
 				4F6BDE1C2666369400E8B1D9 /* banzum.png in Resources */,
+				4F454B25266C010D00AB83AF /* babsang.png in Resources */,
 				4F8644552614D544009F20A3 /* info_box_tail.png in Resources */,
 				4F6BDDE62665549200E8B1D9 /* cafe6.png in Resources */,
 				4F6BDE092666369400E8B1D9 /* meonok.png in Resources */,
@@ -990,6 +1018,7 @@
 				4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */,
 				4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */,
 				4F8644942614D5B5009F20A3 /* map_present_tracking.png in Resources */,
+				4F454B1D266C00EC00AB83AF /* sulbing.png in Resources */,
 				4F6BDE3026665BFE00E8B1D9 /* NotoSansKR-Bold.otf in Resources */,
 				4F6BDDEC2665549200E8B1D9 /* starbucks.png in Resources */,
 				4F6BDDE12665549200E8B1D9 /* cafe7.png in Resources */,
@@ -1002,6 +1031,7 @@
 				4F6BDDDA2665549200E8B1D9 /* cafe14.png in Resources */,
 				4F6BDE172666369400E8B1D9 /* food1.png in Resources */,
 				4F8644952614D5B5009F20A3 /* map_pin_red.png in Resources */,
+				4F454B29266C010D00AB83AF /* bakery.png in Resources */,
 				4F90BB1D261E1F160047F66A /* FriendsMainTableViewCell.xib in Resources */,
 				4F6BDDDD2665549200E8B1D9 /* tomntoms.png in Resources */,
 				4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */,
@@ -1026,6 +1056,8 @@
 				4F8644582614D544009F20A3 /* map_pin.png in Resources */,
 				4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
+				4F454B2A266C010D00AB83AF /* chicken.png in Resources */,
+				4F454B2B266C010D00AB83AF /* taco.png in Resources */,
 				4F6BDE0F2666369400E8B1D9 /* food4.png in Resources */,
 				4F6BDE3326665BFE00E8B1D9 /* NotoSansKR-Black.otf in Resources */,
 				4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */,
@@ -1033,6 +1065,7 @@
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
 				4F6BDDD82665549200E8B1D9 /* cafe3.png in Resources */,
 				4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */,
+				4F454B26266C010D00AB83AF /* hanwoo.png in Resources */,
 				4F6BDDDF2665549200E8B1D9 /* cafe10.png in Resources */,
 				4F8644A02614D5B5009F20A3 /* daum_th_line.png in Resources */,
 				4F8644892614D5B5009F20A3 /* shadow_balloon.png in Resources */,
@@ -1068,6 +1101,7 @@
 				4F8644A12614D5B5009F20A3 /* map_pin_shadow.png in Resources */,
 				4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */,
 				4F6BDDE82665549200E8B1D9 /* twosome.png in Resources */,
+				4F454B1C266C00EC00AB83AF /* billyangel.png in Resources */,
 				4F86445B2614D544009F20A3 /* map_present_background_update.png in Resources */,
 				4F6BDDD72665549200E8B1D9 /* cafe2.png in Resources */,
 				4F86445A2614D544009F20A3 /* noimage.png in Resources */,
@@ -1076,11 +1110,13 @@
 				4F8644542614D544009F20A3 /* map_pinup_custom.png in Resources */,
 				4F585B90265D22FB00DFA81B /* GroupRoom.storyboard in Resources */,
 				4F6BDE3126665BFE00E8B1D9 /* NotoSansKR-Thin.otf in Resources */,
+				4F454B28266C010D00AB83AF /* steak.png in Resources */,
 				4F86444D2614D544009F20A3 /* map_pin_red@3x.png in Resources */,
 				4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */,
 				4F6BDE0B2666369400E8B1D9 /* dduck.png in Resources */,
 				4F6BDE1E2666369400E8B1D9 /* zzuggumi.png in Resources */,
 				4F8644562614D544009F20A3 /* noimage256.png in Resources */,
+				4F454B27266C010D00AB83AF /* calguksu.png in Resources */,
 				4F6BDE0E2666369400E8B1D9 /* zzigae.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,6 +20,8 @@ struct CoffeeImage{
         case STARBUCKS = "starbucks"
         case TOMNTOMS = "tomntoms"
         case TWOSOME = "twosome"
+        case BILLYANGEL = "billyangel"
+        case SULBING = "sulbing"
     }
     
     static func selectImage(name : String, index : Int) -> String{
@@ -32,6 +34,8 @@ struct CoffeeImage{
         else if name.contains("스타벅스"){return brand.STARBUCKS.rawValue}
         else if name.contains("탐앤탐스"){return brand.TOMNTOMS.rawValue}
         else if name.contains("투썸"){return brand.TWOSOME.rawValue}
+        else if name.contains("설빙"){return brand.SULBING.rawValue}
+        else if name.contains("빌리엔젤"){return brand.BILLYANGEL.rawValue}
         else{return CoffeeImage.images[index]}
     }
 }

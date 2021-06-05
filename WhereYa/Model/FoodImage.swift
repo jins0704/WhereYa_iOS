@@ -28,6 +28,13 @@ struct FoodImage{
         case GUK = "guk"
         case ZZIGAE = "zzigae"
         case NOIMAGE = "noimage"
+        case BABSANG = "babsang"
+        case BAKERY = "bakery"
+        case CALGUKSU = "calguksu"
+        case CHICKEN = "chicken"
+        case HANWOO = "hanwoo"
+        case STEAK = "steak"
+        case TACO = "taco"
     }
     
     static func selectImage(name : String, index : Int) -> String{
@@ -45,8 +52,15 @@ struct FoodImage{
         else if name.contains("피자"){return menu.PIZZA.rawValue}
         else if name.contains("버거"){return menu.HAMBURGER.rawValue}
         else if name.contains("쭈꾸미"){return menu.ZZUGGUMI.rawValue}
+        else if name.contains("칼국수"){return menu.CALGUKSU.rawValue}
         else if name.contains("국") || name.contains("순대"){return menu.GUK.rawValue}
         else if name.contains("찌개") || name.contains("김치"){return menu.ZZIGAE.rawValue}
+        else if name.contains("밥상") || name.contains("밥"){return menu.BABSANG.rawValue}
+        else if name.contains("베이커리") || name.contains("카페") {return menu.BAKERY.rawValue}
+        else if name.contains("한우") || name.contains("고기") {return menu.HANWOO.rawValue}
+        else if name.contains("치킨") || name.contains("통닭") {return menu.CHICKEN.rawValue}
+        else if name.contains("스테이크"){return menu.STEAK.rawValue}
+        else if name.contains("타코"){return menu.TACO.rawValue}
         else{return FoodImage.images[index%6]}
     }
 }
