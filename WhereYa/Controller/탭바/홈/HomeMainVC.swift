@@ -24,9 +24,7 @@ class HomeMainVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        getNearCafeData()
-        getNearFoodData()
-        getMainPromiseData()
+        getMainData()
         setUI()
         setTableView()
         setTimer()
@@ -34,8 +32,8 @@ class HomeMainVC: UIViewController {
     
     // MARK: - UISetting
     func setUI(){
-        self.promiseName.font = UIFont.myBoldSystemFont(ofSize: 25)
-        self.alarmLabel.font = UIFont.myMediumSystemFont(ofSize: 19)
+        self.promiseName.font = UIFont.myBoldSystemFont(ofSize: 26)
+        self.alarmLabel.font = UIFont.myMediumSystemFont(ofSize: 20)
         self.backgroundView.backgroundColor = .mainBlueColor
         self.recommendMaidnView.layer.cornerRadius = 10
         self.recommendMaidnView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
@@ -72,7 +70,7 @@ class HomeMainVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
             
             self.recommendTV.reloadData()
-            self.getMainPromiseData()
+            self.getMainData()
             refresh.endRefreshing()
         }
     }
@@ -90,10 +88,13 @@ class HomeMainVC: UIViewController {
  
     // MARK: - getNearCafeData
     
-    func getNearCafeData(){
+    func getNearCafeData(_ promise : MainNoticePromise){
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
-        PlaceService.shared.getNearPlace(categoryCode: PlaceCategoryInfo.cafe.rawValue) { (result) in
+        let x = Double((mainNoticePromise?.promise?.destination?.x ?? "0"))
+        let y = Double((mainNoticePromise?.promise?.destination?.y ?? "0"))
+        
+        PlaceService.shared.getNearPlace(longitude : x ?? 0, latitude : y ?? 0, categoryCode: PlaceCategoryInfo.cafe.rawValue) { (result) in
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
             switch result{
@@ -113,11 +114,13 @@ class HomeMainVC: UIViewController {
         }
     }
     // MARK: - getNearRestaurantsData
-    func getNearFoodData(){
+    func getNearFoodData(_ promise : MainNoticePromise){
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
+        let x = Double((promise.promise?.destination?.x ?? "0"))
+        let y = Double((promise.promise?.destination?.y ?? "0"))
         
-        PlaceService.shared.getNearPlace(categoryCode: PlaceCategoryInfo.food.rawValue) { [self] (result) in
+        PlaceService.shared.getNearPlace(longitude : x ?? 0, latitude : y ?? 0, categoryCode: PlaceCategoryInfo.food.rawValue) { [self] (result) in
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
             switch result{
@@ -152,7 +155,7 @@ class HomeMainVC: UIViewController {
     }
     
     // MARK: - getMainPromiseData
-    func getMainPromiseData(){
+    func getMainData(){
         ActivityIndicator.shared.activityIndicator.startAnimating()
         
         
@@ -165,6 +168,8 @@ class HomeMainVC: UIViewController {
                 if let promise = data as? MainNoticePromise{
                     self.mainNoticePromise = promise
                     self.setMainLabel()
+                    self.getNearCafeData(promise)
+                    self.getNearFoodData(promise)
                 }
                 
             case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
@@ -181,7 +186,7 @@ class HomeMainVC: UIViewController {
     func setMainLabel(){
         if let mpromise = self.mainNoticePromise?.promise, let mtime = self.mainNoticePromise?.lefttime{
             self.promiseName.text = mpromise.name
-            self.alarmLabel.text = "약속까지 \(self.setTimeLabel(mtime.day ?? 0, mtime.hour ?? 0, mtime.minute ?? 0))남았어요\n\(mpromise.destination?.place_name ?? " ")으로 \(mpromise.time ?? " ")까지 가야해요"
+            self.alarmLabel.text = "약속까지 \(self.setTimeLabel(mtime.day ?? 0, mtime.hour ?? 0, mtime.minute ?? 0))남았어요!\n\(mpromise.destination?.place_name ?? " ")으로 가야해요."
         }
     }
     

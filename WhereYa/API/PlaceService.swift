@@ -42,9 +42,9 @@ struct PlaceService {
         }
     }
     
-    func getNearPlace(categoryCode: String, completion: @escaping (NetworkResult<Any>) -> Void){
+    func getNearPlace(longitude : Double, latitude : Double,categoryCode: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let query : String = "\(APIConstants.categoryURL)?category_group_code=\(categoryCode)&sort=accuracy&page=1&x=\(DEFAULT_POSITION.longitude)&y=\(DEFAULT_POSITION.latitude)&radius=500"
+        let query : String = "\(APIConstants.categoryURL)?category_group_code=\(categoryCode)&sort=accuracy&page=1&x=\(longitude)&y=\(latitude)&radius=500"
     
         let encodedQuery : String = query.addingPercentEncoding(withAllowedCharacters: NSMutableCharacterSet.urlQueryAllowed)!
         let queryURL : URL = URL(string: encodedQuery)!
