@@ -20,7 +20,7 @@ class HomeMainVC: UIViewController {
     var restaurants : [Place] = []
     var cafes : [Place] = []
     var mainNoticePromise : MainNoticePromise?
-    var promiseDelegate : PromiseDelegate?
+    var promiseDelegate : dataDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

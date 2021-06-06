@@ -7,18 +7,19 @@
 
 import Foundation
 
-protocol PopUpDelegate{
+protocol popupDelegate{
     func doneBtnClicked(data : String)
     func placeClicked(place : Place)
     func friendClicked(friends : [String])
 }
 
-protocol CellDelegate {
+protocol cellDelegate {
     func cellChecked(_ nickname : String, _ changeBool : Bool)
 }
 
 
-protocol PromiseDelegate{
+protocol dataDelegate{
     func hiddenUI(hidden : Bool)
     func sendPromise(_ promise : Promise)
+    func sendUserLocation(_ userlocations : [UserLocation])
 }

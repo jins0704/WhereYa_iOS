@@ -9,7 +9,7 @@ import UIKit
 
 class FriendSettingPopUpVC: UIViewController{
           
-    var popupDelegate : PopUpDelegate?
+    var popupDelegate : popupDelegate?
     
     var detailNickname : String?
     var detailImg : String?

@@ -17,7 +17,7 @@ class SearchFriendVC: UIViewController {
     @IBOutlet var invitedLabel: UILabel!
     @IBOutlet var friendsLabel: UILabel!
     
-    var popupDelegate : PopUpDelegate?
+    var popupDelegate : popupDelegate?
     var isFiltering : Bool = false
     private var allList : [Friend] = []
     private var filterList : [Friend] = []
@@ -140,7 +140,7 @@ extension SearchFriendVC : UITableViewDelegate, UITableViewDataSource{
 }
 
 // MARK: - CellDelegate
-extension SearchFriendVC : CellDelegate{
+extension SearchFriendVC : cellDelegate{
     func cellChecked(_ nickname: String, _ changeBool: Bool) {
         for friend in allList{
             if friend.nickname == nickname{

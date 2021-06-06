@@ -9,7 +9,7 @@ import UIKit
 
 class SearchPlaceVC: UIViewController, MTMapViewDelegate{
     
-    var popupDelegate : PopUpDelegate?
+    var popupDelegate : popupDelegate?
     var placeName : String?
     
     private var placeList : [Place] = []

@@ -6,3 +6,7 @@
 //
 
 import Foundation
+
+struct CharacterImage{
+    static let images : [String] = ["boy","girl","teenager","business-person"]
+}

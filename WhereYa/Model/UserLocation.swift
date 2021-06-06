@@ -6,3 +6,10 @@
 //
 
 import Foundation
+class UserLocation{
+    var characterImg : String?
+    var name : String?
+    var x : String?
+    var y : String?
+    var touchdown : Bool?
+}

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class SecondSignUpVC: baseVC, PopUpDelegate {
+class SecondSignUpVC: baseVC, popupDelegate {
   
     @IBOutlet weak var popupBtn: UIButton!
     

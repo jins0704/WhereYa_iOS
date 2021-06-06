@@ -11,8 +11,6 @@ import JJFloatingActionButton
 import Toast_Swift
 import Starscream
 
-public let DEFAULT_POSITION = MTMapPointGeo(latitude: 37.576568, longitude: 127.029148)
-
 class GroupRoomVC: UIViewController,MTMapViewDelegate{
 
     static let identifier = "GroupRoomVC"
@@ -20,15 +18,16 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
     var promise : Promise? //나중에 받아올 약속
     var mapView: MTMapView?
     var mapPoint1: MTMapPoint?
-    var poiItem1: MTMapPOIItem?
+    var poiItems: [MTMapPOIItem]?
     var locationManager = CLLocationManager()
     var currentLocation : MTMapPointGeo?
     
-    var promiseDelegate : PromiseDelegate?
+    var dataDelegate : dataDelegate?
     var promiseLocation : MTMapPointGeo?
     let socketURL = APIConstants.SOCKET_URL
     var request : URLRequest?
     var socket : WebSocket?
+    var friends : [UserLocation] = []
     
     @IBOutlet var mapScreenView: UIView!
     
@@ -59,6 +58,7 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
     }
     
     func setMap(){
+     
         // 지도 불러오기
         let mapPoint = CGPoint(x: 0, y: 0)
         let mapSize = CGSize(width: mapScreenView.frame.size.width, height: mapScreenView.frame.size.height)
@@ -70,7 +70,6 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
             
             // 지도 중심점, 레벨
             mapView.setMapCenter(MTMapPoint(geoCoord: promiseLocation!), zoomLevel: 4, animated: true)
-//            mapView.setMapCenter(MTMapPoint(geoCoord: MTMapPointGeo(latitude:  37.585568, longitude: 127.019148)), zoomLevel: 4, animated: true)
             
             // 현재 위치 트래킹
             mapView.showCurrentLocationMarker = true
@@ -78,12 +77,27 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
             
             // 마커 추가
             self.mapPoint1 = MTMapPoint(geoCoord: promiseLocation!)
-            poiItem1 = MTMapPOIItem()
-            poiItem1?.markerType = MTMapPOIItemMarkerType.yellowPin
-            poiItem1?.mapPoint = mapPoint1
-            poiItem1?.itemName = "약속 장소"
+            let poiItem1 = MTMapPOIItem()
+            poiItem1.markerType =  MTMapPOIItemMarkerType.yellowPin
+            poiItem1.mapPoint = mapPoint1
+            poiItem1.itemName = "약속 장소"
+            
+            poiItems?.append(poiItem1)
+            var cnt = 0
+            var b : Double = 0
+            for friend in friends{
+                let poiItem = MTMapPOIItem()
+                
+                poiItem.markerType = MTMapPOIItemMarkerType.customImage
+                poiItem.customImage = UIImage(named: CharacterImage.images[cnt])
+                poiItem.mapPoint = MTMapPoint(geoCoord: MTMapPointGeo(latitude: 37.29104667912, longitude: 127.05+b))
+                friend.characterImg = CharacterImage.images[cnt]
+                poiItem.itemName = friend.name
+                mapView.add(poiItem)
+                cnt += 1
+                b += 0.002
+            }
     
-
             mapView.add(poiItem1)
             
             //            mapView.addPOIItems([poiItem1,poiItem2]
@@ -113,15 +127,21 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
             let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
             let nextVC = storyboard.instantiateViewController(identifier: "PromiseDetailVC")
             
-            self.promiseDelegate = nextVC as? PromiseDelegate
-            self.promiseDelegate?.hiddenUI(hidden: true)
-            self.promiseDelegate?.sendPromise(self.promise!)
+            self.dataDelegate = nextVC as? dataDelegate
+            self.dataDelegate?.hiddenUI(hidden: true)
+            self.dataDelegate?.sendPromise(self.promise!)
             
             self.present(nextVC, animated: true, completion: nil)
         }
 
         actionButton.addItem(title: "친구현황", image: UIImage(systemName: "person.3.fill")?.withRenderingMode(.alwaysTemplate)) { item in
-          // do something
+            let storyboard = UIStoryboard.init(name: "TabbarVC", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(identifier: "GroupConditionVC")
+            
+            self.dataDelegate = nextVC as? dataDelegate
+            self.dataDelegate?.sendUserLocation(self.friends)
+            
+            self.present(nextVC, animated: true, completion: nil)
         }
 
         actionButton.addItem(title: "터치다운", image: UIImage(systemName: "hand.raised.fill")?.withRenderingMode(.alwaysTemplate)) { item in
@@ -130,12 +150,12 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
             let loc2 = CLLocation(latitude: self.promiseLocation!.latitude, longitude: self.promiseLocation!.longitude)
             
             let distance = loc1.distance(from: loc2)
-            if(distance > 1000){
-                self.view.makeToast("아직 도착하지 못했어요", duration: 0.5, position: .center)
+            if(distance > 500){
+                self.view.makeToast("\(Int(distance - 500))m 남았어요!", duration: 0.5, position: .center)
             }
             else{
-                self.view.makeToast("도착했어요!", duration: 0.5, position: .center)
-                item.isHidden = true
+                self.view.makeToast("도착했어요!-\(distance)", duration: 0.5, position: .center)
+                //item.isHidden = true
             }
         }
 
@@ -144,8 +164,6 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
         actionButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16).isActive = true
         actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
 
-        // last 4 lines can be replaced with
-        // actionButton.display(inViewController: self)
     }
     // Custom: 현 위치 트래킹 함수
     
@@ -172,20 +190,44 @@ extension GroupRoomVC : CLLocationManagerDelegate{
     func mapView(_ mapView: MTMapView!, updateCurrentLocation location: MTMapPoint!, withAccuracy accuracy: MTMapLocationAccuracy) {
         currentLocation = location?.mapPointGeo()
         if let latitude = currentLocation?.latitude, let longitude = currentLocation?.longitude{
-            print("MTMapView updateCurrentLocation (\(latitude),\(longitude)) accuracy (\(accuracy))")
+//            print("MTMapView updateCurrentLocation (\(latitude),\(longitude)) accuracy (\(accuracy))")
+            if let room = socket{
+                //print("hi socket")
+                let message = ["roomId" : promise?.id ?? "0","name": UserDefaults.standard.string(forKey: UserKey.NICKNAME) ?? "a","x" : String(longitude),
+                               "y" : String(latitude)] as [String : Any]
+                
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: message)
+                    if let dataString = String(data: data, encoding: .utf8){
+                        room.write(string: dataString)
+                    }
+                } catch {
+                    print("JSON serialization failed: ", error)
+                }
+            }
         }
-    }
-    
-    func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
-        print("MTMapView updateDeviceHeading (\(headingAngle)) degrees")
     }
 }
 
-extension GroupRoomVC : PromiseDelegate{
+extension GroupRoomVC : dataDelegate{
+    func sendUserLocation(_ userlocations: [UserLocation]) {}
+    
+    func sendUserLocation(_ userlocation: UserLocation) {}
+    
     func hiddenUI(hidden: Bool) {}
     
     func sendPromise(_ promise: Promise) {
         self.promise = promise
+        
+        if let users = promise.friends{
+            for i in users{
+                let user = UserLocation.init()
+                user.name = i
+                user.touchdown = false
+                if(i == "bbb"){user.touchdown = true} //test
+                friends.append(user)
+            }
+        }
     }
 }
 
@@ -194,37 +236,25 @@ extension GroupRoomVC : WebSocketDelegate{
     func setSocket(){
         self.request = URLRequest(url: URL(string: socketURL)!)
         request?.timeoutInterval = 10
-        request?.setValue("Room", forHTTPHeaderField: "Sec-WebSocket-Protocol")
-        socket = WebSocket(request: request!)
+        //        request?.setValue("Room", forHTTPHeaderField: "Sec-WebSocket-Protocol")
+        socket = WebSocket(request: request!, certPinner: FoundationSecurity(allowSelfSigned: true))
         socket?.delegate = self
         socket?.connect()
-        print("socket Connected")
-    }
-    
-    func disconnect() {
-        socket?.disconnect()
     }
     
     func didReceive(event: WebSocketEvent, client: WebSocket) {
         switch(event){
         case .connected(let headers):
             print(".connected - \(headers)")
-            
-            let params = [["roodId" : 1,
-                           "name" : "aaa",
-                           "x" : "127.029148",
-                           "y" : "37.576568"]]
-            let jParams = try! JSONSerialization.data(withJSONObject: params, options: [])
-            client.write(string: String(data:jParams, encoding: .utf8)!, completion: nil)
         case .disconnected(let reason, let code):
             print(".disconnected - \(reason), \(code)")
         case .text(let text):
             print("received text: \(text)")
         case .binary(let data):
             print("received data: \(data)")
-        case .pong(let pongData):
+        case .pong(_):
             print("received pong")
-        case .ping(let pingData):
+        case .ping(_):
             print("received ping")
         case .viabilityChanged:
             print("viabilityChanged")
@@ -233,7 +263,7 @@ extension GroupRoomVC : WebSocketDelegate{
         case .cancelled:
             print("cancelled")
         case .error(_): break
-        default: break
+            
         }
     }
 }

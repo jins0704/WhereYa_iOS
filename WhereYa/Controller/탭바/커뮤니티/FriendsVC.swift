@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class FriendsVC: UIViewController, PopUpDelegate {
+class FriendsVC: UIViewController, popupDelegate {
     
     @IBOutlet var mainLabel: UILabel!
     private let cellIdentifier : String = "friendsMainTableViewCell"

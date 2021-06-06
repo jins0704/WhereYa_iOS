@@ -18,7 +18,7 @@ class PromiseDetailVC: UIViewController{
     @IBOutlet var downBtn: UIButton!
     var friends : String = ""
     
-    var promiseDelegate : PromiseDelegate?
+    var promiseDelegate : dataDelegate?
     
     @IBOutlet var infoView: UIView!
     @IBOutlet var deleteBtn: UIButton!
@@ -97,7 +97,11 @@ class PromiseDetailVC: UIViewController{
 
 // MARK: - hiddenDelegate
 
-extension PromiseDetailVC : PromiseDelegate{
+extension PromiseDetailVC : dataDelegate{
+    func sendUserLocation(_ userlocations: [UserLocation]) {}
+    
+    func sendUserLocation(_ userlocation: UserLocation) {}
+    
     func sendPromise(_ promise: Promise) {
         self.promiseName = promise.name
         self.promiseTime = promise.time
@@ -108,7 +112,6 @@ extension PromiseDetailVC : PromiseDelegate{
      
         DispatchQueue.main.async {
             self.setLabel()
-            print("ddd")
         }
     }
     

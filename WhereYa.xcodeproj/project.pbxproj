@@ -178,6 +178,15 @@
 		4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF06D4B26089B3A00327E80 /* UserKey.swift */; };
 		4FF06D5326089CAD00327E80 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF06D5226089CAD00327E80 /* Friend.swift */; };
 		4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */; };
+		4FF802B2266CFFA200CBC942 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802B1266CFFA200CBC942 /* UserLocation.swift */; };
+		4FF802BF266D12E900CBC942 /* CharacterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802BE266D12E900CBC942 /* CharacterImage.swift */; };
+		4FF802C4266D147C00CBC942 /* business-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C0266D147B00CBC942 /* business-person.png */; };
+		4FF802C5266D147C00CBC942 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C1266D147B00CBC942 /* girl.png */; };
+		4FF802C6266D147C00CBC942 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C2266D147C00CBC942 /* boy.png */; };
+		4FF802C7266D147C00CBC942 /* teenager.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C3266D147C00CBC942 /* teenager.png */; };
+		4FF802C9266D191D00CBC942 /* GroupConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802C8266D191D00CBC942 /* GroupConditionVC.swift */; };
+		4FF802CD266D1E3300CBC942 /* ConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802CB266D1E3300CBC942 /* ConditionTableViewCell.swift */; };
+		4FF802CE266D1E3300CBC942 /* ConditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802CC266D1E3300CBC942 /* ConditionTableViewCell.xib */; };
 		4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B025E62A2A0096FC26 /* NetworkResult.swift */; };
 		4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B425E62BCC0096FC26 /* LoginService.swift */; };
 		4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B725E62F500096FC26 /* APIConstants.swift */; };
@@ -412,6 +421,15 @@
 		4FF06D4B26089B3A00327E80 /* UserKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserKey.swift; path = ../../../../Downloads/UserKey.swift; sourceTree = "<group>"; };
 		4FF06D5226089CAD00327E80 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
+		4FF802B1266CFFA200CBC942 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		4FF802BE266D12E900CBC942 /* CharacterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImage.swift; sourceTree = "<group>"; };
+		4FF802C0266D147B00CBC942 /* business-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-person.png"; sourceTree = "<group>"; };
+		4FF802C1266D147B00CBC942 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		4FF802C2266D147C00CBC942 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
+		4FF802C3266D147C00CBC942 /* teenager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teenager.png; sourceTree = "<group>"; };
+		4FF802C8266D191D00CBC942 /* GroupConditionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupConditionVC.swift; sourceTree = "<group>"; };
+		4FF802CB266D1E3300CBC942 /* ConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTableViewCell.swift; sourceTree = "<group>"; };
+		4FF802CC266D1E3300CBC942 /* ConditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionTableViewCell.xib; sourceTree = "<group>"; };
 		4FF918B025E62A2A0096FC26 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4FF918B425E62BCC0096FC26 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		4FF918B725E62F500096FC26 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -832,6 +850,28 @@
 			path = "커뮤니티";
 			sourceTree = "<group>";
 		};
+		4FF802B5266D126700CBC942 /* MapCharacterImage */ = {
+			isa = PBXGroup;
+			children = (
+				4FF802C2266D147C00CBC942 /* boy.png */,
+				4FF802C0266D147B00CBC942 /* business-person.png */,
+				4FF802C1266D147B00CBC942 /* girl.png */,
+				4FF802C3266D147C00CBC942 /* teenager.png */,
+			);
+			path = MapCharacterImage;
+			sourceTree = "<group>";
+		};
+		4FF802CA266D1E0600CBC942 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
+				4FF802C8266D191D00CBC942 /* GroupConditionVC.swift */,
+				4FF802CB266D1E3300CBC942 /* ConditionTableViewCell.swift */,
+				4FF802CC266D1E3300CBC942 /* ConditionTableViewCell.xib */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		4FF917B725DE453A0096FC26 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -884,6 +924,8 @@
 				4F6BDD872664D70800E8B1D9 /* LeftTime.swift */,
 				4F6BDD8B26654E4300E8B1D9 /* CoffeeImage.swift */,
 				4F6BDDEF26662E3000E8B1D9 /* FoodImage.swift */,
+				4FF802B1266CFFA200CBC942 /* UserLocation.swift */,
+				4FF802BE266D12E900CBC942 /* CharacterImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -901,6 +943,7 @@
 			isa = PBXGroup;
 			children = (
 				4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */,
+				4FF802B5266D126700CBC942 /* MapCharacterImage */,
 				4FAB951D25C7D4A400148446 /* Assets.xcassets */,
 				4F6BDDF12666369400E8B1D9 /* foodImage */,
 				4F6BDDBE2665549200E8B1D9 /* cafeImage */,
@@ -925,8 +968,8 @@
 		4FF918FC25E8FC200096FC26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4FF802CA266D1E0600CBC942 /* Group */,
 				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
-				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
 				4F6BDE3A2666B4AD00E8B1D9 /* PastPromiseVC.swift */,
 				4F67A2A7265F95000044316D /* Recommend */,
 			);
@@ -1019,11 +1062,13 @@
 				4F6BDE092666369400E8B1D9 /* meonok.png in Resources */,
 				4F86448F2614D5B5009F20A3 /* copyright.png in Resources */,
 				4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */,
+				4FF802CE266D1E3300CBC942 /* ConditionTableViewCell.xib in Resources */,
 				4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */,
 				4F8644942614D5B5009F20A3 /* map_present_tracking.png in Resources */,
 				4F454B1D266C00EC00AB83AF /* sulbing.png in Resources */,
 				4F6BDE3026665BFE00E8B1D9 /* NotoSansKR-Bold.otf in Resources */,
 				4F6BDDEC2665549200E8B1D9 /* starbucks.png in Resources */,
+				4FF802C7266D147C00CBC942 /* teenager.png in Resources */,
 				4F6BDDE12665549200E8B1D9 /* cafe7.png in Resources */,
 				4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */,
 				4F8644EF2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib in Resources */,
@@ -1064,9 +1109,11 @@
 				4F6BDE0F2666369400E8B1D9 /* food4.png in Resources */,
 				4F6BDE3326665BFE00E8B1D9 /* NotoSansKR-Black.otf in Resources */,
 				4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */,
+				4FF802C4266D147C00CBC942 /* business-person.png in Resources */,
 				4F6BDDDC2665549200E8B1D9 /* cafe4.png in Resources */,
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
 				4F6BDDD82665549200E8B1D9 /* cafe3.png in Resources */,
+				4FF802C5266D147C00CBC942 /* girl.png in Resources */,
 				4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */,
 				4F454B26266C010D00AB83AF /* hanwoo.png in Resources */,
 				4F6BDDDF2665549200E8B1D9 /* cafe10.png in Resources */,
@@ -1098,6 +1145,7 @@
 				4F6BDDEA2665549200E8B1D9 /* backddabang.png in Resources */,
 				4F6BDDED2665549200E8B1D9 /* cafe8.png in Resources */,
 				4F86444F2614D544009F20A3 /* map_pin@3x.png in Resources */,
+				4FF802C6266D147C00CBC942 /* boy.png in Resources */,
 				4F86444C2614D544009F20A3 /* th_line.png in Resources */,
 				4F86448A2614D5B5009F20A3 /* map_pinup.png in Resources */,
 				4F6BDE182666369400E8B1D9 /* donka.png in Resources */,
@@ -1178,10 +1226,12 @@
 				4F585B8D265D126400DFA81B /* HomeMainVC.swift in Sources */,
 				4F67A26E265D894C0044316D /* RecommendCVC.swift in Sources */,
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
+				4FF802B2266CFFA200CBC942 /* UserLocation.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4F90BAEE261C8A1B0047F66A /* TimePopUpVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
 				4FFF039F261B4E28003CEF89 /* CalendarVC.swift in Sources */,
+				4FF802C9266D191D00CBC942 /* GroupConditionVC.swift in Sources */,
 				4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */,
 				4F6BDE3B2666B4AE00E8B1D9 /* PastPromiseVC.swift in Sources */,
 				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
@@ -1192,6 +1242,7 @@
 				4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */,
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
 				4F6BDD862664D60B00E8B1D9 /* MainNoticePromise.swift in Sources */,
+				4FF802CD266D1E3300CBC942 /* ConditionTableViewCell.swift in Sources */,
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */,
@@ -1220,6 +1271,7 @@
 				4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */,
 				4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */,
 				4FFF039C261B2B5A003CEF89 /* UIColor.swift in Sources */,
+				4FF802BF266D12E900CBC942 /* CharacterImage.swift in Sources */,
 				4F90BB10261E084F0047F66A /* SearchFriendVC.swift in Sources */,
 				4F90BB1C261E1F160047F66A /* FriendsMainTableViewCell.swift in Sources */,
 				4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */,

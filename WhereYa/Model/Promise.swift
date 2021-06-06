@@ -12,7 +12,8 @@ struct ResponsePromiseList : Codable{
 }
 
 struct Promise : Codable{
-    var name : String?
+    var id : Int?
+    var name: String?
     var date : String?
     var time : String?
     var memo : String?

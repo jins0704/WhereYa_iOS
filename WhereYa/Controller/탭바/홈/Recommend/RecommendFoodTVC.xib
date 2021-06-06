@@ -33,10 +33,17 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-e6-nzs">
+                        <rect key="frame" x="335" y="17" width="43" height="28"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="more &gt;"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="hvj-e6-nzs" firstAttribute="centerY" secondItem="iE5-hP-sMl" secondAttribute="centerY" id="0qg-EB-imW"/>
                     <constraint firstItem="4FQ-XN-8df" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Ayl-Ws-xP1"/>
                     <constraint firstItem="4FQ-XN-8df" firstAttribute="top" secondItem="iE5-hP-sMl" secondAttribute="bottom" constant="15" id="PcP-ti-cO6"/>
+                    <constraint firstAttribute="trailing" secondItem="hvj-e6-nzs" secondAttribute="trailing" constant="20" id="jIF-wJ-E3H"/>
                     <constraint firstAttribute="trailing" secondItem="4FQ-XN-8df" secondAttribute="trailing" id="lFj-Cf-J98"/>
                     <constraint firstAttribute="bottom" secondItem="4FQ-XN-8df" secondAttribute="bottom" id="u5b-uQ-yEk"/>
                     <constraint firstItem="iE5-hP-sMl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="vdj-Kr-kGa"/>
