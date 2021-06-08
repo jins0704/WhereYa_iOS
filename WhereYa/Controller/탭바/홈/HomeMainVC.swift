@@ -70,7 +70,7 @@ class HomeMainVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now()+1.0) {
             
             self.recommendTV.reloadData()
-            self.getMainData()
+            self.updateTime()
             refresh.endRefreshing()
         }
     }
@@ -93,7 +93,7 @@ class HomeMainVC: UIViewController {
         
         let x = Double((mainNoticePromise?.promise?.destination?.x ?? "0"))
         let y = Double((mainNoticePromise?.promise?.destination?.y ?? "0"))
-        
+
         PlaceService.shared.getNearPlace(longitude : x ?? 0, latitude : y ?? 0, categoryCode: PlaceCategoryInfo.cafe.rawValue) { (result) in
             ActivityIndicator.shared.activityIndicator.stopAnimating()
             
@@ -129,7 +129,6 @@ class HomeMainVC: UIViewController {
                 if let places = data as? [Place]{
                     self.updatePlaces(from: places,PlaceCategoryInfo.food.rawValue)
                 }
-                
             case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
             case .serverErr:
                 print(NetworkInfo.SERVER_FAIL)
@@ -170,7 +169,7 @@ class HomeMainVC: UIViewController {
                     self.setMainLabel()
                     self.getNearCafeData(promise)
                     self.getNearFoodData(promise)
-                }
+            }
                 
             case .requestErr(_) : print(NetworkInfo.BAD_REQUEST)
             case .serverErr:
@@ -202,23 +201,22 @@ class HomeMainVC: UIViewController {
     func setTimer(){
         let timeSelector : Selector = #selector(self.updateTime)
         
-        Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
     }
     
     @objc func updateTime(){
-        if let hour = self.mainNoticePromise?.lefttime?.hour, let minute = self.mainNoticePromise?.lefttime?.minute{
-            if(minute > 0){self.mainNoticePromise?.lefttime?.minute! -= 1}
-            else{
-                if(hour > 0){
-                    self.mainNoticePromise?.lefttime?.hour!-=1
-                    self.mainNoticePromise?.lefttime?.hour = 59
+        PromiseService.shared.getMainPromise{ (result) in
+            ActivityIndicator.shared.activityIndicator.stopAnimating()
+            
+            switch result{
+        
+            case .success(let data) :
+                if let promise = data as? MainNoticePromise{
+                    self.mainNoticePromise = promise
+                    self.setMainLabel()
                 }
-                else{
-                    self.mainNoticePromise?.lefttime?.hour = 0
-                    self.mainNoticePromise?.lefttime?.minute = 0
-                }
+            default : break
             }
-            self.setMainLabel()
         }
     }
     

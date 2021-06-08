@@ -72,7 +72,6 @@ class MyPageVC: UIViewController {
       
         let library =  UIAlertAction(title: "앨범", style: .default) {
             (action) in
-            print("cco")
             self.imagePicker.sourceType = .photoLibrary
             self.present(self.imagePicker, animated: false, completion: nil)
         }

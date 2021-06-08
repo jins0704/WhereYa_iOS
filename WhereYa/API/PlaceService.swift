@@ -64,7 +64,7 @@ struct PlaceService {
                 guard let value =  response.value else{return}
                 
                 if statusCode <= 300{
-            
+                    
                     let networkResult = self.judgeStatus(by : statusCode, value)
                     completion(networkResult)
                 }

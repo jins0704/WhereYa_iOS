@@ -32,6 +32,7 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setPromiseInfo()
         setLocationManager()
         setMap()
