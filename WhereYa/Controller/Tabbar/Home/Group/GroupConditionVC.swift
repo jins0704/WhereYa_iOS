@@ -99,6 +99,7 @@ extension GroupConditionVC : dataDelegate{
     func sendUserLocation(_ userlocations: [UserLocation]){
        
         for user in userlocations{
+        
             if !(user.touchdown ?? false){
                 commingFriends.append(user)
             }

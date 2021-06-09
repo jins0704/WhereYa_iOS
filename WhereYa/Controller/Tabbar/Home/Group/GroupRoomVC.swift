@@ -145,10 +145,10 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
             
             let distance = loc1.distance(from: loc2)
             if(distance > 500){
-                self.view.makeToast("\(Int(distance - 500))m 남았어요!", duration: 0.5, position: .center)
+                self.view.makeToast("\(Int(distance-500)/1000)km \(Int(distance - 500)%1000)m 남았어요!", duration: 0.5, position: .center)
             }
             else{
-                self.view.makeToast("도착했어요!-\(distance)", duration: 0.5, position: .center)
+                self.view.makeToast("도착했어요!", duration: 0.5, position: .center)
                 selfTouchdown = true
                 let message = ["roomId" : promise?.id ?? "0",
                                "name": myNickname ?? "a",
