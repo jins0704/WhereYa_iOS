@@ -53,7 +53,7 @@
 > **홈 화면**
 <br>
 
-<img src="https://user-images.githubusercontent.com/70695311/121414567-be075000-c9a1-11eb-81b9-ba5a38d279c3.png" width="200px" align="center">     <img src="https://user-images.githubusercontent.com/70695311/121416380-b47ee780-c9a3-11eb-9809-213c5d244f37.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121416380-b47ee780-c9a3-11eb-9809-213c5d244f37.png" width="200px" align="center"> 
+<img src="https://user-images.githubusercontent.com/70695311/121414567-be075000-c9a1-11eb-81b9-ba5a38d279c3.png" width="200px" align="center">     <img src="https://user-images.githubusercontent.com/70695311/121419216-ac747700-c9a6-11eb-903d-e2265527f4c4.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121416380-b47ee780-c9a3-11eb-9809-213c5d244f37.png" width="200px" align="center"> 
 <br>
 
 > **위치 공유 화면**
