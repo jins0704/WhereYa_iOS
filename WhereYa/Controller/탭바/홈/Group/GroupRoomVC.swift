@@ -36,7 +36,8 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
         setPromiseInfo()
         setLocationManager()
         setMap()
-        setFloatingButton()
+        setRightFloatingButton()
+        setLeftFloatingButton()
         setSocket()
     }
     func setPromiseInfo(){
@@ -109,7 +110,7 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
         }
     }
     
-    func setFloatingButton(){
+    func setRightFloatingButton(){
         let actionButton = JJFloatingActionButton()
         
         actionButton.buttonColor = UIColor.subpink
@@ -174,18 +175,39 @@ class GroupRoomVC: UIViewController,MTMapViewDelegate{
         actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
 
     }
+    
+    func setLeftFloatingButton(){
+        let actionButton = JJFloatingActionButton()
+        
+        actionButton.buttonColor = UIColor.subgreen
+        actionButton.buttonImage = UIImage(systemName: "location.north.fill")!
+        actionButton.buttonAnimationConfiguration = .transition(toImage: UIImage(systemName: "location.north")!)
+        //actionButton.buttonAnimationConfiguration = .transition(toImage: UIImage(named: "X"))
+        actionButton.configureDefaultItem { item in
+            item.titlePosition = .trailing
+        }
+        
+        actionButton.addItem(title: "내 위치", image: UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysTemplate)) { item in
+            
+            self.mapView?.setMapCenter(MTMapPoint(geoCoord: self.currentLocation ?? self.promiseLocation!), zoomLevel: 3, animated: true)
+            
+        }
+
+        actionButton.addItem(title: "약속 위치", image: UIImage(systemName: "mappin.and.ellipse")?.withRenderingMode(.alwaysTemplate)) { item in
+            
+            self.mapView?.setMapCenter(MTMapPoint(geoCoord: self.promiseLocation!), zoomLevel: 3, animated: true)
+          
+        }
+
+        view.addSubview(actionButton)
+        actionButton.translatesAutoresizingMaskIntoConstraints = false
+        actionButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16).isActive = true
+        actionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -16).isActive = true
+    }
     // Custom: 현 위치 트래킹 함수
     
     @IBAction func backBtnClicked(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
-    }
-    @IBAction func moveToMyLocation(_ sender: Any) {
-        self.mapView?.setMapCenter(MTMapPoint(geoCoord: currentLocation ?? promiseLocation!), zoomLevel: 3, animated: true)
-    }
-    
-    @IBAction func moveToPromiseLocation(_ sender: Any) {
-        // 지도 중심점, 레벨
-        self.mapView?.setMapCenter(MTMapPoint(geoCoord: promiseLocation!), zoomLevel: 3, animated: true)
     }
 }
 

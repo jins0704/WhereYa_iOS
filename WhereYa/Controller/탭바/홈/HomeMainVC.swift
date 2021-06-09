@@ -199,9 +199,10 @@ class HomeMainVC: UIViewController {
     }
     
     func setTimer(){
-        let timeSelector : Selector = #selector(self.updateTime)
-        
-        Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+        if mainNoticePromise?.lefttime?.day == 0{
+            let timeSelector : Selector = #selector(self.updateTime)
+            Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
+        }
     }
     
     @objc func updateTime(){
