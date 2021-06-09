@@ -33,6 +33,11 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVk-ot-87V">
+                        <rect key="frame" x="276" y="17.5" width="40" height="27"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <state key="normal" title="more &gt;"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="vdp-ie-7Fu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="9Qk-7c-BjI"/>
@@ -41,6 +46,8 @@
                     <constraint firstAttribute="trailing" secondItem="vOW-oX-mz5" secondAttribute="trailing" id="SpY-aK-cBn"/>
                     <constraint firstItem="vOW-oX-mz5" firstAttribute="top" secondItem="vdp-ie-7Fu" secondAttribute="bottom" constant="15" id="YWL-mN-kew"/>
                     <constraint firstItem="vOW-oX-mz5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gB6-7i-5Q9"/>
+                    <constraint firstItem="cVk-ot-87V" firstAttribute="centerY" secondItem="vdp-ie-7Fu" secondAttribute="centerY" id="pD3-ws-Od4"/>
+                    <constraint firstAttribute="trailing" secondItem="cVk-ot-87V" secondAttribute="trailing" constant="20" id="yaO-Wc-htI"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

@@ -118,10 +118,9 @@ class MyPageVC: UIViewController {
 extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-    
-        if let myimage = info[.originalImage] as? UIImage,
+
+        if let myimage = info[.editedImage] as? UIImage,
            let myurl = info[UIImagePickerController.InfoKey.imageURL] as? URL {
-            
             ProfileService.shared.updateImage(img: myimage, url : myurl, completion: { (data) in
                 
                 ActivityIndicator.shared.activityIndicator.stopAnimating()
@@ -130,7 +129,7 @@ extension MyPageVC : UIImagePickerControllerDelegate,UINavigationControllerDeleg
                 case .success(let imgurl) :
                     guard let imgurl = imgurl as? String else { return }
                     UserDefaults.standard.setValue(imgurl, forKey: UserKey.IMAGE)
-           
+                   
                     self.profileImage.image = myimage
              
                 case .requestErr(let message):

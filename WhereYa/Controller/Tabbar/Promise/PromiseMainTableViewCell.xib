@@ -79,6 +79,8 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="detailBtn" destination="qQ0-Jy-Tli" id="5ZE-cb-8nC"/>
+                <outlet property="firstIcon" destination="Bxh-2y-cie" id="s8g-R2-jbT"/>
                 <outlet property="innerView" destination="A3J-eA-Yuc" id="tXv-oR-OmI"/>
                 <outlet property="promiseName" destination="FIE-cE-GrP" id="MHw-fb-ERl"/>
                 <outlet property="promisePlace" destination="DjL-uv-6gM" id="pHv-uz-MKk"/>

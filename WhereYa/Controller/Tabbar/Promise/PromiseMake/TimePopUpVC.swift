@@ -9,7 +9,7 @@ import UIKit
 
 class TimePopUpVC: UIViewController {
 
-    var popupDelegate : PopUpDelegate?
+    var popupDelegate : popupDelegate?
     var promisetime : String?
     @IBOutlet var datePicker: UIDatePicker!
     @IBOutlet var popupView: UIView!

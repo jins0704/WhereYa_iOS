@@ -8,7 +8,7 @@ import UIKit
 
 class FriendsMainTableViewCell: UITableViewCell {
     
-    var delegate : CellDelegate?
+    var delegate : cellDelegate?
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet weak var profileNickname: UILabel!

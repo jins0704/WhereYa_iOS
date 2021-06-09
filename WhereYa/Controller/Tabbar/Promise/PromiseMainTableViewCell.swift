@@ -14,6 +14,8 @@ class PromiseMainTableViewCell: UITableViewCell {
     @IBOutlet var promiseName: UILabel!
     @IBOutlet var promisePlace: UILabel!
     @IBOutlet var promiseTime: UILabel!
+    @IBOutlet var detailBtn: UIButton!
+    @IBOutlet var firstIcon: UIImageView!
     
     var promiseAddress : String?
     var promiseMemo : String?
@@ -23,6 +25,11 @@ class PromiseMainTableViewCell: UITableViewCell {
         self.promiseName.text = name
         self.promisePlace.text = place
         self.promiseTime.text = time
+    }
+    func setPastCell(){
+        self.firstIcon.tintColor = .subpink
+        self.firstIcon.image = UIImage(systemName: "person.fill.xmark")
+        self.detailBtn.isHidden = true
     }
     override func awakeFromNib() {
         super.awakeFromNib()

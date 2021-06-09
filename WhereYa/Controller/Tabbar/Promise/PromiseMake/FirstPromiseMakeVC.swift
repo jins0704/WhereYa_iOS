@@ -245,7 +245,7 @@ extension FirstPromiseMakeVC : UITextViewDelegate{
     
 }
 
-extension FirstPromiseMakeVC : PopUpDelegate{
+extension FirstPromiseMakeVC : popupDelegate{
     func friendClicked(friends: [String]) {
         promise.friends = friends
         self.searchFriendBtn.setTitle("친구 : \(friends[0]) 외 \(friends.count-1)명", for: .normal)

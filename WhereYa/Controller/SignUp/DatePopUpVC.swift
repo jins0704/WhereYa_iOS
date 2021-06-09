@@ -9,7 +9,7 @@ import UIKit
 
 class DatePopUpVC: baseVC {
 
-    var popupDelegate : PopUpDelegate?
+    var popupDelegate : popupDelegate?
     var birthdate : String?
     
     @IBOutlet weak var popUpView: UIView!

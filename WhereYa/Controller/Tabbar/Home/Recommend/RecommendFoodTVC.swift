@@ -28,7 +28,7 @@ class RecommendFoodTVC: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     
-        titleLabel.text = "약속 장소와 가까운 음식점"
+        titleLabel.text = "약속장소와 가까운 음식점"
         titleLabel.font = UIFont.myMediumSystemFont(ofSize: 17)
         CollectionViewSetting()
     }
@@ -103,7 +103,7 @@ extension RecommendFoodTVC : UICollectionViewDataSource{
 
         cell.setData( list[indexPath.row].place_name!,  list[indexPath.row].phone!, list[indexPath.row].distance!,  list[indexPath.row].place_url!)
         cell.placeImg.image = UIImage(named: FoodImage.selectImage(name: list[indexPath.row].place_name!, index: indexPath.row))
-       
+        
         return cell
     }
     

@@ -6,6 +6,7 @@ PODS:
   - JJFloatingActionButton (2.5.0)
   - Kingfisher (6.2.1)
   - lottie-ios (3.2.0)
+  - Starscream (4.0.4)
   - SwiftyJSON (4.3.0)
   - Toast-Swift (5.0.1)
 
@@ -16,6 +17,7 @@ DEPENDENCIES:
   - JJFloatingActionButton
   - Kingfisher (~> 6.0)
   - lottie-ios
+  - Starscream (~> 4.0.0)
   - SwiftyJSON (~> 4.0)
   - Toast-Swift (~> 5.0.1)
 
@@ -27,6 +29,7 @@ SPEC REPOS:
     - JJFloatingActionButton
     - Kingfisher
     - lottie-ios
+    - Starscream
     - SwiftyJSON
     - Toast-Swift
 
@@ -37,9 +40,10 @@ SPEC CHECKSUMS:
   JJFloatingActionButton: fdc3aefb0f28f04d0f988fa25d5fac97028a9ea7
   Kingfisher: e71c6fac2aebb1262888cabc2cb13d313362a48f
   lottie-ios: b6b911246246a90a1d25e7388afe6d9ef003d293
+  Starscream: 5178aed56b316f13fa3bc55694e583d35dd414d9
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
 
-PODFILE CHECKSUM: 8ed09b2adec895824c35d0aba3189215eb02d99b
+PODFILE CHECKSUM: 1e53e92c9cabd60a1a02b9686934f75128a54e3a
 
 COCOAPODS: 1.10.1

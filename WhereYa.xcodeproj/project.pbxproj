@@ -11,6 +11,16 @@
 		4F17D6E6262DAE69005B2913 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F17D6E5262DAE69005B2913 /* UIViewController.swift */; };
 		4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52B7260B5E020084C549 /* FriendService.swift */; };
 		4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */; };
+		4F454B1C266C00EC00AB83AF /* billyangel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1A266C00EC00AB83AF /* billyangel.png */; };
+		4F454B1D266C00EC00AB83AF /* sulbing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1B266C00EC00AB83AF /* sulbing.png */; };
+		4F454B25266C010D00AB83AF /* babsang.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1E266C010A00AB83AF /* babsang.png */; };
+		4F454B26266C010D00AB83AF /* hanwoo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B1F266C010B00AB83AF /* hanwoo.png */; };
+		4F454B27266C010D00AB83AF /* calguksu.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B20266C010B00AB83AF /* calguksu.png */; };
+		4F454B28266C010D00AB83AF /* steak.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B21266C010C00AB83AF /* steak.png */; };
+		4F454B29266C010D00AB83AF /* bakery.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B22266C010C00AB83AF /* bakery.png */; };
+		4F454B2A266C010D00AB83AF /* chicken.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B23266C010D00AB83AF /* chicken.png */; };
+		4F454B2B266C010D00AB83AF /* taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 4F454B24266C010D00AB83AF /* taco.png */; };
+		4F454B2D266C05EC00AB83AF /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F454B2C266C05EC00AB83AF /* UIView.swift */; };
 		4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */; };
 		4F539DF72624BFD60020ED9E /* PromiseMainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */; };
 		4F539DFE2625F3910020ED9E /* PromiseDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */; };
@@ -168,6 +178,15 @@
 		4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF06D4B26089B3A00327E80 /* UserKey.swift */; };
 		4FF06D5326089CAD00327E80 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF06D5226089CAD00327E80 /* Friend.swift */; };
 		4FF6C91E25DCE1BF00F5B219 /* baseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */; };
+		4FF802B2266CFFA200CBC942 /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802B1266CFFA200CBC942 /* UserLocation.swift */; };
+		4FF802BF266D12E900CBC942 /* CharacterImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802BE266D12E900CBC942 /* CharacterImage.swift */; };
+		4FF802C4266D147C00CBC942 /* business-person.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C0266D147B00CBC942 /* business-person.png */; };
+		4FF802C5266D147C00CBC942 /* girl.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C1266D147B00CBC942 /* girl.png */; };
+		4FF802C6266D147C00CBC942 /* boy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C2266D147C00CBC942 /* boy.png */; };
+		4FF802C7266D147C00CBC942 /* teenager.png in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802C3266D147C00CBC942 /* teenager.png */; };
+		4FF802C9266D191D00CBC942 /* GroupConditionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802C8266D191D00CBC942 /* GroupConditionVC.swift */; };
+		4FF802CD266D1E3300CBC942 /* ConditionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF802CB266D1E3300CBC942 /* ConditionTableViewCell.swift */; };
+		4FF802CE266D1E3300CBC942 /* ConditionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF802CC266D1E3300CBC942 /* ConditionTableViewCell.xib */; };
 		4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B025E62A2A0096FC26 /* NetworkResult.swift */; };
 		4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B425E62BCC0096FC26 /* LoginService.swift */; };
 		4FF918B825E62F500096FC26 /* APIConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF918B725E62F500096FC26 /* APIConstants.swift */; };
@@ -186,6 +205,16 @@
 		4F17D6E5262DAE69005B2913 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		4F3A52B7260B5E020084C549 /* FriendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendService.swift; sourceTree = "<group>"; };
 		4F3A52BE260B60F60084C549 /* ResponseFriendNickname.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseFriendNickname.swift; sourceTree = "<group>"; };
+		4F454B1A266C00EC00AB83AF /* billyangel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = billyangel.png; sourceTree = "<group>"; };
+		4F454B1B266C00EC00AB83AF /* sulbing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sulbing.png; sourceTree = "<group>"; };
+		4F454B1E266C010A00AB83AF /* babsang.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = babsang.png; sourceTree = "<group>"; };
+		4F454B1F266C010B00AB83AF /* hanwoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hanwoo.png; sourceTree = "<group>"; };
+		4F454B20266C010B00AB83AF /* calguksu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calguksu.png; sourceTree = "<group>"; };
+		4F454B21266C010C00AB83AF /* steak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = steak.png; sourceTree = "<group>"; };
+		4F454B22266C010C00AB83AF /* bakery.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bakery.png; sourceTree = "<group>"; };
+		4F454B23266C010D00AB83AF /* chicken.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chicken.png; sourceTree = "<group>"; };
+		4F454B24266C010D00AB83AF /* taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taco.png; sourceTree = "<group>"; };
+		4F454B2C266C05EC00AB83AF /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		4F539DF42624BFD60020ED9E /* PromiseMainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseMainTableViewCell.swift; sourceTree = "<group>"; };
 		4F539DF52624BFD60020ED9E /* PromiseMainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PromiseMainTableViewCell.xib; sourceTree = "<group>"; };
 		4F539DFD2625F3900020ED9E /* PromiseDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PromiseDetailVC.swift; sourceTree = "<group>"; };
@@ -392,6 +421,15 @@
 		4FF06D4B26089B3A00327E80 /* UserKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserKey.swift; path = ../../../../Downloads/UserKey.swift; sourceTree = "<group>"; };
 		4FF06D5226089CAD00327E80 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		4FF6C91D25DCE1BF00F5B219 /* baseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = baseVC.swift; sourceTree = "<group>"; };
+		4FF802B1266CFFA200CBC942 /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		4FF802BE266D12E900CBC942 /* CharacterImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImage.swift; sourceTree = "<group>"; };
+		4FF802C0266D147B00CBC942 /* business-person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "business-person.png"; sourceTree = "<group>"; };
+		4FF802C1266D147B00CBC942 /* girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl.png; sourceTree = "<group>"; };
+		4FF802C2266D147C00CBC942 /* boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boy.png; sourceTree = "<group>"; };
+		4FF802C3266D147C00CBC942 /* teenager.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teenager.png; sourceTree = "<group>"; };
+		4FF802C8266D191D00CBC942 /* GroupConditionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupConditionVC.swift; sourceTree = "<group>"; };
+		4FF802CB266D1E3300CBC942 /* ConditionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionTableViewCell.swift; sourceTree = "<group>"; };
+		4FF802CC266D1E3300CBC942 /* ConditionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConditionTableViewCell.xib; sourceTree = "<group>"; };
 		4FF918B025E62A2A0096FC26 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		4FF918B425E62BCC0096FC26 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		4FF918B725E62F500096FC26 /* APIConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstants.swift; sourceTree = "<group>"; };
@@ -441,11 +479,13 @@
 		4F3A52A92609F0470084C549 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 				4FFF0396261B25D1003CEF89 /* UITextField.swift */,
 				4FFF039B261B2B5A003CEF89 /* UIColor.swift */,
 				4F90BB28261EF8330047F66A /* UITextView.swift */,
 				4F17D6E5262DAE69005B2913 /* UIViewController.swift */,
 				4F6BDE3626665CB400E8B1D9 /* UIFont.swift */,
+				4F454B2C266C05EC00AB83AF /* UIView.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -486,8 +526,8 @@
 			children = (
 				4F67A26C265D894C0044316D /* RecommendCVC.swift */,
 				4F67A26D265D894C0044316D /* RecommendCVC.xib */,
-				4F67A261265D81D60044316D /* RecommendFoodTVC.xib */,
 				4F67A260265D81D60044316D /* RecommendFoodTVC.swift */,
+				4F67A261265D81D60044316D /* RecommendFoodTVC.xib */,
 				4F67A271265D896A0044316D /* RecommendCafeTVC.xib */,
 				4F67A270265D896A0044316D /* RecommendCafeTVC.swift */,
 			);
@@ -500,6 +540,8 @@
 				4F6BDDBF2665549200E8B1D9 /* cafe2.png */,
 				4F6BDDC02665549200E8B1D9 /* cafe3.png */,
 				4F6BDDC12665549200E8B1D9 /* cafe1.png */,
+				4F454B1A266C00EC00AB83AF /* billyangel.png */,
+				4F454B1B266C00EC00AB83AF /* sulbing.png */,
 				4F6BDDC22665549200E8B1D9 /* cafe14.png */,
 				4F6BDDC32665549200E8B1D9 /* cafe15.png */,
 				4F6BDDC42665549200E8B1D9 /* cafe4.png */,
@@ -541,6 +583,13 @@
 				4F6BDDFC2666369400E8B1D9 /* food6.png */,
 				4F6BDDFD2666369400E8B1D9 /* food2.png */,
 				4F6BDDFE2666369400E8B1D9 /* hamburger.png */,
+				4F454B1E266C010A00AB83AF /* babsang.png */,
+				4F454B22266C010C00AB83AF /* bakery.png */,
+				4F454B20266C010B00AB83AF /* calguksu.png */,
+				4F454B23266C010D00AB83AF /* chicken.png */,
+				4F454B1F266C010B00AB83AF /* hanwoo.png */,
+				4F454B21266C010C00AB83AF /* steak.png */,
+				4F454B24266C010D00AB83AF /* taco.png */,
 				4F6BDDFF2666369400E8B1D9 /* food3.png */,
 				4F6BDE002666369400E8B1D9 /* food1.png */,
 				4F6BDE012666369400E8B1D9 /* donka.png */,
@@ -744,7 +793,6 @@
 				4FF917DA25DE59840096FC26 /* Utils */,
 				4FAB952A25C7D4C300148446 /* Controller */,
 				4FAB952925C7D4BB00148446 /* View */,
-				4F948AD9260DD4ED004BC1A9 /* Protocol.swift */,
 				4FAB952225C7D4A400148446 /* Info.plist */,
 				4F86441C2614D543009F20A3 /* DaumMap.embeddedframework */,
 			);
@@ -800,6 +848,28 @@
 			path = FriendList;
 			sourceTree = "<group>";
 		};
+		4FF802B5266D126700CBC942 /* MapCharacterImage */ = {
+			isa = PBXGroup;
+			children = (
+				4FF802C2266D147C00CBC942 /* boy.png */,
+				4FF802C0266D147B00CBC942 /* business-person.png */,
+				4FF802C1266D147B00CBC942 /* girl.png */,
+				4FF802C3266D147C00CBC942 /* teenager.png */,
+			);
+			path = MapCharacterImage;
+			sourceTree = "<group>";
+		};
+		4FF802CA266D1E0600CBC942 /* Group */ = {
+			isa = PBXGroup;
+			children = (
+				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
+				4FF802C8266D191D00CBC942 /* GroupConditionVC.swift */,
+				4FF802CB266D1E3300CBC942 /* ConditionTableViewCell.swift */,
+				4FF802CC266D1E3300CBC942 /* ConditionTableViewCell.xib */,
+			);
+			path = Group;
+			sourceTree = "<group>";
+		};
 		4FF917B725DE453A0096FC26 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -852,6 +922,8 @@
 				4F6BDD872664D70800E8B1D9 /* LeftTime.swift */,
 				4F6BDD8B26654E4300E8B1D9 /* CoffeeImage.swift */,
 				4F6BDDEF26662E3000E8B1D9 /* FoodImage.swift */,
+				4FF802B1266CFFA200CBC942 /* UserLocation.swift */,
+				4FF802BE266D12E900CBC942 /* CharacterImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -869,6 +941,7 @@
 			isa = PBXGroup;
 			children = (
 				4F6BDE3826667E3E00E8B1D9 /* calenderImg.png */,
+				4FF802B5266D126700CBC942 /* MapCharacterImage */,
 				4FAB951D25C7D4A400148446 /* Assets.xcassets */,
 				4F6BDDF12666369400E8B1D9 /* foodImage */,
 				4F6BDDBE2665549200E8B1D9 /* cafeImage */,
@@ -892,8 +965,8 @@
 		4FF918FC25E8FC200096FC26 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4FF802CA266D1E0600CBC942 /* Group */,
 				4F585B8C265D126400DFA81B /* HomeMainVC.swift */,
-				4F585B91265D238200DFA81B /* GroupRoomVC.swift */,
 				4F6BDE3A2666B4AD00E8B1D9 /* PastPromiseVC.swift */,
 				4F67A2A7265F95000044316D /* Recommend */,
 			);
@@ -979,15 +1052,19 @@
 				4F6BDE112666369400E8B1D9 /* mandu.png in Resources */,
 				4F6BDE0D2666369400E8B1D9 /* italianpasta.png in Resources */,
 				4F6BDE1C2666369400E8B1D9 /* banzum.png in Resources */,
+				4F454B25266C010D00AB83AF /* babsang.png in Resources */,
 				4F8644552614D544009F20A3 /* info_box_tail.png in Resources */,
 				4F6BDDE62665549200E8B1D9 /* cafe6.png in Resources */,
 				4F6BDE092666369400E8B1D9 /* meonok.png in Resources */,
 				4F86448F2614D5B5009F20A3 /* copyright.png in Resources */,
 				4F67A273265D896A0044316D /* RecommendCafeTVC.xib in Resources */,
+				4FF802CE266D1E3300CBC942 /* ConditionTableViewCell.xib in Resources */,
 				4F585B8B265CECA400DFA81B /* Assets.xcassets in Resources */,
 				4F8644942614D5B5009F20A3 /* map_present_tracking.png in Resources */,
+				4F454B1D266C00EC00AB83AF /* sulbing.png in Resources */,
 				4F6BDE3026665BFE00E8B1D9 /* NotoSansKR-Bold.otf in Resources */,
 				4F6BDDEC2665549200E8B1D9 /* starbucks.png in Resources */,
+				4FF802C7266D147C00CBC942 /* teenager.png in Resources */,
 				4F6BDDE12665549200E8B1D9 /* cafe7.png in Resources */,
 				4F8644492614D544009F20A3 /* map_pinup@3x.png in Resources */,
 				4F8644EF2615CFA9009F20A3 /* PlaceSearchTableViewCell.xib in Resources */,
@@ -998,6 +1075,7 @@
 				4F6BDDDA2665549200E8B1D9 /* cafe14.png in Resources */,
 				4F6BDE172666369400E8B1D9 /* food1.png in Resources */,
 				4F8644952614D5B5009F20A3 /* map_pin_red.png in Resources */,
+				4F454B29266C010D00AB83AF /* bakery.png in Resources */,
 				4F90BB1D261E1F160047F66A /* FriendsMainTableViewCell.xib in Resources */,
 				4F6BDDDD2665549200E8B1D9 /* tomntoms.png in Resources */,
 				4F5564DE26010D6700806E8D /* 스크린샷 2021-03-17 오전 12.58.54.png in Resources */,
@@ -1022,13 +1100,18 @@
 				4F8644582614D544009F20A3 /* map_pin.png in Resources */,
 				4F948AB7260C7CC7004BC1A9 /* FriendSettingPopUp.storyboard in Resources */,
 				4FAB951C25C7D4A000148446 /* Main.storyboard in Resources */,
+				4F454B2A266C010D00AB83AF /* chicken.png in Resources */,
+				4F454B2B266C010D00AB83AF /* taco.png in Resources */,
 				4F6BDE0F2666369400E8B1D9 /* food4.png in Resources */,
 				4F6BDE3326665BFE00E8B1D9 /* NotoSansKR-Black.otf in Resources */,
 				4F6BDE1F2666369400E8B1D9 /* chobab.png in Resources */,
+				4FF802C4266D147C00CBC942 /* business-person.png in Resources */,
 				4F6BDDDC2665549200E8B1D9 /* cafe4.png in Resources */,
 				4F5564F526027C9100806E8D /* 스크린샷 2021-03-18 오전 3.06.02.png in Resources */,
 				4F6BDDD82665549200E8B1D9 /* cafe3.png in Resources */,
+				4FF802C5266D147C00CBC942 /* girl.png in Resources */,
 				4FF918D925E81D270096FC26 /* DatePopUp.storyboard in Resources */,
+				4F454B26266C010D00AB83AF /* hanwoo.png in Resources */,
 				4F6BDDDF2665549200E8B1D9 /* cafe10.png in Resources */,
 				4F8644A02614D5B5009F20A3 /* daum_th_line.png in Resources */,
 				4F8644892614D5B5009F20A3 /* shadow_balloon.png in Resources */,
@@ -1058,12 +1141,14 @@
 				4F6BDDEA2665549200E8B1D9 /* backddabang.png in Resources */,
 				4F6BDDED2665549200E8B1D9 /* cafe8.png in Resources */,
 				4F86444F2614D544009F20A3 /* map_pin@3x.png in Resources */,
+				4FF802C6266D147C00CBC942 /* boy.png in Resources */,
 				4F86444C2614D544009F20A3 /* th_line.png in Resources */,
 				4F86448A2614D5B5009F20A3 /* map_pinup.png in Resources */,
 				4F6BDE182666369400E8B1D9 /* donka.png in Resources */,
 				4F8644A12614D5B5009F20A3 /* map_pin_shadow.png in Resources */,
 				4F5564C72600F0AD00806E8D /* 16315-map.json in Resources */,
 				4F6BDDE82665549200E8B1D9 /* twosome.png in Resources */,
+				4F454B1C266C00EC00AB83AF /* billyangel.png in Resources */,
 				4F86445B2614D544009F20A3 /* map_present_background_update.png in Resources */,
 				4F6BDDD72665549200E8B1D9 /* cafe2.png in Resources */,
 				4F86445A2614D544009F20A3 /* noimage.png in Resources */,
@@ -1072,11 +1157,13 @@
 				4F8644542614D544009F20A3 /* map_pinup_custom.png in Resources */,
 				4F585B90265D22FB00DFA81B /* GroupRoom.storyboard in Resources */,
 				4F6BDE3126665BFE00E8B1D9 /* NotoSansKR-Thin.otf in Resources */,
+				4F454B28266C010D00AB83AF /* steak.png in Resources */,
 				4F86444D2614D544009F20A3 /* map_pin_red@3x.png in Resources */,
 				4FF918F725E8FB630096FC26 /* TabbarVC.storyboard in Resources */,
 				4F6BDE0B2666369400E8B1D9 /* dduck.png in Resources */,
 				4F6BDE1E2666369400E8B1D9 /* zzuggumi.png in Resources */,
 				4F8644562614D544009F20A3 /* noimage256.png in Resources */,
+				4F454B27266C010D00AB83AF /* calguksu.png in Resources */,
 				4F6BDE0E2666369400E8B1D9 /* zzigae.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1135,10 +1222,12 @@
 				4F585B8D265D126400DFA81B /* HomeMainVC.swift in Sources */,
 				4F67A26E265D894C0044316D /* RecommendCVC.swift in Sources */,
 				4F3A52BF260B60F60084C549 /* ResponseFriendNickname.swift in Sources */,
+				4FF802B2266CFFA200CBC942 /* UserLocation.swift in Sources */,
 				4FAB952D25C7D77B00148446 /* LoginVC.swift in Sources */,
 				4F90BAEE261C8A1B0047F66A /* TimePopUpVC.swift in Sources */,
 				4FD2DC2E25EFAD4100678B9B /* ActivityIndicator.swift in Sources */,
 				4FFF039F261B4E28003CEF89 /* CalendarVC.swift in Sources */,
+				4FF802C9266D191D00CBC942 /* GroupConditionVC.swift in Sources */,
 				4F8643FA261232FB009F20A3 /* PromiseMainVC.swift in Sources */,
 				4F6BDE3B2666B4AE00E8B1D9 /* PastPromiseVC.swift in Sources */,
 				4F556500260388BD00806E8D /* NetworkInfo.swift in Sources */,
@@ -1149,6 +1238,7 @@
 				4F86440F2614A802009F20A3 /* FirstPromiseMakeVC.swift in Sources */,
 				4FF918C925E6BA970096FC26 /* SignUpService.swift in Sources */,
 				4F6BDD862664D60B00E8B1D9 /* MainNoticePromise.swift in Sources */,
+				4FF802CD266D1E3300CBC942 /* ConditionTableViewCell.swift in Sources */,
 				4FA2AF4225DD02A100B65132 /* SecondSignUpVC.swift in Sources */,
 				4FF918B525E62BCD0096FC26 /* LoginService.swift in Sources */,
 				4F539DF62624BFD60020ED9E /* PromiseMainTableViewCell.swift in Sources */,
@@ -1177,11 +1267,13 @@
 				4FF06D4C26089B3A00327E80 /* UserKey.swift in Sources */,
 				4F3A52B8260B5E020084C549 /* FriendService.swift in Sources */,
 				4FFF039C261B2B5A003CEF89 /* UIColor.swift in Sources */,
+				4FF802BF266D12E900CBC942 /* CharacterImage.swift in Sources */,
 				4F90BB10261E084F0047F66A /* SearchFriendVC.swift in Sources */,
 				4F90BB1C261E1F160047F66A /* FriendsMainTableViewCell.swift in Sources */,
 				4FF918E225E81D7E0096FC26 /* DatePopUpVC.swift in Sources */,
 				4F5564E62601E01200806E8D /* MyPageVC.swift in Sources */,
 				4F67A272265D896A0044316D /* RecommendCafeTVC.swift in Sources */,
+				4F454B2D266C05EC00AB83AF /* UIView.swift in Sources */,
 				4F72A04726610D5000217472 /* PlaceCategoryInfo.swift in Sources */,
 				4FF918B125E62A2A0096FC26 /* NetworkResult.swift in Sources */,
 				4F8644EA2614EEE9009F20A3 /* PlaceService.swift in Sources */,
@@ -1357,7 +1449,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hongjinseok/Desktop/WhereYa_iOS/WhereYa-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1384,7 +1476,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/hongjinseok/Desktop/WhereYa_iOS/WhereYa-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
