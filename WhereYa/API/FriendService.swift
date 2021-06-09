@@ -55,8 +55,9 @@ struct FriendService{
 
     func addFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let url : String = APIConstants.addFriendURL + friendNickname
-    
+        let query : String = APIConstants.modifyFriendURL + friendNickname
+        let url = queryURL(query)
+        
         let dataRequest = AF.request(url,
                                      method: .post,
                                      encoding: JSONEncoding.default,
@@ -81,7 +82,9 @@ struct FriendService{
     
     func removeFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let url : String = APIConstants.addFriendURL + friendNickname
+        let query : String = APIConstants.modifyFriendURL + friendNickname
+        let url = queryURL(query)
+        
         let dataRequest = AF.request(url,
                                      method: .delete,
                                      encoding: JSONEncoding.default,
@@ -93,7 +96,7 @@ struct FriendService{
     
             case .success :
                 guard let statusCode =  response.response?.statusCode else { return }
-                
+                print(statusCode)
                 if statusCode <= 300{completion(.success(NetworkInfo.SUCCESS))}
                 else{completion(.requestErr(NetworkInfo.BAD_REQUEST))}
                 
@@ -105,7 +108,9 @@ struct FriendService{
     
     func bookmarkFriend(friendNickname: String, completion: @escaping (NetworkResult<Any>) -> Void){
         
-        let url : String = APIConstants.bookmarkFriendURL + friendNickname
+        let query : String = APIConstants.bookmarkFriendURL + friendNickname
+        let url = queryURL(query)
+        
         let dataRequest = AF.request(url,
                                      method: .post,
                                      encoding: JSONEncoding.default,
@@ -124,5 +129,12 @@ struct FriendService{
     
             }
         }
+    }
+    
+    func queryURL(_ query : String) -> URL{
+        let encodedQuery : String = query.addingPercentEncoding(withAllowedCharacters: NSMutableCharacterSet.urlQueryAllowed)!
+        let queryURL : URL = URL(string: encodedQuery)!
+        
+        return queryURL
     }
 }
