@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class HomeMainVC: UIViewController {
 
@@ -75,15 +76,23 @@ class HomeMainVC: UIViewController {
         }
     }
     @IBAction func roomBtnClicked(_ sender: Any) {
-        let storyboard = UIStoryboard.init(name: "GroupRoom", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(identifier: GroupRoomVC.identifier)  as! GroupRoomVC
+        
+        if let leftDay = mainNoticePromise?.lefttime?.day, let leftHour = mainNoticePromise?.lefttime?.hour{
+            if leftHour == 0 && leftDay == 0{
+                let storyboard = UIStoryboard.init(name: "GroupRoom", bundle: nil)
+                let nextVC = storyboard.instantiateViewController(identifier: GroupRoomVC.identifier)  as! GroupRoomVC
 
-        if let promise = mainNoticePromise?.promise{
-            self.promiseDelegate = nextVC
-            promiseDelegate?.sendPromise(promise)
+                if let promise = mainNoticePromise?.promise{
+                    self.promiseDelegate = nextVC
+                    promiseDelegate?.sendPromise(promise)
+                }
+                nextVC.modalPresentationStyle = .fullScreen
+                self.present(nextVC, animated: true, completion: nil)
+            }
+            else{
+                self.view.makeToast("1시간 전부터 입장 가능해요", duration: 0.5, position: .center)
+            }
         }
-        nextVC.modalPresentationStyle = .fullScreen
-        self.present(nextVC, animated: true, completion: nil)
     }
  
     // MARK: - getNearCafeData
