@@ -59,7 +59,7 @@
 > **위치 공유 화면**
 <br>
 
-<img src="https://user-images.githubusercontent.com/70695311/121416406-bcd72280-c9a3-11eb-9261-c97c24865a2d.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121416419-bf397c80-c9a3-11eb-9375-262b6884b342.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121416424-bfd21300-c9a3-11eb-933c-11ce7801f43f.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121416432-c2346d00-c9a3-11eb-954a-934f0542571c.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121418222-b34eba00-c9a5-11eb-8fa2-74563543abd0.png" width="200px" align="center"> <img src="https://user-images.githubusercontent.com/70695311/121416484-cfe9f280-c9a3-11eb-98b5-200f9673f4b3.png" width="200px" align="center">
+<img src="https://user-images.githubusercontent.com/70695311/121571770-637ff980-ca5e-11eb-84b5-44d63a52e632.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121416419-bf397c80-c9a3-11eb-9375-262b6884b342.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121571799-6b3f9e00-ca5e-11eb-9cbb-c533f4321adb.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121571808-6da1f800-ca5e-11eb-99e0-359d44eb2f43.png" width="200px" align="center">    <img src="https://user-images.githubusercontent.com/70695311/121418222-b34eba00-c9a5-11eb-8fa2-74563543abd0.png" width="200px" align="center"> <img src="https://user-images.githubusercontent.com/70695311/121416484-cfe9f280-c9a3-11eb-98b5-200f9673f4b3.png" width="200px" align="center">
 
 <br>
 
