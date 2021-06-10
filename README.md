@@ -4,7 +4,7 @@
 
 ### Work Flow
 
-<img width="670" alt="스크린샷 2021-06-10 오전 6 12 23" src="https://user-images.githubusercontent.com/70695311/121430314-e5b2e400-c9b2-11eb-8f33-1e7b7d2644ad.png">
+<img width="670" alt="스크린샷 2021-06-10 오후 1 44 29" src="https://user-images.githubusercontent.com/70695311/121466287-254cf080-c9f2-11eb-9582-9187ab562442.png">
 
 ---
 
