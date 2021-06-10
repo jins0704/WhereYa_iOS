@@ -197,7 +197,8 @@ extension FriendsVC : UITableViewDelegate, UITableViewDataSource{
         var usingArray : [Friend] = []
         
         if isFiltering {
-            if let imageString = self.AllList[indexPath.row].profileImg ,let image = URL(string: imageString){
+            print("filtering")
+            if let imageString = self.filterList[indexPath.row].profileImg ,let image = URL(string: imageString){
                 img = image
             }
             
