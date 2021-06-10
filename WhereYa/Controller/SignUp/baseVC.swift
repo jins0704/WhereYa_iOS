@@ -57,12 +57,12 @@ class baseVC: UIViewController{
         //키보드 사이즈 가져오기
         if ((notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue) != nil{
 
-            if fView.frame.origin.y > 550 && isChangedTextField == true && fView.frame.origin.y > beforefocusedTextField{
+            if fView.frame.origin.y > 470 && isChangedTextField == true && fView.frame.origin.y > beforefocusedTextField{
                 
                 let changeMount = fView.frame.origin.y - beforefocusedTextField
-                
+                print("dd")
                 UIView.animate(withDuration: 0.3, animations: {
-                                self.view.frame.origin.y -= (changeMount/3)})
+                                self.view.frame.origin.y -= (changeMount/5)})
 
                 self.isChangedTextField = false
                 self.beforefocusedTextField = fView.frame.origin.y

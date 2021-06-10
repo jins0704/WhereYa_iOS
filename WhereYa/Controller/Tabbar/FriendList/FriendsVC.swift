@@ -125,6 +125,7 @@ class FriendsVC: UIViewController, popupDelegate {
         
         let insertBtn = UIAlertAction(title: "확인", style: .cancel) { (insert) in
             if let nickname = alert.textFields?[0].text{
+                print(nickname)
                 FriendService.shared.addFriend(friendNickname: nickname) { (data) in
                     print(data)
                     ActivityIndicator.shared.activityIndicator.stopAnimating()

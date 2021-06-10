@@ -30,6 +30,26 @@ class LoginVC: baseVC{
         
         setUI()
     }
+    
+    // MARK: - Notification Selector
+    
+    @objc override func keyboardShowHandle(notification : NSNotification){
+//        if loginBtn.frame.origin.y > 470 {
+//
+//            UIView.animate(withDuration: 0.3, animations: {self.view.frame.origin.y -= 100})
+//        }
+        
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue { UIView.animate(withDuration: 0.3, animations: { self.view.transform = CGAffineTransform(translationX: 0, y: -keyboardSize.height + 200) }) }
+
+    }
+    
+    @objc override func keyboardHideHandle(){
+        //뷰 원상태로 되돌리기
+        self.view.transform = .identity
+
+       // self.view.frame.origin.y = 0
+    }
+    
     @IBAction func loginBtnClicked(_ sender: Any) {
         
         ActivityIndicator.shared.activityIndicator.startAnimating()
