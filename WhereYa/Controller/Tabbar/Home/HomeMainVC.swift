@@ -195,6 +195,7 @@ class HomeMainVC: UIViewController {
         if let mpromise = self.mainNoticePromise?.promise, let mtime = self.mainNoticePromise?.lefttime{
             self.promiseName.text = mpromise.name
             self.alarmLabel.text = "약속까지 \(self.setTimeLabel(mtime.day ?? 0, mtime.hour ?? 0, mtime.minute ?? 0))남았어요!\n\(mpromise.destination?.place_name ?? " ")으로 가야해요."
+            print(alarmLabel.text)
         }
     }
     
@@ -208,7 +209,9 @@ class HomeMainVC: UIViewController {
     }
     
     func setTimer(){
-        if mainNoticePromise?.lefttime?.day == 0{
+        
+        if mainNoticePromise?.lefttime?.day == 0 || mainNoticePromise?.lefttime?.day == nil{
+        
             let timeSelector : Selector = #selector(self.updateTime)
             Timer.scheduledTimer(timeInterval: 30.0, target: self, selector: timeSelector, userInfo: nil, repeats: true)
         }
@@ -221,8 +224,10 @@ class HomeMainVC: UIViewController {
             switch result{
         
             case .success(let data) :
+                
                 if let promise = data as? MainNoticePromise{
                     self.mainNoticePromise = promise
+                    print("실행")
                     self.setMainLabel()
                 }
             default : break
